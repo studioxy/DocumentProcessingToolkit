@@ -1,0 +1,28 @@
+2024-10-15 18:09:41,337 - INFO - --------------------------------------------------------------------------------
+2024-10-15 18:09:41,337 - INFO - Start przetwarzania pliku bank: dok_bank.txt
+2024-10-15 18:09:41,350 - INFO - £¹czna liczba zmian konta 202-2-1-900102 na 131-5: 7
+2024-10-15 18:09:41,350 - INFO - £¹czna liczba zmian dat: 408
+2024-10-15 18:09:41,350 - INFO - £¹czna liczba zmian konta 9 na 0: 36
+2024-10-15 18:09:41,352 - INFO - Zakoñczono przetwarzanie pliku bank: dok_bank.txt
+2024-10-15 18:09:41,352 - INFO - Czas przetwarzania pliku: 15.00654 ms
+2024-10-15 18:09:41,353 - INFO - --------------------------------------------------------------------------------
+2024-10-15 18:09:41,353 - INFO - --------------------------------------------------------------------------------
+2024-10-15 18:09:41,353 - INFO - Start przetwarzania pliku kasa: dok_kasa.txt
+2024-10-15 18:09:41,353 - INFO - £¹czna liczba zmian konta 9 na 0: 10
+2024-10-15 18:09:41,355 - INFO - Zakoñczono przetwarzanie pliku kasa: dok_kasa.txt
+2024-10-15 18:09:41,355 - INFO - Czas przetwarzania pliku: 2.00033 ms
+2024-10-15 18:09:41,355 - INFO - --------------------------------------------------------------------------------
+2024-10-15 18:09:41,355 - INFO - --------------------------------------------------------------------------------
+2024-10-15 18:09:41,355 - INFO - Start przetwarzania pliku vat: dok_sVAT.txt
+2024-10-15 18:09:41,360 - INFO - £¹czna liczba zmian konta 731-1, 731-3, 731-4 na odpowiednie wartoœci: 56
+2024-10-15 18:09:41,360 - INFO - £¹czna liczba zmian daty okresu na ostatni dzieñ poprzedniego miesi¹ca: 56
+2024-10-15 18:09:41,360 - INFO - £¹czna liczba przypadków niezakwalifikowanych przez kwotê <= 0: 0
+2024-10-15 18:09:41,364 - INFO - Zakoñczono przetwarzanie pliku vat: dok_sVAT.txt
+2024-10-15 18:09:41,364 - INFO - Czas przetwarzania pliku: 9.00221 ms
+2024-10-15 18:09:41,364 - INFO - --------------------------------------------------------------------------------
+2024-10-15 18:09:41,364 - INFO - --------------------------------------------------------------------------------
+2024-10-15 18:09:41,364 - INFO - Start przetwarzania pliku kasa: dok_zak.txt
+2024-10-15 18:09:41,365 - INFO - £¹czna liczba zmian konta 9 na 0: 27
+2024-10-15 18:09:41,366 - INFO - Zakoñczono przetwarzanie pliku kasa: dok_zak.txt
+2024-10-15 18:09:41,366 - INFO - Czas przetwarzania pliku: 2.00129 ms
+2024-10-15 18:09:41,366 - INFO - --------------------------------------------------------------------------------
