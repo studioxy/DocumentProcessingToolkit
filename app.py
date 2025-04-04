@@ -129,6 +129,27 @@ def download_file(filename):
         logging.error(f"Error downloading file: {str(e)}")
         return jsonify({"success": False, "message": f"Error downloading file: {str(e)}"}), 500
 
+@app.route('/download-all', methods=['POST'])
+def download_all_files():
+    """Generate download links for all files from a batch."""
+    try:
+        filenames = request.json.get('filenames', [])
+        if not filenames:
+            return jsonify({"success": False, "message": "No filenames provided"}), 400
+            
+        valid_files = []
+        for filename in filenames:
+            if os.path.exists(filename):
+                valid_files.append({
+                    "filename": filename.replace("temp_", ""),
+                    "path": filename
+                })
+                
+        return jsonify({"success": True, "files": valid_files})
+    except Exception as e:
+        logging.error(f"Error preparing batch download: {str(e)}")
+        return jsonify({"success": False, "message": f"Error preparing batch download: {str(e)}"}), 500
+
 @app.route('/logs')
 def view_logs():
     """View processing logs."""

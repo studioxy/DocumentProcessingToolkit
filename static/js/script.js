@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const loadingSpinner = document.getElementById('loadingSpinner');
     const alertContainer = document.getElementById('alertContainer');
     const fileTypeDisplay = document.getElementById('fileTypeDisplay');
+    const downloadAllBtn = document.getElementById('downloadAllBtn');
+    
+    // Store processed filenames for batch download
+    let processedFiles = [];
     
     // Auto-detect file type based on filename for single file
     if (fileInput) {
@@ -29,8 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
             return 'vat';
         } else if (filename.includes('zak') || filename.includes('kasa')) {
             return 'kasa';
+        } else {
+            return 'unknown';
         }
-        return 'unknown';
     }
     
     // Handle form submission
@@ -38,42 +43,42 @@ document.addEventListener('DOMContentLoaded', function() {
         uploadForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Determine if it's a batch or single file upload
-            const activeTab = document.querySelector('.tab-pane.active');
-            const isBatchUpload = activeTab.id === 'batch-upload';
-            
-            if (isBatchUpload) {
-                if (!batchFileInput.files.length) {
-                    showAlert('Proszę wybrać pliki do przetworzenia wsadowego.', 'danger');
-                    return;
-                }
-            } else {
-                if (!fileInput.files[0]) {
-                    showAlert('Proszę wybrać plik do przetworzenia.', 'danger');
-                    return;
-                }
-            }
+            // Check if we're in single or batch mode
+            const isBatchMode = document.getElementById('batch-tab').classList.contains('active');
             
             // Show loading spinner
             loadingSpinner.classList.remove('d-none');
+            
+            // Clear previous results
             resultContainer.classList.add('d-none');
             batchResultContainer.classList.add('d-none');
             
-            // Clear previous alerts
-            alertContainer.innerHTML = '';
-            
+            // Create form data
             const formData = new FormData();
             
-            if (isBatchUpload) {
-                // Append all files for batch processing
-                for (let i = 0; i < batchFileInput.files.length; i++) {
-                    formData.append('files[]', batchFileInput.files[i]);
+            if (isBatchMode) {
+                const files = batchFileInput.files;
+                if (files.length === 0) {
+                    showAlert('Proszę wybrać co najmniej jeden plik do przetworzenia wsadowego.', 'danger');
+                    loadingSpinner.classList.add('d-none');
+                    return;
+                }
+                
+                for (let i = 0; i < files.length; i++) {
+                    formData.append('files[]', files[i]);
                 }
             } else {
-                // Single file processing
-                formData.append('file', fileInput.files[0]);
+                const file = fileInput.files[0];
+                if (!file) {
+                    showAlert('Proszę wybrać plik do przetworzenia.', 'danger');
+                    loadingSpinner.classList.add('d-none');
+                    return;
+                }
+                
+                formData.append('file', file);
             }
             
+            // Send AJAX request
             fetch('/upload', {
                 method: 'POST',
                 body: formData
@@ -82,73 +87,184 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 loadingSpinner.classList.add('d-none');
                 
-                if (data.success) {
-                    if (data.batch) {
-                        // Display batch results
-                        batchResultContainer.classList.remove('d-none');
-                        populateBatchResults(data);
-                    } else {
-                        // Display single file results
-                        resultContainer.classList.remove('d-none');
-                        populateSingleResults(data);
-                    }
+                if (!data.success) {
+                    showAlert(data.message || 'Wystąpił błąd podczas przetwarzania pliku.', 'danger');
+                    return;
+                }
+                
+                if (data.batch) {
+                    // Batch processing results
+                    batchResultContainer.classList.remove('d-none');
+                    populateBatchResults(data);
+                    
+                    // Scroll to results
+                    batchResultContainer.scrollIntoView({ behavior: 'smooth' });
                 } else {
-                    showAlert(data.message || 'Wystąpił błąd podczas przetwarzania.', 'danger');
+                    // Single file processing results
+                    resultContainer.classList.remove('d-none');
+                    populateSingleResults(data);
+                    
+                    // Scroll to results
+                    resultContainer.scrollIntoView({ behavior: 'smooth' });
                 }
             })
             .catch(error => {
+                console.error('Error:', error);
                 loadingSpinner.classList.add('d-none');
-                showAlert('Błąd sieciowy: ' + error.message, 'danger');
+                showAlert('Wystąpił błąd podczas przetwarzania pliku.', 'danger');
             });
         });
     }
     
-    // Populate results for a single file processing
+    // Handle download all button click
+    if (downloadAllBtn) {
+        downloadAllBtn.addEventListener('click', function() {
+            if (processedFiles.length === 0) {
+                showAlert('Brak plików do pobrania.', 'warning');
+                return;
+            }
+            
+            fetch('/download-all', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ filenames: processedFiles })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success && data.files.length > 0) {
+                    // Sequentially download each file
+                    data.files.forEach((file, index) => {
+                        // Use setTimeout to space out downloads slightly
+                        setTimeout(() => {
+                            const a = document.createElement('a');
+                            a.href = `/download/${file.path}`;
+                            a.download = file.filename;
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                        }, index * 500);
+                    });
+                    
+                    showAlert(`Pobieranie ${data.files.length} plików w toku...`, 'success');
+                } else {
+                    showAlert('Nie znaleziono plików do pobrania.', 'warning');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('Wystąpił błąd podczas przygotowywania plików do pobrania.', 'danger');
+            });
+        });
+    }
+    
+    // Populate results for single file processing
     function populateSingleResults(data) {
-        // Update the filename and file type
-        document.getElementById('processedFilename').textContent = data.filename;
-        document.getElementById('processedFiletype').textContent = data.filetype;
+        const fileInfoContainer = document.getElementById('fileInfo');
+        const processingTimeContainer = document.getElementById('processingTime');
+        const changesInfoContainer = document.getElementById('changesInfo');
         
-        // Update processing time
-        document.getElementById('processingTime').textContent = data.result.processing_time.toFixed(2) + ' ms';
+        // Basic info
+        fileInfoContainer.textContent = `${data.filename} (${data.filetype})`;
+        processingTimeContainer.textContent = `${data.result.processing_time.toFixed(2)} sekund`;
         
-        // Clear previous detailed results
-        detailedResults.innerHTML = '';
-        
-        // Display changes based on file type
+        // Changes info
+        let changesHTML = '';
         const changes = data.result.changes;
-        let html = '<table class="table table-striped"><thead><tr><th>Typ zmiany</th><th>Ilość</th></tr></thead><tbody>';
         
         if (data.filetype === 'bank') {
-            html += `
-                <tr><td>Zmiany konta 202-2-1-900102 na 131-5</td><td>${changes.zmiany_konto_900102}</td></tr>
-                <tr><td>Zmiany dat</td><td>${changes.zmiany_data}</td></tr>
-                <tr><td>Zmiany konta 9 na 0</td><td>${changes.zmiany_konto_9}</td></tr>
+            changesHTML = `
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <h6>Zmiany konta 202-2-1-900102 na 131-5</h6>
+                                <p class="mb-0 counter-value">${changes.zmiany_konto_900102}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <h6>Zmiany dat</h6>
+                                <p class="mb-0 counter-value">${changes.zmiany_data}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <h6>Zmiany konta 9 na 0</h6>
+                                <p class="mb-0 counter-value">${changes.zmiany_konto_9}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             `;
         } else if (data.filetype === 'vat') {
-            html += `
-                <tr><td>Zmiany konta 731-1, 731-3, 731-4 na odpowiednie wartości</td><td>${changes.zmiany_konto_731}</td></tr>
-                <tr><td>Zmiany daty okresu na ostatni dzień poprzedniego miesiąca</td><td>${changes.zmiany_okres}</td></tr>
-                <tr><td>Przypadki niezakwalifikowane przez kwotę <= 0</td><td>${changes.niezakwalifikowane_przez_kwote}</td></tr>
+            changesHTML = `
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <h6>Zmiany konta 731</h6>
+                                <p class="mb-0 counter-value">${changes.zmiany_konto_731}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <h6>Zmiany okresu</h6>
+                                <p class="mb-0 counter-value">${changes.zmiany_okres}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <h6>Całkowita liczba zmian</h6>
+                                <p class="mb-0 counter-value">${changes.zmiany_konto_731 + changes.zmiany_okres}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             `;
         } else if (data.filetype === 'kasa') {
-            html += `
-                <tr><td>Zmiany konta 9 na 0</td><td>${changes.zmiany_konto_9}</td></tr>
+            changesHTML = `
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <h6>Zmiany konta 9 na 0</h6>
+                                <p class="mb-0 counter-value">${changes.zmiany_konto_9}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <h6>Konto 201-2-1-9</h6>
+                                <p class="mb-0 counter-value">${changes.zmiany_konto_201 || 0}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <h6>Konto 202-2-1-9</h6>
+                                <p class="mb-0 counter-value">${changes.zmiany_konto_202 || 0}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             `;
         }
         
-        html += '</tbody></table>';
+        changesInfoContainer.innerHTML = changesHTML;
         
-        // Add errors if any
-        if (data.result.errors && data.result.errors.length > 0) {
-            html += '<div class="alert alert-danger mt-3"><h5>Błędy:</h5><ul>';
-            data.result.errors.forEach(error => {
-                html += `<li>${error}</li>`;
-            });
-            html += '</ul></div>';
-        }
-        
-        // Add download and log buttons
+        // Set download button URL
         const downloadBtn = document.getElementById('downloadBtn');
         downloadBtn.setAttribute('href', `/download/${data.temp_filename}`);
         downloadBtn.classList.remove('d-none');
@@ -179,6 +295,15 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Setup cleanup for all temp files when page is unloaded
         const tempFilenames = batchResults.map(item => item.temp_filename);
+        
+        // Store filenames for batch download
+        processedFiles = tempFilenames;
+        
+        // Enable download all button if we have files
+        if (downloadAllBtn && processedFiles.length > 0) {
+            downloadAllBtn.classList.remove('d-none');
+        }
+        
         window.addEventListener('beforeunload', function() {
             tempFilenames.forEach(filename => {
                 navigator.sendBeacon('/cleanup', JSON.stringify({ filename }));
@@ -198,45 +323,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Create accordion items grouped by file type
-        for (const [fileType, files] of Object.entries(filesByType)) {
+        let accordionIndex = 0;
+        for (const [type, files] of Object.entries(filesByType)) {
             if (files.length === 0) continue;
             
-            let fileTypeLabel = '';
-            let fileTypeIcon = '';
+            // Skip unknown files
+            if (type === 'unknown' && files.length === 0) continue;
             
-            switch(fileType) {
-                case 'bank':
-                    fileTypeLabel = 'Dokumenty bankowe';
-                    fileTypeIcon = 'fa-university';
-                    break;
-                case 'vat':
-                    fileTypeLabel = 'Dokumenty VAT';
-                    fileTypeIcon = 'fa-file-invoice';
-                    break;
-                case 'kasa':
-                    fileTypeLabel = 'Dokumenty kasowe';
-                    fileTypeIcon = 'fa-cash-register';
-                    break;
-                default:
-                    fileTypeLabel = 'Inne dokumenty';
-                    fileTypeIcon = 'fa-file-alt';
-            }
-            
-            const accordionId = `accordion-${fileType}`;
-            
+            // Create group header
             const accordionItem = document.createElement('div');
             accordionItem.className = 'accordion-item';
+            
+            // Translate file type for display
+            let typeDisplay = '';
+            switch(type) {
+                case 'bank':
+                    typeDisplay = 'Dokumenty Bankowe';
+                    break;
+                case 'vat':
+                    typeDisplay = 'Dokumenty VAT';
+                    break;
+                case 'kasa':
+                    typeDisplay = 'Dokumenty Kasowe';
+                    break;
+                default:
+                    typeDisplay = 'Inne Dokumenty';
+            }
+            
             accordionItem.innerHTML = `
-                <h2 class="accordion-header" id="heading-${fileType}">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#${accordionId}" aria-expanded="true" 
-                            aria-controls="${accordionId}">
-                        <i class="fas ${fileTypeIcon} me-2"></i>
-                        ${fileTypeLabel} (${files.length})
+                <h2 class="accordion-header" id="heading${accordionIndex}">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${accordionIndex}" aria-expanded="true" aria-controls="collapse${accordionIndex}">
+                        <span class="me-2 badge bg-primary">${files.length}</span>
+                        ${typeDisplay}
                     </button>
                 </h2>
-                <div id="${accordionId}" class="accordion-collapse collapse show" 
-                     aria-labelledby="heading-${fileType}" data-bs-parent="#batchResultsAccordion">
+                <div id="collapse${accordionIndex}" class="accordion-collapse collapse show" aria-labelledby="heading${accordionIndex}">
                     <div class="accordion-body p-0">
                         <div class="list-group list-group-flush">
                             ${files.map((file, index) => createFileResultItem(file, index)).join('')}
@@ -246,6 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             
             accordionContainer.appendChild(accordionItem);
+            accordionIndex++;
         }
     }
     
@@ -278,97 +400,84 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span class="badge bg-info">Zmiany okresu: ${changes.zmiany_okres}</span>
                     </div>
                     <div class="col-md-4">
-                        <span class="badge bg-secondary">Niezakwalifikowane: ${changes.niezakwalifikowane_przez_kwote}</span>
+                        <span class="badge bg-info">Całkowita liczba zmian: ${changes.zmiany_konto_731 + changes.zmiany_okres}</span>
                     </div>
                 </div>
             `;
         } else if (file.filetype === 'kasa') {
             changesHTML = `
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-4">
                         <span class="badge bg-info">Konto 9 → 0: ${changes.zmiany_konto_9}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="badge bg-info">Konto 201-2-1-9: ${changes.zmiany_konto_201 || 0}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="badge bg-info">Konto 202-2-1-9: ${changes.zmiany_konto_202 || 0}</span>
                     </div>
                 </div>
             `;
         }
         
-        const logFilename = file.result.log_file.split('/').pop();
-        
         return `
             <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between align-items-center">
-                    <h6 class="mb-1">${file.filename}</h6>
-                    <small>Czas: ${file.result.processing_time.toFixed(2)} ms</small>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">${file.filename}</h6>
+                    <div>
+                        <span class="badge bg-primary">${(file.result.processing_time).toFixed(2)}s</span>
+                        <a href="/download/${file.temp_filename}" class="btn btn-sm btn-outline-primary ms-2">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="mt-2">
-                    ${changesHTML}
-                </div>
-                <div class="d-flex justify-content-end mt-2">
-                    <a href="/download/${file.temp_filename}" class="btn btn-sm btn-success me-2">
-                        <i class="fas fa-download"></i> Pobierz
-                    </a>
-                    <a href="/logs#${logFilename}" class="btn btn-sm btn-info">
-                        <i class="fas fa-list"></i> Log
-                    </a>
-                </div>
+                ${changesHTML}
             </div>
         `;
     }
     
     function showAlert(message, type) {
-        const alert = document.createElement('div');
-        alert.className = `alert alert-${type} alert-dismissible fade show`;
-        alert.innerHTML = `
-            ${message}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        alertContainer.innerHTML = `
+            <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
         `;
-        alertContainer.appendChild(alert);
+        
+        // Auto-dismiss after 5 seconds
+        setTimeout(() => {
+            const alert = document.querySelector('.alert');
+            if (alert) {
+                const bsAlert = new bootstrap.Alert(alert);
+                bsAlert.close();
+            }
+        }, 5000);
     }
 });
 
-// Log viewer functions
 function loadLogContent(filename) {
-    const logContent = document.getElementById('logContent');
-    logContent.innerHTML = '<div class="text-center"><div class="spinner-border" role="status"></div><p>Ładowanie pliku...</p></div>';
-    
     fetch(`/log/${filename}`)
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                // Format the log content for better readability
-                const formattedContent = data.content
-                    .replace(/\n/g, '<br>')
-                    .replace(/(-{80})/g, '<hr>');
-                
-                logContent.innerHTML = `<div class="log-entry">${formattedContent}</div>`;
-                
-                // Scroll to the selected log in the sidebar
-                const logItem = document.getElementById(`log-${filename}`);
-                if (logItem) {
-                    logItem.scrollIntoView({ behavior: 'smooth' });
+                const logContentContainer = document.getElementById('logContent');
+                if (logContentContainer) {
+                    logContentContainer.textContent = data.content;
+                    // Highlight the selected log
+                    document.querySelectorAll('.log-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    document.getElementById(`log-${filename}`).classList.add('active');
+                    
+                    // Update the active log filename display
+                    const activeLogFilename = document.getElementById('activeLogFilename');
+                    if (activeLogFilename) {
+                        activeLogFilename.textContent = filename;
+                    }
                 }
-                
-                // Highlight the selected log in the sidebar
-                document.querySelectorAll('.log-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-                logItem.classList.add('active');
-                
-                // Update URL hash
-                window.location.hash = filename;
-            } else {
-                logContent.innerHTML = `<div class="alert alert-danger">Błąd: ${data.message}</div>`;
             }
         })
         .catch(error => {
-            logContent.innerHTML = `<div class="alert alert-danger">Błąd sieciowy: ${error.message}</div>`;
+            console.error('Error loading log content:', error);
         });
 }
-
-// Check for hash in URL when logs page loads
-window.addEventListener('load', function() {
-    if (document.getElementById('logsList') && window.location.hash) {
-        const filename = window.location.hash.substring(1);
-        loadLogContent(filename);
-    }
-});
