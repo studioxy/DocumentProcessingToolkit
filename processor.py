@@ -1,7 +1,19 @@
 import os
 import logging
 import time
+import json
 from datetime import datetime, timedelta
+
+def detect_file_type(filename):
+    """Detect file type based on filename."""
+    filename = filename.lower()
+    if 'bank' in filename:
+        return 'bank'
+    elif 'vat' in filename:
+        return 'vat'
+    elif 'zak' in filename or 'kasa' in filename:
+        return 'kasa'
+    return 'unknown'
 
 def poprzedni_dzien_roboczy(data):
     """Calculate the previous working day."""
@@ -41,7 +53,7 @@ def process_file(filename, file_type):
     results = {
         'changes': {},
         'errors': [],
-        'processing_time_ms': 0,
+        'processing_time': 0,
         'log_file': log_filename
     }
     
@@ -60,10 +72,10 @@ def process_file(filename, file_type):
             file.writelines(lines)
         
         elapsed_time = (time.time() - start_time) * 1000  # time in milliseconds
-        results['processing_time_ms'] = round(elapsed_time, 5)
+        results['processing_time'] = round(elapsed_time, 5)
         
         logging.info(f'Zakończono przetwarzanie pliku {file_type}: {filename}')
-        logging.info(f'Czas przetwarzania pliku: {results["processing_time_ms"]:.5f} ms')
+        logging.info(f'Czas przetwarzania pliku: {results["processing_time"]:.5f} ms')
         log_separator()
         
     except Exception as e:

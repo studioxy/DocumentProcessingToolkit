@@ -1,19 +1,19 @@
-/* Modern, elegant custom styles with tasteful color accents */
+/* Modern, elegant custom styles with tasteful color accents - darker version */
 :root {
-    --primary-color: #3a86ff;
-    --primary-hover: #2a75e7;
-    --secondary-color: #2d3748;
-    --accent-color: #4895ef;
-    --success-color: #4cc9a0;
-    --warning-color: #ffaa5a;
-    --danger-color: #ef476f;
-    --dark-bg: #1a1d2b;
-    --card-bg: #242736;
+    --primary-color: #1e429f;
+    --primary-hover: #183785;
+    --secondary-color: #1a1e2d;
+    --accent-color: #284899;
+    --success-color: #2e8f67;
+    --warning-color: #d47d29;
+    --danger-color: #b82e4c;
+    --dark-bg: #111621;
+    --card-bg: #1a1e2d;
     --text-color: #e2e8f0;
     --text-muted: #a0aec0;
-    --border-color: #3c4053;
+    --border-color: #2d3748;
     --border-radius: 8px;
-    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     --transition: all 0.25s ease;
 }
 
@@ -50,8 +50,8 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    background-color: rgba(58, 134, 255, 0.1);
-    color: var(--primary-color);
+    background-color: rgba(30, 66, 159, 0.2);
+    color: var(--text-color);
 }
 
 /* Card styling */
@@ -78,6 +78,11 @@ body {
     color: var(--text-color);
 }
 
+.card-header.bg-primary {
+    background-color: var(--primary-color) !important;
+    color: var(--text-color);
+}
+
 .card-body {
     padding: 1.5rem;
     color: var(--text-color);
@@ -97,6 +102,10 @@ body {
     color: white;
 }
 
+.btn-primary.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
 .btn-primary:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
@@ -107,20 +116,20 @@ body {
     color: white;
 }
 
-.btn-outline-secondary {
+.btn-outline-info {
     border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+    color: var(--text-color);
     background-color: transparent;
 }
 
-.btn-outline-secondary:hover {
+.btn-outline-info:hover {
     background-color: var(--accent-color);
     color: white;
 }
 
 .btn-outline-primary {
     border: 1px solid var(--primary-color);
-    color: var(--primary-color);
+    color: var(--text-color);
     background-color: transparent;
 }
 
@@ -151,16 +160,16 @@ body {
     cursor: pointer;
     margin-bottom: 1.5rem;
     transition: var(--transition);
-    background-color: rgba(72, 149, 239, 0.05);
+    background-color: rgba(40, 72, 153, 0.1);
 }
 
 .custom-file-upload:hover {
     border-color: var(--primary-color);
-    background-color: rgba(58, 134, 255, 0.1);
+    background-color: rgba(30, 66, 159, 0.15);
 }
 
 .custom-file-upload input[type="file"] {
-    margin-bottom: i 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Info cards styling */
@@ -214,14 +223,14 @@ body {
 }
 
 .nav-tabs .nav-link:hover {
-    color: var(--primary-color);
-    background-color: rgba(58, 134, 255, 0.05);
+    color: var(--text-color);
+    background-color: rgba(30, 66, 159, 0.1);
     border-bottom: 2px solid var(--primary-color);
 }
 
 .nav-tabs .nav-link.active {
-    color: var(--primary-color);
-    background-color: var(--card-bg);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
     border-bottom: 2px solid var(--primary-color);
 }
 
@@ -261,13 +270,13 @@ body {
 }
 
 .log-item:hover {
-    background-color: rgba(58, 134, 255, 0.05);
-    color: var(--primary-color);
+    background-color: rgba(30, 66, 159, 0.1);
+    color: var(--text-color);
 }
 
 .log-item.active {
-    background-color: rgba(58, 134, 255, 0.1);
-    color: var(--primary-color);
+    background-color: rgba(30, 66, 159, 0.2);
+    color: var(--text-color);
     border-left: 3px solid var(--primary-color);
 }
 
@@ -295,7 +304,7 @@ body {
 
 .accordion-button:not(.collapsed) {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--text-color);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -319,18 +328,16 @@ body {
     font-weight: 500;
     border-radius: 4px;
     font-size: 0.8rem;
-    background-color: var(--accent-color);
-    color: white;
 }
 
 .badge.bg-info {
-    background-color: var(--accent-color) !important;
+    background-color: var(--primary-color) !important;
     color: white;
 }
 
 .badge.bg-secondary {
     background-color: var(--secondary-color) !important;
-    color: white;
+    color: var(--text-color);
 }
 
 /* Alert styling */
@@ -339,24 +346,22 @@ body {
     border: 1px solid var(--border-color);
     padding: 1rem;
     background-color: var(--card-bg);
+    color: var(--text-color);
 }
 
 .alert-success {
     border-left: 4px solid var(--success-color);
-    color: var(--text-color);
-    background-color: rgba(76, 201, 160, 0.05);
+    background-color: rgba(46, 143, 103, 0.15);
 }
 
 .alert-danger {
     border-left: 4px solid var(--danger-color);
-    color: var(--text-color);
-    background-color: rgba(239, 71, 111, 0.05);
+    background-color: rgba(184, 46, 76, 0.15);
 }
 
-.alert-secondary {
-    border-left: 4px solid var(--accent-color);
-    color: var(--text-color);
-    background-color: rgba(72, 149, 239, 0.05);
+.alert-info {
+    border-left: 4px solid var(--primary-color);
+    background-color: rgba(30, 66, 159, 0.15);
 }
 
 /* Form controls */
@@ -372,7 +377,7 @@ body {
 .form-control:focus {
     background-color: rgba(255, 255, 255, 0.08);
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.25);
+    box-shadow: 0 0 0 2px rgba(30, 66, 159, 0.25);
     color: var(--text-color);
 }
 
@@ -434,7 +439,7 @@ body {
 
 .summary-label {
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--text-color);
     margin-bottom: 0.5rem;
 }
 
@@ -453,7 +458,7 @@ body {
 }
 
 .text-info {
-    color: var(--accent-color) !important;
+    color: var(--text-color) !important;
 }
 
 .bg-info {
@@ -466,13 +471,18 @@ body {
 
 /* Code blocks */
 pre {
-    background-color: #1a1e2d;
+    background-color: #10141e;
     border-radius: var(--border-radius);
     border-left: 4px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+pre code {
+    color: #8ed18e;
 }
 
 code {
-    color: #4cc9a0;
+    color: #8ed18e;
 }
 
 /* Responsive adjustments */

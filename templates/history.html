@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia przetworzonych plików - Proces Dokumentów Finansowych</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-file-invoice-dollar"></i> Proces Dokumentów Finansowych
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/info">Dokumentacja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logs">Historia logów</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/history">Historia przetwarzania</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <h2><i class="fas fa-history me-2"></i>Historia przetworzonych plików</h2>
+                <p class="lead">Poniżej znajduje się lista wszystkich przetworzonych dokumentów wraz ze szczegółami operacji.</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary">
+                        <h4 class="mb-0">Lista przetworzonych plików</h4>
+                    </div>
+                    <div class="card-body">
+                        {% if processed_files %}
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Data przetwarzania</th>
+                                            <th>Nazwa pliku</th>
+                                            <th>Typ dokumentu</th>
+                                            <th>Czas przetwarzania (ms)</th>
+                                            <th>Akcje</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for file in processed_files %}
+                                            <tr>
+                                                <td>{{ file.processing_date.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                                                <td>{{ file.original_filename }}</td>
+                                                <td>
+                                                    {% if file.file_type == 'bank' %}
+                                                        <span class="badge bg-info">Bank</span>
+                                                    {% elif file.file_type == 'vat' %}
+                                                        <span class="badge bg-info">VAT</span>
+                                                    {% elif file.file_type == 'kasa' %}
+                                                        <span class="badge bg-info">Kasa</span>
+                                                    {% else %}
+                                                        <span class="badge bg-secondary">{{ file.file_type }}</span>
+                                                    {% endif %}
+                                                </td>
+                                                <td>{{ "%.2f"|format(file.processing_time) }}</td>
+                                                <td>
+                                                    <a href="{{ url_for('download_file', filename=file.processed_filename) }}" class="btn btn-sm btn-primary bg-primary">
+                                                        <i class="fas fa-download me-1"></i> Pobierz
+                                                    </a>
+                                                    <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#detailsModal{{ file.id }}">
+                                                        <i class="fas fa-search me-1"></i> Szczegóły
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            
+                                            <!-- Details Modal -->
+                                            <div class="modal fade" id="detailsModal{{ file.id }}" tabindex="-1" aria-labelledby="detailsModalLabel{{ file.id }}" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="detailsModalLabel{{ file.id }}">Szczegóły przetwarzania - {{ file.original_filename }}</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <h6>Podstawowe informacje:</h6>
+                                                            <div class="row mb-3">
+                                                                <div class="col-md-6">
+                                                                    <p><strong>ID:</strong> {{ file.id }}</p>
+                                                                    <p><strong>Nazwa oryginalna:</strong> {{ file.original_filename }}</p>
+                                                                    <p><strong>Nazwa przetworzonego pliku:</strong> {{ file.processed_filename }}</p>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <p><strong>Typ dokumentu:</strong> {{ file.file_type }}</p>
+                                                                    <p><strong>Data przetwarzania:</strong> {{ file.processing_date.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+                                                                    <p><strong>Czas przetwarzania:</strong> {{ "%.2f"|format(file.processing_time) }} ms</p>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <h6>Wykonane zmiany:</h6>
+                                                            <div class="p-3 border rounded bg-dark">
+                                                                <pre class="mb-0"><code>{{ file.changes|tojson(indent=2) }}</code></pre>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+                                                            <a href="{{ url_for('download_file', filename=file.processed_filename) }}" class="btn btn-primary bg-primary">
+                                                                <i class="fas fa-download me-1"></i> Pobierz plik
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i> Brak przetworzonych plików w historii. Przetwórz pliki, aby zobaczyć je w historii.
+                            </div>
+                            <div class="text-center mt-4">
+                                <a href="/" class="btn btn-primary bg-primary">
+                                    <i class="fas fa-arrow-left me-2"></i>Wróć do przetwarzania plików
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Proces Dokumentów Finansowych</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

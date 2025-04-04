@@ -3,9 +3,9 @@ import logging
 from datetime import datetime
 from flask import Flask, render_template, request, jsonify, send_file, redirect, url_for
 import processor
-
-app = Flask(__name__)
-app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key")
+from processor import detect_file_type
+from models import db, ProcessedFile
+from main import app
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -45,16 +45,20 @@ def upload_file():
                 file.save(temp_filename)
                 
                 # Determine file type
-                file_type = 'unknown'
-                if 'bank' in file.filename.lower():
-                    file_type = 'bank'
-                elif 'vat' in file.filename.lower():
-                    file_type = 'vat'
-                elif 'zak' in file.filename.lower() or 'kasa' in file.filename.lower():
-                    file_type = 'kasa'
+                file_type = detect_file_type(file.filename)
                 
                 # Process the file
                 result = processor.process_file(temp_filename, file_type)
+                
+                # Save to database
+                new_record = ProcessedFile(
+                    original_filename=file.filename,
+                    processed_filename=temp_filename,
+                    file_type=file_type,
+                    processing_time=result['processing_time'],
+                    changes=result['changes']
+                )
+                db.session.add(new_record)
                 
                 batch_results.append({
                     "filename": file.filename,
@@ -62,6 +66,9 @@ def upload_file():
                     "result": result,
                     "temp_filename": temp_filename
                 })
+            
+            # Commit batch records to database
+            db.session.commit()
             
             return jsonify({
                 "success": True,
@@ -82,16 +89,21 @@ def upload_file():
             file.save(temp_filename)
             
             # Determine file type
-            file_type = 'unknown'
-            if 'bank' in file.filename.lower():
-                file_type = 'bank'
-            elif 'vat' in file.filename.lower():
-                file_type = 'vat'
-            elif 'zak' in file.filename.lower() or 'kasa' in file.filename.lower():
-                file_type = 'kasa'
+            file_type = detect_file_type(file.filename)
             
             # Process the file
             result = processor.process_file(temp_filename, file_type)
+            
+            # Save to database
+            new_record = ProcessedFile(
+                original_filename=file.filename,
+                processed_filename=temp_filename,
+                file_type=file_type,
+                processing_time=result['processing_time'],
+                changes=result['changes']
+            )
+            db.session.add(new_record)
+            db.session.commit()
             
             return jsonify({
                 "success": True,
@@ -151,6 +163,12 @@ def cleanup():
     except Exception as e:
         logging.error(f"Error cleaning up file: {str(e)}")
         return jsonify({"success": False, "message": f"Error cleaning up file: {str(e)}"}), 500
+
+@app.route('/history')
+def history():
+    """View history of processed files from database."""
+    processed_files = ProcessedFile.query.order_by(ProcessedFile.processing_date.desc()).all()
+    return render_template('history.html', processed_files=processed_files)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
