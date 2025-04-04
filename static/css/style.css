@@ -1,16 +1,17 @@
-/* Modern, minimalistic custom styles */
+/* Modern, elegant custom styles with tasteful color accents */
 :root {
-    --primary-color: #4a5568;
+    --primary-color: #3a86ff;
+    --primary-hover: #2a75e7;
     --secondary-color: #2d3748;
-    --accent-color: #718096;
-    --success-color: #38a169;
-    --warning-color: #d69e2e;
-    --danger-color: #e53e3e;
-    --dark-bg: #171923;
-    --card-bg: #1e212b;
+    --accent-color: #4895ef;
+    --success-color: #4cc9a0;
+    --warning-color: #ffaa5a;
+    --danger-color: #ef476f;
+    --dark-bg: #1a1d2b;
+    --card-bg: #242736;
     --text-color: #e2e8f0;
     --text-muted: #a0aec0;
-    --border-color: #2d3748;
+    --border-color: #3c4053;
     --border-radius: 8px;
     --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     --transition: all 0.25s ease;
@@ -27,9 +28,9 @@ body {
 /* Navbar styling */
 .navbar {
     padding: 1rem 2rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     background-color: var(--card-bg) !important;
-    border: none;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .navbar-brand {
@@ -49,8 +50,8 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: rgba(58, 134, 255, 0.1);
+    color: var(--primary-color);
 }
 
 /* Card styling */
@@ -72,7 +73,7 @@ body {
 .card-header {
     font-weight: 600;
     background-color: var(--secondary-color);
-    border: none;
+    border-bottom: 2px solid var(--primary-color);
     padding: 1.25rem;
     color: var(--text-color);
 }
@@ -93,33 +94,39 @@ body {
 
 .btn-primary {
     background-color: var(--primary-color);
-    color: var(--text-color);
+    color: white;
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-hover);
     transform: translateY(-2px);
 }
 
 .btn-success {
     background-color: var(--success-color);
-    color: var(--text-color);
+    color: white;
 }
 
-.btn-info {
+.btn-outline-secondary {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    background-color: transparent;
+}
+
+.btn-outline-secondary:hover {
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: white;
 }
 
 .btn-outline-primary {
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
     background-color: transparent;
 }
 
 .btn-outline-primary:hover {
     background-color: var(--primary-color);
-    color: var(--text-color);
+    color: white;
 }
 
 /* Footer styling */
@@ -128,6 +135,7 @@ body {
     color: var(--text-muted);
     padding: 2rem 0;
     margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
 }
 
 /* File upload styling */
@@ -138,21 +146,21 @@ body {
     justify-content: center;
     padding: 2rem;
     text-align: center;
-    border: 2px dashed var(--border-color);
+    border: 2px dashed var(--accent-color);
     border-radius: var(--border-radius);
     cursor: pointer;
     margin-bottom: 1.5rem;
     transition: var(--transition);
-    background-color: rgba(255, 255, 255, 0.02);
+    background-color: rgba(72, 149, 239, 0.05);
 }
 
 .custom-file-upload:hover {
-    border-color: var(--accent-color);
-    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary-color);
+    background-color: rgba(58, 134, 255, 0.1);
 }
 
 .custom-file-upload input[type="file"] {
-    margin-bottom: 1rem;
+    margin-bottom: i 1rem;
 }
 
 /* Info cards styling */
@@ -169,7 +177,7 @@ body {
 
 .info-card:hover {
     transform: translateY(-3px);
-    border-color: var(--accent-color);
+    border-color: var(--primary-color);
 }
 
 .info-card:before {
@@ -177,15 +185,15 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 5px;
+    width: 4px;
     height: 100%;
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
 }
 
 .info-icon {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 /* Tabs styling */
@@ -206,15 +214,15 @@ body {
 }
 
 .nav-tabs .nav-link:hover {
-    color: var(--text-color);
-    background-color: rgba(255, 255, 255, 0.05);
-    border-bottom: 2px solid var(--accent-color);
+    color: var(--primary-color);
+    background-color: rgba(58, 134, 255, 0.05);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .nav-tabs .nav-link.active {
-    color: var(--text-color);
+    color: var(--primary-color);
     background-color: var(--card-bg);
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .tab-content {
@@ -253,14 +261,14 @@ body {
 }
 
 .log-item:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: rgba(58, 134, 255, 0.05);
+    color: var(--primary-color);
 }
 
 .log-item.active {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    border-left: 3px solid var(--accent-color);
+    background-color: rgba(58, 134, 255, 0.1);
+    color: var(--primary-color);
+    border-left: 3px solid var(--primary-color);
 }
 
 .log-entry {
@@ -287,13 +295,13 @@ body {
 
 .accordion-button:not(.collapsed) {
     background-color: var(--secondary-color);
-    color: var(--text-color);
+    color: var(--primary-color);
     border-bottom: 1px solid var(--border-color);
 }
 
 .accordion-button:focus {
     box-shadow: none;
-    border-color: var(--accent-color);
+    border-color: var(--primary-color);
 }
 
 .accordion-button::after {
@@ -311,18 +319,18 @@ body {
     font-weight: 500;
     border-radius: 4px;
     font-size: 0.8rem;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: var(--accent-color);
+    color: white;
 }
 
 .badge.bg-info {
-    background-color: var(--secondary-color) !important;
-    color: var(--text-color);
+    background-color: var(--accent-color) !important;
+    color: white;
 }
 
 .badge.bg-secondary {
-    background-color: var(--accent-color) !important;
-    color: var(--text-color);
+    background-color: var(--secondary-color) !important;
+    color: white;
 }
 
 /* Alert styling */
@@ -336,16 +344,19 @@ body {
 .alert-success {
     border-left: 4px solid var(--success-color);
     color: var(--text-color);
+    background-color: rgba(76, 201, 160, 0.05);
 }
 
 .alert-danger {
     border-left: 4px solid var(--danger-color);
     color: var(--text-color);
+    background-color: rgba(239, 71, 111, 0.05);
 }
 
-.alert-info {
+.alert-secondary {
     border-left: 4px solid var(--accent-color);
     color: var(--text-color);
+    background-color: rgba(72, 149, 239, 0.05);
 }
 
 /* Form controls */
@@ -360,8 +371,8 @@ body {
 
 .form-control:focus {
     background-color: rgba(255, 255, 255, 0.08);
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 2px rgba(113, 128, 150, 0.25);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.25);
     color: var(--text-color);
 }
 
@@ -397,7 +408,7 @@ body {
 .spinner-border {
     width: 3rem;
     height: 3rem;
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 /* Results summary container */
@@ -423,7 +434,7 @@ body {
 
 .summary-label {
     font-weight: 600;
-    color: var(--text-muted);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
@@ -451,6 +462,17 @@ body {
 
 .text-muted {
     color: var(--text-muted) !important;
+}
+
+/* Code blocks */
+pre {
+    background-color: #1a1e2d;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+}
+
+code {
+    color: #4cc9a0;
 }
 
 /* Responsive adjustments */

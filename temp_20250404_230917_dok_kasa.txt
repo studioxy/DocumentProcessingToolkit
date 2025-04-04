@@ -1,0 +1,1211 @@
+INFO{
+	Nazwa programu ="TO-FI"
+	Wersja_prgramu =ver. 29.11.2020 (Harbour)
+	Wersja szablonu =3.1
+	dane_z_oddzialu =3
+	Kontrahent{
+		id =
+		kod =
+		nazwa =Pryzmat Szczecin
+		miejscowosc =Szczecin
+		ulica =ul. Rydla 51j
+		dom =
+		lokal =
+		kodpocz =70-783
+		rejon =
+		nip =
+		tel1 =091/46 45 130                                                         
+		tel2 =
+		fax =
+		email =
+		www =
+	}
+}
+Kontrahent{
+	id =942031
+	kod =GRZEGORZ HOM
+	nazwa =GRZEGORZ HOM
+	miejscowosc =SZCZECIN
+	ulica =OFIAR OSWIECIMIA 4/18
+	dom =
+	lokal =
+	kodpocz =71-503
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =KW0114/R/24 
+	opis =F 9850K3/7579/24 ZS 977HX
+	data =2024-09-23
+	datasp =2024-09-23
+	kwota =255.12
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0114/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =255.12
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0114/R/24 
+		NumerDok =KW0114/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-23
+	}
+	Zapis{
+		strona=MA
+		kwota =255.12
+		konto =100-3
+		IdDlaRozliczen =2
+		opis =KW0114/R/24 
+		NumerDok =KW0114/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-23
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0114/R/24 
+		obGUID =
+		kwota =255.12
+	}
+}
+Kontrahent{
+	id =941646
+	kod =CARREFOUR POLSKA SP. Z O.O.
+	nazwa =CARREFOUR POLSKA SP. Z O.O.
+	miejscowosc =WARSZAWA
+	ulica =UL. TARGOWA 72
+	dom =
+	lokal =
+	kodpocz =03-734
+	nip =937-00-08-168 
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =KW0115/R/24 
+	opis =Zaplata za rachunek 6262/172/24
+	data =2024-09-23
+	datasp =2024-09-23
+	kwota =507.01
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0115/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =507.01
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0115/R/24 
+		NumerDok =KW0115/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-23
+	}
+	Zapis{
+		strona=MA
+		kwota =507.01
+		konto =100-3
+		IdDlaRozliczen =2
+		opis =KW0115/R/24 
+		NumerDok =KW0115/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-23
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =6262/172/24 
+		obGUID =
+		kwota =507.01
+	}
+}
+Kontrahent{
+	id =999999
+	kod =Skup indywidulany
+	nazwa =Skup indywidulany
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =S0153/R/24  
+	opis =Wyplata za skup S0153/R/24
+	data =2024-09-23
+	datasp =2024-09-23
+	kwota =50.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0153/R/24  
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =50.00
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0153/R/24  
+		NumerDok =S0153/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-23
+	}
+	Zapis{
+		strona=MA
+		kwota =50.00
+		konto =100-3
+		IdDlaRozliczen =2
+		opis =S0153/R/24  
+		NumerDok =S0153/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-23
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0153/R/24  
+		obGUID =
+		kwota =50.00
+	}
+}
+Kontrahent{
+	id =999999
+	kod =Skup indywidulany
+	nazwa =Skup indywidulany
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =S0154/R/24  
+	opis =Wyplata za skup S0154/R/24
+	data =2024-09-23
+	datasp =2024-09-23
+	kwota =104.50
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0154/R/24  
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =104.50
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0154/R/24  
+		NumerDok =S0154/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-23
+	}
+	Zapis{
+		strona=MA
+		kwota =104.50
+		konto =100-3
+		IdDlaRozliczen =2
+		opis =S0154/R/24  
+		NumerDok =S0154/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-23
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0154/R/24  
+		obGUID =
+		kwota =104.50
+	}
+}
+Kontrahent{
+	id =999999
+	kod =Skup indywidulany
+	nazwa =Skup indywidulany
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =S0155/R/24  
+	opis =Wyplata za skup S0155/R/24
+	data =2024-09-23
+	datasp =2024-09-23
+	kwota =10.70
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0155/R/24  
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =10.70
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0155/R/24  
+		NumerDok =S0155/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-23
+	}
+	Zapis{
+		strona=MA
+		kwota =10.70
+		konto =100-3
+		IdDlaRozliczen =2
+		opis =S0155/R/24  
+		NumerDok =S0155/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-23
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0155/R/24  
+		obGUID =
+		kwota =10.70
+	}
+}
+Kontrahent{
+	id =047117
+	kod =TOWARZYSTWO PRZYJACIOL DZIECI
+	nazwa =TOWARZYSTWO PRZYJACIOL DZIECI ZACHODNIOPOMORSKI ODDZIAL REGIONALNY
+	miejscowosc =SZCZECIN
+	ulica =AL.PAPIEZA JANA PAWLAII 42/U9
+	dom =
+	lokal =
+	kodpocz =70-415
+	nip =8512805432    
+	tel1 =OSIEDLE KASZTANOWE 85D        
+	tel2 =
+	fax =PRZEDSZKOLE SùNECZKO          
+	}
+Dokument{
+	symbol FK =RK3
+	kod =F41838/R/24 
+	opis =Faktura platna gotowka
+	data =2024-09-24
+	datasp =2024-09-24
+	kwota =118.23
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F41838/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =118.23
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =F41838/R/24 
+		NumerDok =F41838/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-24
+	}
+	Zapis{
+		strona=MA
+		kwota =118.23
+		konto =201-2-1-047117
+		IdDlaRozliczen =2
+		opis =F41838/R/24 
+		NumerDok =F41838/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-24
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F41838/R/24 
+		obGUID =
+		kwota =118.23
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =44                            
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =P0924/03952 
+	opis =Paragon fiskalny
+	data =2024-09-24
+	datasp =2024-09-24
+	kwota =86.40
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0924/03952 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =86.40
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =P0924/03952 
+		NumerDok =P0924/03952 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-24
+	}
+	Zapis{
+		strona=MA
+		kwota =86.40
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0924/03952 
+		NumerDok =P0924/03952 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-24
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0924/03952 
+		obGUID =
+		kwota =86.40
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =44                            
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =P0924/03953 
+	opis =Paragon fiskalny
+	data =2024-09-24
+	datasp =2024-09-24
+	kwota =186.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0924/03953 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =186.00
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =P0924/03953 
+		NumerDok =P0924/03953 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-24
+	}
+	Zapis{
+		strona=MA
+		kwota =186.00
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0924/03953 
+		NumerDok =P0924/03953 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-24
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0924/03953 
+		obGUID =
+		kwota =186.00
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =44                            
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =P0924/03954 
+	opis =Paragon fiskalny
+	data =2024-09-24
+	datasp =2024-09-24
+	kwota =76.80
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0924/03954 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =76.80
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =P0924/03954 
+		NumerDok =P0924/03954 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-24
+	}
+	Zapis{
+		strona=MA
+		kwota =76.80
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0924/03954 
+		NumerDok =P0924/03954 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-24
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0924/03954 
+		obGUID =
+		kwota =76.80
+	}
+}
+Kontrahent{
+	id =044042
+	kod =HYDRAULIK JACEK KUSTRA
+	nazwa =PPUH HYDRAULIK JACEK KUSTRA
+	miejscowosc =PRZELEWICE
+	ulica =KLODZINO 39
+	dom =
+	lokal =
+	kodpocz =74-210
+	nip =853-114-52-50 
+	tel1 =577-14-24                     
+	tel2 =
+	fax =Sàoneczna 6a starg.           
+	}
+Dokument{
+	symbol FK =RK3
+	kod =F41842/R/24 
+	opis =Faktura platna gotowka
+	data =2024-09-25
+	datasp =2024-09-25
+	kwota =337.72
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F41842/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =337.72
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =F41842/R/24 
+		NumerDok =F41842/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Zapis{
+		strona=MA
+		kwota =337.72
+		konto =201-2-1-044042
+		IdDlaRozliczen =2
+		opis =F41842/R/24 
+		NumerDok =F41842/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F41842/R/24 
+		obGUID =
+		kwota =337.72
+	}
+}
+Kontrahent{
+	id =040915
+	kod =SERWIS OPON
+	nazwa =P.H.U. SERWIS OPON WOJCIECH ZALESKI
+	miejscowosc =SZCZECIN
+	ulica =GRYFINSKA 90
+	dom =
+	lokal =
+	kodpocz =70-772
+	nip =955-102-73-24 
+	tel1 =46-15-708                     
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =KP0020/R/24 
+	opis =Naleznosc za fakture F41460/R/24
+	data =2024-09-25
+	datasp =2024-09-25
+	kwota =198.76
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KP0020/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =198.76
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =KP0020/R/24 
+		NumerDok =KP0020/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Zapis{
+		strona=MA
+		kwota =198.76
+		konto =201-2-1-040915
+		IdDlaRozliczen =2
+		opis =KP0020/R/24 
+		NumerDok =KP0020/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F41460/R/24 
+		obGUID =
+		kwota =198.76
+	}
+}
+Kontrahent{
+	id =043929
+	kod =ZWIAZEK EMERYTOW I RENCISTOW O
+	nazwa =ZWIAZEK EMERYTOW I RENCISTOW ODDZIAL REJONOWY POLSKIEGO ZWIAZKU EMERYTOW RENCISTOW I INWALIDOW
+	miejscowosc =SZCZECIN
+	ulica =UL. GRYFINSKA 151
+	dom =
+	lokal =
+	kodpocz =70-806
+	nip =955-23-04-671 
+	tel1 =.                             
+	tel2 =
+	fax =BZ1409                        
+	}
+Dokument{
+	symbol FK =RK3
+	kod =F41847/R/24 
+	opis =Faktura platna gotowka
+	data =2024-09-25
+	datasp =2024-09-25
+	kwota =201.73
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F41847/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =201.73
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =F41847/R/24 
+		NumerDok =F41847/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Zapis{
+		strona=MA
+		kwota =201.73
+		konto =201-2-1-043929
+		IdDlaRozliczen =2
+		opis =F41847/R/24 
+		NumerDok =F41847/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F41847/R/24 
+		obGUID =
+		kwota =201.73
+	}
+}
+Kontrahent{
+	id =999999
+	kod =Skup indywidulany
+	nazwa =Skup indywidulany
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =S0156/R/24  
+	opis =Wyplata za skup S0156/R/24
+	data =2024-09-25
+	datasp =2024-09-25
+	kwota =131.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0156/R/24  
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =131.00
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0156/R/24  
+		NumerDok =S0156/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Zapis{
+		strona=MA
+		kwota =131.00
+		konto =100-3
+		IdDlaRozliczen =2
+		opis =S0156/R/24  
+		NumerDok =S0156/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0156/R/24  
+		obGUID =
+		kwota =131.00
+	}
+}
+Kontrahent{
+	id =999999
+	kod =Skup indywidulany
+	nazwa =Skup indywidulany
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =S0157/R/24  
+	opis =Wyplata za skup S0157/R/24
+	data =2024-09-25
+	datasp =2024-09-25
+	kwota =39.30
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0157/R/24  
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =39.30
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0157/R/24  
+		NumerDok =S0157/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Zapis{
+		strona=MA
+		kwota =39.30
+		konto =100-3
+		IdDlaRozliczen =2
+		opis =S0157/R/24  
+		NumerDok =S0157/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0157/R/24  
+		obGUID =
+		kwota =39.30
+	}
+}
+Kontrahent{
+	id =046667
+	kod =AGROMA SA
+	nazwa =PHSR AGROMA SA
+	miejscowosc =SZCZECIN
+	ulica =LETNIA 12
+	dom =
+	lokal =
+	kodpocz =70-813
+	nip =8510012377    
+	tel1 =797-197-220                   
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =F41848/R/24 
+	opis =Faktura platna gotowka
+	data =2024-09-25
+	datasp =2024-09-25
+	kwota =226.07
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F41848/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =226.07
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =F41848/R/24 
+		NumerDok =F41848/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Zapis{
+		strona=MA
+		kwota =226.07
+		konto =201-2-1-046667
+		IdDlaRozliczen =2
+		opis =F41848/R/24 
+		NumerDok =F41848/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-25
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F41848/R/24 
+		obGUID =
+		kwota =226.07
+	}
+}
+Kontrahent{
+	id =040569
+	kod =MATEK ANETA WOJTALA
+	nazwa =MATEK ANETA WOJTALA
+	miejscowosc =GOLENIOW
+	ulica =UL. KROLA WL. JAGIELLY 10
+	dom =
+	lokal =
+	kodpocz =72-100
+	nip =856-110-58-64 
+	tel1 =91-469-27-11                  
+	tel2 =
+	fax =CZ1419 Goleniowska 13         
+	}
+Dokument{
+	symbol FK =RK3
+	kod =F41857/R/24 
+	opis =Faktura platna gotowka
+	data =2024-09-26
+	datasp =2024-09-26
+	kwota =184.50
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F41857/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =184.50
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =F41857/R/24 
+		NumerDok =F41857/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-26
+	}
+	Zapis{
+		strona=MA
+		kwota =184.50
+		konto =201-2-1-040569
+		IdDlaRozliczen =2
+		opis =F41857/R/24 
+		NumerDok =F41857/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-26
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F41857/R/24 
+		obGUID =
+		kwota =184.50
+	}
+}
+Kontrahent{
+	id =043257
+	kod =ELEKTRA  A.CHILKIEWICZ I M.L
+	nazwa =ELEKTRA  A.CHILKIEWICZ M.LUBOWSKI
+	miejscowosc =GOLENIOW
+	ulica =I BRYGADY LEGIONOW 12/14
+	dom =
+	lokal =
+	kodpocz =72-100
+	nip =856-16-69-839 
+	tel1 =407 30 28                     
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =F41858/R/24 
+	opis =Faktura platna gotowka
+	data =2024-09-26
+	datasp =2024-09-26
+	kwota =211.88
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F41858/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =211.88
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =F41858/R/24 
+		NumerDok =F41858/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-26
+	}
+	Zapis{
+		strona=MA
+		kwota =211.88
+		konto =201-2-1-043257
+		IdDlaRozliczen =2
+		opis =F41858/R/24 
+		NumerDok =F41858/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-26
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F41858/R/24 
+		obGUID =
+		kwota =211.88
+	}
+}
+Kontrahent{
+	id =999999
+	kod =Skup indywidulany
+	nazwa =Skup indywidulany
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =S0158/R/24  
+	opis =Wyplata za skup S0158/R/24
+	data =2024-09-26
+	datasp =2024-09-26
+	kwota =5.60
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0158/R/24  
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =5.60
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0158/R/24  
+		NumerDok =S0158/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-26
+	}
+	Zapis{
+		strona=MA
+		kwota =5.60
+		konto =100-3
+		IdDlaRozliczen =2
+		opis =S0158/R/24  
+		NumerDok =S0158/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-26
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0158/R/24  
+		obGUID =
+		kwota =5.60
+	}
+}
+Kontrahent{
+	id =940003
+	kod =Michal Lacinski
+	nazwa =Michal Lacinski
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =KW0116/R/24 
+	opis =WYPLATA Z KASY
+	data =2024-09-27
+	datasp =2024-09-27
+	kwota =2500.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0116/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =2500.00
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0116/R/24 
+		NumerDok =KW0116/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-27
+	}
+	Zapis{
+		strona=MA
+		kwota =2500.00
+		konto =100-3
+		IdDlaRozliczen =2
+		opis =KW0116/R/24 
+		NumerDok =KW0116/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-27
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0116/R/24 
+		obGUID =
+		kwota =2500.00
+	}
+}
+Kontrahent{
+	id =999999
+	kod =Skup indywidulany
+	nazwa =Skup indywidulany
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =S0159/R/24  
+	opis =Wyplata za skup S0159/R/24
+	data =2024-09-27
+	datasp =2024-09-27
+	kwota =1.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0159/R/24  
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =1.00
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0159/R/24  
+		NumerDok =S0159/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-27
+	}
+	Zapis{
+		strona=MA
+		kwota =1.00
+		konto =100-3
+		IdDlaRozliczen =2
+		opis =S0159/R/24  
+		NumerDok =S0159/R/24  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-27
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0159/R/24  
+		obGUID =
+		kwota =1.00
+	}
+}
+Kontrahent{
+	id =044590
+	kod =MARIA SIKORA
+	nazwa =MARIA SIKORA
+	miejscowosc =GRYFINO
+	ulica =FLISACZA 23/2
+	dom =
+	lokal =
+	kodpocz =74-100
+	nip =858-130-28-00 
+	tel1 =518-257-301                   
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK3
+	kod =F41867/R/24 
+	opis =Faktura platna gotowka
+	data =2024-09-30
+	datasp =2024-09-30
+	kwota =341.83
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F41867/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =341.83
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =F41867/R/24 
+		NumerDok =F41867/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-30
+	}
+	Zapis{
+		strona=MA
+		kwota =341.83
+		konto =201-2-1-044590
+		IdDlaRozliczen =2
+		opis =F41867/R/24 
+		NumerDok =F41867/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-30
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F41867/R/24 
+		obGUID =
+		kwota =341.83
+	}
+}
+Kontrahent{
+	id =041203
+	kod =CREO
+	nazwa =CREO
+	miejscowosc =Gryfino
+	ulica =Asnyka 37/4
+	dom =
+	lokal =
+	kodpocz =74-100
+	nip =858-142-04-97 
+	tel1 =504 203 222                   
+	tel2 =
+	fax =Armii Krajowej 39             
+	}
+Dokument{
+	symbol FK =RK3
+	kod =F41868/R/24 
+	opis =Faktura platna gotowka
+	data =2024-09-30
+	datasp =2024-09-30
+	kwota =232.47
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F41868/R/24 
+	opis FK =rejestr KASA za dzien 2024-10-01
+	Zapis{
+		strona=WN
+		kwota =232.47
+		konto =100-3
+		IdDlaRozliczen =1
+		opis =F41868/R/24 
+		NumerDok =F41868/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-30
+	}
+	Zapis{
+		strona=MA
+		kwota =232.47
+		konto =201-2-1-041203
+		IdDlaRozliczen =2
+		opis =F41868/R/24 
+		NumerDok =F41868/R/24 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2024-09-30
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F41868/R/24 
+		obGUID =
+		kwota =232.47
+	}
+}
