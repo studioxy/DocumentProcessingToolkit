@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia logów - Proces Dokumentów Finansowych</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-file-invoice-dollar"></i> Proces Dokumentów Finansowych
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/logs">Historia logów</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2><i class="fas fa-history me-2"></i>Historia logów przetwarzania</h2>
+                    <a href="/" class="btn btn-primary">
+                        <i class="fas fa-arrow-left me-2"></i>Powrót do przetwarzania
+                    </a>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Log List Sidebar -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Pliki logów</h5>
+                    </div>
+                    <div class="card-body p-0 log-sidebar" id="logsList">
+                        {% if log_files %}
+                            {% for log_file in log_files %}
+                                <div class="log-item" id="log-{{ log_file }}" onclick="loadLogContent('{{ log_file }}')">
+                                    <i class="fas fa-file-alt me-2"></i>
+                                    {{ log_file }}
+                                    <small class="d-block text-muted">
+                                        {{ log_file[8:16] }}-{{ log_file[17:23] }}
+                                    </small>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="p-3 text-center">
+                                <p>Brak plików logów</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Log Content Display -->
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Zawartość pliku log</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="log-content" id="logContent">
+                            {% if log_files %}
+                                <div class="text-center my-5">
+                                    <i class="fas fa-arrow-left fa-3x mb-3 text-muted"></i>
+                                    <p>Wybierz plik logu z listy po lewej stronie, aby zobaczyć jego zawartość</p>
+                                </div>
+                            {% else %}
+                                <div class="text-center my-5">
+                                    <i class="fas fa-exclamation-circle fa-3x mb-3 text-warning"></i>
+                                    <p>Brak dostępnych plików logów</p>
+                                    <a href="/" class="btn btn-primary mt-3">
+                                        Wróć do przetwarzania plików
+                                    </a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Proces Dokumentów Finansowych</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

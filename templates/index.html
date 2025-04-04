@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proces Dokumentów Finansowych</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-file-invoice-dollar"></i> Proces Dokumentów Finansowych
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logs">Historia logów</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0"><i class="fas fa-upload me-2"></i>Przetwarzanie dokumentów finansowych</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- Alert Container -->
+                        <div id="alertContainer"></div>
+
+                        <!-- File Upload Form -->
+                        <form id="uploadForm" enctype="multipart/form-data">
+                            <div class="mb-4">
+                                <label for="fileInput" class="form-label">Wybierz plik do przetworzenia</label>
+                                <div class="custom-file-upload">
+                                    <input type="file" class="form-control" id="fileInput" accept=".txt">
+                                    <p class="mt-3 mb-0 text-muted">
+                                        <i class="fas fa-info-circle me-1"></i>
+                                        Obsługiwane formaty: dokumenty bankowe, VAT, kasa/zakupy (.txt)
+                                    </p>
+                                </div>
+                                <div id="fileTypeDisplay" class="mt-2 text-info"></div>
+                            </div>
+                            
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-cogs me-2"></i>Przetwórz plik
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Loading Spinner -->
+                        <div id="loadingSpinner" class="text-center my-5 d-none">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Przetwarzanie...</span>
+                            </div>
+                            <p class="mt-3">Przetwarzanie pliku, proszę czekać...</p>
+                        </div>
+
+                        <!-- Results Container -->
+                        <div id="resultContainer" class="mt-4 d-none">
+                            <div class="alert alert-success">
+                                <h5><i class="fas fa-check-circle me-2"></i>Plik został przetworzony pomyślnie!</h5>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header bg-info text-white">
+                                    <h5 class="mb-0">Informacje o przetworzonym pliku</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p><strong>Nazwa pliku:</strong> <span id="processedFilename"></span></p>
+                                            <p><strong>Typ dokumentu:</strong> <span id="processedFiletype"></span></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p><strong>Czas przetwarzania:</strong> <span id="processingTime"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-info text-white">
+                                    <h5 class="mb-0">Szczegółowe wyniki</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div id="detailedResults"></div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center gap-3">
+                                <a id="downloadBtn" href="#" class="btn btn-success d-none">
+                                    <i class="fas fa-download me-2"></i>Pobierz przetworzony plik
+                                </a>
+                                <a id="viewLogBtn" href="/logs" class="btn btn-info d-none">
+                                    <i class="fas fa-list me-2"></i>Zobacz logi przetwarzania
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="row mt-5">
+                    <h4 class="mb-4">Typy przetwarzanych dokumentów</h4>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="card info-card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-university info-icon"></i>
+                                <h5 class="card-title">Dokumenty bankowe</h5>
+                                <p class="card-text">Przetwarzanie dokumentów bankowych:</p>
+                                <ul class="text-start">
+                                    <li>Zmiana konta 202-2-1-900102 na 131-5</li>
+                                    <li>Zmiana dat na poprzedni dzień roboczy</li>
+                                    <li>Zmiana konta 9 na 0</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="card info-card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-file-invoice info-icon"></i>
+                                <h5 class="card-title">Dokumenty VAT</h5>
+                                <p class="card-text">Przetwarzanie dokumentów VAT:</p>
+                                <ul class="text-start">
+                                    <li>Zmiana kont 731-1, 731-3, 731-4</li>
+                                    <li>Zmiana okresu na ostatni dzień poprzedniego miesiąca</li>
+                                    <li>Warunek: kwota > 0</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="card info-card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-cash-register info-icon"></i>
+                                <h5 class="card-title">Dokumenty kasowe</h5>
+                                <p class="card-text">Przetwarzanie dokumentów kasowych:</p>
+                                <ul class="text-start">
+                                    <li>Zmiana konta 9 na 0</li>
+                                    <li>Dotyczy kont 201-2-1-9 i 202-2-1-9</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Proces Dokumentów Finansowych</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
