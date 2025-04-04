@@ -15,10 +15,13 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="/">
-                <i class="fas fa-file-invoice-dollar"></i> Proces Dokumentów Finansowych
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <div class="brand-icon-container me-2">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <span class="brand-text">Proces<span class="text-accent">Fin</span></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,19 +29,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">Strona główna</a>
+                        <a class="nav-link active" href="/"><i class="fas fa-home me-1"></i> Strona główna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/info">Dokumentacja</a>
+                        <a class="nav-link" href="/info"><i class="fas fa-book me-1"></i> Dokumentacja</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/logs">Historia logów</a>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/history">Historia przetwarzania</a>
-                    </li>
+                        <a class="nav-link" href="/logs"><i class="fas fa-clipboard-list me-1"></i> Logi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/history">Historia przetwarzania</a>
+                        <a class="nav-link" href="/history"><i class="fas fa-history me-1"></i> Historia</a>
                     </li>
                 </ul>
             </div>
@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-primary">
+                    <div class="card-header bg-gradient">
                         <h4 class="mb-0"><i class="fas fa-upload me-2"></i>Przetwarzanie dokumentów finansowych</h4>
                     </div>
                     <div class="card-body">
@@ -127,7 +127,7 @@
                             </div>
                             
                             <div class="card mb-4">
-                                <div class="card-header bg-primary">
+                                <div class="card-header bg-gradient">
                                     <h5 class="mb-0">Informacje o przetworzonym pliku</h5>
                                 </div>
                                 <div class="card-body">
@@ -144,7 +144,7 @@
                             </div>
 
                             <div class="card mb-4">
-                                <div class="card-header bg-primary">
+                                <div class="card-header bg-gradient">
                                     <h5 class="mb-0">Podsumowanie zmian</h5>
                                 </div>
                                 <div class="card-body">
@@ -169,7 +169,7 @@
                             </div>
 
                             <div class="card mb-4">
-                                <div class="card-header bg-primary">
+                                <div class="card-header bg-gradient">
                                     <h5 class="mb-0">Podsumowanie przetworzonych plików</h5>
                                 </div>
                                 <div class="card-body">
