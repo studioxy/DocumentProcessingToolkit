@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pl" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szczegóły przetwarzania - Proces Dokumentów Finansowych</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-file-invoice-dollar"></i> Proces Dokumentów Finansowych
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/info">Dokumentacja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logs">Historia logów</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <h2><i class="fas fa-info-circle me-2"></i>Szczegółowa dokumentacja przetwarzania</h2>
+                <p class="lead">Poniżej znajduje się dokładny opis logiki transformacji dla każdego typu dokumentu finansowego.</p>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="bank-tab" data-bs-toggle="tab" data-bs-target="#bank" type="button" role="tab" aria-controls="bank" aria-selected="true">
+                    <i class="fas fa-university me-2"></i>Dokumenty bankowe
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="vat-tab" data-bs-toggle="tab" data-bs-target="#vat" type="button" role="tab" aria-controls="vat" aria-selected="false">
+                    <i class="fas fa-file-invoice me-2"></i>Dokumenty VAT
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="kasa-tab" data-bs-toggle="tab" data-bs-target="#kasa" type="button" role="tab" aria-controls="kasa" aria-selected="false">
+                    <i class="fas fa-cash-register me-2"></i>Dokumenty kasowe
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="algorithm-tab" data-bs-toggle="tab" data-bs-target="#algorithm" type="button" role="tab" aria-controls="algorithm" aria-selected="false">
+                    <i class="fas fa-code me-2"></i>Algorytmy przetwarzania
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab contents -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Bank documents tab -->
+            <div class="tab-pane fade show active" id="bank" role="tabpanel" aria-labelledby="bank-tab">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Dokumenty bankowe - szczegóły transformacji</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5>Wykonywane zmiany:</h5>
+                        
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-exchange-alt me-2"></i>Zamiana konta 202-2-1-900102 na 131-5</h6>
+                            <p>Każda linia zawierająca ciąg <code>konto =202-2-1-900102</code> jest zmieniana poprzez zastąpienie <code>202-2-1-900102</code> na <code>131-5</code>.</p>
+                            <pre class="bg-dark text-light p-2 rounded"><code>Przed: konto =202-2-1-900102
+Po: konto =131-5</code></pre>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-calendar-alt me-2"></i>Zmiana dat na poprzedni dzień roboczy</h6>
+                            <p>Wszystkie daty znajdujące się w liniach zawierających słowa kluczowe <code>data =</code>, <code>datasp =</code> lub <code>dataKPKW =</code> są zmieniane na poprzedni dzień roboczy.</p>
+                            <p>Algorytm wyliczania poprzedniego dnia roboczego:</p>
+                            <ol>
+                                <li>Odejmij jeden dzień od aktualnej daty</li>
+                                <li>Jeśli otrzymany dzień to sobota (dzień tygodnia = 5) lub niedziela (dzień tygodnia = 6), odejmuj kolejne dni, aż otrzymasz dzień roboczy (poniedziałek-piątek)</li>
+                            </ol>
+                            <pre class="bg-dark text-light p-2 rounded"><code>Przed: data = 2023-05-15
+Po: data = 2023-05-12 (jeśli 15.05 to poniedziałek, to poprzedni dzień roboczy to piątek 12.05)</code></pre>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-exchange-alt me-2"></i>Zamiana konta 9 na 0</h6>
+                            <p>W liniach zawierających <code>konto =</code>, jeśli występuje fragment <code>201-2-1-9</code> lub <code>202-2-1-9</code>, pierwsza cyfra <code>9</code> jest zmieniana na <code>0</code>.</p>
+                            <pre class="bg-dark text-light p-2 rounded"><code>Przed: konto =201-2-1-9
+Po: konto =201-2-1-0
+
+Przed: konto =202-2-1-9
+Po: konto =202-2-1-0</code></pre>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5>Przykładowy kod przetwarzania:</h5>
+                            <pre class="bg-dark text-light p-2 rounded"><code># Pierwsza pętla - zamiana 'konto =202-2-1-900102' na 'konto =131-5'
+for i, linia in enumerate(linie):
+    if 'konto =202-2-1-900102' in linia:
+        linie[i] = linia.replace('202-2-1-900102', '131-5')
+        zmiany_konto_900102 += 1
+
+# Druga pętla - zamiana dat i zmiana konta
+for i, linia in enumerate(linie):
+    if any(key in linia for key in ['data =', 'datasp =', 'dataKPKW =']):
+        prefix, data_value = linia.split('=', 1)
+        data_value = data_value.strip()
+
+        nowa_data = poprzedni_dzien_roboczy(data_value)
+        linie[i] = f'{prefix}= {nowa_data}\n'
+        zmiany_data += 1
+
+    elif 'konto =' in linia:
+        if '201-2-1-9' in linia or '202-2-1-9' in linia:
+            nowa_wartosc = linia.replace('9', '0', 1)
+            linie[i] = nowa_wartosc
+            zmiany_konto_9 += 1</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VAT documents tab -->
+            <div class="tab-pane fade" id="vat" role="tabpanel" aria-labelledby="vat-tab">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Dokumenty VAT - szczegóły transformacji</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5>Wykonywane zmiany:</h5>
+                        
+                        <div class="alert alert-warning">
+                            <h6><i class="fas fa-exclamation-triangle me-2"></i>Ważne: zmiany są wprowadzane tylko dla dokumentów, gdzie kwota > 0</h6>
+                            <p>Przetwarzanie zmian kont oraz okresów jest wykonywane tylko wtedy, gdy wartość w polu <code>kwota</code> jest większa od zera. Dokumenty z kwotą ≤ 0 są pomijane (niezakwalifikowane przez kwotę).</p>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-exchange-alt me-2"></i>Zamiana kont 731-1, 731-3, 731-4</h6>
+                            <p>W dokumentach z kwotą > 0, drugie wystąpienie linii z <code>konto =</code> jest modyfikowane według poniższych reguł:</p>
+                            <ul>
+                                <li>Jeżeli wartość konta to <code>731-1</code>, jest zmieniane na <code>702-2-3-1</code></li>
+                                <li>Jeżeli wartość konta to <code>731-3</code>, jest zmieniane na <code>702-2-3-3</code></li>
+                                <li>Jeżeli wartość konta to <code>731-4</code>, jest zmieniane na <code>702-2-3-4</code></li>
+                            </ul>
+                            <pre class="bg-dark text-light p-2 rounded"><code>Przed: konto = 731-1
+Po: konto = 702-2-3-1
+
+Przed: konto = 731-3
+Po: konto = 702-2-3-3
+
+Przed: konto = 731-4
+Po: konto = 702-2-3-4</code></pre>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-calendar-alt me-2"></i>Zmiana daty okresu</h6>
+                            <p>W dokumentach z kwotą > 0, data w polu <code>okres =</code> jest zmieniana na ostatni dzień poprzedniego miesiąca.</p>
+                            <p>Algorytm wyliczania ostatniego dnia poprzedniego miesiąca:</p>
+                            <ol>
+                                <li>Wyznacz pierwszy dzień bieżącego miesiąca dla podanej daty</li>
+                                <li>Odejmij jeden dzień, otrzymując ostatni dzień poprzedniego miesiąca</li>
+                            </ol>
+                            <pre class="bg-dark text-light p-2 rounded"><code>Przed: okres = 2023-05-15
+Po: okres = 2023-04-30 (ostatni dzień kwietnia)</code></pre>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5>Przykładowy kod przetwarzania:</h5>
+                            <pre class="bg-dark text-light p-2 rounded"><code>data_value = None
+datasp_value = None
+kwota_value = None
+zmien_drugi_konto = False
+zmien_okres = False
+licznik_konto = 0
+
+for i, linia in enumerate(linie):
+    if 'Dokument{' in linia:
+        # Początek nowego dokumentu, resetuj zmienne
+        data_value = None
+        datasp_value = None
+        kwota_value = None
+        zmien_drugi_konto = False
+        zmien_okres = False
+        licznik_konto = 0
+
+    if 'datasp =' in linia:
+        datasp_value = linia.split('=')[1].strip()
+        licznik_konto = 0  # resetowanie licznika przy nowym dokumencie
+
+    if 'data =' in linia:
+        data_value = linia.split('=')[1].strip()
+
+    if 'kwota =' in linia:
+        try:
+            kwota_value = float(linia.split('=')[1].strip())
+        except ValueError:
+            kwota_value = None
+
+    if kwota_value is not None and kwota_value > 0:
+        zmien_drugi_konto = True
+        zmien_okres = True
+    else:
+        if kwota_value is not None and kwota_value <= 0:
+            niezakwalifikowane_przez_kwote += 1
+
+    if 'konto =' in linia:
+        licznik_konto += 1
+        if zmien_drugi_konto and licznik_konto == 2:
+            konto_pos = linia.find('=') + 1
+            konto_value = linia[konto_pos:].strip()
+            if konto_value == '731-1':
+                linia = linia[:konto_pos] + '702-2-3-1\n'
+            elif konto_value == '731-3':
+                linia = linia[:konto_pos] + '702-2-3-3\n'
+            elif konto_value == '731-4':
+                linia = linia[:konto_pos] + '702-2-3-4\n'
+            linie[i] = linia
+            zmiany_konto_731 += 1
+            zmien_drugi_konto = False
+
+    if zmien_okres and 'okres =' in linia:
+        okres_pos = linia.find('=') + 1
+        data_okresu = linia[okres_pos:].strip()
+        nowa_data_okresu = ostatni_dzien_poprzedniego_miesiaca(data_okresu)
+        linia = linia[:okres_pos] + nowa_data_okresu + '\n'
+        linie[i] = linia
+        zmiany_okres += 1
+        zmien_okres = False</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cash register documents tab -->
+            <div class="tab-pane fade" id="kasa" role="tabpanel" aria-labelledby="kasa-tab">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Dokumenty kasowe - szczegóły transformacji</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5>Wykonywane zmiany:</h5>
+                        
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-exchange-alt me-2"></i>Zamiana konta 9 na 0</h6>
+                            <p>W liniach zawierających <code>konto =</code>, jeśli występuje fragment <code>201-2-1-9</code> lub <code>202-2-1-9</code>, pierwsza cyfra <code>9</code> jest zamieniana na <code>0</code>.</p>
+                            <p>Ta transformacja jest identyczna jak w przypadku dokumentów bankowych.</p>
+                            <pre class="bg-dark text-light p-2 rounded"><code>Przed: konto =201-2-1-9
+Po: konto =201-2-1-0
+
+Przed: konto =202-2-1-9
+Po: konto =202-2-1-0</code></pre>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5>Przykładowy kod przetwarzania:</h5>
+                            <pre class="bg-dark text-light p-2 rounded"><code>for i, linia in enumerate(linie):
+    if 'konto =' in linia and ('201-2-1-9' in linia or '202-2-1-9' in linia):
+        nowa_wartosc = linia.replace('9', '0', 1)
+        linie[i] = nowa_wartosc
+        zmiany_konto_9 += 1</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Algorithms tab -->
+            <div class="tab-pane fade" id="algorithm" role="tabpanel" aria-labelledby="algorithm-tab">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Szczegóły algorytmów pomocniczych</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5>Funkcje pomocnicze używane w transformacji:</h5>
+                        
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-calendar-alt me-2"></i>Obliczanie poprzedniego dnia roboczego</h6>
+                            <pre class="bg-dark text-light p-2 rounded"><code>def poprzedni_dzien_roboczy(data):
+    """Calculate the previous working day."""
+    data = datetime.strptime(data, '%Y-%m-%d')
+    previous_day = data - timedelta(days=1)
+    while previous_day.weekday() >= 5:  # 5 = Sobota, 6 = Niedziela
+        previous_day -= timedelta(days=1)
+    return previous_day.strftime('%Y-%m-%d')</code></pre>
+                            <p>Funkcja przyjmuje datę w formacie 'YYYY-MM-DD', odejmuje jeden dzień, a następnie sprawdza, czy otrzymany dzień jest dniem roboczym (poniedziałek-piątek). Jeśli nie, odejmuje kolejne dni, aż otrzyma dzień roboczy.</p>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-calendar-alt me-2"></i>Obliczanie ostatniego dnia poprzedniego miesiąca</h6>
+                            <pre class="bg-dark text-light p-2 rounded"><code>def ostatni_dzien_poprzedniego_miesiaca(data):
+    """Calculate the last day of the previous month."""
+    data = datetime.strptime(data, '%Y-%m-%d')
+    first_day_current_month = data.replace(day=1)
+    last_day_previous_month = first_day_current_month - timedelta(days=1)
+    return last_day_previous_month.strftime('%Y-%m-%d')</code></pre>
+                            <p>Funkcja przyjmuje datę w formacie 'YYYY-MM-DD', wyznacza pierwszy dzień bieżącego miesiąca (dzień = 1), a następnie odejmuje jeden dzień, otrzymując ostatni dzień poprzedniego miesiąca.</p>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-code me-2"></i>Struktura procesu przetwarzania</h6>
+                            <p>Ogólny algorytm przetwarzania plików:</p>
+                            <ol>
+                                <li>Otwarcie pliku i wczytanie jego zawartości</li>
+                                <li>Określenie typu dokumentu na podstawie nazwy pliku (bank, VAT, kasa)</li>
+                                <li>Przetwarzanie linii pliku zgodnie z logiką dla danego typu dokumentu</li>
+                                <li>Zapisanie zmodyfikowanej zawartości z powrotem do pliku</li>
+                                <li>Wygenerowanie raportu ze statystykami dokonanych zmian</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+            <a href="/" class="btn btn-primary">
+                <i class="fas fa-arrow-left me-2"></i>Powrót do przetwarzania plików
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Proces Dokumentów Finansowych</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -18,42 +18,91 @@ def index():
     """Render the main upload page."""
     return render_template('index.html')
 
+@app.route('/info')
+def info():
+    """Render the information page with detailed transformation logic."""
+    return render_template('info.html')
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     """Handle file upload and processing."""
     try:
-        if 'file' not in request.files:
+        # Check if it's a batch upload
+        if 'files[]' in request.files:
+            files = request.files.getlist('files[]')
+            
+            if not files or all(file.filename == '' for file in files):
+                return jsonify({"success": False, "message": "No files selected"}), 400
+            
+            batch_results = []
+            for file in files:
+                if file.filename == '':
+                    continue
+                
+                # Save the temporary file
+                timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+                temp_filename = f"temp_{timestamp}_{file.filename}"
+                file.save(temp_filename)
+                
+                # Determine file type
+                file_type = 'unknown'
+                if 'bank' in file.filename.lower():
+                    file_type = 'bank'
+                elif 'vat' in file.filename.lower():
+                    file_type = 'vat'
+                elif 'zak' in file.filename.lower() or 'kasa' in file.filename.lower():
+                    file_type = 'kasa'
+                
+                # Process the file
+                result = processor.process_file(temp_filename, file_type)
+                
+                batch_results.append({
+                    "filename": file.filename,
+                    "filetype": file_type,
+                    "result": result,
+                    "temp_filename": temp_filename
+                })
+            
+            return jsonify({
+                "success": True,
+                "batch": True,
+                "results": batch_results
+            })
+                
+        # Single file upload (old behavior)
+        elif 'file' in request.files:
+            file = request.files['file']
+            
+            if file.filename == '':
+                return jsonify({"success": False, "message": "No file selected"}), 400
+            
+            # Save the temporary file
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            temp_filename = f"temp_{timestamp}_{file.filename}"
+            file.save(temp_filename)
+            
+            # Determine file type
+            file_type = 'unknown'
+            if 'bank' in file.filename.lower():
+                file_type = 'bank'
+            elif 'vat' in file.filename.lower():
+                file_type = 'vat'
+            elif 'zak' in file.filename.lower() or 'kasa' in file.filename.lower():
+                file_type = 'kasa'
+            
+            # Process the file
+            result = processor.process_file(temp_filename, file_type)
+            
+            return jsonify({
+                "success": True,
+                "batch": False,
+                "filename": file.filename,
+                "filetype": file_type,
+                "result": result,
+                "temp_filename": temp_filename
+            })
+        else:
             return jsonify({"success": False, "message": "No file part"}), 400
-        
-        file = request.files['file']
-        
-        if file.filename == '':
-            return jsonify({"success": False, "message": "No file selected"}), 400
-        
-        # Save the temporary file
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        temp_filename = f"temp_{timestamp}_{file.filename}"
-        file.save(temp_filename)
-        
-        # Determine file type
-        file_type = 'unknown'
-        if 'bank' in file.filename.lower():
-            file_type = 'bank'
-        elif 'vat' in file.filename.lower():
-            file_type = 'vat'
-        elif 'zak' in file.filename.lower() or 'kasa' in file.filename.lower():
-            file_type = 'kasa'
-        
-        # Process the file
-        result = processor.process_file(temp_filename, file_type)
-        
-        return jsonify({
-            "success": True,
-            "filename": file.filename,
-            "filetype": file_type,
-            "result": result,
-            "temp_filename": temp_filename
-        })
     
     except Exception as e:
         logging.error(f"Error processing file: {str(e)}")

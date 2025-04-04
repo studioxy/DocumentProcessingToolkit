@@ -27,6 +27,9 @@
                         <a class="nav-link active" href="/">Strona główna</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/info">Dokumentacja</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/logs">Historia logów</a>
                     </li>
                 </ul>
@@ -37,7 +40,7 @@
     <!-- Main Content -->
     <div class="container mt-4">
         <div class="row">
-            <div class="col-lg-8 offset-lg-2">
+            <div class="col-lg-10 offset-lg-1">
                 <div class="card shadow-sm">
                     <div class="card-header bg-primary text-white">
                         <h4 class="mb-0"><i class="fas fa-upload me-2"></i>Przetwarzanie dokumentów finansowych</h4>
@@ -49,20 +52,54 @@
                         <!-- File Upload Form -->
                         <form id="uploadForm" enctype="multipart/form-data">
                             <div class="mb-4">
-                                <label for="fileInput" class="form-label">Wybierz plik do przetworzenia</label>
-                                <div class="custom-file-upload">
-                                    <input type="file" class="form-control" id="fileInput" accept=".txt">
-                                    <p class="mt-3 mb-0 text-muted">
-                                        <i class="fas fa-info-circle me-1"></i>
-                                        Obsługiwane formaty: dokumenty bankowe, VAT, kasa/zakupy (.txt)
-                                    </p>
+                                <ul class="nav nav-tabs" id="uploadTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="single-tab" data-bs-toggle="tab" data-bs-target="#single-upload" type="button" role="tab" aria-controls="single-upload" aria-selected="true">
+                                            <i class="fas fa-file me-2"></i>Pojedynczy plik
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="batch-tab" data-bs-toggle="tab" data-bs-target="#batch-upload" type="button" role="tab" aria-controls="batch-upload" aria-selected="false">
+                                            <i class="fas fa-folder me-2"></i>Wsadowe przetwarzanie
+                                        </button>
+                                    </li>
+                                </ul>
+                                
+                                <div class="tab-content p-3 border border-top-0 rounded-bottom" id="uploadTabsContent">
+                                    <!-- Single file upload tab -->
+                                    <div class="tab-pane fade show active" id="single-upload" role="tabpanel" aria-labelledby="single-tab">
+                                        <label for="fileInput" class="form-label">Wybierz plik do przetworzenia</label>
+                                        <div class="custom-file-upload">
+                                            <input type="file" class="form-control" id="fileInput" name="file" accept=".txt">
+                                            <p class="mt-3 mb-0 text-muted">
+                                                <i class="fas fa-info-circle me-1"></i>
+                                                Obsługiwane formaty: dokumenty bankowe, VAT, kasa/zakupy (.txt)
+                                            </p>
+                                        </div>
+                                        <div id="fileTypeDisplay" class="mt-2 text-info"></div>
+                                    </div>
+                                    
+                                    <!-- Batch upload tab -->
+                                    <div class="tab-pane fade" id="batch-upload" role="tabpanel" aria-labelledby="batch-tab">
+                                        <label for="batchFileInput" class="form-label">Wybierz pliki do przetworzenia wsadowego</label>
+                                        <div class="custom-file-upload">
+                                            <input type="file" class="form-control" id="batchFileInput" name="files[]" accept=".txt" multiple>
+                                            <p class="mt-3 mb-0 text-muted">
+                                                <i class="fas fa-info-circle me-1"></i>
+                                                Możesz wybrać wiele plików jednocześnie (bank, VAT, kasa)
+                                            </p>
+                                        </div>
+                                        <div class="mt-3 alert alert-info">
+                                            <h6><i class="fas fa-lightbulb me-2"></i>Wskazówka:</h6>
+                                            <p class="mb-0">Przetwarzanie wsadowe automatycznie wykrywa typ każdego dokumentu na podstawie nazwy pliku i przetwarza go zgodnie z odpowiednimi regułami.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div id="fileTypeDisplay" class="mt-2 text-info"></div>
                             </div>
                             
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-cogs me-2"></i>Przetwórz plik
+                                    <i class="fas fa-cogs me-2"></i>Przetwórz plik(i)
                                 </button>
                             </div>
                         </form>
@@ -72,10 +109,10 @@
                             <div class="spinner-border text-primary" role="status">
                                 <span class="visually-hidden">Przetwarzanie...</span>
                             </div>
-                            <p class="mt-3">Przetwarzanie pliku, proszę czekać...</p>
+                            <p class="mt-3">Przetwarzanie plików, proszę czekać...</p>
                         </div>
 
-                        <!-- Results Container -->
+                        <!-- Results Container (Single File) -->
                         <div id="resultContainer" class="mt-4 d-none">
                             <div class="alert alert-success">
                                 <h5><i class="fas fa-check-circle me-2"></i>Plik został przetworzony pomyślnie!</h5>
@@ -116,6 +153,31 @@
                                 </a>
                             </div>
                         </div>
+
+                        <!-- Results Container (Batch Processing) -->
+                        <div id="batchResultContainer" class="mt-4 d-none">
+                            <div class="alert alert-success">
+                                <h5><i class="fas fa-check-circle me-2"></i>Przetwarzanie wsadowe zakończone pomyślnie!</h5>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-info text-white">
+                                    <h5 class="mb-0">Podsumowanie przetworzonych plików</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>Liczba przetworzonych plików:</strong> <span id="totalProcessedFiles"></span></p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion for batch results -->
+                            <div class="accordion mb-4" id="batchResultsAccordion"></div>
+
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="/logs" class="btn btn-info">
+                                    <i class="fas fa-list me-2"></i>Zobacz logi przetwarzania
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -134,6 +196,7 @@
                                     <li>Zmiana dat na poprzedni dzień roboczy</li>
                                     <li>Zmiana konta 9 na 0</li>
                                 </ul>
+                                <a href="/info#bank" class="btn btn-sm btn-outline-primary mt-2">Szczegóły</a>
                             </div>
                         </div>
                     </div>
@@ -149,6 +212,7 @@
                                     <li>Zmiana okresu na ostatni dzień poprzedniego miesiąca</li>
                                     <li>Warunek: kwota > 0</li>
                                 </ul>
+                                <a href="/info#vat" class="btn btn-sm btn-outline-primary mt-2">Szczegóły</a>
                             </div>
                         </div>
                     </div>
@@ -163,9 +227,16 @@
                                     <li>Zmiana konta 9 na 0</li>
                                     <li>Dotyczy kont 201-2-1-9 i 202-2-1-9</li>
                                 </ul>
+                                <a href="/info#kasa" class="btn btn-sm btn-outline-primary mt-2">Szczegóły</a>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="/info" class="btn btn-outline-info">
+                        <i class="fas fa-info-circle me-2"></i>Przejdź do pełnej dokumentacji
+                    </a>
                 </div>
             </div>
         </div>
