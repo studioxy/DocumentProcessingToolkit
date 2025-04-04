@@ -1,0 +1,769 @@
+INFO{
+	Nazwa programu ="TO-FI"
+	Wersja_prgramu =ver. 29.11.2020 (Harbour)
+	Wersja szablonu =3.1
+	dane_z_oddzialu =3
+	Kontrahent{
+		id =
+		kod =
+		nazwa =Pryzmat Szczecin
+		miejscowosc =Szczecin
+		ulica =ul. Rydla 51j
+		dom =
+		lokal =
+		kodpocz =70-783
+		rejon =
+		nip =
+		tel1 =091/46 45 130                                                         
+		tel2 =
+		fax =
+		email =
+		www =
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1=44                            
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-23
+	datasp =2024-09-23
+	Dane nabywcy{
+		khid =099999
+		khnip =              
+	}
+	symbol FK=PAR
+	FK nazwa =P0923/03949 
+	JPK_V7 =RO
+	opis FK =Sprzeda¿ towarów
+	Zapis{
+		strona=WN
+		kwota =117.99
+		konto =201-3
+	}
+	Zapis{
+		strona=MA
+		kwota =95.93
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =22.06
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =117.99
+		netto =95.93
+		vat =22.06
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =95.93
+		sumavat =22.06
+		brutto =117.99
+	}
+	Transakcja{
+		termin =2024-09-26
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1=44                            
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-23
+	datasp =2024-09-23
+	Dane nabywcy{
+		khid =099999
+		khnip =              
+	}
+	symbol FK=PAR
+	FK nazwa =P0923/03950 
+	JPK_V7 =RO
+	opis FK =Sprzeda¿ towarów
+	Zapis{
+		strona=WN
+		kwota =232.36
+		konto =201-3
+	}
+	Zapis{
+		strona=MA
+		kwota =188.91
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =43.45
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =232.36
+		netto =188.91
+		vat =43.45
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =188.91
+		sumavat =43.45
+		brutto =232.36
+	}
+	Transakcja{
+		termin =2024-09-26
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1=44                            
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-23
+	datasp =2024-09-23
+	Dane nabywcy{
+		khid =099999
+		khnip =              
+	}
+	symbol FK=PAR
+	FK nazwa =P0923/03951 
+	JPK_V7 =RO
+	opis FK =Sprzeda¿ towarów
+	Zapis{
+		strona=WN
+		kwota =118.23
+		konto =201-3
+	}
+	Zapis{
+		strona=MA
+		kwota =96.12
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =22.11
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =118.23
+		netto =96.12
+		vat =22.11
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =96.12
+		sumavat =22.11
+		brutto =118.23
+	}
+	Transakcja{
+		termin =2024-09-26
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1=44                            
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-24
+	datasp =2024-09-24
+	Dane nabywcy{
+		khid =099999
+		khnip =              
+	}
+	symbol FK=PAR
+	FK nazwa =P0924/03952 
+	JPK_V7 =RO
+	opis FK =Sprzeda¿ towarów
+	Zapis{
+		strona=WN
+		kwota =86.40
+		konto =201-3
+	}
+	Zapis{
+		strona=MA
+		kwota =70.24
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =16.16
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =86.40
+		netto =70.24
+		vat =16.16
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =70.24
+		sumavat =16.16
+		brutto =86.40
+	}
+	Transakcja{
+		termin =2024-09-24
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1=44                            
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-24
+	datasp =2024-09-24
+	Dane nabywcy{
+		khid =099999
+		khnip =              
+	}
+	symbol FK=PAR
+	FK nazwa =P0924/03953 
+	JPK_V7 =RO
+	opis FK =Sprzeda¿ towarów
+	Zapis{
+		strona=WN
+		kwota =186.00
+		konto =201-3
+	}
+	Zapis{
+		strona=MA
+		kwota =151.22
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =34.78
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =186.00
+		netto =151.22
+		vat =34.78
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =151.22
+		sumavat =34.78
+		brutto =186.00
+	}
+	Transakcja{
+		termin =2024-09-24
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1=44                            
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-24
+	datasp =2024-09-24
+	Dane nabywcy{
+		khid =099999
+		khnip =              
+	}
+	symbol FK=PAR
+	FK nazwa =P0924/03954 
+	JPK_V7 =RO
+	opis FK =Sprzeda¿ towarów
+	Zapis{
+		strona=WN
+		kwota =76.80
+		konto =201-3
+	}
+	Zapis{
+		strona=MA
+		kwota =62.44
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =14.36
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =76.80
+		netto =62.44
+		vat =14.36
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =62.44
+		sumavat =14.36
+		brutto =76.80
+	}
+	Transakcja{
+		termin =2024-09-24
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1=44                            
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-25
+	datasp =2024-09-25
+	Dane nabywcy{
+		khid =099999
+		khnip =              
+	}
+	symbol FK=PAR
+	FK nazwa =P0925/03955 
+	JPK_V7 =RO
+	opis FK =Sprzeda¿ towarów
+	Zapis{
+		strona=WN
+		kwota =157.54
+		konto =201-3
+	}
+	Zapis{
+		strona=MA
+		kwota =128.08
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =29.46
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =157.54
+		netto =128.08
+		vat =29.46
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =128.08
+		sumavat =29.46
+		brutto =157.54
+	}
+	Transakcja{
+		termin =2024-09-28
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1=44                            
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-26
+	datasp =2024-09-26
+	Dane nabywcy{
+		khid =099999
+		khnip =              
+	}
+	symbol FK=PAR
+	FK nazwa =P0926/03956 
+	JPK_V7 =RO
+	opis FK =Sprzeda¿ towarów
+	Zapis{
+		strona=WN
+		kwota =76.80
+		konto =201-3
+	}
+	Zapis{
+		strona=MA
+		kwota =62.44
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =14.36
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =76.80
+		netto =62.44
+		vat =14.36
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =62.44
+		sumavat =14.36
+		brutto =76.80
+	}
+	Transakcja{
+		termin =2024-09-29
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =099999
+	kod =PARAGON
+	nazwa =
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1=44                            
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-30
+	datasp =2024-09-30
+	Dane nabywcy{
+		khid =099999
+		khnip =              
+	}
+	symbol FK=PAR
+	FK nazwa =P0930/03957 
+	JPK_V7 =RO
+	opis FK =Sprzeda¿ towarów
+	Zapis{
+		strona=WN
+		kwota =151.81
+		konto =201-3
+	}
+	Zapis{
+		strona=MA
+		kwota =123.42
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =28.39
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =151.81
+		netto =123.42
+		vat =28.39
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =123.42
+		sumavat =28.39
+		brutto =151.81
+	}
+	Transakcja{
+		termin =2024-10-03
+		IdDlaRozliczen =-1
+	}
+}
