@@ -8,7 +8,9 @@
     --warning-color: #d47d29;
     --danger-color: #b82e4c;
     --dark-bg: #111621;
+    --light-bg: #f2f2f2;
     --card-bg: #1a1e2d;
+    --light-bg: #f2f2f2;
     --text-color: #e2e8f0;
     --text-muted: #a0aec0;
     --border-color: #2d3748;
@@ -366,7 +368,7 @@ body {
 
 /* Form controls */
 .form-control {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(240, 240, 240, 0.12);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     color: var(--text-color);

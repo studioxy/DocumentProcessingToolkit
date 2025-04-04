@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('processedFiletype').textContent = data.filetype;
         
         // Update processing time
-        document.getElementById('processingTime').textContent = data.result.processing_time_ms.toFixed(2) + ' ms';
+        document.getElementById('processingTime').textContent = data.result.processing_time.toFixed(2) + ' ms';
         
         // Clear previous detailed results
         detailedResults.innerHTML = '';
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="list-group-item">
                 <div class="d-flex w-100 justify-content-between align-items-center">
                     <h6 class="mb-1">${file.filename}</h6>
-                    <small>Czas: ${file.result.processing_time_ms.toFixed(2)} ms</small>
+                    <small>Czas: ${file.result.processing_time.toFixed(2)} ms</small>
                 </div>
                 <div class="mt-2">
                     ${changesHTML}
