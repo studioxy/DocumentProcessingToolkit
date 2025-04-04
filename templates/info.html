@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <i class="fas fa-file-invoice-dollar"></i> Proces Dokumentów Finansowych
@@ -78,20 +78,20 @@
             <!-- Bank documents tab -->
             <div class="tab-pane fade show active" id="bank" role="tabpanel" aria-labelledby="bank-tab">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header">
                         <h4 class="mb-0">Dokumenty bankowe - szczegóły transformacji</h4>
                     </div>
                     <div class="card-body">
                         <h5>Wykonywane zmiany:</h5>
                         
-                        <div class="alert alert-info">
+                        <div class="alert alert-secondary">
                             <h6><i class="fas fa-exchange-alt me-2"></i>Zamiana konta 202-2-1-900102 na 131-5</h6>
                             <p>Każda linia zawierająca ciąg <code>konto =202-2-1-900102</code> jest zmieniana poprzez zastąpienie <code>202-2-1-900102</code> na <code>131-5</code>.</p>
                             <pre class="bg-dark text-light p-2 rounded"><code>Przed: konto =202-2-1-900102
 Po: konto =131-5</code></pre>
                         </div>
                         
-                        <div class="alert alert-info">
+                        <div class="alert alert-secondary">
                             <h6><i class="fas fa-calendar-alt me-2"></i>Zmiana dat na poprzedni dzień roboczy</h6>
                             <p>Wszystkie daty znajdujące się w liniach zawierających słowa kluczowe <code>data =</code>, <code>datasp =</code> lub <code>dataKPKW =</code> są zmieniane na poprzedni dzień roboczy.</p>
                             <p>Algorytm wyliczania poprzedniego dnia roboczego:</p>
@@ -103,7 +103,7 @@ Po: konto =131-5</code></pre>
 Po: data = 2023-05-12 (jeśli 15.05 to poniedziałek, to poprzedni dzień roboczy to piątek 12.05)</code></pre>
                         </div>
                         
-                        <div class="alert alert-info">
+                        <div class="alert alert-secondary">
                             <h6><i class="fas fa-exchange-alt me-2"></i>Zamiana konta 9 na 0</h6>
                             <p>W liniach zawierających <code>konto =</code>, jeśli występuje fragment <code>201-2-1-9</code> lub <code>202-2-1-9</code>, pierwsza cyfra <code>9</code> jest zmieniana na <code>0</code>.</p>
                             <pre class="bg-dark text-light p-2 rounded"><code>Przed: konto =201-2-1-9
@@ -144,7 +144,7 @@ for i, linia in enumerate(linie):
             <!-- VAT documents tab -->
             <div class="tab-pane fade" id="vat" role="tabpanel" aria-labelledby="vat-tab">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header">
                         <h4 class="mb-0">Dokumenty VAT - szczegóły transformacji</h4>
                     </div>
                     <div class="card-body">
@@ -155,7 +155,7 @@ for i, linia in enumerate(linie):
                             <p>Przetwarzanie zmian kont oraz okresów jest wykonywane tylko wtedy, gdy wartość w polu <code>kwota</code> jest większa od zera. Dokumenty z kwotą ≤ 0 są pomijane (niezakwalifikowane przez kwotę).</p>
                         </div>
                         
-                        <div class="alert alert-info">
+                        <div class="alert alert-secondary">
                             <h6><i class="fas fa-exchange-alt me-2"></i>Zamiana kont 731-1, 731-3, 731-4</h6>
                             <p>W dokumentach z kwotą > 0, drugie wystąpienie linii z <code>konto =</code> jest modyfikowane według poniższych reguł:</p>
                             <ul>
@@ -173,7 +173,7 @@ Przed: konto = 731-4
 Po: konto = 702-2-3-4</code></pre>
                         </div>
                         
-                        <div class="alert alert-info">
+                        <div class="alert alert-secondary">
                             <h6><i class="fas fa-calendar-alt me-2"></i>Zmiana daty okresu</h6>
                             <p>W dokumentach z kwotą > 0, data w polu <code>okres =</code> jest zmieniana na ostatni dzień poprzedniego miesiąca.</p>
                             <p>Algorytm wyliczania ostatniego dnia poprzedniego miesiąca:</p>
@@ -255,13 +255,13 @@ for i, linia in enumerate(linie):
             <!-- Cash register documents tab -->
             <div class="tab-pane fade" id="kasa" role="tabpanel" aria-labelledby="kasa-tab">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header">
                         <h4 class="mb-0">Dokumenty kasowe - szczegóły transformacji</h4>
                     </div>
                     <div class="card-body">
                         <h5>Wykonywane zmiany:</h5>
                         
-                        <div class="alert alert-info">
+                        <div class="alert alert-secondary">
                             <h6><i class="fas fa-exchange-alt me-2"></i>Zamiana konta 9 na 0</h6>
                             <p>W liniach zawierających <code>konto =</code>, jeśli występuje fragment <code>201-2-1-9</code> lub <code>202-2-1-9</code>, pierwsza cyfra <code>9</code> jest zamieniana na <code>0</code>.</p>
                             <p>Ta transformacja jest identyczna jak w przypadku dokumentów bankowych.</p>
@@ -287,13 +287,13 @@ Po: konto =202-2-1-0</code></pre>
             <!-- Algorithms tab -->
             <div class="tab-pane fade" id="algorithm" role="tabpanel" aria-labelledby="algorithm-tab">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header">
                         <h4 class="mb-0">Szczegóły algorytmów pomocniczych</h4>
                     </div>
                     <div class="card-body">
                         <h5>Funkcje pomocnicze używane w transformacji:</h5>
                         
-                        <div class="alert alert-info">
+                        <div class="alert alert-secondary">
                             <h6><i class="fas fa-calendar-alt me-2"></i>Obliczanie poprzedniego dnia roboczego</h6>
                             <pre class="bg-dark text-light p-2 rounded"><code>def poprzedni_dzien_roboczy(data):
     """Calculate the previous working day."""
@@ -305,7 +305,7 @@ Po: konto =202-2-1-0</code></pre>
                             <p>Funkcja przyjmuje datę w formacie 'YYYY-MM-DD', odejmuje jeden dzień, a następnie sprawdza, czy otrzymany dzień jest dniem roboczym (poniedziałek-piątek). Jeśli nie, odejmuje kolejne dni, aż otrzyma dzień roboczy.</p>
                         </div>
                         
-                        <div class="alert alert-info">
+                        <div class="alert alert-secondary">
                             <h6><i class="fas fa-calendar-alt me-2"></i>Obliczanie ostatniego dnia poprzedniego miesiąca</h6>
                             <pre class="bg-dark text-light p-2 rounded"><code>def ostatni_dzien_poprzedniego_miesiaca(data):
     """Calculate the last day of the previous month."""
@@ -316,7 +316,7 @@ Po: konto =202-2-1-0</code></pre>
                             <p>Funkcja przyjmuje datę w formacie 'YYYY-MM-DD', wyznacza pierwszy dzień bieżącego miesiąca (dzień = 1), a następnie odejmuje jeden dzień, otrzymując ostatni dzień poprzedniego miesiąca.</p>
                         </div>
                         
-                        <div class="alert alert-info">
+                        <div class="alert alert-secondary">
                             <h6><i class="fas fa-code me-2"></i>Struktura procesu przetwarzania</h6>
                             <p>Ogólny algorytm przetwarzania plików:</p>
                             <ol>
