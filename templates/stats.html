@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pl" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statystyki zmian - Proces Dokumentów Finansowych</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <div class="brand-icon-container me-2">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <span class="brand-text">Proces<span class="text-accent">Fin</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-home me-1"></i> Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/info"><i class="fas fa-book me-1"></i> Dokumentacja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logs"><i class="fas fa-history me-1"></i> Historia logów</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/history"><i class="fas fa-clock me-1"></i> Historia przetwarzania</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/stats"><i class="fas fa-chart-bar me-1"></i> Statystyki</a>
+                    </li>
+                    <li class="nav-item ms-2" id="themeSwitcher"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <h2><i class="fas fa-chart-bar me-2"></i>Statystyki zmian</h2>
+                <p class="lead">Szczegółowa analiza danych przetwarzania dokumentów i wprowadzonych zmian.</p>
+                
+                <!-- Filters -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-primary d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Filtry</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url_for('stats') }}" method="get" class="row gx-3 gy-2 align-items-end">
+                            <div class="col-sm-4">
+                                <label for="fileType" class="form-label">Typ dokumentu</label>
+                                <select class="form-select" id="fileType" name="type">
+                                    <option value="all" {% if file_type == 'all' %}selected{% endif %}>Wszystkie</option>
+                                    <option value="bank" {% if file_type == 'bank' %}selected{% endif %}>Bankowe</option>
+                                    <option value="vat" {% if file_type == 'vat' %}selected{% endif %}>VAT</option>
+                                    <option value="kasa" {% if file_type == 'kasa' %}selected{% endif %}>Kasowe</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="timePeriod" class="form-label">Okres czasu</label>
+                                <select class="form-select" id="timePeriod" name="period">
+                                    <option value="24hours" {% if time_period == '24hours' %}selected{% endif %}>Ostatnie 24 godziny</option>
+                                    <option value="7days" {% if time_period == '7days' %}selected{% endif %}>Ostatnie 7 dni</option>
+                                    <option value="30days" {% if time_period == '30days' %}selected{% endif %}>Ostatnie 30 dni</option>
+                                    <option value="all" {% if time_period == 'all' %}selected{% endif %}>Cały okres</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-filter me-1"></i> Zastosuj filtry
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Summary Cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-file-alt fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Przetworzone pliki</h5>
+                                <h2 class="mb-0">{{ total_files }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-exchange-alt fa-3x mb-3 text-success"></i>
+                                <h5 class="card-title">Liczba zmian</h5>
+                                <h2 class="mb-0">{{ total_changes }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-percentage fa-3x mb-3 text-warning"></i>
+                                <h5 class="card-title">Średnia zmian na plik</h5>
+                                <h2 class="mb-0">
+                                    {% if total_files > 0 %}
+                                        {{ (total_changes / total_files)|round(1) }}
+                                    {% else %}
+                                        0
+                                    {% endif %}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-primary">
+                        <h5 class="mb-0">Podział według typu dokumentu</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="fileTypePieChart" height="260"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-primary">
+                        <h5 class="mb-0">Podział zmian według typu dokumentu</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="changesPieChart" height="260"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline Charts -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary">
+                        <h5 class="mb-0">Przetwarzanie plików w czasie</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="timeSeriesChart" height="220"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Stats -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header" style="background: var(--ocean-primary);">
+                        <h5 class="mb-0">Dokumenty bankowe</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Liczba przetworzonych plików:</strong> {{ bank_stats.count }}</p>
+                        <p><strong>Całkowita liczba zmian:</strong> {{ bank_stats.total_changes }}</p>
+                        
+                        <hr>
+                        <h6>Zmiany według reguł:</h6>
+                        <ul class="list-group">
+                            {% for rule, count in bank_stats.changes_by_rule.items() %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    {{ rule }}
+                                    <span class="badge bg-primary rounded-pill">{{ count }}</span>
+                                </li>
+                            {% else %}
+                                <li class="list-group-item">Brak danych</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header" style="background: var(--forest-primary);">
+                        <h5 class="mb-0">Dokumenty VAT</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Liczba przetworzonych plików:</strong> {{ vat_stats.count }}</p>
+                        <p><strong>Całkowita liczba zmian:</strong> {{ vat_stats.total_changes }}</p>
+                        
+                        <hr>
+                        <h6>Zmiany według reguł:</h6>
+                        <ul class="list-group">
+                            {% for rule, count in vat_stats.changes_by_rule.items() %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    {{ rule }}
+                                    <span class="badge bg-primary rounded-pill">{{ count }}</span>
+                                </li>
+                            {% else %}
+                                <li class="list-group-item">Brak danych</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header" style="background: var(--amber-primary);">
+                        <h5 class="mb-0">Dokumenty kasowe</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Liczba przetworzonych plików:</strong> {{ kasa_stats.count }}</p>
+                        <p><strong>Całkowita liczba zmian:</strong> {{ kasa_stats.total_changes }}</p>
+                        
+                        <hr>
+                        <h6>Zmiany według reguł:</h6>
+                        <ul class="list-group">
+                            {% for rule, count in kasa_stats.changes_by_rule.items() %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    {{ rule }}
+                                    <span class="badge bg-primary rounded-pill">{{ count }}</span>
+                                </li>
+                            {% else %}
+                                <li class="list-group-item">Brak danych</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recent Files -->
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary">
+                        <h5 class="mb-0">Ostatnio przetworzone pliki</h5>
+                    </div>
+                    <div class="card-body">
+                        {% if processed_files %}
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Nazwa pliku</th>
+                                            <th>Typ</th>
+                                            <th>Liczba zmian</th>
+                                            <th>Czas przetwarzania</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for file in processed_files[:10] %}
+                                            <tr>
+                                                <td>{{ file.processing_date.strftime('%Y-%m-%d %H:%M') }}</td>
+                                                <td>{{ file.original_filename }}</td>
+                                                <td>
+                                                    {% if file.file_type == 'bank' %}
+                                                        <span class="badge bg-info">Bank</span>
+                                                    {% elif file.file_type == 'vat' %}
+                                                        <span class="badge bg-info">VAT</span>
+                                                    {% elif file.file_type == 'kasa' %}
+                                                        <span class="badge bg-info">Kasa</span>
+                                                    {% else %}
+                                                        <span class="badge bg-secondary">{{ file.file_type }}</span>
+                                                    {% endif %}
+                                                </td>
+                                                <td>
+                                                    {% if file.changes %}
+                                                        {% set total = 0 %}
+                                                        {% for key, value in file.changes.items() %}
+                                                            {% if value is number %}
+                                                                {% set total = total + value %}
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        {{ total }}
+                                                    {% else %}
+                                                        0
+                                                    {% endif %}
+                                                </td>
+                                                <td>{{ "%.2f"|format(file.processing_time) }} ms</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            {% if processed_files|length > 10 %}
+                                <div class="text-center mt-3">
+                                    <a href="{{ url_for('history') }}" class="btn btn-outline-primary">
+                                        <i class="fas fa-list me-1"></i> Zobacz pełną historię
+                                    </a>
+                                </div>
+                            {% endif %}
+                        {% else %}
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i> Brak danych dla wybranych filtrów.
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Proces Dokumentów Finansowych</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <!-- Theme Switcher -->
+    <script src="{{ url_for('static', filename='js/theme-switcher.js') }}"></script>
+    
+    <!-- Charts Initialization -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // File Type Distribution Pie Chart
+            const fileTypeCtx = document.getElementById('fileTypePieChart').getContext('2d');
+            const fileTypePieChart = new Chart(fileTypeCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Bankowe', 'VAT', 'Kasowe'],
+                    datasets: [{
+                        data: [{{ bank_stats.count }}, {{ vat_stats.count }}, {{ kasa_stats.count }}],
+                        backgroundColor: [
+                            'rgba(72, 147, 193, 0.8)',  // Ocean blue
+                            'rgba(76, 175, 124, 0.8)',  // Forest green
+                            'rgba(209, 142, 55, 0.8)'   // Amber
+                        ],
+                        borderColor: [
+                            'rgba(72, 147, 193, 1)',
+                            'rgba(76, 175, 124, 1)',
+                            'rgba(209, 142, 55, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((acc, val) => acc + val, 0);
+                                    const percentage = total > 0 ? Math.round((value / total) * 100) : 0;
+                                    return `${label}: ${value} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Changes Distribution Pie Chart
+            const changesCtx = document.getElementById('changesPieChart').getContext('2d');
+            const changesPieChart = new Chart(changesCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Bankowe', 'VAT', 'Kasowe'],
+                    datasets: [{
+                        data: [
+                            {{ bank_stats.total_changes }}, 
+                            {{ vat_stats.total_changes }}, 
+                            {{ kasa_stats.total_changes }}
+                        ],
+                        backgroundColor: [
+                            'rgba(72, 147, 193, 0.8)',  // Ocean blue
+                            'rgba(76, 175, 124, 0.8)',  // Forest green
+                            'rgba(209, 142, 55, 0.8)'   // Amber
+                        ],
+                        borderColor: [
+                            'rgba(72, 147, 193, 1)',
+                            'rgba(76, 175, 124, 1)',
+                            'rgba(209, 142, 55, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((acc, val) => acc + val, 0);
+                                    const percentage = total > 0 ? Math.round((value / total) * 100) : 0;
+                                    return `${label}: ${value} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Time Series Chart
+            const timeData = {{ time_series_data|safe }};
+            const timeSeriesCtx = document.getElementById('timeSeriesChart').getContext('2d');
+            
+            const labels = timeData.map(item => item.date);
+            const bankData = timeData.map(item => item.bank);
+            const vatData = timeData.map(item => item.vat);
+            const kasaData = timeData.map(item => item.kasa);
+            
+            const timeSeriesChart = new Chart(timeSeriesCtx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Dokumenty bankowe',
+                            data: bankData,
+                            borderColor: 'rgba(72, 147, 193, 1)',
+                            backgroundColor: 'rgba(72, 147, 193, 0.2)',
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Dokumenty VAT',
+                            data: vatData,
+                            borderColor: 'rgba(76, 175, 124, 1)',
+                            backgroundColor: 'rgba(76, 175, 124, 0.2)',
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Dokumenty kasowe',
+                            data: kasaData,
+                            borderColor: 'rgba(209, 142, 55, 1)',
+                            backgroundColor: 'rgba(209, 142, 55, 0.2)',
+                            tension: 0.3,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Data'
+                            },
+                            grid: {
+                                color: 'rgba(255,255,255,0.05)'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Liczba plików'
+                            },
+                            grid: {
+                                color: 'rgba(255,255,255,0.05)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

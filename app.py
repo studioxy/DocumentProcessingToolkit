@@ -1,7 +1,10 @@
 import os
 import logging
-from datetime import datetime
+import json
+from datetime import datetime, timedelta
+from collections import defaultdict
 from flask import Flask, render_template, request, jsonify, send_file, redirect, url_for
+import pandas as pd
 import processor
 from processor import detect_file_type
 from models import db, ProcessedFile
@@ -190,6 +193,124 @@ def history():
     """View history of processed files from database."""
     processed_files = ProcessedFile.query.order_by(ProcessedFile.processing_date.desc()).all()
     return render_template('history.html', processed_files=processed_files)
+
+
+@app.route('/stats')
+def stats():
+    """View detailed statistics of file changes."""
+    # Get the filter parameters from query string
+    file_type = request.args.get('type', 'all')
+    time_period = request.args.get('period', '7days')  # Default to last 7 days
+    
+    # Base query
+    query = ProcessedFile.query
+    
+    # Apply file type filter if not 'all'
+    if file_type != 'all':
+        query = query.filter(ProcessedFile.file_type == file_type)
+    
+    # Apply time period filter
+    now = datetime.now()
+    if time_period == '24hours':
+        query = query.filter(ProcessedFile.processing_date >= now - timedelta(days=1))
+    elif time_period == '7days':
+        query = query.filter(ProcessedFile.processing_date >= now - timedelta(days=7))
+    elif time_period == '30days':
+        query = query.filter(ProcessedFile.processing_date >= now - timedelta(days=30))
+    
+    # Get the processed files for the given filters
+    processed_files = query.order_by(ProcessedFile.processing_date.desc()).all()
+    
+    # Collect statistics based on file types
+    bank_stats = {'count': 0, 'total_changes': 0, 'changes_by_rule': defaultdict(int)}
+    vat_stats = {'count': 0, 'total_changes': 0, 'changes_by_rule': defaultdict(int)}
+    kasa_stats = {'count': 0, 'total_changes': 0, 'changes_by_rule': defaultdict(int)}
+    
+    # Time-based stats (for time series chart)
+    time_stats = defaultdict(lambda: {'bank': 0, 'vat': 0, 'kasa': 0})
+    
+    for file in processed_files:
+        # Skip if changes field is None
+        if not file.changes:
+            continue
+            
+        # Format date for charts
+        date_str = file.processing_date.strftime('%Y-%m-%d')
+        
+        # Aggregate by file type
+        if file.file_type == 'bank':
+            bank_stats['count'] += 1
+            time_stats[date_str]['bank'] += 1
+            
+            # Collect specific changes
+            if 'zamiana_liczby_kont' in file.changes:
+                bank_stats['changes_by_rule']['zamiana_liczby_kont'] += file.changes['zamiana_liczby_kont']
+                bank_stats['total_changes'] += file.changes['zamiana_liczby_kont']
+            
+            if 'zmiana_daty' in file.changes:
+                bank_stats['changes_by_rule']['zmiana_daty'] += file.changes['zmiana_daty']
+                bank_stats['total_changes'] += file.changes['zmiana_daty']
+            
+            if 'usunięcie_wpisu' in file.changes:
+                bank_stats['changes_by_rule']['usunięcie_wpisu'] += file.changes['usunięcie_wpisu']
+                bank_stats['total_changes'] += file.changes['usunięcie_wpisu']
+            
+        elif file.file_type == 'vat':
+            vat_stats['count'] += 1
+            time_stats[date_str]['vat'] += 1
+            
+            # Collect specific changes
+            if 'zakwalifikowane_vs_niezakwalifikowane' in file.changes:
+                vat_stats['changes_by_rule']['zakwalifikowane_vs_niezakwalifikowane'] += file.changes['zakwalifikowane_vs_niezakwalifikowane']
+                vat_stats['total_changes'] += file.changes['zakwalifikowane_vs_niezakwalifikowane']
+                
+            if 'niezakwalifikowane_przez_kwote' in file.changes:
+                vat_stats['changes_by_rule']['niezakwalifikowane_przez_kwote'] += file.changes['niezakwalifikowane_przez_kwote']
+                vat_stats['total_changes'] += file.changes['niezakwalifikowane_przez_kwote']
+                
+            if 'niezakwalifikowane_przez_date' in file.changes:
+                vat_stats['changes_by_rule']['niezakwalifikowane_przez_date'] += file.changes['niezakwalifikowane_przez_date']
+                vat_stats['total_changes'] += file.changes['niezakwalifikowane_przez_date']
+                
+        elif file.file_type == 'kasa':
+            kasa_stats['count'] += 1
+            time_stats[date_str]['kasa'] += 1
+            
+            # Collect specific changes
+            if 'zamiana_9_na_0' in file.changes:
+                kasa_stats['changes_by_rule']['zamiana_9_na_0'] += file.changes['zamiana_9_na_0']
+                kasa_stats['total_changes'] += file.changes['zamiana_9_na_0']
+                
+            if 'zamiana_daty' in file.changes:
+                kasa_stats['changes_by_rule']['zamiana_daty'] += file.changes['zamiana_daty']
+                kasa_stats['total_changes'] += file.changes['zamiana_daty']
+    
+    # Convert time_stats to a format suitable for charts
+    time_series_data = []
+    for date_str, counts in sorted(time_stats.items()):
+        time_series_data.append({
+            'date': date_str,
+            'bank': counts['bank'],
+            'vat': counts['vat'],
+            'kasa': counts['kasa']
+        })
+    
+    # Calculate totals for pie chart
+    total_files = bank_stats['count'] + vat_stats['count'] + kasa_stats['count']
+    total_changes = bank_stats['total_changes'] + vat_stats['total_changes'] + kasa_stats['total_changes']
+    
+    return render_template(
+        'stats.html',
+        file_type=file_type,
+        time_period=time_period,
+        bank_stats=bank_stats,
+        vat_stats=vat_stats,
+        kasa_stats=kasa_stats,
+        total_files=total_files,
+        total_changes=total_changes,
+        time_series_data=json.dumps(time_series_data),
+        processed_files=processed_files
+    )
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
