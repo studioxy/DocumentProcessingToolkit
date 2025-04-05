@@ -1,0 +1,783 @@
+INFO{
+	Nazwa programu ="TO-FI"
+	Wersja_prgramu =ver. 29.11.2020 (Harbour)
+	Wersja szablonu =3.1
+	dane_z_oddzialu =3
+	Kontrahent{
+		id =
+		kod =
+		nazwa =Pryzmat Szczecin
+		miejscowosc =Szczecin
+		ulica =ul. Rydla 51j
+		dom =
+		lokal =
+		kodpocz =70-783
+		rejon =
+		nip =
+		tel1 =091/46 45 130                                                         
+		tel2 =
+		fax =
+		email =
+		www =
+	}
+}
+Kontrahent{
+	id =046208
+	kod =PEC STARGARD
+	nazwa =PRZEDSIEBIORSTWO ENERGETYKI CIEPLNEJ Sp. z o.o.
+	miejscowosc =STARGARD
+	ulica =NASIENNA 6
+	dom =
+	lokal =
+	kodpocz =73-110
+	nip =854-00-11-767 
+	tel1=91 578 84 46                  
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-23
+	datasp =2024-09-23
+	Dane nabywcy{
+		khid =046208
+		khnip =854-00-11-767 
+	}
+	symbol FK=FKS
+	FK nazwa =F41833/R/24 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =3660.48
+		konto =201-2-1-046208
+	}
+	Zapis{
+		strona=MA
+		kwota =2976.00
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =684.48
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =3660.48
+		netto =2976.00
+		vat =684.48
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =2976.00
+		sumavat =684.48
+		brutto =3660.48
+	}
+	Transakcja{
+		termin =2024-10-07
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =047575
+	kod =USLUGI TRANSPORTOWE
+	nazwa =USLUGI TRANSPORTOWE WITOLD J. WIECZOREK
+	miejscowosc =SZCZECIN
+	ulica =DOBROPOLE 17
+	dom =
+	lokal =
+	kodpocz =70-892
+	nip =852-104-18-91 
+	tel1=.                             
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-23
+	datasp =2024-09-23
+	Dane nabywcy{
+		khid =047575
+		khnip =852-104-18-91 
+	}
+	symbol FK=FKS
+	FK nazwa =F41834/R/24 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =184.50
+		konto =201-2-1-047575
+	}
+	Zapis{
+		strona=MA
+		kwota =150.00
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =34.50
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =184.50
+		netto =150.00
+		vat =34.50
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =150.00
+		sumavat =34.50
+		brutto =184.50
+	}
+	Transakcja{
+		termin =2024-09-30
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =046017
+	kod =GMINA MIASTO SZCZECIN
+	nazwa =GMINA MIASTO SZCZECIN
+	miejscowosc =SZCZECIN
+	ulica =PLAC ARMII KRAJOWEJ 1
+	dom =
+	lokal =
+	kodpocz =70-456
+	nip =851-030-94-10 
+	tel1=..                            
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-23
+	datasp =2024-09-23
+	Dane nabywcy{
+		khid =046017
+		khnip =851-030-94-10 
+	}
+	symbol FK=FKS
+	FK nazwa =F41835/R/24 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =92.25
+		konto =201-2-1-046017
+	}
+	Zapis{
+		strona=MA
+		kwota =75.00
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =17.25
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =92.25
+		netto =75.00
+		vat =17.25
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =75.00
+		sumavat =17.25
+		brutto =92.25
+	}
+	Transakcja{
+		termin =2024-10-07
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =040681
+	kod =CHEMICZNA SPOL. INWALID ARA
+	nazwa =CHEMICZNA SPOLDZIELNIA INWALIDOW "ARA"
+	miejscowosc =SZCZECIN
+	ulica =UL. BATALIONOW CHLOPSKICH 120C
+	dom =
+	lokal =
+	kodpocz =70-760
+	nip =852-060-07-33 
+	tel1=4614-002,4615-645 P.BO˝ENKA   
+	tel2=
+	fax =609-556-199;hp56;601521152    
+	}
+Dokument{
+	data =2024-09-23
+	datasp =2024-09-23
+	Dane nabywcy{
+		khid =040681
+		khnip =852-060-07-33 
+	}
+	symbol FK=FKS
+	FK nazwa =F41836/R/24 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =197.99
+		konto =201-2-1-040681
+	}
+	Zapis{
+		strona=MA
+		kwota =160.97
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =37.02
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =197.99
+		netto =160.97
+		vat =37.02
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =160.97
+		sumavat =37.02
+		brutto =197.99
+	}
+	Transakcja{
+		termin =2024-09-30
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =040728
+	kod =KERAMZYT SYSTEM
+	nazwa =KERAMZYT-BETON SYSTEM Spolka z ograniczona odpowiedzialnoscia
+	miejscowosc =Szczecin
+	ulica =Tartaczna 9
+	dom =
+	lokal =
+	kodpocz =70-893
+	nip =854-222-00-67 
+	tel1=4 62 14 40                    
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-24
+	datasp =2024-09-24
+	Dane nabywcy{
+		khid =040728
+		khnip =854-222-00-67 
+	}
+	symbol FK=FKS
+	FK nazwa =F41837/R/24 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =430.50
+		konto =201-2-1-040728
+	}
+	Zapis{
+		strona=MA
+		kwota =350.00
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =80.50
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =430.50
+		netto =350.00
+		vat =80.50
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =350.00
+		sumavat =80.50
+		brutto =430.50
+	}
+	Transakcja{
+		termin =2024-10-08
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =047117
+	kod =TOWARZYSTWO PRZYJACIOL DZIECI
+	nazwa =TOWARZYSTWO PRZYJACIOL DZIECI ZACHODNIOPOMORSKI ODDZIAL REGIONALNY
+	miejscowosc =SZCZECIN
+	ulica =AL.PAPIEZA JANA PAWLAII 42/U9
+	dom =
+	lokal =
+	kodpocz =70-415
+	nip =8512805432    
+	tel1=OSIEDLE KASZTANOWE 85D        
+	tel2=
+	fax =PRZEDSZKOLE SťNECZKO          
+	}
+Dokument{
+	data =2024-09-24
+	datasp =2024-09-24
+	Dane nabywcy{
+		khid =047117
+		khnip =8512805432    
+	}
+	symbol FK=FKS
+	FK nazwa =F41838/R/24 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =118.23
+		konto =201-2-1-047117
+	}
+	Zapis{
+		strona=MA
+		kwota =96.12
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =22.11
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =118.23
+		netto =96.12
+		vat =22.11
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =96.12
+		sumavat =22.11
+		brutto =118.23
+	}
+	Transakcja{
+		termin =2024-09-24
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =042265
+	kod =PERGOLA SP.J. E.MICHALEK Z.TOM
+	nazwa =PERGOLA SP.J. E.MICHALEK Z.TOMASZEWSKI
+	miejscowosc =SZCZECIN
+	ulica =POCZTOWA 39
+	dom =
+	lokal =
+	kodpocz =70-357
+	nip =852-22-55-950 
+	tel1=4613-905                      
+	tel2=
+	fax =BATALIONŕW CHťOPSKICH 61B     
+	}
+Dokument{
+	data =2024-09-24
+	datasp =2024-09-24
+	Dane nabywcy{
+		khid =042265
+		khnip =852-22-55-950 
+	}
+	symbol FK=FKS
+	FK nazwa =F41839/R/24 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =182.66
+		konto =201-2-1-042265
+	}
+	Zapis{
+		strona=MA
+		kwota =148.50
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =34.16
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =182.66
+		netto =148.50
+		vat =34.16
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =148.50
+		sumavat =34.16
+		brutto =182.66
+	}
+	Transakcja{
+		termin =2024-10-01
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =042753
+	kod =ZARZAD ODDZIALU MIEJSKIEGO ZWI
+	nazwa =ZARZAD ODDZIALU MIEJSKIEGO ZWIAZKU OSP PR
+	miejscowosc =SZCZECIN
+	ulica =PYRZYCKA 4A
+	dom =
+	lokal =
+	kodpocz =70-892
+	nip =955-22-02-858 
+	tel1=600-23-66-02                  
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2024-09-24
+	datasp =2024-09-24
+	Dane nabywcy{
+		khid =042753
+		khnip =955-22-02-858 
+	}
+	symbol FK=FKS
+	FK nazwa =F41840/R/24 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =267.00
+		konto =201-2-1-042753
+	}
+	Zapis{
+		strona=MA
+		kwota =217.07
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =49.93
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =267.00
+		netto =217.07
+		vat =49.93
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =217.07
+		sumavat =49.93
+		brutto =267.00
+	}
+	Transakcja{
+		termin =2024-10-01
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =046444
+	kod =SUKCES JANINA SZYDLOWSKA
+	nazwa =SUKCES JANINA SZYDLOWSKA
+	miejscowosc =SZCZECIN
+	ulica =JASNA 5A/14
+	dom =
+	lokal =
+	kodpocz =70-777
+	nip =955-100-07-33 
+	tel1=                              
+	tel2=
+	fax =PATRZ 43043                   
+	}
+Dokument{
+	data =2024-09-24
+	datasp =2024-09-24
+	Dane nabywcy{
+		khid =046444
+		khnip =955-100-07-33 
+	}
+	symbol FK=FKS
+	FK nazwa =F41841/R/24 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =260.00
+		konto =201-2-1-046444
+	}
+	Zapis{
+		strona=MA
+		kwota =211.38
+		konto =731-3
+	}
+	Zapis{
+		strona =MA
+		kwota =48.62
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+		okres =2024-09-01
+		stawka =23.00
+		brutto =260.00
+		netto =211.38
+		vat =48.62
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =211.38
+		sumavat =48.62
+		brutto =260.00
+	}
+	Transakcja{
+		termin =2024-09-27
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =044042
+	kod =HYDRAULIK JACEK KUSTRA
+	nazwa =PPUH HYDRAULIK JACEK KUSTRA
+	miejscowosc =PRZELEWICE
+	ulica =KLODZINO 39
+	dom =
+	lokal =
+	kodpocz =74-210
+	nip =853-114-52-50 
+	tel1=577-14-24                     
+	tel2=
+	fax =S
