@@ -1,5 +1,6 @@
-/* Modern, material design inspired styles with subtle color accents */
+/* Modern, material design inspired styles with nature-based themes */
 :root {
+    /* Current theme variables (default - Twilight Purple) */
     --primary-color: rgba(128, 100, 190, 0.8);
     --primary-hover: rgba(128, 100, 190, 0.9);
     --secondary-color: #262636;
@@ -13,6 +14,101 @@
     --text-color: #e2e8f0;
     --text-muted: #a0aec0;
     --border-color: rgba(70, 70, 90, 0.3);
+    
+    /* Theme: Forest Emerald */
+    --forest-primary: rgba(76, 175, 124, 0.75);
+    --forest-hover: rgba(76, 175, 124, 0.9);
+    --forest-secondary: #1f2d28;
+    --forest-accent: rgba(102, 187, 142, 0.7);
+    --forest-dark-bg: #1a2521;
+    --forest-card-bg: #22332d;
+    --forest-border: rgba(70, 135, 90, 0.3);
+    
+    /* Theme: Ocean Azure */
+    --ocean-primary: rgba(72, 147, 193, 0.75);
+    --ocean-hover: rgba(72, 147, 193, 0.9);
+    --ocean-secondary: #1b2936;
+    --ocean-accent: rgba(100, 173, 219, 0.7);
+    --ocean-dark-bg: #162230;
+    --ocean-card-bg: #1d304a;
+    --ocean-border: rgba(60, 120, 180, 0.3);
+    
+    /* Theme: Amber Sunset */
+    --amber-primary: rgba(209, 142, 55, 0.75);
+    --amber-hover: rgba(209, 142, 55, 0.9);
+    --amber-secondary: #312923;
+    --amber-accent: rgba(235, 169, 83, 0.7);
+    --amber-dark-bg: #28221c;
+    --amber-card-bg: #362f25;
+    --amber-border: rgba(180, 130, 70, 0.3);
+    
+    /* Theme: Crimson Rose */
+    --rose-primary: rgba(188, 75, 93, 0.75);
+    --rose-hover: rgba(188, 75, 93, 0.9);
+    --rose-secondary: #2d2023;
+    --rose-accent: rgba(214, 100, 120, 0.7);
+    --rose-dark-bg: #241b1e;
+    --rose-card-bg: #332327;
+    --rose-border: rgba(160, 70, 90, 0.3);
+
+    /* Theme: Turquoise Lagoon */
+    --lagoon-primary: rgba(64, 190, 188, 0.75);
+    --lagoon-hover: rgba(64, 190, 188, 0.9);
+    --lagoon-secondary: #1e2f33;
+    --lagoon-accent: rgba(88, 216, 210, 0.7);
+    --lagoon-dark-bg: #16272b;
+    --lagoon-card-bg: #1e3538;
+    --lagoon-border: rgba(60, 160, 160, 0.3);
+    
+    /* Common variables */
+    --border-radius: 4px;
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --elevation-2: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+    --elevation-3: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+    --forest-dark-bg: #1a2521;
+    --forest-card-bg: #22332d;
+    --forest-border: rgba(70, 135, 90, 0.3);
+    
+    /* Theme: Ocean Azure */
+    --ocean-primary: rgba(72, 147, 193, 0.75);
+    --ocean-hover: rgba(72, 147, 193, 0.9);
+    --ocean-secondary: #1b2936;
+    --ocean-accent: rgba(100, 173, 219, 0.7);
+    --ocean-dark-bg: #162230;
+    --ocean-card-bg: #1d304a;
+    --ocean-border: rgba(60, 120, 180, 0.3);
+    
+    /* Theme: Amber Sunset */
+    --amber-primary: rgba(209, 142, 55, 0.75);
+    --amber-hover: rgba(209, 142, 55, 0.9);
+    --amber-secondary: #312923;
+    --amber-accent: rgba(235, 169, 83, 0.7);
+    --amber-dark-bg: #28221c;
+    --amber-card-bg: #362f25;
+    --amber-border: rgba(180, 130, 70, 0.3);
+    
+    /* Theme: Crimson Rose */
+    --rose-primary: rgba(188, 75, 93, 0.75);
+    --rose-hover: rgba(188, 75, 93, 0.9);
+    --rose-secondary: #2d2023;
+    --rose-accent: rgba(214, 100, 120, 0.7);
+    --rose-dark-bg: #241b1e;
+    --rose-card-bg: #332327;
+    --rose-border: rgba(160, 70, 90, 0.3);
+
+    /* Theme: Turquoise Lagoon */
+    --lagoon-primary: rgba(64, 190, 188, 0.75);
+    --lagoon-hover: rgba(64, 190, 188, 0.9);
+    --lagoon-secondary: #1e2f33;
+    --lagoon-accent: rgba(88, 216, 210, 0.7);
+    --lagoon-dark-bg: #16272b;
+    --lagoon-card-bg: #1e3538;
+    --lagoon-border: rgba(60, 160, 160, 0.3);
+    
+    /* Common variables */
     --border-radius: 4px;
     --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
