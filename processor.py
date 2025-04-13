@@ -135,125 +135,104 @@ def process_vat_file(lines):
         'niezakwalifikowane_przez_date': 0
     }
     
-    current_document = {
-        'data': None,
-        'datasp': None,
-        'kwota': None,
-        'kwota_vat': None,
-        'licznik_konto': 0,
-        'zmien_konto': False,
-        'zmien_okres': False,
-        'w_dokumencie': False,
-        'w_zapisie': False,
-        'zapisy': []
-    }
+    w_dokumencie = False
+    w_zapisie = False
+    
+    # Zmienne dla bieżącego dokumentu
+    data_value = None
+    datasp_value = None
+    kwota_value = None
+    licznik_konto = 0
+    zmiana_konta_731 = False
+    zmiana_okresu = False
+    
+    # Trzeci zapis w dokumencie (VAT) - na potrzeby sprawdzenia minusa w kwocie
+    vat_zapis_kwota_str = None
     
     for i, line in enumerate(lines):
-        # Początek nowego dokumentu dla kontrahenta
+        # Początek nowego dokumentu
         if 'Dokument{' in line:
-            # Jeśli kończymy poprzedni dokument, sprawdźmy czy nie były spełnione warunki
-            if current_document['w_dokumencie'] and current_document['data'] is not None and current_document['datasp'] is not None:
-                if current_document['data'] == current_document['datasp']:
-                    changes['niezakwalifikowane_przez_date'] += 1
-            
-            # Reset dla nowego dokumentu
-            current_document = {
-                'data': None,
-                'datasp': None,
-                'kwota': None,
-                'kwota_vat': None,
-                'licznik_konto': 0,
-                'zmien_konto': False,
-                'zmien_okres': False,
-                'w_dokumencie': True,
-                'w_zapisie': False,
-                'zapisy': []
-            }
+            # Resetujemy zmienne dla nowego dokumentu
+            w_dokumencie = True
+            data_value = None
+            datasp_value = None
+            kwota_value = None
+            licznik_konto = 0
+            zmiana_konta_731 = False
+            zmiana_okresu = False
+            vat_zapis_kwota_str = None
         
-        # Zbieramy informacje o dokumencie
-        if current_document['w_dokumencie']:
-            # Daty dokumentu
-            if 'datasp =' in line:
-                current_document['datasp'] = line.split('=')[1].strip()
-            
+        # Zbieramy daty z bieżącego dokumentu
+        if w_dokumencie:
             if 'data =' in line:
-                current_document['data'] = line.split('=')[1].strip()
+                data_value = line.split('=')[1].strip()
+            
+            if 'datasp =' in line:
+                datasp_value = line.split('=')[1].strip()
             
             # Początek zapisu
             if 'Zapis{' in line:
-                current_document['w_zapisie'] = True
-                current_document['zapisy'].append({
-                    'strona': None,
-                    'kwota': None,
-                    'konto': None
-                })
+                w_zapisie = True
+                licznik_konto = 0  # Resetujemy licznik dla każdego zapisu
             
-            # Dane w zapisie
-            if current_document['w_zapisie']:
-                if 'strona =' in line or 'strona=' in line:
-                    if '=' in line:
-                        current_document['zapisy'][-1]['strona'] = line.split('=')[1].strip()
-                
+            # Przetwarzanie zapisów w dokumencie
+            if w_zapisie:
+                # Szukamy kwoty VAT (3ci zapis, konto 221-1)
                 if 'kwota =' in line:
-                    try:
-                        current_document['zapisy'][-1]['kwota'] = float(line.split('=')[1].strip())
-                    except ValueError:
-                        current_document['zapisy'][-1]['kwota'] = 0
+                    kwota_str = line.split('=')[1].strip()
+                    
+                    # Jeśli następna linia ma konto 221-1, zapisujemy kwotę VAT
+                    next_line_idx = i + 1
+                    if next_line_idx < len(lines) and 'konto =221-1' in lines[next_line_idx]:
+                        vat_zapis_kwota_str = kwota_str
                 
+                # Sprawdzamy konto w zapisie i liczymy wystąpienia
                 if 'konto =' in line:
-                    current_document['zapisy'][-1]['konto'] = line.split('=')[1].strip()
+                    licznik_konto += 1
                     
-                    # Zliczamy konta dla późniejszej zmiany
-                    current_document['licznik_konto'] += 1
-                    
-                    # Sprawdzamy drugi zapis z kontem 731-*
-                    if current_document['zmien_konto'] and current_document['licznik_konto'] == 2:
+                    # Sprawdzamy czy to drugi zapis (konto 731-*)
+                    if licznik_konto == 2 and zmiana_konta_731:
                         konto_pos = line.find('=') + 1
                         konto_value = line[konto_pos:].strip()
-                        if konto_value in ['731-1', '731-3', '731-4']:
-                            # Zapisujemy nowe konto
-                            new_konto = konto_value.replace('731-1', '702-2-3-1').replace('731-3', '702-2-3-3').replace('731-4', '702-2-3-4')
-                            line = line[:konto_pos] + new_konto + '\n'
-                            lines[i] = line
+                        
+                        if konto_value == '731-1':
+                            lines[i] = line[:konto_pos] + '702-2-3-1\n'
                             changes['zmiany_konto_731'] += 1
-            
-            # Koniec zapisu
-            if current_document['w_zapisie'] and '}' in line and 'Zapis{' not in line and 'Dokument{' not in line:
-                current_document['w_zapisie'] = False
+                        elif konto_value == '731-3':
+                            lines[i] = line[:konto_pos] + '702-2-3-3\n'
+                            changes['zmiany_konto_731'] += 1
+                        elif konto_value == '731-4':
+                            lines[i] = line[:konto_pos] + '702-2-3-4\n'
+                            changes['zmiany_konto_731'] += 1
                 
-                # Sprawdzamy, czy to zapis VAT (konto 221-1)
-                ostatni_zapis = current_document['zapisy'][-1]
-                if ostatni_zapis['konto'] == '221-1' and ostatni_zapis['strona'] == 'MA' and ostatni_zapis['kwota'] is not None:
-                    current_document['kwota_vat'] = ostatni_zapis['kwota']
-                    
-                    # Pobierz oryginalny tekst linii z kwotą, aby sprawdzić czy jest minus
-                    for prev_idx in range(i-5, i):
-                        if prev_idx >= 0 and 'kwota =' in lines[prev_idx]:
-                            kwota_line = lines[prev_idx]
-                            kwota_str = kwota_line.split('=')[1].strip()
-                            # Sprawdzamy warunki do zmian: data różna od datasp i brak minusa przed kwotą
-                            if (current_document['data'] != current_document['datasp'] and 
-                                not kwota_str.startswith('-')):
-                                current_document['zmien_konto'] = True
-                                current_document['zmien_okres'] = True
-                            else:
-                                if kwota_str.startswith('-'):
-                                    changes['niezakwalifikowane_przez_kwote'] += 1
-                            break
+                # Koniec zapisu
+                if '}' in line and 'Zapis{' not in line and 'Dokument{' not in line:
+                    w_zapisie = False
             
-            # Zmiana okresu w Rejestrze
-            if current_document['zmien_okres'] and 'okres =' in line:
+            # Zmiana okresu rozliczenia
+            if zmiana_okresu and 'okres =' in line:
                 okres_pos = line.find('=') + 1
                 data_okresu = line[okres_pos:].strip()
                 nowa_data_okresu = ostatni_dzien_poprzedniego_miesiaca(data_okresu)
-                line = line[:okres_pos] + nowa_data_okresu + '\n'
-                lines[i] = line
+                lines[i] = line[:okres_pos] + nowa_data_okresu + '\n'
                 changes['zmiany_okres'] += 1
-                current_document['zmien_okres'] = False
+                zmiana_okresu = False
+            
+            # Po wszystkich zapisach, przed końcem dokumentu, sprawdzamy warunki
+            if 'Rejestr{' in line and data_value is not None and datasp_value is not None and vat_zapis_kwota_str is not None:
+                # Sprawdzamy czy daty są różne i czy nie ma minusa w kwocie VAT
+                if data_value != datasp_value and not vat_zapis_kwota_str.startswith('-'):
+                    zmiana_konta_731 = True
+                    zmiana_okresu = True
+                else:
+                    if data_value == datasp_value:
+                        changes['niezakwalifikowane_przez_date'] += 1
+                    if vat_zapis_kwota_str.startswith('-'):
+                        changes['niezakwalifikowane_przez_kwote'] += 1
             
             # Koniec dokumentu
-            if line.strip() == '}' and 'Zapis{' not in line and current_document['w_zapisie'] == False:
-                current_document['w_dokumencie'] = False
+            if line.strip() == '}' and w_dokumencie and not w_zapisie:
+                w_dokumencie = False
     
     logging.info(f'Łączna liczba zmian konta 731-1, 731-3, 731-4 na odpowiednie wartości: {changes["zmiany_konto_731"]}')
     logging.info(f'Łączna liczba zmian daty okresu na ostatni dzień poprzedniego miesiąca: {changes["zmiany_okres"]}')
