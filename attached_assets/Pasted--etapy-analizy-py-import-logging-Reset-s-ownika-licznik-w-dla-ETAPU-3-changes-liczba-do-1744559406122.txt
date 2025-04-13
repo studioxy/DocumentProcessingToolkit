@@ -1,0 +1,60 @@
+# etapy_analizy.py
+import logging
+
+# Reset słownika liczników dla ETAPU 3
+changes = {
+    'liczba_dokumentow_z_roznymi_datami': 0,
+    'dokumenty_zkwalifikowane': 0,
+    'niezakwalifikowane_przez_kwote': 0,
+    'niezakwalifikowane_przez_date': 0
+}
+
+logging.info("ETAP 3: Analiza dokumentów i warunków biznesowych")
+
+for dokument in baza_dokumentow:
+    # Inicjalizacja - domyślnie dokument NIE kwalifikuje się do zmian
+    dokument['do_zmiany'] = False
+    
+    # Sprawdź, czy mamy obie daty
+    if dokument['data'] is None or dokument['datasp'] is None:
+        logging.warning(f"Dokument {dokument['id']}: Brak kompletu dat: data={dokument['data']}, datasp={dokument['datasp']}")
+        continue
+        
+    # Oczyść daty (usuwając białe znaki) przed porównaniem
+    dokument['data_clean'] = dokument['data'].strip()
+    dokument['datasp_clean'] = dokument['datasp'].strip()
+    
+    # Porównanie oczyszczonych dat
+    daty_sa_rozne = dokument['data_clean'] != dokument['datasp_clean']
+    
+    # Jeżeli daty są różne, zwiększ odpowiedni licznik
+    if daty_sa_rozne:
+        changes['liczba_dokumentow_z_roznymi_datami'] += 1
+    
+    # Sprawdź warunek kwoty VAT – musi być obecna oraz bez minusa
+    kwota_bez_minusa = dokument['kwota_vat'] is not None and not dokument['kwota_vat_ma_minus']
+    
+    # Szczegółowy log dla dokumentu
+    logging.info(f"Analiza dokumentu {dokument['id']} (kontrahent: {dokument['kontrahent_id']}):")
+    logging.info(f"  - Data oczyszczona: [{dokument['data_clean']}], DataSp oczyszczona: [{dokument['datasp_clean']}]")
+    logging.info(f"  - Daty są różne: {daty_sa_rozne}")
+    logging.info(f"  - Kwota VAT: {dokument['kwota_vat']}, bez minusa: {kwota_bez_minusa}")
+    logging.info(f"  - Konto 731: {dokument['konto_731_wartosc'] if dokument['konto_731_wartosc'] else 'brak'}")
+    
+    # Decyzja o kwalifikacji do zmian – tylko gdy WSZYSTKIE warunki są spełnione
+    if daty_sa_rozne:
+        if kwota_bez_minusa:
+            # Dokument spełnia wszystkie wymagane warunki
+            dokument['do_zmiany'] = True
+            changes['dokumenty_zkwalifikowane'] += 1
+            logging.info(f"  => Dokument {dokument['id']} KWALIFIKUJE SIĘ do zmian")
+        else:
+            changes['niezakwalifikowane_przez_kwote'] += 1
+            logging.info(f"  => Dokument {dokument['id']} NIE KWALIFIKUJE SIĘ - kwota VAT ma minus lub brak")
+    else:
+        changes['niezakwalifikowane_przez_date'] += 1
+        logging.info(f"  => Dokument {dokument['id']} NIE KWALIFIKUJE SIĘ - daty są identyczne: [{dokument['data_clean']}] = [{dokument['datasp_clean']}]")
+
+# Log końcowy – podsumowanie wyników ETAPU 3
+logging.info("Podsumowanie ETAPU 3:")
+logging.info(changes)
