@@ -156,12 +156,13 @@ def process_vat_file(lines):
                 'kwota_vat': None,
                 'kwota_vat_str': None,
                 'kwota_vat_ma_minus': False,
-                'konto_731_linia': None,
-                'konto_731_wartosc': None,
+                'zapis_drugi_konto_linia': None,
+                'zapis_drugi_konto_wartosc': None,
                 'okres_linia': None,
                 'okres_wartosc': None,
                 'zmieniac_konto': False,
-                'zmieniac_okres': False
+                'zmieniac_okres': False,
+                'jest_konto_731': False  # Czy jest konto 731 w dokumencie
             }
         
         # Jeśli mamy aktywny dokument
@@ -183,10 +184,20 @@ def process_vat_file(lines):
                 except ValueError:
                     dokument_aktualny['kwota_vat'] = 0
             
-            # Identyfikujemy drugie konto (731-*)
-            if 'konto =' in line and any(konto in line for konto in ['731-1', '731-3', '731-4']):
-                dokument_aktualny['konto_731_linia'] = i
-                dokument_aktualny['konto_731_wartosc'] = line.split('=')[1].strip()
+            # Śledzenie zapisów w dokumencie
+            if 'Zapis{' in line:
+                zapis_counter = 0  # Reset licznika zapisów
+            
+            # Identyfikujemy drugie konto (zarówno 731-* jak i 702-*)
+            if 'konto =' in line:
+                # Wykrywanie drugiego zapisu (numer 2)
+                if 'Zapis{' in lines[i-5:i] and 'strona=MA' in lines[i-4:i]:
+                    dokument_aktualny['zapis_drugi_konto_linia'] = i
+                    dokument_aktualny['zapis_drugi_konto_wartosc'] = line.split('=')[1].strip()
+                    
+                    # Sprawdzenie czy to konto 731-*
+                    if any(konto in line for konto in ['731-1', '731-3', '731-4']):
+                        dokument_aktualny['jest_konto_731'] = True
             
             # Identyfikujemy linię z okresem
             if 'okres =' in line:
@@ -196,10 +207,13 @@ def process_vat_file(lines):
             # Koniec dokumentu - dodajemy do kolekcji jeśli mamy wszystkie potrzebne dane
             if line == '}' and dokument_aktualny.get('data') is not None:
                 # Sprawdzamy warunki modyfikacji (różnica dat i kwota bez minusa)
+                # Ważne: zmieniamy konto tylko jeśli jest to 731-*, zmienamy okres zawsze gdy warunki spełnione
                 if (dokument_aktualny['data'] != dokument_aktualny['datasp'] and 
                     not dokument_aktualny['kwota_vat_ma_minus']):
-                    dokument_aktualny['zmieniac_konto'] = True
-                    dokument_aktualny['zmieniac_okres'] = True
+                    
+                    # Konto zmieniamy tylko gdy jest to 731-*
+                    dokument_aktualny['zmieniac_konto'] = dokument_aktualny['jest_konto_731']
+                    dokument_aktualny['zmieniac_okres'] = True  # Okres zmieniamy zawsze gdy daty różne i brak minusa
                 else:
                     # Logowanie przyczyn niezakwalifikowania
                     if dokument_aktualny['data'] == dokument_aktualny['datasp']:
@@ -213,12 +227,18 @@ def process_vat_file(lines):
                 dokumenty.append(dokument_aktualny)
                 dokument_aktualny = None  # Resetujemy aktualny dokument
     
+    # Debug: Wypisanie informacji o dokumentach
+    for i, dok in enumerate(dokumenty):
+        logging.debug(f"Dokument {i+1}: data={dok['data']}, datasp={dok['datasp']}, " +
+                     f"zmieniac_konto={dok['zmieniac_konto']}, zmieniac_okres={dok['zmieniac_okres']}, " +
+                     f"jest_konto_731={dok['jest_konto_731']}, konto={dok.get('zapis_drugi_konto_wartosc')}")
+    
     # Faza 2: Wprowadzanie zmian
     for dokument in dokumenty:
-        # Zmiana konta 731-* na odpowiednie 702-*
-        if dokument['zmieniac_konto'] and dokument['konto_731_linia'] is not None:
-            konto_value = dokument['konto_731_wartosc']
-            linia_idx = dokument['konto_731_linia']
+        # Zmiana konta 731-* na odpowiednie 702-* (tylko gdy jest to 731-*)
+        if dokument['zmieniac_konto'] and dokument['zapis_drugi_konto_linia'] is not None and dokument['jest_konto_731']:
+            konto_value = dokument['zapis_drugi_konto_wartosc']
+            linia_idx = dokument['zapis_drugi_konto_linia']
             
             if konto_value == '731-1':
                 new_konto = '702-2-3-1'
