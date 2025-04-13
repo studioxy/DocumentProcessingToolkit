@@ -58,8 +58,10 @@ def process_file(filename, file_type):
     }
     
     try:
-        with open(filename, 'r', encoding='latin-1') as file:
+        # Porada: wczytujemy plik z tym samym kodowaniem jakiego używamy do zapisu logów
+        with open(filename, 'r', encoding='utf-8', errors='replace') as file:
             lines = file.readlines()
+            logging.info(f"Wczytano plik {filename} używając kodowania UTF-8 z automatyczną zamianą nierozpoznanych znaków")
         
         if file_type == 'bank':
             results['changes'] = process_bank_file(lines)
@@ -68,8 +70,9 @@ def process_file(filename, file_type):
         elif file_type == 'kasa':
             results['changes'] = process_kasa_file(lines)
         
-        with open(filename, 'w', encoding='latin-1') as file:
+        with open(filename, 'w', encoding='utf-8') as file:
             file.writelines(lines)
+            logging.info(f"Zapisano plik {filename} używając kodowania UTF-8")
         
         elapsed_time = (time.time() - start_time) * 1000  # time in milliseconds
         results['processing_time'] = round(elapsed_time, 5)
@@ -195,6 +198,11 @@ def process_vat_file(lines):
     if kontrahenci:
         kontrahenci[-1]['linia_koniec'] = len(lines) - 1
     
+    # Sprawdź czy mamy kontrahenta TOMASZ HAMERA (001455) - znany problematyczny przypadek
+    for k in kontrahenci:
+        if k['id'] == '001455':
+            logging.warning(f"UWAGA: Znaleziono kontrahenta TOMASZ HAMERA (ID: 001455). Wszystkie dokumenty tego kontrahenta będą dokładnie analizowane.")
+            
     logging.info(f"Znaleziono {len(kontrahenci)} kontrahentów w pliku")
     
     # ETAP 2: Znajdź wszystkie dokumenty w blokach kontrahentów
@@ -225,7 +233,9 @@ def process_vat_file(lines):
                     'konto_731_linia': None,
                     'konto_731_wartosc': None,
                     'okres_linia': None,
-                    'do_zmiany': False
+                    'do_zmiany': False,
+                    'data_clean': None,
+                    'datasp_clean': None
                 }
                 
                 # Znajdź koniec tego dokumentu (do następnego Dokument{ lub końca kontrahenta)
@@ -301,9 +311,7 @@ def process_vat_file(lines):
         # Inicjalizacja - DOMYŚLNIE dokument NIE kwalifikuje się do zmian
         dokument['do_zmiany'] = False
         
-        # Dodajemy nowe pola dla oczyszczonych dat
-        dokument['data_clean'] = None
-        dokument['datasp_clean'] = None
+        # Te pola powinny już być zainicjalizowane we wcześniejszym kroku
         
         # Sprawdź czy mamy obie daty
         if dokument['data'] is None or dokument['datasp'] is None:
