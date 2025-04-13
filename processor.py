@@ -226,15 +226,20 @@ def process_vat_file(lines):
                 if ostatni_zapis['konto'] == '221-1' and ostatni_zapis['strona'] == 'MA' and ostatni_zapis['kwota'] is not None:
                     current_document['kwota_vat'] = ostatni_zapis['kwota']
                     
-                    # Sprawdzamy warunki do zmian
-                    if (current_document['data'] != current_document['datasp'] and 
-                        current_document['kwota_vat'] is not None and 
-                        current_document['kwota_vat'] > 0):
-                        current_document['zmien_konto'] = True
-                        current_document['zmien_okres'] = True
-                    else:
-                        if current_document['kwota_vat'] is not None and current_document['kwota_vat'] <= 0:
-                            changes['niezakwalifikowane_przez_kwote'] += 1
+                    # Pobierz oryginalny tekst linii z kwotą, aby sprawdzić czy jest minus
+                    for prev_idx in range(i-5, i):
+                        if prev_idx >= 0 and 'kwota =' in lines[prev_idx]:
+                            kwota_line = lines[prev_idx]
+                            kwota_str = kwota_line.split('=')[1].strip()
+                            # Sprawdzamy warunki do zmian: data różna od datasp i brak minusa przed kwotą
+                            if (current_document['data'] != current_document['datasp'] and 
+                                not kwota_str.startswith('-')):
+                                current_document['zmien_konto'] = True
+                                current_document['zmien_okres'] = True
+                            else:
+                                if kwota_str.startswith('-'):
+                                    changes['niezakwalifikowane_przez_kwote'] += 1
+                            break
             
             # Zmiana okresu w Rejestrze
             if current_document['zmien_okres'] and 'okres =' in line:
@@ -253,7 +258,7 @@ def process_vat_file(lines):
     logging.info(f'Łączna liczba zmian konta 731-1, 731-3, 731-4 na odpowiednie wartości: {changes["zmiany_konto_731"]}')
     logging.info(f'Łączna liczba zmian daty okresu na ostatni dzień poprzedniego miesiąca: {changes["zmiany_okres"]}')
     logging.info(f'Łączna liczba przypadków niezakwalifikowanych przez taką samą datę: {changes["niezakwalifikowane_przez_date"]}')
-    logging.info(f'Łączna liczba przypadków niezakwalifikowanych przez kwotę <= 0: {changes["niezakwalifikowane_przez_kwote"]}')
+    logging.info(f'Łączna liczba przypadków niezakwalifikowanych przez ujemną kwotę (z minusem): {changes["niezakwalifikowane_przez_kwote"]}')
     
     return changes
 

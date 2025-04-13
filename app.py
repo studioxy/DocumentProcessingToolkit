@@ -265,7 +265,7 @@ def stats():
                 vat_stats['total_changes'] += file.changes['zakwalifikowane_vs_niezakwalifikowane']
                 
             if 'niezakwalifikowane_przez_kwote' in file.changes:
-                vat_stats['changes_by_rule']['niezakwalifikowane_przez_kwote'] += file.changes['niezakwalifikowane_przez_kwote']
+                vat_stats['changes_by_rule']['niezakwalifikowane_przez_ujemną_kwotę'] += file.changes['niezakwalifikowane_przez_kwote']
                 vat_stats['total_changes'] += file.changes['niezakwalifikowane_przez_kwote']
                 
             if 'niezakwalifikowane_przez_date' in file.changes:
