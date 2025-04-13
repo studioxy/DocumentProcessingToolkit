@@ -38,9 +38,9 @@ def process_file(filename, file_type):
     """Process a file based on its type and return statistics."""
     start_time = time.time()
     
-    # Configure logging to file
+    # Configure logging to file - używamy UTF-8 zamiast latin-1 aby obsługiwać polskie znaki
     log_filename = datetime.now().strftime('logs/logdata_%Y%m%d_%H%M%S.txt')
-    file_handler = logging.FileHandler(log_filename, encoding='latin-1')
+    file_handler = logging.FileHandler(log_filename, encoding='utf-8')
     file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
     
     # Add handler to root logger
