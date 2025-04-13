@@ -135,6 +135,8 @@ def process_vat_file(lines):
         'niezakwalifikowane_przez_date': 0
     }
     
+    # Flagi stanu
+    w_kontrahencie = False
     w_dokumencie = False
     w_zapisie = False
     
@@ -145,38 +147,52 @@ def process_vat_file(lines):
     licznik_konto = 0
     zmiana_konta_731 = False
     zmiana_okresu = False
-    
-    # Trzeci zapis w dokumencie (VAT) - na potrzeby sprawdzenia minusa w kwocie
     vat_zapis_kwota_str = None
     
-    for i, line in enumerate(lines):
-        # Początek nowego dokumentu
-        if 'Dokument{' in line:
+    # Funkcja do resetowania zmiennych dokumentu
+    def reset_dokument_vars():
+        nonlocal data_value, datasp_value, kwota_value, licznik_konto, zmiana_konta_731, zmiana_okresu, vat_zapis_kwota_str, w_dokumencie, w_zapisie
+        data_value = None
+        datasp_value = None
+        kwota_value = None
+        licznik_konto = 0
+        zmiana_konta_731 = False
+        zmiana_okresu = False
+        vat_zapis_kwota_str = None
+        w_dokumencie = False
+        w_zapisie = False
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        
+        # Wykryj początek nowego kontrahenta
+        if 'Kontrahent{' in line:
+            # Resetujemy wszystko dla nowego kontrahenta
+            w_kontrahencie = True
+            reset_dokument_vars()
+        
+        # Wykryj początek nowego dokumentu
+        elif 'Dokument{' in line and w_kontrahencie:
             # Resetujemy zmienne dla nowego dokumentu
+            reset_dokument_vars()
             w_dokumencie = True
-            data_value = None
-            datasp_value = None
-            kwota_value = None
-            licznik_konto = 0
-            zmiana_konta_731 = False
-            zmiana_okresu = False
-            vat_zapis_kwota_str = None
         
         # Zbieramy daty z bieżącego dokumentu
-        if w_dokumencie:
+        elif w_dokumencie:
             if 'data =' in line:
                 data_value = line.split('=')[1].strip()
             
-            if 'datasp =' in line:
+            elif 'datasp =' in line:
                 datasp_value = line.split('=')[1].strip()
             
             # Początek zapisu
-            if 'Zapis{' in line:
+            elif 'Zapis{' in line:
                 w_zapisie = True
                 licznik_konto = 0  # Resetujemy licznik dla każdego zapisu
             
             # Przetwarzanie zapisów w dokumencie
-            if w_zapisie:
+            elif w_zapisie:
                 # Szukamy kwoty VAT (3ci zapis, konto 221-1)
                 if 'kwota =' in line:
                     kwota_str = line.split('=')[1].strip()
@@ -187,7 +203,7 @@ def process_vat_file(lines):
                         vat_zapis_kwota_str = kwota_str
                 
                 # Sprawdzamy konto w zapisie i liczymy wystąpienia
-                if 'konto =' in line:
+                elif 'konto =' in line:
                     licznik_konto += 1
                     
                     # Sprawdzamy czy to drugi zapis (konto 731-*)
@@ -206,11 +222,11 @@ def process_vat_file(lines):
                             changes['zmiany_konto_731'] += 1
                 
                 # Koniec zapisu
-                if '}' in line and 'Zapis{' not in line and 'Dokument{' not in line:
+                elif '}' in line and 'Zapis{' not in line and 'Dokument{' not in line and 'Kontrahent{' not in line:
                     w_zapisie = False
             
             # Zmiana okresu rozliczenia
-            if zmiana_okresu and 'okres =' in line:
+            elif zmiana_okresu and 'okres =' in line:
                 okres_pos = line.find('=') + 1
                 data_okresu = line[okres_pos:].strip()
                 nowa_data_okresu = ostatni_dzien_poprzedniego_miesiaca(data_okresu)
@@ -219,20 +235,25 @@ def process_vat_file(lines):
                 zmiana_okresu = False
             
             # Po wszystkich zapisach, przed końcem dokumentu, sprawdzamy warunki
-            if 'Rejestr{' in line and data_value is not None and datasp_value is not None and vat_zapis_kwota_str is not None:
-                # Sprawdzamy czy daty są różne i czy nie ma minusa w kwocie VAT
-                if data_value != datasp_value and not vat_zapis_kwota_str.startswith('-'):
-                    zmiana_konta_731 = True
-                    zmiana_okresu = True
-                else:
-                    if data_value == datasp_value:
-                        changes['niezakwalifikowane_przez_date'] += 1
-                    if vat_zapis_kwota_str.startswith('-'):
-                        changes['niezakwalifikowane_przez_kwote'] += 1
+            elif 'Rejestr{' in line and data_value is not None and datasp_value is not None:
+                # Analizujemy czy daty są różne i czy kwota VAT nie ma minusa
+                if vat_zapis_kwota_str is not None:
+                    # Główny warunek biznesowy - różnica dat w tym samym dokumencie i brak minusa
+                    if data_value != datasp_value and not vat_zapis_kwota_str.startswith('-'):
+                        zmiana_konta_731 = True
+                        zmiana_okresu = True
+                    else:
+                        # Logowanie dlaczego nie zakwalifikowano
+                        if data_value == datasp_value:
+                            changes['niezakwalifikowane_przez_date'] += 1
+                        if vat_zapis_kwota_str is not None and vat_zapis_kwota_str.startswith('-'):
+                            changes['niezakwalifikowane_przez_kwote'] += 1
             
-            # Koniec dokumentu
-            if line.strip() == '}' and w_dokumencie and not w_zapisie:
+            # Koniec dokumentu - pusta linia lub koniec bloku
+            elif line.strip() == '}' and w_dokumencie and not w_zapisie:
                 w_dokumencie = False
+        
+        i += 1
     
     logging.info(f'Łączna liczba zmian konta 731-1, 731-3, 731-4 na odpowiednie wartości: {changes["zmiany_konto_731"]}')
     logging.info(f'Łączna liczba zmian daty okresu na ostatni dzień poprzedniego miesiąca: {changes["zmiany_okres"]}')
