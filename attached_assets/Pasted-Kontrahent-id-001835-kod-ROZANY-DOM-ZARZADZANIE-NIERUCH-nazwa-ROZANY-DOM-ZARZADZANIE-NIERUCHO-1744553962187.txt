@@ -1,0 +1,165 @@
+Kontrahent{
+	id =001835
+	kod =ROZANY DOM ZARZADZANIE NIERUCH
+	nazwa =ROZANY DOM ZARZADZANIE NIERUCHOMOSCIAMI SP. Z O.O.
+	miejscowosc =SZCZECIN
+	ulica =MALKOWSKIEGO 24 LOK.U2
+	dom =
+	lokal =
+	kodpocz =70-305
+	nip =8513238998    
+	tel1=883-030-260                   
+	tel2=
+	fax =                              
+	}
+Dokument{
+	data =2025-04-01
+	datasp =2025-03-31
+	Dane nabywcy{
+		khid =001835
+		khnip =8513238998    
+	}
+	symbol FK=FKS
+	FK nazwa =F01464/S/25 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =1253.80
+		konto =201-2-1-001835
+	}
+	Zapis{
+		strona=MA
+		kwota =1019.35
+		konto =702-2-3-1
+	}
+	Zapis{
+		strona =MA
+		kwota =234.45
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+  okres =2025-02-28
+		stawka =23.00
+		brutto =1253.80
+		netto =1019.35
+		vat =234.45
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =1019.35
+		sumavat =234.45
+		brutto =1253.80
+	}
+	Transakcja{
+		termin =2025-04-15
+		IdDlaRozliczen =-1
+	}
+}
+
+Kontrahent{
+	id =000316
+	kod =MSC K. FRANK L.
+	nazwa =MSC K. FRANK L. WIECZORKOWSKI
+	miejscowosc =SZCZECIN
+	ulica =ROBOTNICZA 31/63
+	dom =
+	lokal =
+	kodpocz =71-712
+	nip =955-23-53-451 
+	tel1=884-881-931                   
+	tel2=
+	fax =Antosiewicza 1 pok.11         
+	}
+Dokument{
+	data =2025-04-02
+	datasp =2025-04-02
+	Dane nabywcy{
+		khid =000316
+		khnip =955-23-53-451 
+	}
+	symbol FK=FKS
+	FK nazwa =F01465/S/25 
+	JPK_V7 =
+	opis FK =Sprzedaż towarów
+	Zapis{
+		strona=WN
+		kwota =11656.71
+		konto =201-2-1-000316
+	}
+	Zapis{
+		strona=MA
+		kwota =9477.00
+		konto =702-2-3-1
+	}
+	Zapis{
+		strona =MA
+		kwota =2179.71
+		konto =221-1
+	}
+	Rejestr{
+		JPK_V7 =GTU_06
+  okres =2025-02-28
+		stawka =23.00
+		brutto =11656.71
+		netto =9477.00
+		vat =2179.71
+		stawka1 =23
+		brutto2 =0.00
+		netto2 =0.00
+		vat2 =0.00
+		stawka2 =22
+		brutto3 =0.00
+		netto3 =0.00
+		vat3 =0.00
+		stawka3 =8
+		brutto4 =0.00
+		netto4 =0.00
+		vat4 =0.00
+		stawka4 =7
+		brutto5 =0.00
+		netto5 =0.00
+		vat5 =0.00
+		stawka5 =5
+		brutto6 =0.00
+		netto6 =0.00
+		vat6 =0.00
+		stawka6 =3
+		brutto7 =0.00
+		netto7 =0.00
+		vat7 =0.00
+		stawka4 =0
+		nettoWolne =0.00
+		sumanetto =9477.00
+		sumavat =2179.71
+		brutto =11656.71
+	}
+	Transakcja{
+		termin =2025-04-16
+		IdDlaRozliczen =-1
+	}
+}
