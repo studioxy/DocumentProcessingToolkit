@@ -1,0 +1,1970 @@
+2025-04-13 14:42:18,345 - INFO - --------------------------------------------------------------------------------
+2025-04-13 14:42:18,345 - INFO - Start przetwarzania pliku vat: temp_20250413_144218_dok_sVAT.txt
+2025-04-13 14:42:18,348 - INFO - ===== ROZPOCZYNAM PRZETWARZANIE PLIKU VAT =====
+2025-04-13 14:42:18,349 - INFO - ETAP 1: Pobieranie danych z pliku
+2025-04-13 14:42:18,349 - DEBUG - Znaleziono kontrahenta ID:  w linii 6
+2025-04-13 14:42:18,349 - DEBUG - Znaleziono kontrahenta ID: 014925 w linii 24
+2025-04-13 14:42:18,349 - DEBUG - Znaleziono kontrahenta ID: 011299 w linii 107
+2025-04-13 14:42:18,349 - DEBUG - Znaleziono kontrahenta ID: 002371 w linii 190
+2025-04-13 14:42:18,349 - DEBUG - Znaleziono kontrahenta ID: 014925 w linii 273
+2025-04-13 14:42:18,350 - DEBUG - Znaleziono kontrahenta ID: 001027 w linii 356
+2025-04-13 14:42:18,350 - DEBUG - Znaleziono kontrahenta ID: 010190 w linii 439
+2025-04-13 14:42:18,350 - DEBUG - Znaleziono kontrahenta ID: 002033 w linii 522
+2025-04-13 14:42:18,350 - DEBUG - Znaleziono kontrahenta ID: 018347 w linii 605
+2025-04-13 14:42:18,350 - DEBUG - Znaleziono kontrahenta ID: 002138 w linii 688
+2025-04-13 14:42:18,350 - DEBUG - Znaleziono kontrahenta ID: 000381 w linii 771
+2025-04-13 14:42:18,350 - DEBUG - Znaleziono kontrahenta ID: 010679 w linii 854
+2025-04-13 14:42:18,350 - DEBUG - Znaleziono kontrahenta ID: 000243 w linii 937
+2025-04-13 14:42:18,351 - DEBUG - Znaleziono kontrahenta ID: 019119 w linii 1020
+2025-04-13 14:42:18,351 - DEBUG - Znaleziono kontrahenta ID: 000545 w linii 1103
+2025-04-13 14:42:18,351 - DEBUG - Znaleziono kontrahenta ID: 018130 w linii 1186
+2025-04-13 14:42:18,351 - DEBUG - Znaleziono kontrahenta ID: 018620 w linii 1269
+2025-04-13 14:42:18,351 - DEBUG - Znaleziono kontrahenta ID: 000166 w linii 1352
+2025-04-13 14:42:18,351 - DEBUG - Znaleziono kontrahenta ID: 010955 w linii 1435
+2025-04-13 14:42:18,351 - DEBUG - Znaleziono kontrahenta ID: 012938 w linii 1518
+2025-04-13 14:42:18,351 - DEBUG - Znaleziono kontrahenta ID: 001104 w linii 1601
+2025-04-13 14:42:18,351 - DEBUG - Znaleziono kontrahenta ID: 010821 w linii 1684
+2025-04-13 14:42:18,352 - DEBUG - Znaleziono kontrahenta ID: 001523 w linii 1767
+2025-04-13 14:42:18,352 - DEBUG - Znaleziono kontrahenta ID: 001861 w linii 1850
+2025-04-13 14:42:18,352 - DEBUG - Znaleziono kontrahenta ID: 018175 w linii 1933
+2025-04-13 14:42:18,352 - DEBUG - Znaleziono kontrahenta ID: 001680 w linii 2016
+2025-04-13 14:42:18,352 - DEBUG - Znaleziono kontrahenta ID: 019279 w linii 2099
+2025-04-13 14:42:18,352 - DEBUG - Znaleziono kontrahenta ID: 000869 w linii 2182
+2025-04-13 14:42:18,352 - DEBUG - Znaleziono kontrahenta ID: 015026 w linii 2265
+2025-04-13 14:42:18,352 - DEBUG - Znaleziono kontrahenta ID: 018533 w linii 2348
+2025-04-13 14:42:18,352 - DEBUG - Znaleziono kontrahenta ID: 018144 w linii 2431
+2025-04-13 14:42:18,353 - DEBUG - Znaleziono kontrahenta ID: 018144 w linii 2514
+2025-04-13 14:42:18,353 - DEBUG - Znaleziono kontrahenta ID: 018144 w linii 2597
+2025-04-13 14:42:18,353 - DEBUG - Znaleziono kontrahenta ID: 001609 w linii 2680
+2025-04-13 14:42:18,353 - DEBUG - Znaleziono kontrahenta ID: 010088 w linii 2763
+2025-04-13 14:42:18,353 - DEBUG - Znaleziono kontrahenta ID: 014366 w linii 2846
+2025-04-13 14:42:18,353 - DEBUG - Znaleziono kontrahenta ID: 000253 w linii 2929
+2025-04-13 14:42:18,353 - DEBUG - Znaleziono kontrahenta ID: 017983 w linii 3012
+2025-04-13 14:42:18,353 - DEBUG - Znaleziono kontrahenta ID: 017675 w linii 3095
+2025-04-13 14:42:18,353 - DEBUG - Znaleziono kontrahenta ID: 000558 w linii 3178
+2025-04-13 14:42:18,354 - DEBUG - Znaleziono kontrahenta ID: 001516 w linii 3261
+2025-04-13 14:42:18,354 - DEBUG - Znaleziono kontrahenta ID: 000810 w linii 3344
+2025-04-13 14:42:18,354 - DEBUG - Znaleziono kontrahenta ID: 019387 w linii 3427
+2025-04-13 14:42:18,354 - DEBUG - Znaleziono kontrahenta ID: 012549 w linii 3510
+2025-04-13 14:42:18,354 - DEBUG - Znaleziono kontrahenta ID: 001753 w linii 3593
+2025-04-13 14:42:18,354 - DEBUG - Znaleziono kontrahenta ID: 001761 w linii 3676
+2025-04-13 14:42:18,355 - DEBUG - Znaleziono kontrahenta ID: 001816 w linii 3759
+2025-04-13 14:42:18,355 - DEBUG - Znaleziono kontrahenta ID: 001840 w linii 3842
+2025-04-13 14:42:18,355 - DEBUG - Znaleziono kontrahenta ID: 001815 w linii 3925
+2025-04-13 14:42:18,355 - DEBUG - Znaleziono kontrahenta ID: 014135 w linii 4008
+2025-04-13 14:42:18,355 - DEBUG - Znaleziono kontrahenta ID: 001843 w linii 4091
+2025-04-13 14:42:18,355 - DEBUG - Znaleziono kontrahenta ID: 001842 w linii 4174
+2025-04-13 14:42:18,356 - DEBUG - Znaleziono kontrahenta ID: 001841 w linii 4257
+2025-04-13 14:42:18,356 - DEBUG - Znaleziono kontrahenta ID: 015213 w linii 4340
+2025-04-13 14:42:18,356 - DEBUG - Znaleziono kontrahenta ID: 001455 w linii 4423
+2025-04-13 14:42:18,356 - DEBUG - Znaleziono kontrahenta ID: 019126 w linii 4506
+2025-04-13 14:42:18,356 - DEBUG - Znaleziono kontrahenta ID: 001839 w linii 4589
+2025-04-13 14:42:18,357 - DEBUG - Znaleziono kontrahenta ID: 010317 w linii 4672
+2025-04-13 14:42:18,357 - DEBUG - Znaleziono kontrahenta ID: 001837 w linii 4755
+2025-04-13 14:42:18,357 - DEBUG - Znaleziono kontrahenta ID: 001836 w linii 4838
+2025-04-13 14:42:18,357 - DEBUG - Znaleziono kontrahenta ID: 001835 w linii 4921
+2025-04-13 14:42:18,357 - DEBUG - Znaleziono kontrahenta ID: 000316 w linii 5004
+2025-04-13 14:42:18,358 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 5087
+2025-04-13 14:42:18,358 - DEBUG - Znaleziono kontrahenta ID: 000432 w linii 5170
+2025-04-13 14:42:18,358 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 5253
+2025-04-13 14:42:18,359 - DEBUG - Znaleziono kontrahenta ID: 001181 w linii 5336
+2025-04-13 14:42:18,359 - DEBUG - Znaleziono kontrahenta ID: 017701 w linii 5419
+2025-04-13 14:42:18,359 - DEBUG - Znaleziono kontrahenta ID: 018765 w linii 5502
+2025-04-13 14:42:18,359 - DEBUG - Znaleziono kontrahenta ID: 002974 w linii 5585
+2025-04-13 14:42:18,360 - DEBUG - Znaleziono kontrahenta ID: 002158 w linii 5668
+2025-04-13 14:42:18,360 - DEBUG - Znaleziono kontrahenta ID: 001833 w linii 5751
+2025-04-13 14:42:18,360 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 5834
+2025-04-13 14:42:18,361 - DEBUG - Znaleziono kontrahenta ID: 001831 w linii 5917
+2025-04-13 14:42:18,361 - DEBUG - Znaleziono kontrahenta ID: 001830 w linii 6000
+2025-04-13 14:42:18,361 - DEBUG - Znaleziono kontrahenta ID: 001823 w linii 6083
+2025-04-13 14:42:18,361 - DEBUG - Znaleziono kontrahenta ID: 001822 w linii 6166
+2025-04-13 14:42:18,362 - DEBUG - Znaleziono kontrahenta ID: 001820 w linii 6249
+2025-04-13 14:42:18,362 - DEBUG - Znaleziono kontrahenta ID: 010995 w linii 6332
+2025-04-13 14:42:18,362 - DEBUG - Znaleziono kontrahenta ID: 001819 w linii 6415
+2025-04-13 14:42:18,362 - DEBUG - Znaleziono kontrahenta ID: 001818 w linii 6498
+2025-04-13 14:42:18,362 - DEBUG - Znaleziono kontrahenta ID: 001817 w linii 6581
+2025-04-13 14:42:18,363 - DEBUG - Znaleziono kontrahenta ID: 001809 w linii 6664
+2025-04-13 14:42:18,363 - DEBUG - Znaleziono kontrahenta ID: 001806 w linii 6747
+2025-04-13 14:42:18,363 - DEBUG - Znaleziono kontrahenta ID: 001786 w linii 6830
+2025-04-13 14:42:18,363 - DEBUG - Znaleziono kontrahenta ID: 001784 w linii 6913
+2025-04-13 14:42:18,363 - DEBUG - Znaleziono kontrahenta ID: 002883 w linii 6996
+2025-04-13 14:42:18,364 - DEBUG - Znaleziono kontrahenta ID: 001783 w linii 7079
+2025-04-13 14:42:18,364 - DEBUG - Znaleziono kontrahenta ID: 001780 w linii 7162
+2025-04-13 14:42:18,364 - DEBUG - Znaleziono kontrahenta ID: 019436 w linii 7245
+2025-04-13 14:42:18,364 - DEBUG - Znaleziono kontrahenta ID: 001862 w linii 7328
+2025-04-13 14:42:18,364 - DEBUG - Znaleziono kontrahenta ID: 002183 w linii 7411
+2025-04-13 14:42:18,364 - DEBUG - Znaleziono kontrahenta ID: 018847 w linii 7494
+2025-04-13 14:42:18,364 - DEBUG - Znaleziono kontrahenta ID: 000422 w linii 7577
+2025-04-13 14:42:18,364 - DEBUG - Znaleziono kontrahenta ID: 002364 w linii 7660
+2025-04-13 14:42:18,365 - DEBUG - Znaleziono kontrahenta ID: 002368 w linii 7743
+2025-04-13 14:42:18,365 - DEBUG - Znaleziono kontrahenta ID: 002384 w linii 7826
+2025-04-13 14:42:18,365 - DEBUG - Znaleziono kontrahenta ID: 002431 w linii 7909
+2025-04-13 14:42:18,365 - DEBUG - Znaleziono kontrahenta ID: 002294 w linii 7992
+2025-04-13 14:42:18,365 - DEBUG - Znaleziono kontrahenta ID: 002493 w linii 8075
+2025-04-13 14:42:18,365 - DEBUG - Znaleziono kontrahenta ID: 002525 w linii 8158
+2025-04-13 14:42:18,365 - DEBUG - Znaleziono kontrahenta ID: 002570 w linii 8241
+2025-04-13 14:42:18,365 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 8324
+2025-04-13 14:42:18,365 - DEBUG - Znaleziono kontrahenta ID: 001351 w linii 8407
+2025-04-13 14:42:18,365 - DEBUG - Znaleziono kontrahenta ID: 001866 w linii 8490
+2025-04-13 14:42:18,366 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 8573
+2025-04-13 14:42:18,366 - DEBUG - Znaleziono kontrahenta ID: 000940 w linii 8656
+2025-04-13 14:42:18,366 - DEBUG - Znaleziono kontrahenta ID: 001800 w linii 8739
+2025-04-13 14:42:18,366 - DEBUG - Znaleziono kontrahenta ID: 002417 w linii 8822
+2025-04-13 14:42:18,366 - DEBUG - Znaleziono kontrahenta ID: 002536 w linii 8905
+2025-04-13 14:42:18,366 - DEBUG - Znaleziono kontrahenta ID: 002856 w linii 8988
+2025-04-13 14:42:18,366 - DEBUG - Znaleziono kontrahenta ID: 018237 w linii 9071
+2025-04-13 14:42:18,366 - DEBUG - Znaleziono kontrahenta ID: 002884 w linii 9154
+2025-04-13 14:42:18,367 - DEBUG - Znaleziono kontrahenta ID: 014807 w linii 9237
+2025-04-13 14:42:18,367 - DEBUG - Znaleziono kontrahenta ID: 002291 w linii 9320
+2025-04-13 14:42:18,367 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 9403
+2025-04-13 14:42:18,367 - DEBUG - Znaleziono kontrahenta ID: 002904 w linii 9486
+2025-04-13 14:42:18,367 - DEBUG - Znaleziono kontrahenta ID: 002010 w linii 9569
+2025-04-13 14:42:18,367 - DEBUG - Znaleziono kontrahenta ID: 018803 w linii 9652
+2025-04-13 14:42:18,367 - DEBUG - Znaleziono kontrahenta ID: 018928 w linii 9735
+2025-04-13 14:42:18,367 - DEBUG - Znaleziono kontrahenta ID: 017182 w linii 9818
+2025-04-13 14:42:18,368 - DEBUG - Znaleziono kontrahenta ID: 010821 w linii 9901
+2025-04-13 14:42:18,368 - DEBUG - Znaleziono kontrahenta ID: 001263 w linii 9984
+2025-04-13 14:42:18,368 - DEBUG - Znaleziono kontrahenta ID: 010905 w linii 10067
+2025-04-13 14:42:18,368 - DEBUG - Znaleziono kontrahenta ID: 015596 w linii 10150
+2025-04-13 14:42:18,368 - DEBUG - Znaleziono kontrahenta ID: 017613 w linii 10233
+2025-04-13 14:42:18,368 - DEBUG - Znaleziono kontrahenta ID: 001561 w linii 10318
+2025-04-13 14:42:18,369 - DEBUG - Znaleziono kontrahenta ID: 001510 w linii 10401
+2025-04-13 14:42:18,369 - DEBUG - Znaleziono kontrahenta ID: 001736 w linii 10484
+2025-04-13 14:42:18,369 - DEBUG - Znaleziono kontrahenta ID: 001952 w linii 10567
+2025-04-13 14:42:18,369 - DEBUG - Znaleziono kontrahenta ID: 001852 w linii 10650
+2025-04-13 14:42:18,369 - DEBUG - Znaleziono kontrahenta ID: 014458 w linii 10733
+2025-04-13 14:42:18,369 - DEBUG - Znaleziono kontrahenta ID: 002766 w linii 10816
+2025-04-13 14:42:18,369 - DEBUG - Znaleziono kontrahenta ID: 016983 w linii 10899
+2025-04-13 14:42:18,370 - DEBUG - Znaleziono kontrahenta ID: 012447 w linii 10982
+2025-04-13 14:42:18,370 - DEBUG - Znaleziono kontrahenta ID: 002799 w linii 11065
+2025-04-13 14:42:18,370 - DEBUG - Znaleziono kontrahenta ID: 002846 w linii 11148
+2025-04-13 14:42:18,370 - DEBUG - Znaleziono kontrahenta ID: 001966 w linii 11231
+2025-04-13 14:42:18,370 - DEBUG - Znaleziono kontrahenta ID: 019240 w linii 11314
+2025-04-13 14:42:18,370 - DEBUG - Znaleziono kontrahenta ID: 017182 w linii 11397
+2025-04-13 14:42:18,370 - DEBUG - Znaleziono kontrahenta ID: 002844 w linii 11480
+2025-04-13 14:42:18,371 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 11563
+2025-04-13 14:42:18,371 - DEBUG - Znaleziono kontrahenta ID: 001045 w linii 11646
+2025-04-13 14:42:18,371 - DEBUG - Znaleziono kontrahenta ID: 002086 w linii 11729
+2025-04-13 14:42:18,371 - DEBUG - Znaleziono kontrahenta ID: 016276 w linii 11812
+2025-04-13 14:42:18,371 - DEBUG - Znaleziono kontrahenta ID: 002137 w linii 11895
+2025-04-13 14:42:18,371 - DEBUG - Znaleziono kontrahenta ID: 001058 w linii 11978
+2025-04-13 14:42:18,371 - DEBUG - Znaleziono kontrahenta ID: 002011 w linii 12061
+2025-04-13 14:42:18,372 - DEBUG - Znaleziono kontrahenta ID: 002202 w linii 12144
+2025-04-13 14:42:18,372 - DEBUG - Znaleziono kontrahenta ID: 002321 w linii 12227
+2025-04-13 14:42:18,372 - DEBUG - Znaleziono kontrahenta ID: 018065 w linii 12310
+2025-04-13 14:42:18,372 - DEBUG - Znaleziono kontrahenta ID: 015260 w linii 12393
+2025-04-13 14:42:18,372 - DEBUG - Znaleziono kontrahenta ID: 001058 w linii 12476
+2025-04-13 14:42:18,372 - DEBUG - Znaleziono kontrahenta ID: 002894 w linii 12561
+2025-04-13 14:42:18,373 - DEBUG - Znaleziono kontrahenta ID: 000530 w linii 12644
+2025-04-13 14:42:18,373 - DEBUG - Znaleziono kontrahenta ID: 018765 w linii 12727
+2025-04-13 14:42:18,373 - DEBUG - Znaleziono kontrahenta ID: 013947 w linii 12810
+2025-04-13 14:42:18,373 - DEBUG - Znaleziono kontrahenta ID: 014998 w linii 12893
+2025-04-13 14:42:18,373 - DEBUG - Znaleziono kontrahenta ID: 017787 w linii 12976
+2025-04-13 14:42:18,373 - DEBUG - Znaleziono kontrahenta ID: 019266 w linii 13059
+2025-04-13 14:42:18,374 - DEBUG - Znaleziono kontrahenta ID: 001967 w linii 13142
+2025-04-13 14:42:18,374 - DEBUG - Znaleziono kontrahenta ID: 010386 w linii 13225
+2025-04-13 14:42:18,374 - DEBUG - Znaleziono kontrahenta ID: 001187 w linii 13308
+2025-04-13 14:42:18,374 - DEBUG - Znaleziono kontrahenta ID: 002104 w linii 13391
+2025-04-13 14:42:18,374 - DEBUG - Znaleziono kontrahenta ID: 016518 w linii 13474
+2025-04-13 14:42:18,374 - DEBUG - Znaleziono kontrahenta ID: 001420 w linii 13557
+2025-04-13 14:42:18,374 - DEBUG - Znaleziono kontrahenta ID: 017117 w linii 13640
+2025-04-13 14:42:18,375 - DEBUG - Znaleziono kontrahenta ID: 000316 w linii 13723
+2025-04-13 14:42:18,375 - DEBUG - Znaleziono kontrahenta ID: 014969 w linii 13806
+2025-04-13 14:42:18,375 - DEBUG - Znaleziono kontrahenta ID: 002411 w linii 13889
+2025-04-13 14:42:18,375 - DEBUG - Znaleziono kontrahenta ID: 002395 w linii 13972
+2025-04-13 14:42:18,375 - DEBUG - Znaleziono kontrahenta ID: 002910 w linii 14055
+2025-04-13 14:42:18,375 - DEBUG - Znaleziono kontrahenta ID: 012791 w linii 14138
+2025-04-13 14:42:18,375 - DEBUG - Znaleziono kontrahenta ID: 002261 w linii 14221
+2025-04-13 14:42:18,375 - DEBUG - Znaleziono kontrahenta ID: 014998 w linii 14304
+2025-04-13 14:42:18,375 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 14387
+2025-04-13 14:42:18,376 - DEBUG - Znaleziono kontrahenta ID: 002054 w linii 14470
+2025-04-13 14:42:18,376 - DEBUG - Znaleziono kontrahenta ID: 016368 w linii 14553
+2025-04-13 14:42:18,376 - DEBUG - Znaleziono kontrahenta ID: 001615 w linii 14636
+2025-04-13 14:42:18,376 - DEBUG - Znaleziono kontrahenta ID: 011344 w linii 14719
+2025-04-13 14:42:18,377 - DEBUG - Znaleziono kontrahenta ID: 002001 w linii 14802
+2025-04-13 14:42:18,377 - DEBUG - Znaleziono kontrahenta ID: 010562 w linii 14885
+2025-04-13 14:42:18,377 - DEBUG - Znaleziono kontrahenta ID: 001695 w linii 14968
+2025-04-13 14:42:18,377 - DEBUG - Znaleziono kontrahenta ID: 002725 w linii 15051
+2025-04-13 14:42:18,377 - DEBUG - Znaleziono kontrahenta ID: 000012 w linii 15134
+2025-04-13 14:42:18,377 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 15217
+2025-04-13 14:42:18,377 - DEBUG - Znaleziono kontrahenta ID: 018571 w linii 15300
+2025-04-13 14:42:18,377 - DEBUG - Znaleziono kontrahenta ID: 019014 w linii 15383
+2025-04-13 14:42:18,377 - DEBUG - Znaleziono kontrahenta ID: 013415 w linii 15466
+2025-04-13 14:42:18,378 - DEBUG - Znaleziono kontrahenta ID: 000530 w linii 15549
+2025-04-13 14:42:18,378 - DEBUG - Znaleziono kontrahenta ID: 018031 w linii 15632
+2025-04-13 14:42:18,378 - DEBUG - Znaleziono kontrahenta ID: 002807 w linii 15715
+2025-04-13 14:42:18,378 - DEBUG - Znaleziono kontrahenta ID: 014925 w linii 15798
+2025-04-13 14:42:18,378 - DEBUG - Znaleziono kontrahenta ID: 014925 w linii 15881
+2025-04-13 14:42:18,378 - DEBUG - Znaleziono kontrahenta ID: 015566 w linii 15966
+2025-04-13 14:42:18,378 - DEBUG - Znaleziono kontrahenta ID: 019187 w linii 16049
+2025-04-13 14:42:18,378 - DEBUG - Znaleziono kontrahenta ID: 002485 w linii 16132
+2025-04-13 14:42:18,378 - DEBUG - Znaleziono kontrahenta ID: 000316 w linii 16215
+2025-04-13 14:42:18,379 - DEBUG - Znaleziono kontrahenta ID: 002975 w linii 16298
+2025-04-13 14:42:18,379 - DEBUG - Znaleziono kontrahenta ID: 002637 w linii 16381
+2025-04-13 14:42:18,379 - DEBUG - Znaleziono kontrahenta ID: 001821 w linii 16464
+2025-04-13 14:42:18,379 - DEBUG - Znaleziono kontrahenta ID: 001771 w linii 16547
+2025-04-13 14:42:18,379 - DEBUG - Znaleziono kontrahenta ID: 016091 w linii 16630
+2025-04-13 14:42:18,379 - DEBUG - Znaleziono kontrahenta ID: 001390 w linii 16713
+2025-04-13 14:42:18,379 - DEBUG - Znaleziono kontrahenta ID: 000399 w linii 16796
+2025-04-13 14:42:18,379 - DEBUG - Znaleziono kontrahenta ID: 001358 w linii 16879
+2025-04-13 14:42:18,379 - DEBUG - Znaleziono kontrahenta ID: 011113 w linii 16962
+2025-04-13 14:42:18,380 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 17045
+2025-04-13 14:42:18,380 - DEBUG - Znaleziono kontrahenta ID: 001564 w linii 17128
+2025-04-13 14:42:18,380 - DEBUG - Znaleziono kontrahenta ID: 000479 w linii 17211
+2025-04-13 14:42:18,380 - DEBUG - Znaleziono kontrahenta ID: 001026 w linii 17294
+2025-04-13 14:42:18,380 - DEBUG - Znaleziono kontrahenta ID: 001564 w linii 17377
+2025-04-13 14:42:18,380 - DEBUG - Znaleziono kontrahenta ID: 019176 w linii 17460
+2025-04-13 14:42:18,380 - DEBUG - Znaleziono kontrahenta ID: 018928 w linii 17543
+2025-04-13 14:42:18,380 - DEBUG - Znaleziono kontrahenta ID: 017092 w linii 17626
+2025-04-13 14:42:18,380 - DEBUG - Znaleziono kontrahenta ID: 000530 w linii 17709
+2025-04-13 14:42:18,380 - DEBUG - Znaleziono kontrahenta ID: 018504 w linii 17794
+2025-04-13 14:42:18,381 - DEBUG - Znaleziono kontrahenta ID: 014113 w linii 17877
+2025-04-13 14:42:18,381 - DEBUG - Znaleziono kontrahenta ID: 001844 w linii 17960
+2025-04-13 14:42:18,381 - DEBUG - Znaleziono kontrahenta ID: 001832 w linii 18043
+2025-04-13 14:42:18,381 - DEBUG - Znaleziono kontrahenta ID: 001787 w linii 18126
+2025-04-13 14:42:18,381 - DEBUG - Znaleziono kontrahenta ID: 000723 w linii 18209
+2025-04-13 14:42:18,381 - DEBUG - Znaleziono kontrahenta ID: 019460 w linii 18292
+2025-04-13 14:42:18,381 - DEBUG - Znaleziono kontrahenta ID: 017491 w linii 18375
+2025-04-13 14:42:18,381 - DEBUG - Znaleziono kontrahenta ID: 001629 w linii 18458
+2025-04-13 14:42:18,381 - DEBUG - Znaleziono kontrahenta ID: 018942 w linii 18541
+2025-04-13 14:42:18,382 - DEBUG - Znaleziono kontrahenta ID: 018554 w linii 18624
+2025-04-13 14:42:18,382 - DEBUG - Znaleziono kontrahenta ID: 001513 w linii 18707
+2025-04-13 14:42:18,382 - DEBUG - Znaleziono kontrahenta ID: 001993 w linii 18790
+2025-04-13 14:42:18,382 - DEBUG - Znaleziono kontrahenta ID: 016920 w linii 18873
+2025-04-13 14:42:18,382 - DEBUG - Znaleziono kontrahenta ID: 001860 w linii 18956
+2025-04-13 14:42:18,382 - DEBUG - Znaleziono kontrahenta ID: 002102 w linii 19039
+2025-04-13 14:42:18,382 - DEBUG - Znaleziono kontrahenta ID: 002975 w linii 19122
+2025-04-13 14:42:18,382 - DEBUG - Znaleziono kontrahenta ID: 018354 w linii 19207
+2025-04-13 14:42:18,382 - INFO - Znaleziono 233 kontrahentów w pliku
+2025-04-13 14:42:18,383 - DEBUG - Dokument 1: data = 2025-04-01
+2025-04-13 14:42:18,383 - DEBUG - Dokument 1: datasp = 2025-04-01
+2025-04-13 14:42:18,383 - DEBUG - Dokument 1: znaleziono konto 731-1 w linii 56
+2025-04-13 14:42:18,383 - DEBUG - Dokument 1: znaleziono okres w linii 65
+2025-04-13 14:42:18,383 - DEBUG - Dokument 2: data = 2025-04-01
+2025-04-13 14:42:18,383 - DEBUG - Dokument 2: datasp = 2025-04-01
+2025-04-13 14:42:18,383 - DEBUG - Dokument 2: znaleziono konto 731-1 w linii 139
+2025-04-13 14:42:18,383 - DEBUG - Dokument 2: znaleziono okres w linii 148
+2025-04-13 14:42:18,383 - DEBUG - Dokument 3: data = 2025-04-01
+2025-04-13 14:42:18,384 - DEBUG - Dokument 3: datasp = 2025-04-01
+2025-04-13 14:42:18,384 - DEBUG - Dokument 3: znaleziono konto 731-1 w linii 222
+2025-04-13 14:42:18,384 - DEBUG - Dokument 3: znaleziono okres w linii 231
+2025-04-13 14:42:18,384 - DEBUG - Dokument 4: data = 2025-04-01
+2025-04-13 14:42:18,384 - DEBUG - Dokument 4: datasp = 2025-04-01
+2025-04-13 14:42:18,384 - DEBUG - Dokument 4: znaleziono konto 731-1 w linii 305
+2025-04-13 14:42:18,384 - DEBUG - Dokument 4: znaleziono okres w linii 314
+2025-04-13 14:42:18,384 - DEBUG - Dokument 5: data = 2025-04-01
+2025-04-13 14:42:18,384 - DEBUG - Dokument 5: datasp = 2025-04-01
+2025-04-13 14:42:18,385 - DEBUG - Dokument 5: znaleziono konto 731-1 w linii 388
+2025-04-13 14:42:18,385 - DEBUG - Dokument 5: znaleziono okres w linii 397
+2025-04-13 14:42:18,385 - DEBUG - Dokument 6: data = 2025-04-01
+2025-04-13 14:42:18,385 - DEBUG - Dokument 6: datasp = 2025-04-01
+2025-04-13 14:42:18,385 - DEBUG - Dokument 6: znaleziono konto 731-1 w linii 471
+2025-04-13 14:42:18,385 - DEBUG - Dokument 6: znaleziono okres w linii 480
+2025-04-13 14:42:18,385 - DEBUG - Dokument 7: data = 2025-04-01
+2025-04-13 14:42:18,385 - DEBUG - Dokument 7: datasp = 2025-04-01
+2025-04-13 14:42:18,385 - DEBUG - Dokument 7: znaleziono konto 731-1 w linii 554
+2025-04-13 14:42:18,386 - DEBUG - Dokument 7: znaleziono okres w linii 563
+2025-04-13 14:42:18,386 - DEBUG - Dokument 8: data = 2025-04-01
+2025-04-13 14:42:18,386 - DEBUG - Dokument 8: datasp = 2025-04-01
+2025-04-13 14:42:18,386 - DEBUG - Dokument 8: znaleziono konto 731-1 w linii 637
+2025-04-13 14:42:18,386 - DEBUG - Dokument 8: znaleziono okres w linii 646
+2025-04-13 14:42:18,386 - DEBUG - Dokument 9: data = 2025-04-01
+2025-04-13 14:42:18,386 - DEBUG - Dokument 9: datasp = 2025-04-01
+2025-04-13 14:42:18,387 - DEBUG - Dokument 9: znaleziono konto 731-1 w linii 720
+2025-04-13 14:42:18,387 - DEBUG - Dokument 9: znaleziono okres w linii 729
+2025-04-13 14:42:18,387 - DEBUG - Dokument 10: data = 2025-04-01
+2025-04-13 14:42:18,387 - DEBUG - Dokument 10: datasp = 2025-04-01
+2025-04-13 14:42:18,387 - DEBUG - Dokument 10: znaleziono konto 731-1 w linii 803
+2025-04-13 14:42:18,387 - DEBUG - Dokument 10: znaleziono okres w linii 812
+2025-04-13 14:42:18,387 - DEBUG - Dokument 11: data = 2025-04-01
+2025-04-13 14:42:18,387 - DEBUG - Dokument 11: datasp = 2025-03-31
+2025-04-13 14:42:18,388 - DEBUG - Dokument 11: znaleziono okres w linii 895
+2025-04-13 14:42:18,388 - DEBUG - Dokument 12: data = 2025-04-01
+2025-04-13 14:42:18,388 - DEBUG - Dokument 12: datasp = 2025-03-31
+2025-04-13 14:42:18,388 - DEBUG - Dokument 12: znaleziono okres w linii 978
+2025-04-13 14:42:18,388 - DEBUG - Dokument 13: data = 2025-04-01
+2025-04-13 14:42:18,388 - DEBUG - Dokument 13: datasp = 2025-03-31
+2025-04-13 14:42:18,388 - DEBUG - Dokument 13: znaleziono okres w linii 1061
+2025-04-13 14:42:18,389 - DEBUG - Dokument 14: data = 2025-04-01
+2025-04-13 14:42:18,389 - DEBUG - Dokument 14: datasp = 2025-03-31
+2025-04-13 14:42:18,389 - DEBUG - Dokument 14: znaleziono okres w linii 1144
+2025-04-13 14:42:18,389 - DEBUG - Dokument 15: data = 2025-04-01
+2025-04-13 14:42:18,389 - DEBUG - Dokument 15: datasp = 2025-03-31
+2025-04-13 14:42:18,389 - DEBUG - Dokument 15: znaleziono okres w linii 1227
+2025-04-13 14:42:18,389 - DEBUG - Dokument 16: data = 2025-04-01
+2025-04-13 14:42:18,389 - DEBUG - Dokument 16: datasp = 2025-03-31
+2025-04-13 14:42:18,389 - DEBUG - Dokument 16: znaleziono okres w linii 1310
+2025-04-13 14:42:18,390 - DEBUG - Dokument 17: data = 2025-04-01
+2025-04-13 14:42:18,390 - DEBUG - Dokument 17: datasp = 2025-03-31
+2025-04-13 14:42:18,390 - DEBUG - Dokument 17: znaleziono okres w linii 1393
+2025-04-13 14:42:18,390 - DEBUG - Dokument 18: data = 2025-04-01
+2025-04-13 14:42:18,390 - DEBUG - Dokument 18: datasp = 2025-03-31
+2025-04-13 14:42:18,390 - DEBUG - Dokument 18: znaleziono okres w linii 1476
+2025-04-13 14:42:18,390 - DEBUG - Dokument 19: data = 2025-04-01
+2025-04-13 14:42:18,390 - DEBUG - Dokument 19: datasp = 2025-03-31
+2025-04-13 14:42:18,391 - DEBUG - Dokument 19: znaleziono okres w linii 1559
+2025-04-13 14:42:18,391 - DEBUG - Dokument 20: data = 2025-04-01
+2025-04-13 14:42:18,391 - DEBUG - Dokument 20: datasp = 2025-03-31
+2025-04-13 14:42:18,391 - DEBUG - Dokument 20: znaleziono okres w linii 1642
+2025-04-13 14:42:18,391 - DEBUG - Dokument 21: data = 2025-04-01
+2025-04-13 14:42:18,391 - DEBUG - Dokument 21: datasp = 2025-03-31
+2025-04-13 14:42:18,392 - DEBUG - Dokument 21: znaleziono okres w linii 1725
+2025-04-13 14:42:18,392 - DEBUG - Dokument 22: data = 2025-04-01
+2025-04-13 14:42:18,392 - DEBUG - Dokument 22: datasp = 2025-03-31
+2025-04-13 14:42:18,392 - DEBUG - Dokument 22: znaleziono okres w linii 1808
+2025-04-13 14:42:18,392 - DEBUG - Dokument 23: data = 2025-04-01
+2025-04-13 14:42:18,392 - DEBUG - Dokument 23: datasp = 2025-03-31
+2025-04-13 14:42:18,392 - DEBUG - Dokument 23: znaleziono okres w linii 1891
+2025-04-13 14:42:18,392 - DEBUG - Dokument 24: data = 2025-04-01
+2025-04-13 14:42:18,392 - DEBUG - Dokument 24: datasp = 2025-03-31
+2025-04-13 14:42:18,392 - DEBUG - Dokument 24: znaleziono okres w linii 1974
+2025-04-13 14:42:18,393 - DEBUG - Dokument 25: data = 2025-04-01
+2025-04-13 14:42:18,393 - DEBUG - Dokument 25: datasp = 2025-03-31
+2025-04-13 14:42:18,393 - DEBUG - Dokument 25: znaleziono okres w linii 2057
+2025-04-13 14:42:18,393 - DEBUG - Dokument 26: data = 2025-04-01
+2025-04-13 14:42:18,393 - DEBUG - Dokument 26: datasp = 2025-03-31
+2025-04-13 14:42:18,393 - DEBUG - Dokument 26: znaleziono okres w linii 2140
+2025-04-13 14:42:18,393 - DEBUG - Dokument 27: data = 2025-04-01
+2025-04-13 14:42:18,393 - DEBUG - Dokument 27: datasp = 2025-03-31
+2025-04-13 14:42:18,393 - DEBUG - Dokument 27: znaleziono okres w linii 2223
+2025-04-13 14:42:18,394 - DEBUG - Dokument 28: data = 2025-04-01
+2025-04-13 14:42:18,394 - DEBUG - Dokument 28: datasp = 2025-03-31
+2025-04-13 14:42:18,394 - DEBUG - Dokument 28: znaleziono okres w linii 2306
+2025-04-13 14:42:18,394 - DEBUG - Dokument 29: data = 2025-04-01
+2025-04-13 14:42:18,394 - DEBUG - Dokument 29: datasp = 2025-03-31
+2025-04-13 14:42:18,394 - DEBUG - Dokument 29: znaleziono okres w linii 2389
+2025-04-13 14:42:18,394 - DEBUG - Dokument 30: data = 2025-04-01
+2025-04-13 14:42:18,394 - DEBUG - Dokument 30: datasp = 2025-03-31
+2025-04-13 14:42:18,394 - DEBUG - Dokument 30: znaleziono okres w linii 2472
+2025-04-13 14:42:18,395 - DEBUG - Dokument 31: data = 2025-04-01
+2025-04-13 14:42:18,395 - DEBUG - Dokument 31: datasp = 2025-03-31
+2025-04-13 14:42:18,395 - DEBUG - Dokument 31: znaleziono okres w linii 2555
+2025-04-13 14:42:18,395 - DEBUG - Dokument 32: data = 2025-04-01
+2025-04-13 14:42:18,395 - DEBUG - Dokument 32: datasp = 2025-03-31
+2025-04-13 14:42:18,395 - DEBUG - Dokument 32: znaleziono okres w linii 2638
+2025-04-13 14:42:18,395 - DEBUG - Dokument 33: data = 2025-04-01
+2025-04-13 14:42:18,395 - DEBUG - Dokument 33: datasp = 2025-03-31
+2025-04-13 14:42:18,395 - DEBUG - Dokument 33: znaleziono okres w linii 2721
+2025-04-13 14:42:18,395 - DEBUG - Dokument 34: data = 2025-04-01
+2025-04-13 14:42:18,396 - DEBUG - Dokument 34: datasp = 2025-03-31
+2025-04-13 14:42:18,396 - DEBUG - Dokument 34: znaleziono okres w linii 2804
+2025-04-13 14:42:18,396 - DEBUG - Dokument 35: data = 2025-04-01
+2025-04-13 14:42:18,396 - DEBUG - Dokument 35: datasp = 2025-03-31
+2025-04-13 14:42:18,396 - DEBUG - Dokument 35: znaleziono okres w linii 2887
+2025-04-13 14:42:18,396 - DEBUG - Dokument 36: data = 2025-04-01
+2025-04-13 14:42:18,396 - DEBUG - Dokument 36: datasp = 2025-03-31
+2025-04-13 14:42:18,397 - DEBUG - Dokument 36: znaleziono okres w linii 2970
+2025-04-13 14:42:18,397 - DEBUG - Dokument 37: data = 2025-04-01
+2025-04-13 14:42:18,397 - DEBUG - Dokument 37: datasp = 2025-03-31
+2025-04-13 14:42:18,397 - DEBUG - Dokument 37: znaleziono okres w linii 3053
+2025-04-13 14:42:18,397 - DEBUG - Dokument 38: data = 2025-04-01
+2025-04-13 14:42:18,397 - DEBUG - Dokument 38: datasp = 2025-03-31
+2025-04-13 14:42:18,397 - DEBUG - Dokument 38: znaleziono okres w linii 3136
+2025-04-13 14:42:18,397 - DEBUG - Dokument 39: data = 2025-04-01
+2025-04-13 14:42:18,397 - DEBUG - Dokument 39: datasp = 2025-03-31
+2025-04-13 14:42:18,397 - DEBUG - Dokument 39: znaleziono okres w linii 3219
+2025-04-13 14:42:18,397 - DEBUG - Dokument 40: data = 2025-04-01
+2025-04-13 14:42:18,398 - DEBUG - Dokument 40: datasp = 2025-03-31
+2025-04-13 14:42:18,398 - DEBUG - Dokument 40: znaleziono okres w linii 3302
+2025-04-13 14:42:18,398 - DEBUG - Dokument 41: data = 2025-04-01
+2025-04-13 14:42:18,398 - DEBUG - Dokument 41: datasp = 2025-03-31
+2025-04-13 14:42:18,398 - DEBUG - Dokument 41: znaleziono okres w linii 3385
+2025-04-13 14:42:18,398 - DEBUG - Dokument 42: data = 2025-04-01
+2025-04-13 14:42:18,398 - DEBUG - Dokument 42: datasp = 2025-03-31
+2025-04-13 14:42:18,398 - DEBUG - Dokument 42: znaleziono okres w linii 3468
+2025-04-13 14:42:18,398 - DEBUG - Dokument 43: data = 2025-04-01
+2025-04-13 14:42:18,398 - DEBUG - Dokument 43: datasp = 2025-03-31
+2025-04-13 14:42:18,399 - DEBUG - Dokument 43: znaleziono okres w linii 3551
+2025-04-13 14:42:18,399 - DEBUG - Dokument 44: data = 2025-04-01
+2025-04-13 14:42:18,399 - DEBUG - Dokument 44: datasp = 2025-03-31
+2025-04-13 14:42:18,399 - DEBUG - Dokument 44: znaleziono okres w linii 3634
+2025-04-13 14:42:18,399 - DEBUG - Dokument 45: data = 2025-04-01
+2025-04-13 14:42:18,399 - DEBUG - Dokument 45: datasp = 2025-03-31
+2025-04-13 14:42:18,399 - DEBUG - Dokument 45: znaleziono okres w linii 3717
+2025-04-13 14:42:18,399 - DEBUG - Dokument 46: data = 2025-04-01
+2025-04-13 14:42:18,399 - DEBUG - Dokument 46: datasp = 2025-03-31
+2025-04-13 14:42:18,400 - DEBUG - Dokument 46: znaleziono okres w linii 3800
+2025-04-13 14:42:18,400 - DEBUG - Dokument 47: data = 2025-04-01
+2025-04-13 14:42:18,400 - DEBUG - Dokument 47: datasp = 2025-03-31
+2025-04-13 14:42:18,400 - DEBUG - Dokument 47: znaleziono okres w linii 3883
+2025-04-13 14:42:18,400 - DEBUG - Dokument 48: data = 2025-04-01
+2025-04-13 14:42:18,400 - DEBUG - Dokument 48: datasp = 2025-03-31
+2025-04-13 14:42:18,400 - DEBUG - Dokument 48: znaleziono okres w linii 3966
+2025-04-13 14:42:18,400 - DEBUG - Dokument 49: data = 2025-04-01
+2025-04-13 14:42:18,401 - DEBUG - Dokument 49: datasp = 2025-03-31
+2025-04-13 14:42:18,401 - DEBUG - Dokument 49: znaleziono okres w linii 4049
+2025-04-13 14:42:18,401 - DEBUG - Dokument 50: data = 2025-04-01
+2025-04-13 14:42:18,401 - DEBUG - Dokument 50: datasp = 2025-03-31
+2025-04-13 14:42:18,401 - DEBUG - Dokument 50: znaleziono okres w linii 4132
+2025-04-13 14:42:18,401 - DEBUG - Dokument 51: data = 2025-04-01
+2025-04-13 14:42:18,401 - DEBUG - Dokument 51: datasp = 2025-03-31
+2025-04-13 14:42:18,401 - DEBUG - Dokument 51: znaleziono okres w linii 4215
+2025-04-13 14:42:18,401 - DEBUG - Dokument 52: data = 2025-04-01
+2025-04-13 14:42:18,401 - DEBUG - Dokument 52: datasp = 2025-03-31
+2025-04-13 14:42:18,402 - DEBUG - Dokument 52: znaleziono okres w linii 4298
+2025-04-13 14:42:18,402 - DEBUG - Dokument 53: data = 2025-04-01
+2025-04-13 14:42:18,402 - DEBUG - Dokument 53: datasp = 2025-03-31
+2025-04-13 14:42:18,402 - DEBUG - Dokument 53: znaleziono okres w linii 4381
+2025-04-13 14:42:18,402 - DEBUG - Dokument 54: data = 2025-04-01
+2025-04-13 14:42:18,402 - DEBUG - Dokument 54: datasp = 2025-04-01
+2025-04-13 14:42:18,402 - DEBUG - Dokument 54: znaleziono okres w linii 4464
+2025-04-13 14:42:18,402 - DEBUG - Dokument 55: data = 2025-04-01
+2025-04-13 14:42:18,402 - DEBUG - Dokument 55: datasp = 2025-04-01
+2025-04-13 14:42:18,403 - DEBUG - Dokument 55: znaleziono konto 731-1 w linii 4538
+2025-04-13 14:42:18,403 - DEBUG - Dokument 55: znaleziono okres w linii 4547
+2025-04-13 14:42:18,403 - DEBUG - Dokument 56: data = 2025-04-01
+2025-04-13 14:42:18,403 - DEBUG - Dokument 56: datasp = 2025-03-31
+2025-04-13 14:42:18,403 - DEBUG - Dokument 56: znaleziono okres w linii 4630
+2025-04-13 14:42:18,403 - DEBUG - Dokument 57: data = 2025-04-01
+2025-04-13 14:42:18,403 - DEBUG - Dokument 57: datasp = 2025-03-31
+2025-04-13 14:42:18,403 - DEBUG - Dokument 57: znaleziono okres w linii 4713
+2025-04-13 14:42:18,403 - DEBUG - Dokument 58: data = 2025-04-01
+2025-04-13 14:42:18,404 - DEBUG - Dokument 58: datasp = 2025-03-31
+2025-04-13 14:42:18,404 - DEBUG - Dokument 58: znaleziono okres w linii 4796
+2025-04-13 14:42:18,404 - DEBUG - Dokument 59: data = 2025-04-01
+2025-04-13 14:42:18,404 - DEBUG - Dokument 59: datasp = 2025-03-31
+2025-04-13 14:42:18,404 - DEBUG - Dokument 59: znaleziono okres w linii 4879
+2025-04-13 14:42:18,404 - DEBUG - Dokument 60: data = 2025-04-01
+2025-04-13 14:42:18,404 - DEBUG - Dokument 60: datasp = 2025-03-31
+2025-04-13 14:42:18,404 - DEBUG - Dokument 60: znaleziono okres w linii 4962
+2025-04-13 14:42:18,404 - DEBUG - Dokument 61: data = 2025-04-02
+2025-04-13 14:42:18,404 - DEBUG - Dokument 61: datasp = 2025-04-02
+2025-04-13 14:42:18,405 - DEBUG - Dokument 61: znaleziono okres w linii 5045
+2025-04-13 14:42:18,405 - DEBUG - Dokument 62: data = 2025-04-02
+2025-04-13 14:42:18,405 - DEBUG - Dokument 62: datasp = 2025-04-02
+2025-04-13 14:42:18,405 - DEBUG - Dokument 62: znaleziono konto 731-1 w linii 5119
+2025-04-13 14:42:18,405 - DEBUG - Dokument 62: znaleziono okres w linii 5128
+2025-04-13 14:42:18,405 - DEBUG - Dokument 63: data = 2025-04-02
+2025-04-13 14:42:18,405 - DEBUG - Dokument 63: datasp = 2025-04-02
+2025-04-13 14:42:18,405 - DEBUG - Dokument 63: znaleziono konto 731-1 w linii 5202
+2025-04-13 14:42:18,405 - DEBUG - Dokument 63: znaleziono okres w linii 5211
+2025-04-13 14:42:18,405 - DEBUG - Dokument 64: data = 2025-04-02
+2025-04-13 14:42:18,406 - DEBUG - Dokument 64: datasp = 2025-04-02
+2025-04-13 14:42:18,406 - DEBUG - Dokument 64: znaleziono konto 731-1 w linii 5285
+2025-04-13 14:42:18,406 - DEBUG - Dokument 64: znaleziono okres w linii 5294
+2025-04-13 14:42:18,406 - DEBUG - Dokument 65: data = 2025-04-02
+2025-04-13 14:42:18,406 - DEBUG - Dokument 65: datasp = 2025-04-02
+2025-04-13 14:42:18,406 - DEBUG - Dokument 65: znaleziono konto 731-1 w linii 5368
+2025-04-13 14:42:18,406 - DEBUG - Dokument 65: znaleziono okres w linii 5377
+2025-04-13 14:42:18,406 - DEBUG - Dokument 66: data = 2025-04-02
+2025-04-13 14:42:18,406 - DEBUG - Dokument 66: datasp = 2025-04-02
+2025-04-13 14:42:18,406 - DEBUG - Dokument 66: znaleziono konto 731-1 w linii 5451
+2025-04-13 14:42:18,406 - DEBUG - Dokument 66: znaleziono okres w linii 5460
+2025-04-13 14:42:18,407 - DEBUG - Dokument 67: data = 2025-04-02
+2025-04-13 14:42:18,407 - DEBUG - Dokument 67: datasp = 2025-04-02
+2025-04-13 14:42:18,407 - DEBUG - Dokument 67: znaleziono konto 731-1 w linii 5534
+2025-04-13 14:42:18,407 - DEBUG - Dokument 67: znaleziono okres w linii 5543
+2025-04-13 14:42:18,407 - DEBUG - Dokument 68: data = 2025-04-02
+2025-04-13 14:42:18,407 - DEBUG - Dokument 68: datasp = 2025-04-02
+2025-04-13 14:42:18,407 - DEBUG - Dokument 68: znaleziono konto 731-1 w linii 5617
+2025-04-13 14:42:18,407 - DEBUG - Dokument 68: znaleziono okres w linii 5626
+2025-04-13 14:42:18,407 - DEBUG - Dokument 69: data = 2025-04-02
+2025-04-13 14:42:18,407 - DEBUG - Dokument 69: datasp = 2025-03-31
+2025-04-13 14:42:18,408 - DEBUG - Dokument 69: znaleziono okres w linii 5709
+2025-04-13 14:42:18,408 - DEBUG - Dokument 70: data = 2025-04-02
+2025-04-13 14:42:18,408 - DEBUG - Dokument 70: datasp = 2025-03-31
+2025-04-13 14:42:18,408 - DEBUG - Dokument 70: znaleziono okres w linii 5792
+2025-04-13 14:42:18,408 - DEBUG - Dokument 71: data = 2025-04-02
+2025-04-13 14:42:18,408 - DEBUG - Dokument 71: datasp = 2025-03-31
+2025-04-13 14:42:18,408 - DEBUG - Dokument 71: znaleziono okres w linii 5875
+2025-04-13 14:42:18,408 - DEBUG - Dokument 72: data = 2025-04-02
+2025-04-13 14:42:18,408 - DEBUG - Dokument 72: datasp = 2025-03-31
+2025-04-13 14:42:18,409 - DEBUG - Dokument 72: znaleziono okres w linii 5958
+2025-04-13 14:42:18,409 - DEBUG - Dokument 73: data = 2025-04-02
+2025-04-13 14:42:18,409 - DEBUG - Dokument 73: datasp = 2025-03-31
+2025-04-13 14:42:18,409 - DEBUG - Dokument 73: znaleziono okres w linii 6041
+2025-04-13 14:42:18,409 - DEBUG - Dokument 74: data = 2025-04-02
+2025-04-13 14:42:18,409 - DEBUG - Dokument 74: datasp = 2025-03-31
+2025-04-13 14:42:18,409 - DEBUG - Dokument 74: znaleziono okres w linii 6124
+2025-04-13 14:42:18,410 - DEBUG - Dokument 75: data = 2025-04-02
+2025-04-13 14:42:18,410 - DEBUG - Dokument 75: datasp = 2025-03-31
+2025-04-13 14:42:18,410 - DEBUG - Dokument 75: znaleziono okres w linii 6207
+2025-04-13 14:42:18,410 - DEBUG - Dokument 76: data = 2025-04-02
+2025-04-13 14:42:18,410 - DEBUG - Dokument 76: datasp = 2025-03-31
+2025-04-13 14:42:18,410 - DEBUG - Dokument 76: znaleziono okres w linii 6290
+2025-04-13 14:42:18,410 - DEBUG - Dokument 77: data = 2025-04-02
+2025-04-13 14:42:18,411 - DEBUG - Dokument 77: datasp = 2025-03-31
+2025-04-13 14:42:18,411 - DEBUG - Dokument 77: znaleziono okres w linii 6373
+2025-04-13 14:42:18,411 - DEBUG - Dokument 78: data = 2025-04-02
+2025-04-13 14:42:18,411 - DEBUG - Dokument 78: datasp = 2025-03-31
+2025-04-13 14:42:18,411 - DEBUG - Dokument 78: znaleziono okres w linii 6456
+2025-04-13 14:42:18,411 - DEBUG - Dokument 79: data = 2025-04-02
+2025-04-13 14:42:18,411 - DEBUG - Dokument 79: datasp = 2025-03-31
+2025-04-13 14:42:18,411 - DEBUG - Dokument 79: znaleziono okres w linii 6539
+2025-04-13 14:42:18,411 - DEBUG - Dokument 80: data = 2025-04-02
+2025-04-13 14:42:18,412 - DEBUG - Dokument 80: datasp = 2025-03-31
+2025-04-13 14:42:18,412 - DEBUG - Dokument 80: znaleziono okres w linii 6622
+2025-04-13 14:42:18,412 - DEBUG - Dokument 81: data = 2025-04-02
+2025-04-13 14:42:18,412 - DEBUG - Dokument 81: datasp = 2025-03-31
+2025-04-13 14:42:18,412 - DEBUG - Dokument 81: znaleziono okres w linii 6705
+2025-04-13 14:42:18,412 - DEBUG - Dokument 82: data = 2025-04-02
+2025-04-13 14:42:18,412 - DEBUG - Dokument 82: datasp = 2025-03-31
+2025-04-13 14:42:18,412 - DEBUG - Dokument 82: znaleziono okres w linii 6788
+2025-04-13 14:42:18,412 - DEBUG - Dokument 83: data = 2025-04-02
+2025-04-13 14:42:18,412 - DEBUG - Dokument 83: datasp = 2025-03-31
+2025-04-13 14:42:18,412 - DEBUG - Dokument 83: znaleziono okres w linii 6871
+2025-04-13 14:42:18,412 - DEBUG - Dokument 84: data = 2025-04-02
+2025-04-13 14:42:18,413 - DEBUG - Dokument 84: datasp = 2025-03-31
+2025-04-13 14:42:18,413 - DEBUG - Dokument 84: znaleziono okres w linii 6954
+2025-04-13 14:42:18,413 - DEBUG - Dokument 85: data = 2025-04-02
+2025-04-13 14:42:18,413 - DEBUG - Dokument 85: datasp = 2025-04-02
+2025-04-13 14:42:18,413 - DEBUG - Dokument 85: znaleziono okres w linii 7037
+2025-04-13 14:42:18,413 - DEBUG - Dokument 86: data = 2025-04-02
+2025-04-13 14:42:18,413 - DEBUG - Dokument 86: datasp = 2025-03-31
+2025-04-13 14:42:18,413 - DEBUG - Dokument 86: znaleziono okres w linii 7120
+2025-04-13 14:42:18,413 - DEBUG - Dokument 87: data = 2025-04-02
+2025-04-13 14:42:18,413 - DEBUG - Dokument 87: datasp = 2025-03-31
+2025-04-13 14:42:18,413 - DEBUG - Dokument 87: znaleziono okres w linii 7203
+2025-04-13 14:42:18,414 - DEBUG - Dokument 88: data = 2025-04-02
+2025-04-13 14:42:18,414 - DEBUG - Dokument 88: datasp = 2025-03-31
+2025-04-13 14:42:18,414 - DEBUG - Dokument 88: znaleziono okres w linii 7286
+2025-04-13 14:42:18,414 - DEBUG - Dokument 89: data = 2025-04-02
+2025-04-13 14:42:18,414 - DEBUG - Dokument 89: datasp = 2025-03-31
+2025-04-13 14:42:18,414 - DEBUG - Dokument 89: znaleziono okres w linii 7369
+2025-04-13 14:42:18,414 - DEBUG - Dokument 90: data = 2025-04-02
+2025-04-13 14:42:18,415 - DEBUG - Dokument 90: datasp = 2025-04-02
+2025-04-13 14:42:18,415 - DEBUG - Dokument 90: znaleziono okres w linii 7452
+2025-04-13 14:42:18,415 - DEBUG - Dokument 91: data = 2025-04-02
+2025-04-13 14:42:18,415 - DEBUG - Dokument 91: datasp = 2025-03-31
+2025-04-13 14:42:18,415 - DEBUG - Dokument 91: znaleziono okres w linii 7535
+2025-04-13 14:42:18,415 - DEBUG - Dokument 92: data = 2025-04-02
+2025-04-13 14:42:18,415 - DEBUG - Dokument 92: datasp = 2025-03-31
+2025-04-13 14:42:18,415 - DEBUG - Dokument 92: znaleziono okres w linii 7618
+2025-04-13 14:42:18,416 - DEBUG - Dokument 93: data = 2025-04-02
+2025-04-13 14:42:18,416 - DEBUG - Dokument 93: datasp = 2025-03-31
+2025-04-13 14:42:18,416 - DEBUG - Dokument 93: znaleziono okres w linii 7701
+2025-04-13 14:42:18,416 - DEBUG - Dokument 94: data = 2025-04-02
+2025-04-13 14:42:18,416 - DEBUG - Dokument 94: datasp = 2025-03-31
+2025-04-13 14:42:18,416 - DEBUG - Dokument 94: znaleziono okres w linii 7784
+2025-04-13 14:42:18,416 - DEBUG - Dokument 95: data = 2025-04-02
+2025-04-13 14:42:18,416 - DEBUG - Dokument 95: datasp = 2025-03-31
+2025-04-13 14:42:18,417 - DEBUG - Dokument 95: znaleziono okres w linii 7867
+2025-04-13 14:42:18,417 - DEBUG - Dokument 96: data = 2025-04-02
+2025-04-13 14:42:18,417 - DEBUG - Dokument 96: datasp = 2025-03-31
+2025-04-13 14:42:18,417 - DEBUG - Dokument 96: znaleziono okres w linii 7950
+2025-04-13 14:42:18,417 - DEBUG - Dokument 97: data = 2025-04-02
+2025-04-13 14:42:18,417 - DEBUG - Dokument 97: datasp = 2025-03-31
+2025-04-13 14:42:18,417 - DEBUG - Dokument 97: znaleziono okres w linii 8033
+2025-04-13 14:42:18,417 - DEBUG - Dokument 98: data = 2025-04-02
+2025-04-13 14:42:18,418 - DEBUG - Dokument 98: datasp = 2025-03-31
+2025-04-13 14:42:18,418 - DEBUG - Dokument 98: znaleziono okres w linii 8116
+2025-04-13 14:42:18,418 - DEBUG - Dokument 99: data = 2025-04-02
+2025-04-13 14:42:18,418 - DEBUG - Dokument 99: datasp = 2025-03-31
+2025-04-13 14:42:18,419 - DEBUG - Dokument 99: znaleziono okres w linii 8199
+2025-04-13 14:42:18,419 - DEBUG - Dokument 100: data = 2025-04-02
+2025-04-13 14:42:18,419 - DEBUG - Dokument 100: datasp = 2025-03-31
+2025-04-13 14:42:18,419 - DEBUG - Dokument 100: znaleziono okres w linii 8282
+2025-04-13 14:42:18,419 - DEBUG - Dokument 101: data = 2025-04-02
+2025-04-13 14:42:18,419 - DEBUG - Dokument 101: datasp = 2025-03-31
+2025-04-13 14:42:18,419 - DEBUG - Dokument 101: znaleziono okres w linii 8365
+2025-04-13 14:42:18,419 - DEBUG - Dokument 102: data = 2025-04-02
+2025-04-13 14:42:18,420 - DEBUG - Dokument 102: datasp = 2025-03-31
+2025-04-13 14:42:18,420 - DEBUG - Dokument 102: znaleziono okres w linii 8448
+2025-04-13 14:42:18,420 - DEBUG - Dokument 103: data = 2025-04-02
+2025-04-13 14:42:18,420 - DEBUG - Dokument 103: datasp = 2025-03-31
+2025-04-13 14:42:18,420 - DEBUG - Dokument 103: znaleziono okres w linii 8531
+2025-04-13 14:42:18,420 - DEBUG - Dokument 104: data = 2025-04-02
+2025-04-13 14:42:18,420 - DEBUG - Dokument 104: datasp = 2025-03-31
+2025-04-13 14:42:18,420 - DEBUG - Dokument 104: znaleziono okres w linii 8614
+2025-04-13 14:42:18,420 - DEBUG - Dokument 105: data = 2025-04-02
+2025-04-13 14:42:18,421 - DEBUG - Dokument 105: datasp = 2025-03-31
+2025-04-13 14:42:18,421 - DEBUG - Dokument 105: znaleziono okres w linii 8697
+2025-04-13 14:42:18,421 - DEBUG - Dokument 106: data = 2025-04-02
+2025-04-13 14:42:18,421 - DEBUG - Dokument 106: datasp = 2025-03-31
+2025-04-13 14:42:18,421 - DEBUG - Dokument 106: znaleziono okres w linii 8780
+2025-04-13 14:42:18,421 - DEBUG - Dokument 107: data = 2025-04-02
+2025-04-13 14:42:18,421 - DEBUG - Dokument 107: datasp = 2025-03-31
+2025-04-13 14:42:18,421 - DEBUG - Dokument 107: znaleziono okres w linii 8863
+2025-04-13 14:42:18,422 - DEBUG - Dokument 108: data = 2025-04-02
+2025-04-13 14:42:18,422 - DEBUG - Dokument 108: datasp = 2025-03-31
+2025-04-13 14:42:18,422 - DEBUG - Dokument 108: znaleziono okres w linii 8946
+2025-04-13 14:42:18,422 - DEBUG - Dokument 109: data = 2025-04-02
+2025-04-13 14:42:18,422 - DEBUG - Dokument 109: datasp = 2025-03-31
+2025-04-13 14:42:18,422 - DEBUG - Dokument 109: znaleziono okres w linii 9029
+2025-04-13 14:42:18,422 - DEBUG - Dokument 110: data = 2025-04-02
+2025-04-13 14:42:18,422 - DEBUG - Dokument 110: datasp = 2025-03-31
+2025-04-13 14:42:18,422 - DEBUG - Dokument 110: znaleziono okres w linii 9112
+2025-04-13 14:42:18,422 - DEBUG - Dokument 111: data = 2025-04-02
+2025-04-13 14:42:18,422 - DEBUG - Dokument 111: datasp = 2025-03-31
+2025-04-13 14:42:18,423 - DEBUG - Dokument 111: znaleziono okres w linii 9195
+2025-04-13 14:42:18,423 - DEBUG - Dokument 112: data = 2025-04-02
+2025-04-13 14:42:18,423 - DEBUG - Dokument 112: datasp = 2025-03-31
+2025-04-13 14:42:18,423 - DEBUG - Dokument 112: znaleziono okres w linii 9278
+2025-04-13 14:42:18,423 - DEBUG - Dokument 113: data = 2025-04-02
+2025-04-13 14:42:18,423 - DEBUG - Dokument 113: datasp = 2025-03-31
+2025-04-13 14:42:18,423 - DEBUG - Dokument 113: znaleziono okres w linii 9361
+2025-04-13 14:42:18,423 - DEBUG - Dokument 114: data = 2025-04-02
+2025-04-13 14:42:18,423 - DEBUG - Dokument 114: datasp = 2025-04-02
+2025-04-13 14:42:18,423 - DEBUG - Dokument 114: znaleziono okres w linii 9444
+2025-04-13 14:42:18,424 - DEBUG - Dokument 115: data = 2025-04-02
+2025-04-13 14:42:18,424 - DEBUG - Dokument 115: datasp = 2025-03-31
+2025-04-13 14:42:18,424 - DEBUG - Dokument 115: znaleziono okres w linii 9527
+2025-04-13 14:42:18,424 - DEBUG - Dokument 116: data = 2025-04-02
+2025-04-13 14:42:18,424 - DEBUG - Dokument 116: datasp = 2025-03-31
+2025-04-13 14:42:18,424 - DEBUG - Dokument 116: znaleziono okres w linii 9610
+2025-04-13 14:42:18,424 - DEBUG - Dokument 117: data = 2025-04-02
+2025-04-13 14:42:18,424 - DEBUG - Dokument 117: datasp = 2025-03-31
+2025-04-13 14:42:18,424 - DEBUG - Dokument 117: znaleziono okres w linii 9693
+2025-04-13 14:42:18,424 - DEBUG - Dokument 118: data = 2025-04-02
+2025-04-13 14:42:18,424 - DEBUG - Dokument 118: datasp = 2025-03-31
+2025-04-13 14:42:18,425 - DEBUG - Dokument 118: znaleziono okres w linii 9776
+2025-04-13 14:42:18,425 - DEBUG - Dokument 119: data = 2025-04-02
+2025-04-13 14:42:18,425 - DEBUG - Dokument 119: datasp = 2025-04-02
+2025-04-13 14:42:18,425 - DEBUG - Dokument 119: znaleziono okres w linii 9859
+2025-04-13 14:42:18,425 - DEBUG - Dokument 120: data = 2025-04-02
+2025-04-13 14:42:18,425 - DEBUG - Dokument 120: datasp = 2025-04-02
+2025-04-13 14:42:18,425 - DEBUG - Dokument 120: znaleziono konto 731-1 w linii 9933
+2025-04-13 14:42:18,425 - DEBUG - Dokument 120: znaleziono okres w linii 9942
+2025-04-13 14:42:18,425 - DEBUG - Dokument 121: data = 2025-04-02
+2025-04-13 14:42:18,426 - DEBUG - Dokument 121: datasp = 2025-04-02
+2025-04-13 14:42:18,426 - DEBUG - Dokument 121: znaleziono konto 731-1 w linii 10016
+2025-04-13 14:42:18,426 - DEBUG - Dokument 121: znaleziono okres w linii 10025
+2025-04-13 14:42:18,426 - DEBUG - Dokument 122: data = 2025-04-02
+2025-04-13 14:42:18,426 - DEBUG - Dokument 122: datasp = 2025-04-02
+2025-04-13 14:42:18,426 - DEBUG - Dokument 122: znaleziono konto 731-1 w linii 10099
+2025-04-13 14:42:18,426 - DEBUG - Dokument 122: znaleziono okres w linii 10108
+2025-04-13 14:42:18,426 - DEBUG - Dokument 123: data = 2025-04-02
+2025-04-13 14:42:18,426 - DEBUG - Dokument 123: datasp = 2025-04-02
+2025-04-13 14:42:18,427 - DEBUG - Dokument 123: znaleziono konto 731-1 w linii 10182
+2025-04-13 14:42:18,427 - DEBUG - Dokument 123: znaleziono okres w linii 10191
+2025-04-13 14:42:18,427 - DEBUG - Dokument 124: data = 2025-04-02
+2025-04-13 14:42:18,427 - DEBUG - Dokument 124: datasp = 2025-04-01
+2025-04-13 14:42:18,427 - DEBUG - Dokument 124: znaleziono okres w linii 10276
+2025-04-13 14:42:18,427 - DEBUG - Dokument 125: data = 2025-04-03
+2025-04-13 14:42:18,427 - DEBUG - Dokument 125: datasp = 2025-04-03
+2025-04-13 14:42:18,427 - DEBUG - Dokument 125: znaleziono konto 731-1 w linii 10350
+2025-04-13 14:42:18,427 - DEBUG - Dokument 125: znaleziono okres w linii 10359
+2025-04-13 14:42:18,427 - DEBUG - Dokument 126: data = 2025-04-03
+2025-04-13 14:42:18,427 - DEBUG - Dokument 126: datasp = 2025-04-03
+2025-04-13 14:42:18,427 - DEBUG - Dokument 126: znaleziono konto 731-1 w linii 10433
+2025-04-13 14:42:18,428 - DEBUG - Dokument 126: znaleziono okres w linii 10442
+2025-04-13 14:42:18,428 - DEBUG - Dokument 127: data = 2025-04-03
+2025-04-13 14:42:18,428 - DEBUG - Dokument 127: datasp = 2025-04-03
+2025-04-13 14:42:18,428 - DEBUG - Dokument 127: znaleziono konto 731-1 w linii 10516
+2025-04-13 14:42:18,428 - DEBUG - Dokument 127: znaleziono okres w linii 10525
+2025-04-13 14:42:18,428 - DEBUG - Dokument 128: data = 2025-04-03
+2025-04-13 14:42:18,428 - DEBUG - Dokument 128: datasp = 2025-04-03
+2025-04-13 14:42:18,428 - DEBUG - Dokument 128: znaleziono konto 731-1 w linii 10599
+2025-04-13 14:42:18,428 - DEBUG - Dokument 128: znaleziono okres w linii 10608
+2025-04-13 14:42:18,428 - DEBUG - Dokument 129: data = 2025-04-03
+2025-04-13 14:42:18,428 - DEBUG - Dokument 129: datasp = 2025-04-03
+2025-04-13 14:42:18,429 - DEBUG - Dokument 129: znaleziono konto 731-1 w linii 10682
+2025-04-13 14:42:18,429 - DEBUG - Dokument 129: znaleziono okres w linii 10691
+2025-04-13 14:42:18,429 - DEBUG - Dokument 130: data = 2025-04-03
+2025-04-13 14:42:18,429 - DEBUG - Dokument 130: datasp = 2025-04-03
+2025-04-13 14:42:18,429 - DEBUG - Dokument 130: znaleziono konto 731-1 w linii 10765
+2025-04-13 14:42:18,429 - DEBUG - Dokument 130: znaleziono okres w linii 10774
+2025-04-13 14:42:18,429 - DEBUG - Dokument 131: data = 2025-04-03
+2025-04-13 14:42:18,429 - DEBUG - Dokument 131: datasp = 2025-04-03
+2025-04-13 14:42:18,429 - DEBUG - Dokument 131: znaleziono konto 731-1 w linii 10848
+2025-04-13 14:42:18,430 - DEBUG - Dokument 131: znaleziono okres w linii 10857
+2025-04-13 14:42:18,430 - DEBUG - Dokument 132: data = 2025-04-03
+2025-04-13 14:42:18,430 - DEBUG - Dokument 132: datasp = 2025-04-03
+2025-04-13 14:42:18,430 - DEBUG - Dokument 132: znaleziono konto 731-1 w linii 10931
+2025-04-13 14:42:18,430 - DEBUG - Dokument 132: znaleziono okres w linii 10940
+2025-04-13 14:42:18,430 - DEBUG - Dokument 133: data = 2025-04-03
+2025-04-13 14:42:18,430 - DEBUG - Dokument 133: datasp = 2025-04-03
+2025-04-13 14:42:18,430 - DEBUG - Dokument 133: znaleziono konto 731-1 w linii 11014
+2025-04-13 14:42:18,431 - DEBUG - Dokument 133: znaleziono okres w linii 11023
+2025-04-13 14:42:18,431 - DEBUG - Dokument 134: data = 2025-04-03
+2025-04-13 14:42:18,431 - DEBUG - Dokument 134: datasp = 2025-04-03
+2025-04-13 14:42:18,431 - DEBUG - Dokument 134: znaleziono konto 731-1 w linii 11097
+2025-04-13 14:42:18,431 - DEBUG - Dokument 134: znaleziono okres w linii 11106
+2025-04-13 14:42:18,431 - DEBUG - Dokument 135: data = 2025-04-03
+2025-04-13 14:42:18,431 - DEBUG - Dokument 135: datasp = 2025-04-03
+2025-04-13 14:42:18,431 - DEBUG - Dokument 135: znaleziono konto 731-1 w linii 11180
+2025-04-13 14:42:18,432 - DEBUG - Dokument 135: znaleziono okres w linii 11189
+2025-04-13 14:42:18,432 - DEBUG - Dokument 136: data = 2025-04-03
+2025-04-13 14:42:18,432 - DEBUG - Dokument 136: datasp = 2025-04-03
+2025-04-13 14:42:18,432 - DEBUG - Dokument 136: znaleziono konto 731-1 w linii 11263
+2025-04-13 14:42:18,432 - DEBUG - Dokument 136: znaleziono okres w linii 11272
+2025-04-13 14:42:18,432 - DEBUG - Dokument 137: data = 2025-04-03
+2025-04-13 14:42:18,432 - DEBUG - Dokument 137: datasp = 2025-04-03
+2025-04-13 14:42:18,432 - DEBUG - Dokument 137: znaleziono konto 731-1 w linii 11346
+2025-04-13 14:42:18,433 - DEBUG - Dokument 137: znaleziono okres w linii 11355
+2025-04-13 14:42:18,433 - DEBUG - Dokument 138: data = 2025-04-03
+2025-04-13 14:42:18,433 - DEBUG - Dokument 138: datasp = 2025-04-03
+2025-04-13 14:42:18,433 - DEBUG - Dokument 138: znaleziono konto 731-1 w linii 11429
+2025-04-13 14:42:18,433 - DEBUG - Dokument 138: znaleziono okres w linii 11438
+2025-04-13 14:42:18,433 - DEBUG - Dokument 139: data = 2025-04-04
+2025-04-13 14:42:18,433 - DEBUG - Dokument 139: datasp = 2025-04-04
+2025-04-13 14:42:18,433 - DEBUG - Dokument 139: znaleziono okres w linii 11521
+2025-04-13 14:42:18,434 - DEBUG - Dokument 140: data = 2025-04-04
+2025-04-13 14:42:18,434 - DEBUG - Dokument 140: datasp = 2025-04-04
+2025-04-13 14:42:18,434 - DEBUG - Dokument 140: znaleziono konto 731-1 w linii 11595
+2025-04-13 14:42:18,434 - DEBUG - Dokument 140: znaleziono okres w linii 11604
+2025-04-13 14:42:18,434 - DEBUG - Dokument 141: data = 2025-04-04
+2025-04-13 14:42:18,434 - DEBUG - Dokument 141: datasp = 2025-04-04
+2025-04-13 14:42:18,434 - DEBUG - Dokument 141: znaleziono konto 731-1 w linii 11678
+2025-04-13 14:42:18,435 - DEBUG - Dokument 141: znaleziono okres w linii 11687
+2025-04-13 14:42:18,435 - DEBUG - Dokument 142: data = 2025-04-04
+2025-04-13 14:42:18,435 - DEBUG - Dokument 142: datasp = 2025-04-04
+2025-04-13 14:42:18,435 - DEBUG - Dokument 142: znaleziono konto 731-1 w linii 11761
+2025-04-13 14:42:18,435 - DEBUG - Dokument 142: znaleziono okres w linii 11770
+2025-04-13 14:42:18,435 - DEBUG - Dokument 143: data = 2025-04-04
+2025-04-13 14:42:18,435 - DEBUG - Dokument 143: datasp = 2025-04-04
+2025-04-13 14:42:18,435 - DEBUG - Dokument 143: znaleziono konto 731-1 w linii 11844
+2025-04-13 14:42:18,435 - DEBUG - Dokument 143: znaleziono okres w linii 11853
+2025-04-13 14:42:18,436 - DEBUG - Dokument 144: data = 2025-04-04
+2025-04-13 14:42:18,436 - DEBUG - Dokument 144: datasp = 2025-04-04
+2025-04-13 14:42:18,436 - DEBUG - Dokument 144: znaleziono konto 731-1 w linii 11927
+2025-04-13 14:42:18,436 - DEBUG - Dokument 144: znaleziono okres w linii 11936
+2025-04-13 14:42:18,436 - DEBUG - Dokument 145: data = 2025-04-04
+2025-04-13 14:42:18,436 - DEBUG - Dokument 145: datasp = 2025-04-04
+2025-04-13 14:42:18,436 - DEBUG - Dokument 145: znaleziono konto 731-1 w linii 12010
+2025-04-13 14:42:18,436 - DEBUG - Dokument 145: znaleziono okres w linii 12019
+2025-04-13 14:42:18,437 - DEBUG - Dokument 146: data = 2025-04-04
+2025-04-13 14:42:18,437 - DEBUG - Dokument 146: datasp = 2025-03-31
+2025-04-13 14:42:18,437 - DEBUG - Dokument 146: znaleziono okres w linii 12102
+2025-04-13 14:42:18,437 - DEBUG - Dokument 147: data = 2025-04-04
+2025-04-13 14:42:18,437 - DEBUG - Dokument 147: datasp = 2025-03-31
+2025-04-13 14:42:18,437 - DEBUG - Dokument 147: znaleziono okres w linii 12185
+2025-04-13 14:42:18,437 - DEBUG - Dokument 148: data = 2025-04-04
+2025-04-13 14:42:18,437 - DEBUG - Dokument 148: datasp = 2025-04-04
+2025-04-13 14:42:18,437 - DEBUG - Dokument 148: znaleziono okres w linii 12268
+2025-04-13 14:42:18,438 - DEBUG - Dokument 149: data = 2025-04-04
+2025-04-13 14:42:18,438 - DEBUG - Dokument 149: datasp = 2025-04-04
+2025-04-13 14:42:18,438 - DEBUG - Dokument 149: znaleziono konto 731-1 w linii 12342
+2025-04-13 14:42:18,438 - DEBUG - Dokument 149: znaleziono okres w linii 12351
+2025-04-13 14:42:18,438 - DEBUG - Dokument 150: data = 2025-04-04
+2025-04-13 14:42:18,438 - DEBUG - Dokument 150: datasp = 2025-04-04
+2025-04-13 14:42:18,438 - DEBUG - Dokument 150: znaleziono konto 731-1 w linii 12425
+2025-04-13 14:42:18,438 - DEBUG - Dokument 150: znaleziono okres w linii 12434
+2025-04-13 14:42:18,438 - DEBUG - Dokument 151: data = 2025-04-04
+2025-04-13 14:42:18,439 - DEBUG - Dokument 151: datasp = 2025-02-06
+2025-04-13 14:42:18,439 - DEBUG - Dokument 151: znaleziono okres w linii 12519
+2025-04-13 14:42:18,439 - DEBUG - Dokument 152: data = 2025-04-07
+2025-04-13 14:42:18,439 - DEBUG - Dokument 152: datasp = 2025-04-07
+2025-04-13 14:42:18,439 - DEBUG - Dokument 152: znaleziono okres w linii 12602
+2025-04-13 14:42:18,439 - DEBUG - Dokument 153: data = 2025-04-07
+2025-04-13 14:42:18,439 - DEBUG - Dokument 153: datasp = 2025-04-07
+2025-04-13 14:42:18,439 - DEBUG - Dokument 153: znaleziono konto 731-1 w linii 12676
+2025-04-13 14:42:18,439 - DEBUG - Dokument 153: znaleziono okres w linii 12685
+2025-04-13 14:42:18,439 - DEBUG - Dokument 154: data = 2025-04-07
+2025-04-13 14:42:18,439 - DEBUG - Dokument 154: datasp = 2025-04-07
+2025-04-13 14:42:18,440 - DEBUG - Dokument 154: znaleziono konto 731-1 w linii 12759
+2025-04-13 14:42:18,440 - DEBUG - Dokument 154: znaleziono okres w linii 12768
+2025-04-13 14:42:18,440 - DEBUG - Dokument 155: data = 2025-04-07
+2025-04-13 14:42:18,440 - DEBUG - Dokument 155: datasp = 2025-04-07
+2025-04-13 14:42:18,440 - DEBUG - Dokument 155: znaleziono konto 731-1 w linii 12842
+2025-04-13 14:42:18,440 - DEBUG - Dokument 155: znaleziono okres w linii 12851
+2025-04-13 14:42:18,440 - DEBUG - Dokument 156: data = 2025-04-07
+2025-04-13 14:42:18,440 - DEBUG - Dokument 156: datasp = 2025-04-07
+2025-04-13 14:42:18,440 - DEBUG - Dokument 156: znaleziono konto 731-1 w linii 12925
+2025-04-13 14:42:18,440 - DEBUG - Dokument 156: znaleziono okres w linii 12934
+2025-04-13 14:42:18,441 - DEBUG - Dokument 157: data = 2025-04-07
+2025-04-13 14:42:18,441 - DEBUG - Dokument 157: datasp = 2025-04-07
+2025-04-13 14:42:18,441 - DEBUG - Dokument 157: znaleziono konto 731-1 w linii 13008
+2025-04-13 14:42:18,441 - DEBUG - Dokument 157: znaleziono okres w linii 13017
+2025-04-13 14:42:18,441 - DEBUG - Dokument 158: data = 2025-04-07
+2025-04-13 14:42:18,441 - DEBUG - Dokument 158: datasp = 2025-04-07
+2025-04-13 14:42:18,441 - DEBUG - Dokument 158: znaleziono konto 731-1 w linii 13091
+2025-04-13 14:42:18,441 - DEBUG - Dokument 158: znaleziono okres w linii 13100
+2025-04-13 14:42:18,442 - DEBUG - Dokument 159: data = 2025-04-07
+2025-04-13 14:42:18,442 - DEBUG - Dokument 159: datasp = 2025-04-07
+2025-04-13 14:42:18,442 - DEBUG - Dokument 159: znaleziono konto 731-1 w linii 13174
+2025-04-13 14:42:18,442 - DEBUG - Dokument 159: znaleziono okres w linii 13183
+2025-04-13 14:42:18,442 - DEBUG - Dokument 160: data = 2025-04-07
+2025-04-13 14:42:18,442 - DEBUG - Dokument 160: datasp = 2025-04-07
+2025-04-13 14:42:18,442 - DEBUG - Dokument 160: znaleziono konto 731-1 w linii 13257
+2025-04-13 14:42:18,442 - DEBUG - Dokument 160: znaleziono okres w linii 13266
+2025-04-13 14:42:18,442 - DEBUG - Dokument 161: data = 2025-04-07
+2025-04-13 14:42:18,442 - DEBUG - Dokument 161: datasp = 2025-04-07
+2025-04-13 14:42:18,442 - DEBUG - Dokument 161: znaleziono konto 731-1 w linii 13340
+2025-04-13 14:42:18,442 - DEBUG - Dokument 161: znaleziono okres w linii 13349
+2025-04-13 14:42:18,443 - DEBUG - Dokument 162: data = 2025-04-07
+2025-04-13 14:42:18,443 - DEBUG - Dokument 162: datasp = 2025-04-07
+2025-04-13 14:42:18,443 - DEBUG - Dokument 162: znaleziono konto 731-1 w linii 13423
+2025-04-13 14:42:18,443 - DEBUG - Dokument 162: znaleziono okres w linii 13432
+2025-04-13 14:42:18,443 - DEBUG - Dokument 163: data = 2025-04-07
+2025-04-13 14:42:18,443 - DEBUG - Dokument 163: datasp = 2025-04-07
+2025-04-13 14:42:18,443 - DEBUG - Dokument 163: znaleziono konto 731-1 w linii 13506
+2025-04-13 14:42:18,443 - DEBUG - Dokument 163: znaleziono okres w linii 13515
+2025-04-13 14:42:18,443 - DEBUG - Dokument 164: data = 2025-04-07
+2025-04-13 14:42:18,443 - DEBUG - Dokument 164: datasp = 2025-04-07
+2025-04-13 14:42:18,444 - DEBUG - Dokument 164: znaleziono konto 731-1 w linii 13589
+2025-04-13 14:42:18,444 - DEBUG - Dokument 164: znaleziono okres w linii 13598
+2025-04-13 14:42:18,444 - DEBUG - Dokument 165: data = 2025-04-07
+2025-04-13 14:42:18,444 - DEBUG - Dokument 165: datasp = 2025-04-07
+2025-04-13 14:42:18,444 - DEBUG - Dokument 165: znaleziono konto 731-1 w linii 13672
+2025-04-13 14:42:18,444 - DEBUG - Dokument 165: znaleziono okres w linii 13681
+2025-04-13 14:42:18,444 - DEBUG - Dokument 166: data = 2025-04-07
+2025-04-13 14:42:18,444 - DEBUG - Dokument 166: datasp = 2025-04-07
+2025-04-13 14:42:18,444 - DEBUG - Dokument 166: znaleziono konto 731-1 w linii 13755
+2025-04-13 14:42:18,445 - DEBUG - Dokument 166: znaleziono okres w linii 13764
+2025-04-13 14:42:18,445 - DEBUG - Dokument 167: data = 2025-04-07
+2025-04-13 14:42:18,445 - DEBUG - Dokument 167: datasp = 2025-04-07
+2025-04-13 14:42:18,445 - DEBUG - Dokument 167: znaleziono konto 731-1 w linii 13838
+2025-04-13 14:42:18,445 - DEBUG - Dokument 167: znaleziono okres w linii 13847
+2025-04-13 14:42:18,445 - DEBUG - Dokument 168: data = 2025-04-07
+2025-04-13 14:42:18,446 - DEBUG - Dokument 168: datasp = 2025-04-07
+2025-04-13 14:42:18,446 - DEBUG - Dokument 168: znaleziono konto 731-1 w linii 13921
+2025-04-13 14:42:18,446 - DEBUG - Dokument 168: znaleziono okres w linii 13930
+2025-04-13 14:42:18,446 - DEBUG - Dokument 169: data = 2025-04-07
+2025-04-13 14:42:18,446 - DEBUG - Dokument 169: datasp = 2025-04-07
+2025-04-13 14:42:18,446 - DEBUG - Dokument 169: znaleziono konto 731-1 w linii 14004
+2025-04-13 14:42:18,446 - DEBUG - Dokument 169: znaleziono okres w linii 14013
+2025-04-13 14:42:18,447 - DEBUG - Dokument 170: data = 2025-04-08
+2025-04-13 14:42:18,447 - DEBUG - Dokument 170: datasp = 2025-03-31
+2025-04-13 14:42:18,447 - DEBUG - Dokument 170: znaleziono okres w linii 14096
+2025-04-13 14:42:18,447 - DEBUG - Dokument 171: data = 2025-04-08
+2025-04-13 14:42:18,447 - DEBUG - Dokument 171: datasp = 2025-04-08
+2025-04-13 14:42:18,447 - DEBUG - Dokument 171: znaleziono okres w linii 14179
+2025-04-13 14:42:18,447 - DEBUG - Dokument 172: data = 2025-04-08
+2025-04-13 14:42:18,447 - DEBUG - Dokument 172: datasp = 2025-04-08
+2025-04-13 14:42:18,448 - DEBUG - Dokument 172: znaleziono konto 731-1 w linii 14253
+2025-04-13 14:42:18,448 - DEBUG - Dokument 172: znaleziono okres w linii 14262
+2025-04-13 14:42:18,448 - DEBUG - Dokument 173: data = 2025-04-08
+2025-04-13 14:42:18,448 - DEBUG - Dokument 173: datasp = 2025-04-08
+2025-04-13 14:42:18,448 - DEBUG - Dokument 173: znaleziono konto 731-1 w linii 14336
+2025-04-13 14:42:18,448 - DEBUG - Dokument 173: znaleziono okres w linii 14345
+2025-04-13 14:42:18,448 - DEBUG - Dokument 174: data = 2025-04-08
+2025-04-13 14:42:18,448 - DEBUG - Dokument 174: datasp = 2025-04-08
+2025-04-13 14:42:18,448 - DEBUG - Dokument 174: znaleziono konto 731-1 w linii 14419
+2025-04-13 14:42:18,449 - DEBUG - Dokument 174: znaleziono okres w linii 14428
+2025-04-13 14:42:18,449 - DEBUG - Dokument 175: data = 2025-04-08
+2025-04-13 14:42:18,449 - DEBUG - Dokument 175: datasp = 2025-04-08
+2025-04-13 14:42:18,449 - DEBUG - Dokument 175: znaleziono konto 731-1 w linii 14502
+2025-04-13 14:42:18,449 - DEBUG - Dokument 175: znaleziono okres w linii 14511
+2025-04-13 14:42:18,449 - DEBUG - Dokument 176: data = 2025-04-08
+2025-04-13 14:42:18,449 - DEBUG - Dokument 176: datasp = 2025-04-08
+2025-04-13 14:42:18,449 - DEBUG - Dokument 176: znaleziono konto 731-1 w linii 14585
+2025-04-13 14:42:18,449 - DEBUG - Dokument 176: znaleziono okres w linii 14594
+2025-04-13 14:42:18,450 - DEBUG - Dokument 177: data = 2025-04-08
+2025-04-13 14:42:18,450 - DEBUG - Dokument 177: datasp = 2025-04-08
+2025-04-13 14:42:18,450 - DEBUG - Dokument 177: znaleziono konto 731-1 w linii 14668
+2025-04-13 14:42:18,450 - DEBUG - Dokument 177: znaleziono okres w linii 14677
+2025-04-13 14:42:18,450 - DEBUG - Dokument 178: data = 2025-04-08
+2025-04-13 14:42:18,450 - DEBUG - Dokument 178: datasp = 2025-04-08
+2025-04-13 14:42:18,450 - DEBUG - Dokument 178: znaleziono konto 731-1 w linii 14751
+2025-04-13 14:42:18,450 - DEBUG - Dokument 178: znaleziono okres w linii 14760
+2025-04-13 14:42:18,450 - DEBUG - Dokument 179: data = 2025-04-08
+2025-04-13 14:42:18,450 - DEBUG - Dokument 179: datasp = 2025-04-08
+2025-04-13 14:42:18,450 - DEBUG - Dokument 179: znaleziono konto 731-1 w linii 14834
+2025-04-13 14:42:18,450 - DEBUG - Dokument 179: znaleziono okres w linii 14843
+2025-04-13 14:42:18,451 - DEBUG - Dokument 180: data = 2025-04-08
+2025-04-13 14:42:18,451 - DEBUG - Dokument 180: datasp = 2025-04-08
+2025-04-13 14:42:18,451 - DEBUG - Dokument 180: znaleziono konto 731-1 w linii 14917
+2025-04-13 14:42:18,451 - DEBUG - Dokument 180: znaleziono okres w linii 14926
+2025-04-13 14:42:18,451 - DEBUG - Dokument 181: data = 2025-04-08
+2025-04-13 14:42:18,451 - DEBUG - Dokument 181: datasp = 2025-04-08
+2025-04-13 14:42:18,451 - DEBUG - Dokument 181: znaleziono konto 731-1 w linii 15000
+2025-04-13 14:42:18,451 - DEBUG - Dokument 181: znaleziono okres w linii 15009
+2025-04-13 14:42:18,451 - DEBUG - Dokument 182: data = 2025-04-08
+2025-04-13 14:42:18,451 - DEBUG - Dokument 182: datasp = 2025-04-08
+2025-04-13 14:42:18,451 - DEBUG - Dokument 182: znaleziono konto 731-1 w linii 15083
+2025-04-13 14:42:18,451 - DEBUG - Dokument 182: znaleziono okres w linii 15092
+2025-04-13 14:42:18,452 - DEBUG - Dokument 183: data = 2025-04-08
+2025-04-13 14:42:18,452 - DEBUG - Dokument 183: datasp = 2025-04-08
+2025-04-13 14:42:18,452 - DEBUG - Dokument 183: znaleziono konto 731-1 w linii 15166
+2025-04-13 14:42:18,452 - DEBUG - Dokument 183: znaleziono okres w linii 15175
+2025-04-13 14:42:18,452 - DEBUG - Dokument 184: data = 2025-04-08
+2025-04-13 14:42:18,452 - DEBUG - Dokument 184: datasp = 2025-03-31
+2025-04-13 14:42:18,452 - DEBUG - Dokument 184: znaleziono okres w linii 15258
+2025-04-13 14:42:18,452 - DEBUG - Dokument 185: data = 2025-04-08
+2025-04-13 14:42:18,452 - DEBUG - Dokument 185: datasp = 2025-04-08
+2025-04-13 14:42:18,452 - DEBUG - Dokument 185: znaleziono okres w linii 15341
+2025-04-13 14:42:18,453 - DEBUG - Dokument 186: data = 2025-04-08
+2025-04-13 14:42:18,453 - DEBUG - Dokument 186: datasp = 2025-04-08
+2025-04-13 14:42:18,453 - DEBUG - Dokument 186: znaleziono konto 731-1 w linii 15415
+2025-04-13 14:42:18,453 - DEBUG - Dokument 186: znaleziono okres w linii 15424
+2025-04-13 14:42:18,453 - DEBUG - Dokument 187: data = 2025-04-08
+2025-04-13 14:42:18,453 - DEBUG - Dokument 187: datasp = 2025-04-08
+2025-04-13 14:42:18,453 - DEBUG - Dokument 187: znaleziono konto 731-1 w linii 15498
+2025-04-13 14:42:18,453 - DEBUG - Dokument 187: znaleziono okres w linii 15507
+2025-04-13 14:42:18,453 - DEBUG - Dokument 188: data = 2025-04-08
+2025-04-13 14:42:18,453 - DEBUG - Dokument 188: datasp = 2025-04-08
+2025-04-13 14:42:18,454 - DEBUG - Dokument 188: znaleziono konto 731-1 w linii 15581
+2025-04-13 14:42:18,454 - DEBUG - Dokument 188: znaleziono okres w linii 15590
+2025-04-13 14:42:18,454 - DEBUG - Dokument 189: data = 2025-04-08
+2025-04-13 14:42:18,454 - DEBUG - Dokument 189: datasp = 2025-04-08
+2025-04-13 14:42:18,454 - DEBUG - Dokument 189: znaleziono konto 731-1 w linii 15664
+2025-04-13 14:42:18,454 - DEBUG - Dokument 189: znaleziono okres w linii 15673
+2025-04-13 14:42:18,454 - DEBUG - Dokument 190: data = 2025-04-08
+2025-04-13 14:42:18,454 - DEBUG - Dokument 190: datasp = 2025-04-08
+2025-04-13 14:42:18,454 - DEBUG - Dokument 190: znaleziono konto 731-1 w linii 15747
+2025-04-13 14:42:18,454 - DEBUG - Dokument 190: znaleziono okres w linii 15756
+2025-04-13 14:42:18,455 - DEBUG - Dokument 191: data = 2025-04-08
+2025-04-13 14:42:18,455 - DEBUG - Dokument 191: datasp = 2025-04-08
+2025-04-13 14:42:18,455 - DEBUG - Dokument 191: znaleziono konto 731-1 w linii 15830
+2025-04-13 14:42:18,455 - DEBUG - Dokument 191: znaleziono okres w linii 15839
+2025-04-13 14:42:18,455 - DEBUG - Dokument 192: data = 2025-04-08
+2025-04-13 14:42:18,455 - DEBUG - Dokument 192: datasp = 2025-04-01
+2025-04-13 14:42:18,455 - DEBUG - Dokument 192: znaleziono okres w linii 15924
+2025-04-13 14:42:18,455 - DEBUG - Dokument 193: data = 2025-04-09
+2025-04-13 14:42:18,455 - DEBUG - Dokument 193: datasp = 2025-04-09
+2025-04-13 14:42:18,455 - DEBUG - Dokument 193: znaleziono konto 731-1 w linii 15998
+2025-04-13 14:42:18,456 - DEBUG - Dokument 193: znaleziono okres w linii 16007
+2025-04-13 14:42:18,456 - DEBUG - Dokument 194: data = 2025-04-09
+2025-04-13 14:42:18,456 - DEBUG - Dokument 194: datasp = 2025-04-09
+2025-04-13 14:42:18,456 - DEBUG - Dokument 194: znaleziono konto 731-1 w linii 16081
+2025-04-13 14:42:18,456 - DEBUG - Dokument 194: znaleziono okres w linii 16090
+2025-04-13 14:42:18,456 - DEBUG - Dokument 195: data = 2025-04-09
+2025-04-13 14:42:18,456 - DEBUG - Dokument 195: datasp = 2025-04-09
+2025-04-13 14:42:18,456 - DEBUG - Dokument 195: znaleziono konto 731-1 w linii 16164
+2025-04-13 14:42:18,456 - DEBUG - Dokument 195: znaleziono okres w linii 16173
+2025-04-13 14:42:18,456 - DEBUG - Dokument 196: data = 2025-04-09
+2025-04-13 14:42:18,457 - DEBUG - Dokument 196: datasp = 2025-04-09
+2025-04-13 14:42:18,457 - DEBUG - Dokument 196: znaleziono konto 731-1 w linii 16247
+2025-04-13 14:42:18,457 - DEBUG - Dokument 196: znaleziono okres w linii 16256
+2025-04-13 14:42:18,457 - DEBUG - Dokument 197: data = 2025-04-09
+2025-04-13 14:42:18,457 - DEBUG - Dokument 197: datasp = 2025-04-09
+2025-04-13 14:42:18,457 - DEBUG - Dokument 197: znaleziono konto 731-1 w linii 16330
+2025-04-13 14:42:18,457 - DEBUG - Dokument 197: znaleziono okres w linii 16339
+2025-04-13 14:42:18,457 - DEBUG - Dokument 198: data = 2025-04-09
+2025-04-13 14:42:18,457 - DEBUG - Dokument 198: datasp = 2025-04-09
+2025-04-13 14:42:18,457 - DEBUG - Dokument 198: znaleziono konto 731-1 w linii 16413
+2025-04-13 14:42:18,457 - DEBUG - Dokument 198: znaleziono okres w linii 16422
+2025-04-13 14:42:18,458 - DEBUG - Dokument 199: data = 2025-04-09
+2025-04-13 14:42:18,458 - DEBUG - Dokument 199: datasp = 2025-03-31
+2025-04-13 14:42:18,458 - DEBUG - Dokument 199: znaleziono okres w linii 16505
+2025-04-13 14:42:18,458 - DEBUG - Dokument 200: data = 2025-04-09
+2025-04-13 14:42:18,458 - DEBUG - Dokument 200: datasp = 2025-03-31
+2025-04-13 14:42:18,458 - DEBUG - Dokument 200: znaleziono okres w linii 16588
+2025-04-13 14:42:18,458 - DEBUG - Dokument 201: data = 2025-04-09
+2025-04-13 14:42:18,458 - DEBUG - Dokument 201: datasp = 2025-04-09
+2025-04-13 14:42:18,458 - DEBUG - Dokument 201: znaleziono okres w linii 16671
+2025-04-13 14:42:18,459 - DEBUG - Dokument 202: data = 2025-04-09
+2025-04-13 14:42:18,459 - DEBUG - Dokument 202: datasp = 2025-03-31
+2025-04-13 14:42:18,459 - DEBUG - Dokument 202: znaleziono okres w linii 16754
+2025-04-13 14:42:18,459 - DEBUG - Dokument 203: data = 2025-04-09
+2025-04-13 14:42:18,459 - DEBUG - Dokument 203: datasp = 2025-04-09
+2025-04-13 14:42:18,459 - DEBUG - Dokument 203: znaleziono okres w linii 16837
+2025-04-13 14:42:18,459 - DEBUG - Dokument 204: data = 2025-04-09
+2025-04-13 14:42:18,459 - DEBUG - Dokument 204: datasp = 2025-04-09
+2025-04-13 14:42:18,459 - DEBUG - Dokument 204: znaleziono konto 731-1 w linii 16911
+2025-04-13 14:42:18,459 - DEBUG - Dokument 204: znaleziono okres w linii 16920
+2025-04-13 14:42:18,459 - DEBUG - Dokument 205: data = 2025-04-09
+2025-04-13 14:42:18,459 - DEBUG - Dokument 205: datasp = 2025-04-09
+2025-04-13 14:42:18,460 - DEBUG - Dokument 205: znaleziono konto 731-1 w linii 16994
+2025-04-13 14:42:18,460 - DEBUG - Dokument 205: znaleziono okres w linii 17003
+2025-04-13 14:42:18,460 - DEBUG - Dokument 206: data = 2025-04-09
+2025-04-13 14:42:18,460 - DEBUG - Dokument 206: datasp = 2025-04-09
+2025-04-13 14:42:18,460 - DEBUG - Dokument 206: znaleziono konto 731-1 w linii 17077
+2025-04-13 14:42:18,460 - DEBUG - Dokument 206: znaleziono okres w linii 17086
+2025-04-13 14:42:18,460 - DEBUG - Dokument 207: data = 2025-04-09
+2025-04-13 14:42:18,460 - DEBUG - Dokument 207: datasp = 2025-03-31
+2025-04-13 14:42:18,460 - DEBUG - Dokument 207: znaleziono okres w linii 17169
+2025-04-13 14:42:18,460 - DEBUG - Dokument 208: data = 2025-04-09
+2025-04-13 14:42:18,460 - DEBUG - Dokument 208: datasp = 2025-04-09
+2025-04-13 14:42:18,461 - DEBUG - Dokument 208: znaleziono okres w linii 17252
+2025-04-13 14:42:18,461 - DEBUG - Dokument 209: data = 2025-04-09
+2025-04-13 14:42:18,461 - DEBUG - Dokument 209: datasp = 2025-04-09
+2025-04-13 14:42:18,461 - DEBUG - Dokument 209: znaleziono konto 731-1 w linii 17326
+2025-04-13 14:42:18,461 - DEBUG - Dokument 209: znaleziono okres w linii 17335
+2025-04-13 14:42:18,461 - DEBUG - Dokument 210: data = 2025-04-09
+2025-04-13 14:42:18,461 - DEBUG - Dokument 210: datasp = 2025-03-31
+2025-04-13 14:42:18,461 - DEBUG - Dokument 210: znaleziono okres w linii 17418
+2025-04-13 14:42:18,461 - DEBUG - Dokument 211: data = 2025-04-09
+2025-04-13 14:42:18,462 - DEBUG - Dokument 211: datasp = 2025-04-09
+2025-04-13 14:42:18,462 - DEBUG - Dokument 211: znaleziono okres w linii 17501
+2025-04-13 14:42:18,462 - DEBUG - Dokument 212: data = 2025-04-09
+2025-04-13 14:42:18,462 - DEBUG - Dokument 212: datasp = 2025-04-09
+2025-04-13 14:42:18,462 - DEBUG - Dokument 212: znaleziono konto 731-1 w linii 17575
+2025-04-13 14:42:18,465 - DEBUG - Dokument 212: znaleziono okres w linii 17584
+2025-04-13 14:42:18,465 - DEBUG - Dokument 213: data = 2025-04-09
+2025-04-13 14:42:18,465 - DEBUG - Dokument 213: datasp = 2025-04-09
+2025-04-13 14:42:18,465 - DEBUG - Dokument 213: znaleziono konto 731-1 w linii 17658
+2025-04-13 14:42:18,465 - DEBUG - Dokument 213: znaleziono okres w linii 17667
+2025-04-13 14:42:18,466 - DEBUG - Dokument 214: data = 2025-04-09
+2025-04-13 14:42:18,466 - DEBUG - Dokument 214: datasp = 2025-04-07
+2025-04-13 14:42:18,466 - DEBUG - Dokument 214: znaleziono okres w linii 17752
+2025-04-13 14:42:18,466 - DEBUG - Dokument 215: data = 2025-04-10
+2025-04-13 14:42:18,466 - DEBUG - Dokument 215: datasp = 2025-04-10
+2025-04-13 14:42:18,466 - DEBUG - Dokument 215: znaleziono konto 731-1 w linii 17826
+2025-04-13 14:42:18,466 - DEBUG - Dokument 215: znaleziono okres w linii 17835
+2025-04-13 14:42:18,466 - DEBUG - Dokument 216: data = 2025-04-10
+2025-04-13 14:42:18,466 - DEBUG - Dokument 216: datasp = 2025-04-10
+2025-04-13 14:42:18,467 - DEBUG - Dokument 216: znaleziono konto 731-1 w linii 17909
+2025-04-13 14:42:18,467 - DEBUG - Dokument 216: znaleziono okres w linii 17918
+2025-04-13 14:42:18,467 - DEBUG - Dokument 217: data = 2025-04-10
+2025-04-13 14:42:18,467 - DEBUG - Dokument 217: datasp = 2025-03-31
+2025-04-13 14:42:18,467 - DEBUG - Dokument 217: znaleziono okres w linii 18001
+2025-04-13 14:42:18,467 - DEBUG - Dokument 218: data = 2025-04-10
+2025-04-13 14:42:18,467 - DEBUG - Dokument 218: datasp = 2025-03-31
+2025-04-13 14:42:18,467 - DEBUG - Dokument 218: znaleziono okres w linii 18084
+2025-04-13 14:42:18,468 - DEBUG - Dokument 219: data = 2025-04-10
+2025-04-13 14:42:18,468 - DEBUG - Dokument 219: datasp = 2025-03-31
+2025-04-13 14:42:18,468 - DEBUG - Dokument 219: znaleziono okres w linii 18167
+2025-04-13 14:42:18,468 - DEBUG - Dokument 220: data = 2025-04-10
+2025-04-13 14:42:18,468 - DEBUG - Dokument 220: datasp = 2025-04-10
+2025-04-13 14:42:18,468 - DEBUG - Dokument 220: znaleziono okres w linii 18250
+2025-04-13 14:42:18,468 - DEBUG - Dokument 221: data = 2025-04-10
+2025-04-13 14:42:18,468 - DEBUG - Dokument 221: datasp = 2025-04-10
+2025-04-13 14:42:18,468 - DEBUG - Dokument 221: znaleziono konto 731-1 w linii 18324
+2025-04-13 14:42:18,469 - DEBUG - Dokument 221: znaleziono okres w linii 18333
+2025-04-13 14:42:18,469 - DEBUG - Dokument 222: data = 2025-04-10
+2025-04-13 14:42:18,469 - DEBUG - Dokument 222: datasp = 2025-04-10
+2025-04-13 14:42:18,469 - DEBUG - Dokument 222: znaleziono konto 731-1 w linii 18407
+2025-04-13 14:42:18,469 - DEBUG - Dokument 222: znaleziono okres w linii 18416
+2025-04-13 14:42:18,469 - DEBUG - Dokument 223: data = 2025-04-10
+2025-04-13 14:42:18,469 - DEBUG - Dokument 223: datasp = 2025-04-10
+2025-04-13 14:42:18,469 - DEBUG - Dokument 223: znaleziono konto 731-1 w linii 18490
+2025-04-13 14:42:18,470 - DEBUG - Dokument 223: znaleziono okres w linii 18499
+2025-04-13 14:42:18,470 - DEBUG - Dokument 224: data = 2025-04-10
+2025-04-13 14:42:18,470 - DEBUG - Dokument 224: datasp = 2025-04-10
+2025-04-13 14:42:18,470 - DEBUG - Dokument 224: znaleziono konto 731-1 w linii 18573
+2025-04-13 14:42:18,470 - DEBUG - Dokument 224: znaleziono okres w linii 18582
+2025-04-13 14:42:18,470 - DEBUG - Dokument 225: data = 2025-04-10
+2025-04-13 14:42:18,470 - DEBUG - Dokument 225: datasp = 2025-04-10
+2025-04-13 14:42:18,470 - DEBUG - Dokument 225: znaleziono konto 731-1 w linii 18656
+2025-04-13 14:42:18,471 - DEBUG - Dokument 225: znaleziono okres w linii 18665
+2025-04-13 14:42:18,471 - DEBUG - Dokument 226: data = 2025-04-10
+2025-04-13 14:42:18,471 - DEBUG - Dokument 226: datasp = 2025-04-10
+2025-04-13 14:42:18,471 - DEBUG - Dokument 226: znaleziono konto 731-1 w linii 18739
+2025-04-13 14:42:18,471 - DEBUG - Dokument 226: znaleziono okres w linii 18748
+2025-04-13 14:42:18,471 - DEBUG - Dokument 227: data = 2025-04-10
+2025-04-13 14:42:18,471 - DEBUG - Dokument 227: datasp = 2025-04-10
+2025-04-13 14:42:18,471 - DEBUG - Dokument 227: znaleziono konto 731-1 w linii 18822
+2025-04-13 14:42:18,472 - DEBUG - Dokument 227: znaleziono okres w linii 18831
+2025-04-13 14:42:18,472 - DEBUG - Dokument 228: data = 2025-04-10
+2025-04-13 14:42:18,472 - DEBUG - Dokument 228: datasp = 2025-03-31
+2025-04-13 14:42:18,472 - DEBUG - Dokument 228: znaleziono okres w linii 18914
+2025-04-13 14:42:18,472 - DEBUG - Dokument 229: data = 2025-04-10
+2025-04-13 14:42:18,472 - DEBUG - Dokument 229: datasp = 2025-04-10
+2025-04-13 14:42:18,472 - DEBUG - Dokument 229: znaleziono okres w linii 18997
+2025-04-13 14:42:18,472 - DEBUG - Dokument 230: data = 2025-04-10
+2025-04-13 14:42:18,473 - DEBUG - Dokument 230: datasp = 2025-04-10
+2025-04-13 14:42:18,473 - DEBUG - Dokument 230: znaleziono konto 731-1 w linii 19071
+2025-04-13 14:42:18,473 - DEBUG - Dokument 230: znaleziono okres w linii 19080
+2025-04-13 14:42:18,473 - DEBUG - Dokument 231: data = 2025-04-10
+2025-04-13 14:42:18,473 - DEBUG - Dokument 231: datasp = 2025-04-09
+2025-04-13 14:42:18,473 - DEBUG - Dokument 231: znaleziono okres w linii 19165
+2025-04-13 14:42:18,473 - DEBUG - Dokument 232: data = 2025-04-10
+2025-04-13 14:42:18,473 - DEBUG - Dokument 232: datasp = 2025-03-27
+2025-04-13 14:42:18,473 - DEBUG - Dokument 232: znaleziono konto 731-1 w linii 19241
+2025-04-13 14:42:18,474 - DEBUG - Dokument 232: znaleziono okres w linii 19250
+2025-04-13 14:42:18,477 - INFO - ETAP 3: Analiza dokumentów i warunków biznesowych
+2025-04-13 14:42:18,477 - INFO - Analiza dokumentu 1 (kontrahent: 014925):
+2025-04-13 14:42:18,477 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,478 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,478 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,479 - INFO - Analiza dokumentu 2 (kontrahent: 011299):
+2025-04-13 14:42:18,479 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,480 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,480 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,481 - INFO - Analiza dokumentu 3 (kontrahent: 002371):
+2025-04-13 14:42:18,481 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,482 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,482 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,485 - INFO - Analiza dokumentu 4 (kontrahent: 014925):
+2025-04-13 14:42:18,485 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,486 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,486 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,487 - INFO - Analiza dokumentu 5 (kontrahent: 001027):
+2025-04-13 14:42:18,487 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,487 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,488 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,488 - INFO - Analiza dokumentu 6 (kontrahent: 010190):
+2025-04-13 14:42:18,488 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,489 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,489 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,490 - INFO - Analiza dokumentu 7 (kontrahent: 002033):
+2025-04-13 14:42:18,490 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,491 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,491 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,492 - INFO - Analiza dokumentu 8 (kontrahent: 018347):
+2025-04-13 14:42:18,492 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,492 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,493 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,493 - INFO - Analiza dokumentu 9 (kontrahent: 002138):
+2025-04-13 14:42:18,493 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,494 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,494 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,495 - INFO - Analiza dokumentu 10 (kontrahent: 000381):
+2025-04-13 14:42:18,495 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,496 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,496 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,496 - INFO - Analiza dokumentu 11 (kontrahent: 010679):
+2025-04-13 14:42:18,496 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,497 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,497 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,497 - INFO - Analiza dokumentu 12 (kontrahent: 000243):
+2025-04-13 14:42:18,497 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,498 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,498 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,498 - INFO - Analiza dokumentu 13 (kontrahent: 019119):
+2025-04-13 14:42:18,498 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,499 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,499 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,499 - INFO - Analiza dokumentu 14 (kontrahent: 000545):
+2025-04-13 14:42:18,499 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,500 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,500 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,500 - INFO - Analiza dokumentu 15 (kontrahent: 018130):
+2025-04-13 14:42:18,500 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,501 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,501 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,501 - INFO - Analiza dokumentu 16 (kontrahent: 018620):
+2025-04-13 14:42:18,501 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,502 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,502 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,502 - INFO - Analiza dokumentu 17 (kontrahent: 000166):
+2025-04-13 14:42:18,502 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,503 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,503 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,503 - INFO - Analiza dokumentu 18 (kontrahent: 010955):
+2025-04-13 14:42:18,503 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,504 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,504 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,504 - INFO - Analiza dokumentu 19 (kontrahent: 012938):
+2025-04-13 14:42:18,504 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,505 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,505 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,505 - INFO - Analiza dokumentu 20 (kontrahent: 001104):
+2025-04-13 14:42:18,505 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,506 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,506 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,506 - INFO - Analiza dokumentu 21 (kontrahent: 010821):
+2025-04-13 14:42:18,506 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,507 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,507 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,507 - INFO - Analiza dokumentu 22 (kontrahent: 001523):
+2025-04-13 14:42:18,507 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,508 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,508 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,508 - INFO - Analiza dokumentu 23 (kontrahent: 001861):
+2025-04-13 14:42:18,508 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,509 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,509 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,509 - INFO - Analiza dokumentu 24 (kontrahent: 018175):
+2025-04-13 14:42:18,509 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,510 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,510 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,510 - INFO - Analiza dokumentu 25 (kontrahent: 001680):
+2025-04-13 14:42:18,510 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,511 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,511 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,511 - INFO - Analiza dokumentu 26 (kontrahent: 019279):
+2025-04-13 14:42:18,511 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,512 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,512 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,512 - INFO - Analiza dokumentu 27 (kontrahent: 000869):
+2025-04-13 14:42:18,512 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,513 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,513 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,513 - INFO - Analiza dokumentu 28 (kontrahent: 015026):
+2025-04-13 14:42:18,513 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,514 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,514 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,514 - INFO - Analiza dokumentu 29 (kontrahent: 018533):
+2025-04-13 14:42:18,514 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,515 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,515 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,515 - INFO - Analiza dokumentu 30 (kontrahent: 018144):
+2025-04-13 14:42:18,515 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,516 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,516 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,516 - INFO - Analiza dokumentu 31 (kontrahent: 018144):
+2025-04-13 14:42:18,516 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,517 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,517 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,517 - INFO - Analiza dokumentu 32 (kontrahent: 018144):
+2025-04-13 14:42:18,517 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,518 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,518 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,518 - INFO - Analiza dokumentu 33 (kontrahent: 001609):
+2025-04-13 14:42:18,518 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,518 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,518 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,519 - INFO - Analiza dokumentu 34 (kontrahent: 010088):
+2025-04-13 14:42:18,519 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,519 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,519 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,520 - INFO - Analiza dokumentu 35 (kontrahent: 014366):
+2025-04-13 14:42:18,520 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,520 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,520 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,521 - INFO - Analiza dokumentu 36 (kontrahent: 000253):
+2025-04-13 14:42:18,521 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,521 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,521 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,521 - INFO - Analiza dokumentu 37 (kontrahent: 017983):
+2025-04-13 14:42:18,522 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,523 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,523 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,523 - INFO - Analiza dokumentu 38 (kontrahent: 017675):
+2025-04-13 14:42:18,523 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,524 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,524 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,524 - INFO - Analiza dokumentu 39 (kontrahent: 000558):
+2025-04-13 14:42:18,524 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,525 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,525 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,525 - INFO - Analiza dokumentu 40 (kontrahent: 001516):
+2025-04-13 14:42:18,525 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,526 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,526 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,526 - INFO - Analiza dokumentu 41 (kontrahent: 000810):
+2025-04-13 14:42:18,526 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,527 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,527 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,527 - INFO - Analiza dokumentu 42 (kontrahent: 019387):
+2025-04-13 14:42:18,527 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,528 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,528 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,528 - INFO - Analiza dokumentu 43 (kontrahent: 012549):
+2025-04-13 14:42:18,528 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,529 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,529 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,529 - INFO - Analiza dokumentu 44 (kontrahent: 001753):
+2025-04-13 14:42:18,529 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,530 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,530 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,530 - INFO - Analiza dokumentu 45 (kontrahent: 001761):
+2025-04-13 14:42:18,530 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,531 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,531 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,531 - INFO - Analiza dokumentu 46 (kontrahent: 001816):
+2025-04-13 14:42:18,531 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,532 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,532 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,532 - INFO - Analiza dokumentu 47 (kontrahent: 001840):
+2025-04-13 14:42:18,532 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,533 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,533 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,533 - INFO - Analiza dokumentu 48 (kontrahent: 001815):
+2025-04-13 14:42:18,533 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,534 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,534 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,534 - INFO - Analiza dokumentu 49 (kontrahent: 014135):
+2025-04-13 14:42:18,534 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,535 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,535 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,535 - INFO - Analiza dokumentu 50 (kontrahent: 001843):
+2025-04-13 14:42:18,535 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,535 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,536 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,536 - INFO - Analiza dokumentu 51 (kontrahent: 001842):
+2025-04-13 14:42:18,536 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,537 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,537 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,537 - INFO - Analiza dokumentu 52 (kontrahent: 001841):
+2025-04-13 14:42:18,537 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,538 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,538 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,538 - INFO - Analiza dokumentu 53 (kontrahent: 015213):
+2025-04-13 14:42:18,538 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,539 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,539 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,539 - INFO - Analiza dokumentu 54 (kontrahent: 001455):
+2025-04-13 14:42:18,539 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,540 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,540 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,541 - INFO - Analiza dokumentu 55 (kontrahent: 019126):
+2025-04-13 14:42:18,541 - INFO -   - Data: 2025-04-01, DataSp: 2025-04-01
+2025-04-13 14:42:18,541 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,542 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,542 - INFO - Analiza dokumentu 56 (kontrahent: 001839):
+2025-04-13 14:42:18,542 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,543 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,543 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,543 - INFO - Analiza dokumentu 57 (kontrahent: 010317):
+2025-04-13 14:42:18,543 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,543 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,543 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,543 - INFO - Analiza dokumentu 58 (kontrahent: 001837):
+2025-04-13 14:42:18,544 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,544 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,544 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,544 - INFO - Analiza dokumentu 59 (kontrahent: 001836):
+2025-04-13 14:42:18,544 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,545 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,545 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,545 - INFO - Analiza dokumentu 60 (kontrahent: 001835):
+2025-04-13 14:42:18,545 - INFO -   - Data: 2025-04-01, DataSp: 2025-03-31
+2025-04-13 14:42:18,545 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,545 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,546 - INFO - Analiza dokumentu 61 (kontrahent: 000316):
+2025-04-13 14:42:18,546 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,546 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,546 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,547 - INFO - Analiza dokumentu 62 (kontrahent: 017092):
+2025-04-13 14:42:18,547 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,548 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,548 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,549 - INFO - Analiza dokumentu 63 (kontrahent: 000432):
+2025-04-13 14:42:18,549 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,550 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,550 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,551 - INFO - Analiza dokumentu 64 (kontrahent: 017092):
+2025-04-13 14:42:18,551 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,551 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,552 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,552 - INFO - Analiza dokumentu 65 (kontrahent: 001181):
+2025-04-13 14:42:18,552 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,553 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,553 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,554 - INFO - Analiza dokumentu 66 (kontrahent: 017701):
+2025-04-13 14:42:18,554 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,555 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,555 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,555 - INFO - Analiza dokumentu 67 (kontrahent: 018765):
+2025-04-13 14:42:18,555 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,556 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,556 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,557 - INFO - Analiza dokumentu 68 (kontrahent: 002974):
+2025-04-13 14:42:18,557 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,558 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,558 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,559 - INFO - Analiza dokumentu 69 (kontrahent: 002158):
+2025-04-13 14:42:18,559 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,560 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,560 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,560 - INFO - Analiza dokumentu 70 (kontrahent: 001833):
+2025-04-13 14:42:18,560 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,561 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,561 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,561 - INFO - Analiza dokumentu 71 (kontrahent: 017092):
+2025-04-13 14:42:18,561 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,562 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,562 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,562 - INFO - Analiza dokumentu 72 (kontrahent: 001831):
+2025-04-13 14:42:18,562 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,563 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,563 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,563 - INFO - Analiza dokumentu 73 (kontrahent: 001830):
+2025-04-13 14:42:18,563 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,564 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,564 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,564 - INFO - Analiza dokumentu 74 (kontrahent: 001823):
+2025-04-13 14:42:18,564 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,564 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,565 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,565 - INFO - Analiza dokumentu 75 (kontrahent: 001822):
+2025-04-13 14:42:18,565 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,565 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,565 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,566 - INFO - Analiza dokumentu 76 (kontrahent: 001820):
+2025-04-13 14:42:18,566 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,566 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,567 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,567 - INFO - Analiza dokumentu 77 (kontrahent: 010995):
+2025-04-13 14:42:18,567 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,567 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,567 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,568 - INFO - Analiza dokumentu 78 (kontrahent: 001819):
+2025-04-13 14:42:18,568 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,569 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,569 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,569 - INFO - Analiza dokumentu 79 (kontrahent: 001818):
+2025-04-13 14:42:18,569 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,570 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,570 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,570 - INFO - Analiza dokumentu 80 (kontrahent: 001817):
+2025-04-13 14:42:18,570 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,571 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,571 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,571 - INFO - Analiza dokumentu 81 (kontrahent: 001809):
+2025-04-13 14:42:18,571 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,572 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,572 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,572 - INFO - Analiza dokumentu 82 (kontrahent: 001806):
+2025-04-13 14:42:18,572 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,573 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,573 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,573 - INFO - Analiza dokumentu 83 (kontrahent: 001786):
+2025-04-13 14:42:18,573 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,574 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,574 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,574 - INFO - Analiza dokumentu 84 (kontrahent: 001784):
+2025-04-13 14:42:18,574 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,575 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,575 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,575 - INFO - Analiza dokumentu 85 (kontrahent: 002883):
+2025-04-13 14:42:18,575 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,578 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,578 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,579 - INFO - Analiza dokumentu 86 (kontrahent: 001783):
+2025-04-13 14:42:18,579 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,580 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,581 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,581 - INFO - Analiza dokumentu 87 (kontrahent: 001780):
+2025-04-13 14:42:18,581 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,582 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,582 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,582 - INFO - Analiza dokumentu 88 (kontrahent: 019436):
+2025-04-13 14:42:18,582 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,583 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,583 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,583 - INFO - Analiza dokumentu 89 (kontrahent: 001862):
+2025-04-13 14:42:18,583 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,584 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,584 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,584 - INFO - Analiza dokumentu 90 (kontrahent: 002183):
+2025-04-13 14:42:18,584 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,585 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,585 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,586 - INFO - Analiza dokumentu 91 (kontrahent: 018847):
+2025-04-13 14:42:18,586 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,587 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,587 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,587 - INFO - Analiza dokumentu 92 (kontrahent: 000422):
+2025-04-13 14:42:18,587 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,588 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,588 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,588 - INFO - Analiza dokumentu 93 (kontrahent: 002364):
+2025-04-13 14:42:18,588 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,589 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,589 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,589 - INFO - Analiza dokumentu 94 (kontrahent: 002368):
+2025-04-13 14:42:18,589 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,590 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,590 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,590 - INFO - Analiza dokumentu 95 (kontrahent: 002384):
+2025-04-13 14:42:18,590 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,591 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,591 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,591 - INFO - Analiza dokumentu 96 (kontrahent: 002431):
+2025-04-13 14:42:18,591 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,592 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,592 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,592 - INFO - Analiza dokumentu 97 (kontrahent: 002294):
+2025-04-13 14:42:18,593 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,593 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,593 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,593 - INFO - Analiza dokumentu 98 (kontrahent: 002493):
+2025-04-13 14:42:18,593 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,594 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,594 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,594 - INFO - Analiza dokumentu 99 (kontrahent: 002525):
+2025-04-13 14:42:18,594 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,595 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,595 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,595 - INFO - Analiza dokumentu 100 (kontrahent: 002570):
+2025-04-13 14:42:18,595 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,596 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,596 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,596 - INFO - Analiza dokumentu 101 (kontrahent: 017092):
+2025-04-13 14:42:18,596 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,597 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,597 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,597 - INFO - Analiza dokumentu 102 (kontrahent: 001351):
+2025-04-13 14:42:18,597 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,597 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,598 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,598 - INFO - Analiza dokumentu 103 (kontrahent: 001866):
+2025-04-13 14:42:18,598 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,598 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,598 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,598 - INFO - Analiza dokumentu 104 (kontrahent: 017092):
+2025-04-13 14:42:18,599 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,599 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,599 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,599 - INFO - Analiza dokumentu 105 (kontrahent: 000940):
+2025-04-13 14:42:18,600 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,600 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,600 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,600 - INFO - Analiza dokumentu 106 (kontrahent: 001800):
+2025-04-13 14:42:18,601 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,601 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,601 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,602 - INFO - Analiza dokumentu 107 (kontrahent: 002417):
+2025-04-13 14:42:18,602 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,602 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,602 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,602 - INFO - Analiza dokumentu 108 (kontrahent: 002536):
+2025-04-13 14:42:18,603 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,603 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,603 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,604 - INFO - Analiza dokumentu 109 (kontrahent: 002856):
+2025-04-13 14:42:18,604 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,604 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,604 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,604 - INFO - Analiza dokumentu 110 (kontrahent: 018237):
+2025-04-13 14:42:18,604 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,605 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,605 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,605 - INFO - Analiza dokumentu 111 (kontrahent: 002884):
+2025-04-13 14:42:18,605 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,606 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,606 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,606 - INFO - Analiza dokumentu 112 (kontrahent: 014807):
+2025-04-13 14:42:18,606 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,607 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,607 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,607 - INFO - Analiza dokumentu 113 (kontrahent: 002291):
+2025-04-13 14:42:18,607 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,608 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,608 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,608 - INFO - Analiza dokumentu 114 (kontrahent: 017092):
+2025-04-13 14:42:18,608 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,609 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,609 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,610 - INFO - Analiza dokumentu 115 (kontrahent: 002904):
+2025-04-13 14:42:18,610 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,611 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,611 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,611 - INFO - Analiza dokumentu 116 (kontrahent: 002010):
+2025-04-13 14:42:18,611 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,612 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,612 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,612 - INFO - Analiza dokumentu 117 (kontrahent: 018803):
+2025-04-13 14:42:18,612 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,612 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,612 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,612 - INFO - Analiza dokumentu 118 (kontrahent: 018928):
+2025-04-13 14:42:18,613 - INFO -   - Data: 2025-04-02, DataSp: 2025-03-31
+2025-04-13 14:42:18,613 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,613 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,613 - INFO - Analiza dokumentu 119 (kontrahent: 017182):
+2025-04-13 14:42:18,614 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,614 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,614 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,615 - INFO - Analiza dokumentu 120 (kontrahent: 010821):
+2025-04-13 14:42:18,615 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,615 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,615 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,616 - INFO - Analiza dokumentu 121 (kontrahent: 001263):
+2025-04-13 14:42:18,616 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,617 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,617 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,618 - INFO - Analiza dokumentu 122 (kontrahent: 010905):
+2025-04-13 14:42:18,618 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,619 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,619 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,619 - INFO - Analiza dokumentu 123 (kontrahent: 015596):
+2025-04-13 14:42:18,619 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-02
+2025-04-13 14:42:18,620 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,620 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,621 - INFO - Analiza dokumentu 124 (kontrahent: 017613):
+2025-04-13 14:42:18,621 - INFO -   - Data: 2025-04-02, DataSp: 2025-04-01
+2025-04-13 14:42:18,622 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,622 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,622 - INFO - Analiza dokumentu 125 (kontrahent: 001561):
+2025-04-13 14:42:18,622 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,623 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,623 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,623 - INFO - Analiza dokumentu 126 (kontrahent: 001510):
+2025-04-13 14:42:18,624 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,624 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,624 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,625 - INFO - Analiza dokumentu 127 (kontrahent: 001736):
+2025-04-13 14:42:18,625 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,626 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,626 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,627 - INFO - Analiza dokumentu 128 (kontrahent: 001952):
+2025-04-13 14:42:18,627 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,628 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,628 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,629 - INFO - Analiza dokumentu 129 (kontrahent: 001852):
+2025-04-13 14:42:18,629 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,630 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,630 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,631 - INFO - Analiza dokumentu 130 (kontrahent: 014458):
+2025-04-13 14:42:18,631 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,632 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,632 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,633 - INFO - Analiza dokumentu 131 (kontrahent: 002766):
+2025-04-13 14:42:18,633 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,634 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,634 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,635 - INFO - Analiza dokumentu 132 (kontrahent: 016983):
+2025-04-13 14:42:18,635 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,635 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,636 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,636 - INFO - Analiza dokumentu 133 (kontrahent: 012447):
+2025-04-13 14:42:18,636 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,637 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,637 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,637 - INFO - Analiza dokumentu 134 (kontrahent: 002799):
+2025-04-13 14:42:18,638 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,638 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,638 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,639 - INFO - Analiza dokumentu 135 (kontrahent: 002846):
+2025-04-13 14:42:18,639 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,639 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,639 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,640 - INFO - Analiza dokumentu 136 (kontrahent: 001966):
+2025-04-13 14:42:18,640 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,641 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,641 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,642 - INFO - Analiza dokumentu 137 (kontrahent: 019240):
+2025-04-13 14:42:18,642 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,643 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,643 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,644 - INFO - Analiza dokumentu 138 (kontrahent: 017182):
+2025-04-13 14:42:18,644 - INFO -   - Data: 2025-04-03, DataSp: 2025-04-03
+2025-04-13 14:42:18,645 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,645 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,646 - INFO - Analiza dokumentu 139 (kontrahent: 002844):
+2025-04-13 14:42:18,646 - INFO -   - Data: 2025-04-04, DataSp: 2025-04-04
+2025-04-13 14:42:18,646 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,647 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,647 - INFO - Analiza dokumentu 140 (kontrahent: 017092):
+2025-04-13 14:42:18,647 - INFO -   - Data: 2025-04-04, DataSp: 2025-04-04
+2025-04-13 14:42:18,648 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,648 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,649 - INFO - Analiza dokumentu 141 (kontrahent: 001045):
+2025-04-13 14:42:18,649 - INFO -   - Data: 2025-04-04, DataSp: 2025-04-04
+2025-04-13 14:42:18,650 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,650 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,651 - INFO - Analiza dokumentu 142 (kontrahent: 002086):
+2025-04-13 14:42:18,651 - INFO -   - Data: 2025-04-04, DataSp: 2025-04-04
+2025-04-13 14:42:18,652 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,652 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,653 - INFO - Analiza dokumentu 143 (kontrahent: 016276):
+2025-04-13 14:42:18,653 - INFO -   - Data: 2025-04-04, DataSp: 2025-04-04
+2025-04-13 14:42:18,653 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,654 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,654 - INFO - Analiza dokumentu 144 (kontrahent: 002137):
+2025-04-13 14:42:18,655 - INFO -   - Data: 2025-04-04, DataSp: 2025-04-04
+2025-04-13 14:42:18,655 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,655 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,656 - INFO - Analiza dokumentu 145 (kontrahent: 001058):
+2025-04-13 14:42:18,656 - INFO -   - Data: 2025-04-04, DataSp: 2025-04-04
+2025-04-13 14:42:18,657 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,657 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,658 - INFO - Analiza dokumentu 146 (kontrahent: 002011):
+2025-04-13 14:42:18,658 - INFO -   - Data: 2025-04-04, DataSp: 2025-03-31
+2025-04-13 14:42:18,659 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,659 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,659 - INFO - Analiza dokumentu 147 (kontrahent: 002202):
+2025-04-13 14:42:18,659 - INFO -   - Data: 2025-04-04, DataSp: 2025-03-31
+2025-04-13 14:42:18,659 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,660 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,660 - INFO - Analiza dokumentu 148 (kontrahent: 002321):
+2025-04-13 14:42:18,660 - INFO -   - Data: 2025-04-04, DataSp: 2025-04-04
+2025-04-13 14:42:18,660 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,660 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,661 - INFO - Analiza dokumentu 149 (kontrahent: 018065):
+2025-04-13 14:42:18,661 - INFO -   - Data: 2025-04-04, DataSp: 2025-04-04
+2025-04-13 14:42:18,662 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,662 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,663 - INFO - Analiza dokumentu 150 (kontrahent: 015260):
+2025-04-13 14:42:18,663 - INFO -   - Data: 2025-04-04, DataSp: 2025-04-04
+2025-04-13 14:42:18,663 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,664 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,664 - INFO - Analiza dokumentu 151 (kontrahent: 001058):
+2025-04-13 14:42:18,664 - INFO -   - Data: 2025-04-04, DataSp: 2025-02-06
+2025-04-13 14:42:18,665 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,665 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,665 - INFO - Analiza dokumentu 152 (kontrahent: 002894):
+2025-04-13 14:42:18,665 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,666 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,666 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,666 - INFO - Analiza dokumentu 153 (kontrahent: 000530):
+2025-04-13 14:42:18,667 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,667 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,667 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,668 - INFO - Analiza dokumentu 154 (kontrahent: 018765):
+2025-04-13 14:42:18,668 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,669 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,669 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,670 - INFO - Analiza dokumentu 155 (kontrahent: 013947):
+2025-04-13 14:42:18,670 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,670 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,670 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,671 - INFO - Analiza dokumentu 156 (kontrahent: 014998):
+2025-04-13 14:42:18,671 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,672 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,672 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,673 - INFO - Analiza dokumentu 157 (kontrahent: 017787):
+2025-04-13 14:42:18,673 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,674 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,674 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,674 - INFO - Analiza dokumentu 158 (kontrahent: 019266):
+2025-04-13 14:42:18,674 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,675 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,675 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,676 - INFO - Analiza dokumentu 159 (kontrahent: 001967):
+2025-04-13 14:42:18,676 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,677 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,677 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,678 - INFO - Analiza dokumentu 160 (kontrahent: 010386):
+2025-04-13 14:42:18,678 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,679 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,679 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,680 - INFO - Analiza dokumentu 161 (kontrahent: 001187):
+2025-04-13 14:42:18,680 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,681 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,681 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,681 - INFO - Analiza dokumentu 162 (kontrahent: 002104):
+2025-04-13 14:42:18,682 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,682 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,682 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,683 - INFO - Analiza dokumentu 163 (kontrahent: 016518):
+2025-04-13 14:42:18,683 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,684 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,684 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,685 - INFO - Analiza dokumentu 164 (kontrahent: 001420):
+2025-04-13 14:42:18,685 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,686 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,686 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,686 - INFO - Analiza dokumentu 165 (kontrahent: 017117):
+2025-04-13 14:42:18,687 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,687 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,687 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,688 - INFO - Analiza dokumentu 166 (kontrahent: 000316):
+2025-04-13 14:42:18,688 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,689 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,689 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,690 - INFO - Analiza dokumentu 167 (kontrahent: 014969):
+2025-04-13 14:42:18,690 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,690 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,690 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,691 - INFO - Analiza dokumentu 168 (kontrahent: 002411):
+2025-04-13 14:42:18,691 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,692 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,692 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,693 - INFO - Analiza dokumentu 169 (kontrahent: 002395):
+2025-04-13 14:42:18,693 - INFO -   - Data: 2025-04-07, DataSp: 2025-04-07
+2025-04-13 14:42:18,694 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,694 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,695 - INFO - Analiza dokumentu 170 (kontrahent: 002910):
+2025-04-13 14:42:18,695 - INFO -   - Data: 2025-04-08, DataSp: 2025-03-31
+2025-04-13 14:42:18,696 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,696 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,696 - INFO - Analiza dokumentu 171 (kontrahent: 012791):
+2025-04-13 14:42:18,696 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,697 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,697 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,697 - INFO - Analiza dokumentu 172 (kontrahent: 002261):
+2025-04-13 14:42:18,697 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,698 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,698 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,699 - INFO - Analiza dokumentu 173 (kontrahent: 014998):
+2025-04-13 14:42:18,699 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,700 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,700 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,701 - INFO - Analiza dokumentu 174 (kontrahent: 017092):
+2025-04-13 14:42:18,701 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,702 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,702 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,702 - INFO - Analiza dokumentu 175 (kontrahent: 002054):
+2025-04-13 14:42:18,703 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,703 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,703 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,704 - INFO - Analiza dokumentu 176 (kontrahent: 016368):
+2025-04-13 14:42:18,704 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,705 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,705 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,706 - INFO - Analiza dokumentu 177 (kontrahent: 001615):
+2025-04-13 14:42:18,706 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,707 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,707 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,707 - INFO - Analiza dokumentu 178 (kontrahent: 011344):
+2025-04-13 14:42:18,708 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,708 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,708 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,709 - INFO - Analiza dokumentu 179 (kontrahent: 002001):
+2025-04-13 14:42:18,709 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,710 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,710 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,711 - INFO - Analiza dokumentu 180 (kontrahent: 010562):
+2025-04-13 14:42:18,711 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,712 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,712 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,712 - INFO - Analiza dokumentu 181 (kontrahent: 001695):
+2025-04-13 14:42:18,713 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,713 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,713 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,714 - INFO - Analiza dokumentu 182 (kontrahent: 002725):
+2025-04-13 14:42:18,714 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,715 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,715 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,716 - INFO - Analiza dokumentu 183 (kontrahent: 000012):
+2025-04-13 14:42:18,716 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,717 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,717 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,717 - INFO - Analiza dokumentu 184 (kontrahent: 017092):
+2025-04-13 14:42:18,718 - INFO -   - Data: 2025-04-08, DataSp: 2025-03-31
+2025-04-13 14:42:18,718 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,718 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,718 - INFO - Analiza dokumentu 185 (kontrahent: 018571):
+2025-04-13 14:42:18,719 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,719 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,719 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,720 - INFO - Analiza dokumentu 186 (kontrahent: 019014):
+2025-04-13 14:42:18,720 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,721 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,721 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,722 - INFO - Analiza dokumentu 187 (kontrahent: 013415):
+2025-04-13 14:42:18,722 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,722 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,722 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,723 - INFO - Analiza dokumentu 188 (kontrahent: 000530):
+2025-04-13 14:42:18,723 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,724 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,724 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,725 - INFO - Analiza dokumentu 189 (kontrahent: 018031):
+2025-04-13 14:42:18,725 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,725 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,726 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,726 - INFO - Analiza dokumentu 190 (kontrahent: 002807):
+2025-04-13 14:42:18,726 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,727 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,727 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,727 - INFO - Analiza dokumentu 191 (kontrahent: 014925):
+2025-04-13 14:42:18,728 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-08
+2025-04-13 14:42:18,728 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,728 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,729 - INFO - Analiza dokumentu 192 (kontrahent: 014925):
+2025-04-13 14:42:18,729 - INFO -   - Data: 2025-04-08, DataSp: 2025-04-01
+2025-04-13 14:42:18,729 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,729 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,730 - INFO - Analiza dokumentu 193 (kontrahent: 015566):
+2025-04-13 14:42:18,730 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,730 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,730 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,731 - INFO - Analiza dokumentu 194 (kontrahent: 019187):
+2025-04-13 14:42:18,731 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,732 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,732 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,733 - INFO - Analiza dokumentu 195 (kontrahent: 002485):
+2025-04-13 14:42:18,733 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,733 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,734 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,734 - INFO - Analiza dokumentu 196 (kontrahent: 000316):
+2025-04-13 14:42:18,734 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,735 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,735 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,736 - INFO - Analiza dokumentu 197 (kontrahent: 002975):
+2025-04-13 14:42:18,736 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,736 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,737 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,737 - INFO - Analiza dokumentu 198 (kontrahent: 002637):
+2025-04-13 14:42:18,737 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,738 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,738 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,739 - INFO - Analiza dokumentu 199 (kontrahent: 001821):
+2025-04-13 14:42:18,739 - INFO -   - Data: 2025-04-09, DataSp: 2025-03-31
+2025-04-13 14:42:18,740 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,740 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,740 - INFO - Analiza dokumentu 200 (kontrahent: 001771):
+2025-04-13 14:42:18,740 - INFO -   - Data: 2025-04-09, DataSp: 2025-03-31
+2025-04-13 14:42:18,741 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,741 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,741 - INFO - Analiza dokumentu 201 (kontrahent: 016091):
+2025-04-13 14:42:18,741 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,742 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,742 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,743 - INFO - Analiza dokumentu 202 (kontrahent: 001390):
+2025-04-13 14:42:18,743 - INFO -   - Data: 2025-04-09, DataSp: 2025-03-31
+2025-04-13 14:42:18,743 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,743 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,743 - INFO - Analiza dokumentu 203 (kontrahent: 000399):
+2025-04-13 14:42:18,744 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,744 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,744 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,745 - INFO - Analiza dokumentu 204 (kontrahent: 001358):
+2025-04-13 14:42:18,745 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,746 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,746 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,747 - INFO - Analiza dokumentu 205 (kontrahent: 011113):
+2025-04-13 14:42:18,747 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,748 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,748 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,748 - INFO - Analiza dokumentu 206 (kontrahent: 017092):
+2025-04-13 14:42:18,748 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,749 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,749 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,750 - INFO - Analiza dokumentu 207 (kontrahent: 001564):
+2025-04-13 14:42:18,750 - INFO -   - Data: 2025-04-09, DataSp: 2025-03-31
+2025-04-13 14:42:18,751 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,751 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,751 - INFO - Analiza dokumentu 208 (kontrahent: 000479):
+2025-04-13 14:42:18,751 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,752 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,752 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,752 - INFO - Analiza dokumentu 209 (kontrahent: 001026):
+2025-04-13 14:42:18,753 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,753 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,753 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,754 - INFO - Analiza dokumentu 210 (kontrahent: 001564):
+2025-04-13 14:42:18,754 - INFO -   - Data: 2025-04-09, DataSp: 2025-03-31
+2025-04-13 14:42:18,755 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,755 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,755 - INFO - Analiza dokumentu 211 (kontrahent: 019176):
+2025-04-13 14:42:18,755 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,756 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,756 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,757 - INFO - Analiza dokumentu 212 (kontrahent: 018928):
+2025-04-13 14:42:18,757 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,758 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,758 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,758 - INFO - Analiza dokumentu 213 (kontrahent: 017092):
+2025-04-13 14:42:18,759 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-09
+2025-04-13 14:42:18,759 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,759 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,760 - INFO - Analiza dokumentu 214 (kontrahent: 000530):
+2025-04-13 14:42:18,760 - INFO -   - Data: 2025-04-09, DataSp: 2025-04-07
+2025-04-13 14:42:18,760 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,761 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,761 - INFO - Analiza dokumentu 215 (kontrahent: 018504):
+2025-04-13 14:42:18,761 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,761 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,761 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,762 - INFO - Analiza dokumentu 216 (kontrahent: 014113):
+2025-04-13 14:42:18,763 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,763 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,763 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,764 - INFO - Analiza dokumentu 217 (kontrahent: 001844):
+2025-04-13 14:42:18,764 - INFO -   - Data: 2025-04-10, DataSp: 2025-03-31
+2025-04-13 14:42:18,765 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,765 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,765 - INFO - Analiza dokumentu 218 (kontrahent: 001832):
+2025-04-13 14:42:18,765 - INFO -   - Data: 2025-04-10, DataSp: 2025-03-31
+2025-04-13 14:42:18,765 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,765 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,766 - INFO - Analiza dokumentu 219 (kontrahent: 001787):
+2025-04-13 14:42:18,766 - INFO -   - Data: 2025-04-10, DataSp: 2025-03-31
+2025-04-13 14:42:18,766 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,766 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,767 - INFO - Analiza dokumentu 220 (kontrahent: 000723):
+2025-04-13 14:42:18,767 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,767 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,767 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,768 - INFO - Analiza dokumentu 221 (kontrahent: 019460):
+2025-04-13 14:42:18,768 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,769 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,769 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,770 - INFO - Analiza dokumentu 222 (kontrahent: 017491):
+2025-04-13 14:42:18,770 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,771 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,771 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,771 - INFO - Analiza dokumentu 223 (kontrahent: 001629):
+2025-04-13 14:42:18,771 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,772 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,772 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,773 - INFO - Analiza dokumentu 224 (kontrahent: 018942):
+2025-04-13 14:42:18,773 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,774 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,774 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,774 - INFO - Analiza dokumentu 225 (kontrahent: 018554):
+2025-04-13 14:42:18,774 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,775 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,775 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,776 - INFO - Analiza dokumentu 226 (kontrahent: 001513):
+2025-04-13 14:42:18,776 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,776 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,776 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,777 - INFO - Analiza dokumentu 227 (kontrahent: 001993):
+2025-04-13 14:42:18,777 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,778 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,778 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,779 - INFO - Analiza dokumentu 228 (kontrahent: 016920):
+2025-04-13 14:42:18,779 - INFO -   - Data: 2025-04-10, DataSp: 2025-03-31
+2025-04-13 14:42:18,779 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,780 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,780 - INFO - Analiza dokumentu 229 (kontrahent: 001860):
+2025-04-13 14:42:18,780 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,780 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,780 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,781 - INFO - Analiza dokumentu 230 (kontrahent: 002102):
+2025-04-13 14:42:18,781 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-10
+2025-04-13 14:42:18,782 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,782 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,782 - INFO - Analiza dokumentu 231 (kontrahent: 002975):
+2025-04-13 14:42:18,783 - INFO -   - Data: 2025-04-10, DataSp: 2025-04-09
+2025-04-13 14:42:18,783 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,783 - INFO -   - Konto 731: brak
+2025-04-13 14:42:18,783 - INFO - Analiza dokumentu 232 (kontrahent: 018354):
+2025-04-13 14:42:18,783 - INFO -   - Data: 2025-04-10, DataSp: 2025-03-27
+2025-04-13 14:42:18,785 - INFO -   - Kwota VAT: None, bez minusa: False
+2025-04-13 14:42:18,785 - INFO -   - Konto 731: 731-1
+2025-04-13 14:42:18,785 - INFO - ETAP 4: Wprowadzanie zmian w dokumentach
+2025-04-13 14:42:18,785 - INFO - ===== PODSUMOWANIE ZMIAN =====
+2025-04-13 14:42:18,788 - INFO - ===== KONIEC PRZETWARZANIA PLIKU VAT =====
+2025-04-13 14:42:18,792 - INFO - Czas przetwarzania pliku: 448.84062 ms
+2025-04-13 14:42:18,793 - INFO - --------------------------------------------------------------------------------

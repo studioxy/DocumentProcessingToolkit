@@ -261,16 +261,18 @@ def process_vat_file(lines):
                     
                     # Znajdź kwotę VAT przy koncie 221-1
                     elif 'konto =' in linia_j and '221-1' in linia_j:
-                        # Sprawdź czy następna linia zawiera kwotę
-                        if j + 1 <= dokument['linia_koniec'] and 'kwota =' in lines[j + 1].strip():
-                            kwota_text = lines[j + 1].strip()
-                            try:
-                                wartość_kwoty = kwota_text.split('=', 1)[1].strip()
-                                dokument['kwota_vat'] = wartość_kwoty
-                                dokument['kwota_vat_ma_minus'] = '-' in wartość_kwoty
-                                logging.debug(f"Dokument {indeks_dokumentu}: kwota VAT = {wartość_kwoty}, ma minus: {dokument['kwota_vat_ma_minus']}")
-                            except:
-                                pass
+                        # Znajdź linię z kwotą w tym samym zapisie (powyżej konta)
+                        for prev_j in range(max(dokument['linia_start'], j-5), j):
+                            prev_line = lines[prev_j].strip()
+                            if 'kwota =' in prev_line:
+                                try:
+                                    wartość_kwoty = prev_line.split('=', 1)[1].strip()
+                                    dokument['kwota_vat'] = wartość_kwoty
+                                    dokument['kwota_vat_ma_minus'] = '-' in wartość_kwoty
+                                    logging.debug(f"Dokument {indeks_dokumentu}: kwota VAT = {wartość_kwoty}, ma minus: {dokument['kwota_vat_ma_minus']}")
+                                except:
+                                    pass
+                                break
                     
                     # Znajdź konto 731-*
                     elif 'konto =' in linia_j:
