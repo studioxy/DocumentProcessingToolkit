@@ -298,17 +298,27 @@ def process_vat_file(lines):
     for dokument in baza_dokumentow:
         # Analizuj warunki biznesowe dla każdego dokumentu
         has_valid_dates = dokument['data'] is not None and dokument['datasp'] is not None
-        daty_rozne = has_valid_dates and dokument['data'] != dokument['datasp']
+        
+        # Jawnie inicjalizujemy dokument jako NIEKWALIFIKUJĄCY się do zmian
+        dokument['do_zmiany'] = False
+        
+        # Dodajmy bardzo dokładne sprawdzenie różnicy dat
+        daty_rozne = False
+        if has_valid_dates:
+            # Dokładne porównanie jako stringi
+            if dokument['data'].strip() != dokument['datasp'].strip():
+                daty_rozne = True
+                
         kwota_bez_minusa = dokument['kwota_vat'] is not None and not dokument['kwota_vat_ma_minus']
         
         # Szczegółowy log dla tego dokumentu
         logging.info(f"Analiza dokumentu {dokument['id']} (kontrahent: {dokument['kontrahent_id']}):")
-        logging.info(f"  - Data: {dokument['data']}, DataSp: {dokument['datasp']}")
+        logging.info(f"  - Data: [{dokument['data']}], DataSp: [{dokument['datasp']}]")
         logging.info(f"  - Daty są różne: {daty_rozne}")
         logging.info(f"  - Kwota VAT: {dokument['kwota_vat']}, bez minusa: {kwota_bez_minusa}")
         logging.info(f"  - Konto 731: {dokument['konto_731_wartosc'] if dokument['konto_731_wartosc'] else 'brak'}")
         
-        # Ustal, czy dokument kwalifikuje się do zmian
+        # Ustal, czy dokument kwalifikuje się do zmian, tylko gdy spełnia WSZYSTKIE warunki
         if daty_rozne and kwota_bez_minusa:
             dokument['do_zmiany'] = True
             logging.info(f"  => Dokument {dokument['id']} KWALIFIKUJE SIĘ do zmian")
@@ -316,7 +326,7 @@ def process_vat_file(lines):
             # Zapisz powód niezakwalifikowania
             if has_valid_dates and not daty_rozne:
                 changes['niezakwalifikowane_przez_date'] += 1
-                logging.info(f"  => Dokument {dokument['id']} NIE KWALIFIKUJE SIĘ - daty są takie same")
+                logging.info(f"  => Dokument {dokument['id']} NIE KWALIFIKUJE SIĘ - daty są takie same ({dokument['data']} = {dokument['datasp']})")
             
             if dokument['kwota_vat'] is not None and dokument['kwota_vat_ma_minus']:
                 changes['niezakwalifikowane_przez_kwote'] += 1
