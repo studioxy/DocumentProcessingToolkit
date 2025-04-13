@@ -1,0 +1,121 @@
+# etapy_analizy.py
+import logging
+
+# Funkcja inicjalizująca licznik zmian
+def reset_changes():
+    """
+    Resetuje licznik zmian do stanu wyjściowego
+    """
+    return {
+        'liczba_dokumentow_z_roznymi_datami': 0,
+        'dokumenty_zkwalifikowane': 0,
+        'niezakwalifikowane_przez_kwote': 0,
+        'niezakwalifikowane_przez_date': 0
+    }
+
+# Funkcja czyszcząca i porównująca daty
+def clean_and_compare_dates(dokument):
+    """
+    Czyści daty i dokonuje porównania.
+    Zwraca: (data_clean, datasp_clean, czy_daty_sa_rozne)
+    Jeżeli brak którejkolwiek daty, zwraca (None, None, False)
+    """
+    if dokument.get('data') is None or dokument.get('datasp') is None:
+        logging.warning(
+            f"Dokument {dokument.get('id')}: Brak kompletu dat: data={dokument.get('data')}, datasp={dokument.get('datasp')}"
+        )
+        return None, None, False
+
+    data_clean = dokument['data'].strip()
+    datasp_clean = dokument['datasp'].strip()
+    # Bezpośrednie porównanie ciągów, gdy format jest jednolity
+    daty_sa_rozne = data_clean != datasp_clean
+    return data_clean, datasp_clean, daty_sa_rozne
+
+# Funkcja przetwarzająca pojedynczy dokument
+def process_document(dokument, changes):
+    """
+    Przetwarza pojedynczy dokument, aktualizując liczniki oraz flagę kwalifikacji.
+    """
+    # Inicjalizacja – domyślnie dokument NIE kwalifikuje się do zmian
+    dokument['do_zmiany'] = False
+
+    # Przetwórz i porównaj daty
+    data_clean, datasp_clean, daty_sa_rozne = clean_and_compare_dates(dokument)
+    if data_clean is None:
+        return  # Pomijamy dokument bez kompletnych dat
+
+    dokument['data_clean'] = data_clean
+    dokument['datasp_clean'] = datasp_clean
+
+    if daty_sa_rozne:
+        changes['liczba_dokumentow_z_roznymi_datami'] += 1
+
+    # Sprawdź warunek dotyczący kwoty VAT: wartość musi być dostępna i bez minusa
+    kwota_bez_minusa = dokument.get('kwota_vat') is not None and not dokument.get('kwota_vat_ma_minus', False)
+
+    # Szczegółowe logowanie dla danego dokumentu
+    logging.info(f"Analiza dokumentu {dokument.get('id')} (kontrahent: {dokument.get('kontrahent_id', 'nieznany')}):")
+    logging.info(f"  - Data oczyszczona: [{data_clean}], DataSp oczyszczona: [{datasp_clean}]")
+    logging.info(f"  - Daty są różne: {daty_sa_rozne}")
+    logging.info(f"  - Kwota VAT: {dokument.get('kwota_vat')} (bez minusa: {kwota_bez_minusa})")
+    konto731 = dokument.get('konto_731_wartosc')
+    logging.info(f"  - Konto 731: {konto731 if konto731 else 'brak'}")
+
+    # Decyzja o kwalifikacji do zmian – dokument kwalifikuje się wyłącznie, gdy
+    # daty są różne i kwota VAT spełnia warunek
+    if daty_sa_rozne:
+        if kwota_bez_minusa:
+            dokument['do_zmiany'] = True
+            changes['dokumenty_zkwalifikowane'] += 1
+            logging.info(f"  => Dokument {dokument.get('id')} KWALIFIKUJE SIĘ do zmian")
+        else:
+            changes['niezakwalifikowane_przez_kwote'] += 1
+            logging.info(f"  => Dokument {dokument.get('id')} NIE KWALIFIKUJE SIĘ - kwota VAT ma minus lub brak")
+    else:
+        changes['niezakwalifikowane_przez_date'] += 1
+        logging.info(
+            f"  => Dokument {dokument.get('id')} NIE KWALIFIKUJE SIĘ - daty są identyczne: [{data_clean}] = [{datasp_clean}]"
+        )
+
+# Główna funkcja analizy dokumentów
+def analyze_documents(baza_dokumentow):
+    """
+    Przeprowadza analizę dokumentów według założonej logiki ETAPU 3.
+    """
+    changes = reset_changes()
+    logging.info("ETAP 3: Analiza dokumentów i warunków biznesowych")
+
+    for dokument in baza_dokumentow:
+        process_document(dokument, changes)
+
+    logging.info("Podsumowanie ETAPU 3:")
+    logging.info(changes)
+    return changes
+
+# Przykładowe wywołanie
+if __name__ == "__main__":
+    # Przykładowa baza dokumentów do testów
+    baza_dokumentow = [
+        {
+            'id': 1,
+            'data': "2021-05-10 ",
+            'datasp': "2021-05-10",
+            'kwota_vat': 100,
+            'kwota_vat_ma_minus': False,
+            'kontrahent_id': 123,
+            'konto_731_wartosc': "730-01"
+        },
+        {
+            'id': 2,
+            'data': "2021-05-10",
+            'datasp': "2021-05-11",
+            'kwota_vat': 50,
+            'kwota_vat_ma_minus': True,
+            'kontrahent_id': 456,
+            'konto_731_wartosc': None
+        },
+        # Dodaj więcej przykładowych dokumentów według potrzeb
+    ]
+
+    analyze_documents(baza_dokumentow)

@@ -143,6 +143,9 @@ def process_vat_file(lines):
     """
     logging.info("===== ROZPOCZYNAM PRZETWARZANIE PLIKU VAT =====")
     
+    # Importuj funkcje modułowe
+    from etapy_analizy import reset_changes, analyze_documents, apply_document_changes
+    
     changes = {
         'zmiany_konto_731': 0,
         'zmiany_okres': 0,
@@ -304,139 +307,11 @@ def process_vat_file(lines):
     changes['liczba_wszystkich_dokumentow'] = len(baza_dokumentow)
     logging.info(f"Łącznie znaleziono {len(baza_dokumentow)} dokumentów")
     
-    # ETAP 3: Analiza danych i podejmowanie decyzji
-    # Reset liczników dla ETAPU 3
-    changes.update({
-        'liczba_dokumentow_z_roznymi_datami': 0,
-        'dokumenty_zkwalifikowane': 0,
-        'niezakwalifikowane_przez_kwote': 0,
-        'niezakwalifikowane_przez_date': 0
-    })
+    # ETAP 3: Wykorzystaj zmodularyzowaną funkcję do analizy dokumentów
+    changes.update(analyze_documents(baza_dokumentow))
     
-    logging.info("ETAP 3: Analiza dokumentów i warunków biznesowych")
-    
-    for dokument in baza_dokumentow:
-        # Inicjalizacja - domyślnie dokument NIE kwalifikuje się do zmian
-        dokument['do_zmiany'] = False
-        
-        # Sprawdź, czy mamy obie daty
-        if dokument['data'] is None or dokument['datasp'] is None:
-            logging.warning(f"Dokument {dokument['id']}: Brak kompletu dat: data={dokument['data']}, datasp={dokument['datasp']}")
-            continue
-            
-        # Oczyść daty (usuwając białe znaki) przed porównaniem
-        dokument['data_clean'] = dokument['data'].strip()
-        dokument['datasp_clean'] = dokument['datasp'].strip()
-        
-        # Porównanie oczyszczonych dat
-        daty_sa_rozne = dokument['data_clean'] != dokument['datasp_clean']
-        
-        # Jeżeli daty są różne, zwiększ odpowiedni licznik
-        if daty_sa_rozne:
-            changes['liczba_dokumentow_z_roznymi_datami'] += 1
-        
-        # Sprawdź warunek kwoty VAT – musi być obecna oraz bez minusa
-        kwota_bez_minusa = dokument['kwota_vat'] is not None and not dokument['kwota_vat_ma_minus']
-        
-        # Szczegółowy log dla dokumentu
-        logging.info(f"Analiza dokumentu {dokument['id']} (kontrahent: {dokument['kontrahent_id']}):")
-        logging.info(f"  - Data oczyszczona: [{dokument['data_clean']}], DataSp oczyszczona: [{dokument['datasp_clean']}]")
-        logging.info(f"  - Daty są różne: {daty_sa_rozne}")
-        logging.info(f"  - Kwota VAT: {dokument['kwota_vat']}, bez minusa: {kwota_bez_minusa}")
-        logging.info(f"  - Konto 731: {dokument['konto_731_wartosc'] if dokument['konto_731_wartosc'] else 'brak'}")
-        
-        # Decyzja o kwalifikacji do zmian – tylko gdy WSZYSTKIE warunki są spełnione
-        if daty_sa_rozne:
-            if kwota_bez_minusa:
-                # Dokument spełnia wszystkie wymagane warunki
-                dokument['do_zmiany'] = True
-                changes['dokumenty_zkwalifikowane'] += 1
-                logging.info(f"  => Dokument {dokument['id']} KWALIFIKUJE SIĘ do zmian")
-            else:
-                changes['niezakwalifikowane_przez_kwote'] += 1
-                logging.info(f"  => Dokument {dokument['id']} NIE KWALIFIKUJE SIĘ - kwota VAT ma minus lub brak")
-        else:
-            changes['niezakwalifikowane_przez_date'] += 1
-            logging.info(f"  => Dokument {dokument['id']} NIE KWALIFIKUJE SIĘ - daty są identyczne: [{dokument['data_clean']}] = [{dokument['datasp_clean']}]")
-    
-    # Log końcowy - podsumowanie wyników ETAPU 3
-    logging.info(f"Podsumowanie ETAPU 3: {changes}")
-    
-    # ETAP 4: Wprowadzenie zmian w pliku na podstawie analizy
-    logging.info("ETAP 4: Wprowadzanie zmian w dokumentach")
-    
-    for dokument in baza_dokumentow:
-        # Pomiń dokumenty, które nie kwalifikują się do zmian
-        if not dokument['do_zmiany']:
-            continue
-        
-        # ZMIANA 1: Konto 731-* na 702-*
-        if dokument['konto_731_linia'] is not None:
-            konto_org = dokument['konto_731_wartosc']
-            new_konto = None
-            
-            if konto_org == '731-1':
-                new_konto = '702-2-3-1'
-            elif konto_org == '731-3':
-                new_konto = '702-2-3-3'
-            elif konto_org == '731-4':
-                new_konto = '702-2-3-4'
-            
-            if new_konto:
-                # Zachowaj dokładne formatowanie oryginału
-                org_line = lines[dokument['konto_731_linia']]
-                spaces_before = len(org_line) - len(org_line.lstrip())
-                indent = ' ' * spaces_before
-                
-                # Dokładnie odtwórz formatowanie
-                eq_pos = org_line.find('=')
-                spaces_after_eq = len(org_line[eq_pos+1:]) - len(org_line[eq_pos+1:].lstrip())
-                eq_space = ' ' * spaces_after_eq
-                
-                # Przygotuj nową linię z identycznym formatowaniem
-                lines[dokument['konto_731_linia']] = f"{indent}konto ={eq_space}{new_konto}\n"
-                changes['zmiany_konto_731'] += 1
-                logging.info(f"Dokument {dokument['id']}: Zmieniono konto {konto_org} na {new_konto}")
-        
-        # ZMIANA 2: Okres na ostatni dzień poprzedniego miesiąca
-        if dokument['okres_linia'] is not None:
-            org_line = lines[dokument['okres_linia']]
-            okres_split = org_line.split('=', 1)
-            if len(okres_split) > 1:
-                okres_value = okres_split[1].strip()
-                nowy_okres = ostatni_dzien_poprzedniego_miesiaca(okres_value)
-                
-                # Szczegółowe informacje o zmianie
-                logging.info(f"Dokument {dokument['id']}: Zmiana okresu:")
-                logging.info(f"  - Aktualny okres: {okres_value}")
-                logging.info(f"  - Nowy okres: {nowy_okres}")
-                
-                # Zachowaj dokładne formatowanie oryginału
-                spaces_before = len(org_line) - len(org_line.lstrip())
-                indent = ' ' * spaces_before
-                
-                # Dokładnie odtwórz formatowanie
-                eq_pos = org_line.find('=')
-                spaces_after_eq = len(org_line[eq_pos+1:]) - len(org_line[eq_pos+1:].lstrip())
-                eq_space = ' ' * spaces_after_eq
-                
-                # Przygotuj nową linię z identycznym formatowaniem
-                lines[dokument['okres_linia']] = f"{indent}okres ={eq_space}{nowy_okres}\n"
-                changes['zmiany_okres'] += 1
-                logging.info(f"Dokument {dokument['id']}: Zmieniono okres {okres_value} na {nowy_okres}")
-            else:
-                logging.error(f"Dokument {dokument['id']}: Błąd parsowania linii okresu: {org_line}")
-    
-    # Podsumowanie
-    logging.info("===== PODSUMOWANIE ZMIAN =====")
-    logging.info(f"Łączna liczba dokumentów: {changes['liczba_wszystkich_dokumentow']}")
-    logging.info(f"Łączna liczba dokumentów z różnymi datami: {changes['liczba_dokumentow_z_roznymi_datami']}")
-    logging.info(f"Łączna liczba dokumentów zakwalifikowanych do zmian: {changes['dokumenty_zkwalifikowane']}")
-    logging.info(f"Łączna liczba zmian konta 731-*: {changes['zmiany_konto_731']}")
-    logging.info(f"Łączna liczba zmian daty okresu: {changes['zmiany_okres']}")
-    logging.info(f"Łączna liczba dokumentów niezakwalifikowanych przez datę: {changes['niezakwalifikowane_przez_date']}")
-    logging.info(f"Łączna liczba dokumentów niezakwalifikowanych przez kwotę: {changes['niezakwalifikowane_przez_kwote']}")
-    logging.info("===== KONIEC PRZETWARZANIA PLIKU VAT =====")
+    # ETAP 4: Wykorzystaj zmodularyzowaną funkcję do wprowadzania zmian
+    apply_document_changes(baza_dokumentow, lines, changes)
     
     return changes
 
