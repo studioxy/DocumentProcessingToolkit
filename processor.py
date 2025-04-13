@@ -204,11 +204,13 @@ def process_vat_file(lines):
                 logging.debug(f"Blok {i+1}: Znaleziono datasp = {dokument['datasp']}")
             
             # Znajdź kwotę VAT (przy koncie 221-1)
-            if j+1 < len(blok_linii) and 'kwota =' in linia_stripped and 'konto =221-1' in blok_linii[j+1].strip():
-                kwota_str = linia_stripped.split('=')[1].strip()
-                dokument['kwota_vat'] = kwota_str
-                dokument['kwota_vat_ma_minus'] = kwota_str.startswith('-')
-                logging.debug(f"Blok {i+1}: Znaleziono kwotę VAT = {kwota_str}, ma minus: {dokument['kwota_vat_ma_minus']}")
+            if 'konto =' in linia_stripped and '221-1' in linia_stripped:
+                # Znajdź kwotę w następnej linii
+                if j+1 < len(blok_linii) and 'kwota =' in blok_linii[j+1].strip():
+                    kwota_str = blok_linii[j+1].strip().split('=')[1].strip()
+                    dokument['kwota_vat'] = kwota_str
+                    dokument['kwota_vat_ma_minus'] = '-' in kwota_str
+                    logging.debug(f"Blok {i+1}: Znaleziono kwotę VAT = {kwota_str}, ma minus: {dokument['kwota_vat_ma_minus']}")
             
             # Znajdź konto 731-*
             if 'konto =' in linia_stripped:
@@ -306,6 +308,15 @@ def process_vat_file(lines):
             if len(okres_split) > 1:
                 okres_value = okres_split[1].strip()
                 nowy_okres = ostatni_dzien_poprzedniego_miesiaca(okres_value)
+                
+                # Dodatkowy log pokazujący wszystkie warunki i zmienne dla tej zmiany
+                logging.info(f"DEBUG ZMIANA OKRESU - Blok {i+1}:")
+                logging.info(f"  - zmien_okres: {dokument['zmien_okres']}")
+                logging.info(f"  - data: {dokument['data']}")
+                logging.info(f"  - datasp: {dokument['datasp']}")
+                logging.info(f"  - daty są różne: {dokument['data'] != dokument['datasp'] if dokument['data'] and dokument['datasp'] else 'Brak obu dat'}")
+                logging.info(f"  - kwota_vat_ma_minus: {dokument['kwota_vat_ma_minus']}")
+                logging.info(f"  - kwota_vat: {dokument['kwota_vat']}")
                 
                 # Zachowaj dokładne formatowanie oryginału
                 spaces_before = len(org_line) - len(org_line.lstrip())
