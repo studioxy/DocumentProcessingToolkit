@@ -1,0 +1,803 @@
+2025-04-13 14:34:58,355 - INFO - --------------------------------------------------------------------------------
+2025-04-13 14:34:58,355 - INFO - Start przetwarzania pliku vat: temp_20250413_143458_dok_sVAT.txt
+2025-04-13 14:34:58,359 - DEBUG - Blok 2: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,359 - DEBUG - Blok 2: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,359 - DEBUG - Blok 2: Znaleziono konto 731: 731-1 w linii 56
+2025-04-13 14:34:58,360 - DEBUG - Blok 2: Znaleziono okres w linii 65
+2025-04-13 14:34:58,361 - DEBUG - Blok 3: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,361 - DEBUG - Blok 3: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,361 - DEBUG - Blok 3: Znaleziono konto 731: 731-1 w linii 139
+2025-04-13 14:34:58,361 - DEBUG - Blok 3: Znaleziono okres w linii 148
+2025-04-13 14:34:58,362 - DEBUG - Blok 4: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,362 - DEBUG - Blok 4: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,362 - DEBUG - Blok 4: Znaleziono konto 731: 731-1 w linii 222
+2025-04-13 14:34:58,362 - DEBUG - Blok 4: Znaleziono okres w linii 231
+2025-04-13 14:34:58,363 - DEBUG - Blok 5: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,363 - DEBUG - Blok 5: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,363 - DEBUG - Blok 5: Znaleziono konto 731: 731-1 w linii 305
+2025-04-13 14:34:58,363 - DEBUG - Blok 5: Znaleziono okres w linii 314
+2025-04-13 14:34:58,364 - DEBUG - Blok 6: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,364 - DEBUG - Blok 6: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,365 - DEBUG - Blok 6: Znaleziono konto 731: 731-1 w linii 388
+2025-04-13 14:34:58,365 - DEBUG - Blok 6: Znaleziono okres w linii 397
+2025-04-13 14:34:58,366 - DEBUG - Blok 7: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,366 - DEBUG - Blok 7: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,366 - DEBUG - Blok 7: Znaleziono konto 731: 731-1 w linii 471
+2025-04-13 14:34:58,366 - DEBUG - Blok 7: Znaleziono okres w linii 480
+2025-04-13 14:34:58,367 - DEBUG - Blok 8: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,367 - DEBUG - Blok 8: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,367 - DEBUG - Blok 8: Znaleziono konto 731: 731-1 w linii 554
+2025-04-13 14:34:58,367 - DEBUG - Blok 8: Znaleziono okres w linii 563
+2025-04-13 14:34:58,368 - DEBUG - Blok 9: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,368 - DEBUG - Blok 9: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,368 - DEBUG - Blok 9: Znaleziono konto 731: 731-1 w linii 637
+2025-04-13 14:34:58,368 - DEBUG - Blok 9: Znaleziono okres w linii 646
+2025-04-13 14:34:58,369 - DEBUG - Blok 10: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,369 - DEBUG - Blok 10: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,369 - DEBUG - Blok 10: Znaleziono konto 731: 731-1 w linii 720
+2025-04-13 14:34:58,369 - DEBUG - Blok 10: Znaleziono okres w linii 729
+2025-04-13 14:34:58,370 - DEBUG - Blok 11: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,370 - DEBUG - Blok 11: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,371 - DEBUG - Blok 11: Znaleziono konto 731: 731-1 w linii 803
+2025-04-13 14:34:58,371 - DEBUG - Blok 11: Znaleziono okres w linii 812
+2025-04-13 14:34:58,372 - DEBUG - Blok 12: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,372 - DEBUG - Blok 12: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,372 - DEBUG - Blok 12: Znaleziono okres w linii 895
+2025-04-13 14:34:58,372 - DEBUG - Blok 13: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,372 - DEBUG - Blok 13: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,373 - DEBUG - Blok 13: Znaleziono okres w linii 978
+2025-04-13 14:34:58,373 - DEBUG - Blok 14: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,373 - DEBUG - Blok 14: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,373 - DEBUG - Blok 14: Znaleziono okres w linii 1061
+2025-04-13 14:34:58,374 - DEBUG - Blok 15: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,374 - DEBUG - Blok 15: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,374 - DEBUG - Blok 15: Znaleziono okres w linii 1144
+2025-04-13 14:34:58,375 - DEBUG - Blok 16: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,375 - DEBUG - Blok 16: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,375 - DEBUG - Blok 16: Znaleziono okres w linii 1227
+2025-04-13 14:34:58,375 - DEBUG - Blok 17: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,375 - DEBUG - Blok 17: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,376 - DEBUG - Blok 17: Znaleziono okres w linii 1310
+2025-04-13 14:34:58,376 - DEBUG - Blok 18: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,376 - DEBUG - Blok 18: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,376 - DEBUG - Blok 18: Znaleziono okres w linii 1393
+2025-04-13 14:34:58,377 - DEBUG - Blok 19: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,377 - DEBUG - Blok 19: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,377 - DEBUG - Blok 19: Znaleziono okres w linii 1476
+2025-04-13 14:34:58,377 - DEBUG - Blok 20: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,378 - DEBUG - Blok 20: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,378 - DEBUG - Blok 20: Znaleziono okres w linii 1559
+2025-04-13 14:34:58,378 - DEBUG - Blok 21: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,378 - DEBUG - Blok 21: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,378 - DEBUG - Blok 21: Znaleziono okres w linii 1642
+2025-04-13 14:34:58,379 - DEBUG - Blok 22: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,379 - DEBUG - Blok 22: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,379 - DEBUG - Blok 22: Znaleziono okres w linii 1725
+2025-04-13 14:34:58,380 - DEBUG - Blok 23: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,380 - DEBUG - Blok 23: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,380 - DEBUG - Blok 23: Znaleziono okres w linii 1808
+2025-04-13 14:34:58,380 - DEBUG - Blok 24: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,380 - DEBUG - Blok 24: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,380 - DEBUG - Blok 24: Znaleziono okres w linii 1891
+2025-04-13 14:34:58,381 - DEBUG - Blok 25: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,381 - DEBUG - Blok 25: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,381 - DEBUG - Blok 25: Znaleziono okres w linii 1974
+2025-04-13 14:34:58,382 - DEBUG - Blok 26: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,382 - DEBUG - Blok 26: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,382 - DEBUG - Blok 26: Znaleziono okres w linii 2057
+2025-04-13 14:34:58,382 - DEBUG - Blok 27: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,383 - DEBUG - Blok 27: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,383 - DEBUG - Blok 27: Znaleziono okres w linii 2140
+2025-04-13 14:34:58,383 - DEBUG - Blok 28: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,383 - DEBUG - Blok 28: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,383 - DEBUG - Blok 28: Znaleziono okres w linii 2223
+2025-04-13 14:34:58,384 - DEBUG - Blok 29: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,384 - DEBUG - Blok 29: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,384 - DEBUG - Blok 29: Znaleziono okres w linii 2306
+2025-04-13 14:34:58,385 - DEBUG - Blok 30: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,385 - DEBUG - Blok 30: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,385 - DEBUG - Blok 30: Znaleziono okres w linii 2389
+2025-04-13 14:34:58,385 - DEBUG - Blok 31: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,385 - DEBUG - Blok 31: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,386 - DEBUG - Blok 31: Znaleziono okres w linii 2472
+2025-04-13 14:34:58,386 - DEBUG - Blok 32: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,386 - DEBUG - Blok 32: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,386 - DEBUG - Blok 32: Znaleziono okres w linii 2555
+2025-04-13 14:34:58,387 - DEBUG - Blok 33: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,387 - DEBUG - Blok 33: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,387 - DEBUG - Blok 33: Znaleziono okres w linii 2638
+2025-04-13 14:34:58,387 - DEBUG - Blok 34: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,387 - DEBUG - Blok 34: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,388 - DEBUG - Blok 34: Znaleziono okres w linii 2721
+2025-04-13 14:34:58,388 - DEBUG - Blok 35: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,388 - DEBUG - Blok 35: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,388 - DEBUG - Blok 35: Znaleziono okres w linii 2804
+2025-04-13 14:34:58,389 - DEBUG - Blok 36: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,389 - DEBUG - Blok 36: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,389 - DEBUG - Blok 36: Znaleziono okres w linii 2887
+2025-04-13 14:34:58,389 - DEBUG - Blok 37: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,390 - DEBUG - Blok 37: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,390 - DEBUG - Blok 37: Znaleziono okres w linii 2970
+2025-04-13 14:34:58,390 - DEBUG - Blok 38: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,390 - DEBUG - Blok 38: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,390 - DEBUG - Blok 38: Znaleziono okres w linii 3053
+2025-04-13 14:34:58,391 - DEBUG - Blok 39: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,391 - DEBUG - Blok 39: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,391 - DEBUG - Blok 39: Znaleziono okres w linii 3136
+2025-04-13 14:34:58,391 - DEBUG - Blok 40: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,392 - DEBUG - Blok 40: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,392 - DEBUG - Blok 40: Znaleziono okres w linii 3219
+2025-04-13 14:34:58,392 - DEBUG - Blok 41: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,392 - DEBUG - Blok 41: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,392 - DEBUG - Blok 41: Znaleziono okres w linii 3302
+2025-04-13 14:34:58,393 - DEBUG - Blok 42: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,393 - DEBUG - Blok 42: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,393 - DEBUG - Blok 42: Znaleziono okres w linii 3385
+2025-04-13 14:34:58,393 - DEBUG - Blok 43: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,394 - DEBUG - Blok 43: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,394 - DEBUG - Blok 43: Znaleziono okres w linii 3468
+2025-04-13 14:34:58,394 - DEBUG - Blok 44: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,394 - DEBUG - Blok 44: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,394 - DEBUG - Blok 44: Znaleziono okres w linii 3551
+2025-04-13 14:34:58,395 - DEBUG - Blok 45: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,395 - DEBUG - Blok 45: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,395 - DEBUG - Blok 45: Znaleziono okres w linii 3634
+2025-04-13 14:34:58,395 - DEBUG - Blok 46: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,396 - DEBUG - Blok 46: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,396 - DEBUG - Blok 46: Znaleziono okres w linii 3717
+2025-04-13 14:34:58,396 - DEBUG - Blok 47: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,396 - DEBUG - Blok 47: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,396 - DEBUG - Blok 47: Znaleziono okres w linii 3800
+2025-04-13 14:34:58,397 - DEBUG - Blok 48: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,397 - DEBUG - Blok 48: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,397 - DEBUG - Blok 48: Znaleziono okres w linii 3883
+2025-04-13 14:34:58,397 - DEBUG - Blok 49: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,398 - DEBUG - Blok 49: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,398 - DEBUG - Blok 49: Znaleziono okres w linii 3966
+2025-04-13 14:34:58,398 - DEBUG - Blok 50: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,398 - DEBUG - Blok 50: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,398 - DEBUG - Blok 50: Znaleziono okres w linii 4049
+2025-04-13 14:34:58,399 - DEBUG - Blok 51: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,399 - DEBUG - Blok 51: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,399 - DEBUG - Blok 51: Znaleziono okres w linii 4132
+2025-04-13 14:34:58,400 - DEBUG - Blok 52: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,400 - DEBUG - Blok 52: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,400 - DEBUG - Blok 52: Znaleziono okres w linii 4215
+2025-04-13 14:34:58,400 - DEBUG - Blok 53: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,401 - DEBUG - Blok 53: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,401 - DEBUG - Blok 53: Znaleziono okres w linii 4298
+2025-04-13 14:34:58,401 - DEBUG - Blok 54: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,401 - DEBUG - Blok 54: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,401 - DEBUG - Blok 54: Znaleziono okres w linii 4381
+2025-04-13 14:34:58,402 - DEBUG - Blok 55: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,402 - DEBUG - Blok 55: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,402 - DEBUG - Blok 55: Znaleziono okres w linii 4464
+2025-04-13 14:34:58,403 - DEBUG - Blok 56: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,403 - DEBUG - Blok 56: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,403 - DEBUG - Blok 56: Znaleziono konto 731: 731-1 w linii 4538
+2025-04-13 14:34:58,403 - DEBUG - Blok 56: Znaleziono okres w linii 4547
+2025-04-13 14:34:58,404 - DEBUG - Blok 57: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,404 - DEBUG - Blok 57: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,404 - DEBUG - Blok 57: Znaleziono okres w linii 4630
+2025-04-13 14:34:58,405 - DEBUG - Blok 58: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,405 - DEBUG - Blok 58: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,405 - DEBUG - Blok 58: Znaleziono okres w linii 4713
+2025-04-13 14:34:58,406 - DEBUG - Blok 59: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,406 - DEBUG - Blok 59: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,406 - DEBUG - Blok 59: Znaleziono okres w linii 4796
+2025-04-13 14:34:58,406 - DEBUG - Blok 60: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,406 - DEBUG - Blok 60: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,406 - DEBUG - Blok 60: Znaleziono okres w linii 4879
+2025-04-13 14:34:58,407 - DEBUG - Blok 61: Znaleziono data = 2025-04-01
+2025-04-13 14:34:58,407 - DEBUG - Blok 61: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,407 - DEBUG - Blok 61: Znaleziono okres w linii 4962
+2025-04-13 14:34:58,408 - DEBUG - Blok 62: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,408 - DEBUG - Blok 62: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,408 - DEBUG - Blok 62: Znaleziono okres w linii 5045
+2025-04-13 14:34:58,409 - DEBUG - Blok 63: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,409 - DEBUG - Blok 63: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,409 - DEBUG - Blok 63: Znaleziono konto 731: 731-1 w linii 5119
+2025-04-13 14:34:58,409 - DEBUG - Blok 63: Znaleziono okres w linii 5128
+2025-04-13 14:34:58,410 - DEBUG - Blok 64: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,410 - DEBUG - Blok 64: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,410 - DEBUG - Blok 64: Znaleziono konto 731: 731-1 w linii 5202
+2025-04-13 14:34:58,410 - DEBUG - Blok 64: Znaleziono okres w linii 5211
+2025-04-13 14:34:58,411 - DEBUG - Blok 65: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,411 - DEBUG - Blok 65: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,411 - DEBUG - Blok 65: Znaleziono konto 731: 731-1 w linii 5285
+2025-04-13 14:34:58,411 - DEBUG - Blok 65: Znaleziono okres w linii 5294
+2025-04-13 14:34:58,412 - DEBUG - Blok 66: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,412 - DEBUG - Blok 66: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,412 - DEBUG - Blok 66: Znaleziono konto 731: 731-1 w linii 5368
+2025-04-13 14:34:58,413 - DEBUG - Blok 66: Znaleziono okres w linii 5377
+2025-04-13 14:34:58,413 - DEBUG - Blok 67: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,414 - DEBUG - Blok 67: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,414 - DEBUG - Blok 67: Znaleziono konto 731: 731-1 w linii 5451
+2025-04-13 14:34:58,414 - DEBUG - Blok 67: Znaleziono okres w linii 5460
+2025-04-13 14:34:58,415 - DEBUG - Blok 68: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,415 - DEBUG - Blok 68: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,415 - DEBUG - Blok 68: Znaleziono konto 731: 731-1 w linii 5534
+2025-04-13 14:34:58,415 - DEBUG - Blok 68: Znaleziono okres w linii 5543
+2025-04-13 14:34:58,416 - DEBUG - Blok 69: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,416 - DEBUG - Blok 69: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,416 - DEBUG - Blok 69: Znaleziono konto 731: 731-1 w linii 5617
+2025-04-13 14:34:58,416 - DEBUG - Blok 69: Znaleziono okres w linii 5626
+2025-04-13 14:34:58,417 - DEBUG - Blok 70: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,417 - DEBUG - Blok 70: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,417 - DEBUG - Blok 70: Znaleziono okres w linii 5709
+2025-04-13 14:34:58,418 - DEBUG - Blok 71: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,418 - DEBUG - Blok 71: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,418 - DEBUG - Blok 71: Znaleziono okres w linii 5792
+2025-04-13 14:34:58,418 - DEBUG - Blok 72: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,418 - DEBUG - Blok 72: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,418 - DEBUG - Blok 72: Znaleziono okres w linii 5875
+2025-04-13 14:34:58,419 - DEBUG - Blok 73: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,419 - DEBUG - Blok 73: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,419 - DEBUG - Blok 73: Znaleziono okres w linii 5958
+2025-04-13 14:34:58,420 - DEBUG - Blok 74: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,420 - DEBUG - Blok 74: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,420 - DEBUG - Blok 74: Znaleziono okres w linii 6041
+2025-04-13 14:34:58,420 - DEBUG - Blok 75: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,420 - DEBUG - Blok 75: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,420 - DEBUG - Blok 75: Znaleziono okres w linii 6124
+2025-04-13 14:34:58,421 - DEBUG - Blok 76: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,421 - DEBUG - Blok 76: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,421 - DEBUG - Blok 76: Znaleziono okres w linii 6207
+2025-04-13 14:34:58,422 - DEBUG - Blok 77: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,422 - DEBUG - Blok 77: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,422 - DEBUG - Blok 77: Znaleziono okres w linii 6290
+2025-04-13 14:34:58,422 - DEBUG - Blok 78: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,422 - DEBUG - Blok 78: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,422 - DEBUG - Blok 78: Znaleziono okres w linii 6373
+2025-04-13 14:34:58,423 - DEBUG - Blok 79: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,423 - DEBUG - Blok 79: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,423 - DEBUG - Blok 79: Znaleziono okres w linii 6456
+2025-04-13 14:34:58,424 - DEBUG - Blok 80: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,424 - DEBUG - Blok 80: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,424 - DEBUG - Blok 80: Znaleziono okres w linii 6539
+2025-04-13 14:34:58,425 - DEBUG - Blok 81: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,425 - DEBUG - Blok 81: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,425 - DEBUG - Blok 81: Znaleziono okres w linii 6622
+2025-04-13 14:34:58,425 - DEBUG - Blok 82: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,425 - DEBUG - Blok 82: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,425 - DEBUG - Blok 82: Znaleziono okres w linii 6705
+2025-04-13 14:34:58,426 - DEBUG - Blok 83: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,426 - DEBUG - Blok 83: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,426 - DEBUG - Blok 83: Znaleziono okres w linii 6788
+2025-04-13 14:34:58,427 - DEBUG - Blok 84: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,427 - DEBUG - Blok 84: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,427 - DEBUG - Blok 84: Znaleziono okres w linii 6871
+2025-04-13 14:34:58,427 - DEBUG - Blok 85: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,427 - DEBUG - Blok 85: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,428 - DEBUG - Blok 85: Znaleziono okres w linii 6954
+2025-04-13 14:34:58,428 - DEBUG - Blok 86: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,428 - DEBUG - Blok 86: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,428 - DEBUG - Blok 86: Znaleziono okres w linii 7037
+2025-04-13 14:34:58,429 - DEBUG - Blok 87: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,429 - DEBUG - Blok 87: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,429 - DEBUG - Blok 87: Znaleziono okres w linii 7120
+2025-04-13 14:34:58,430 - DEBUG - Blok 88: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,430 - DEBUG - Blok 88: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,430 - DEBUG - Blok 88: Znaleziono okres w linii 7203
+2025-04-13 14:34:58,431 - DEBUG - Blok 89: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,431 - DEBUG - Blok 89: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,431 - DEBUG - Blok 89: Znaleziono okres w linii 7286
+2025-04-13 14:34:58,431 - DEBUG - Blok 90: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,431 - DEBUG - Blok 90: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,431 - DEBUG - Blok 90: Znaleziono okres w linii 7369
+2025-04-13 14:34:58,432 - DEBUG - Blok 91: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,432 - DEBUG - Blok 91: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,432 - DEBUG - Blok 91: Znaleziono okres w linii 7452
+2025-04-13 14:34:58,433 - DEBUG - Blok 92: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,433 - DEBUG - Blok 92: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,433 - DEBUG - Blok 92: Znaleziono okres w linii 7535
+2025-04-13 14:34:58,434 - DEBUG - Blok 93: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,434 - DEBUG - Blok 93: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,434 - DEBUG - Blok 93: Znaleziono okres w linii 7618
+2025-04-13 14:34:58,434 - DEBUG - Blok 94: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,435 - DEBUG - Blok 94: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,435 - DEBUG - Blok 94: Znaleziono okres w linii 7701
+2025-04-13 14:34:58,435 - DEBUG - Blok 95: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,435 - DEBUG - Blok 95: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,435 - DEBUG - Blok 95: Znaleziono okres w linii 7784
+2025-04-13 14:34:58,436 - DEBUG - Blok 96: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,436 - DEBUG - Blok 96: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,436 - DEBUG - Blok 96: Znaleziono okres w linii 7867
+2025-04-13 14:34:58,437 - DEBUG - Blok 97: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,437 - DEBUG - Blok 97: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,437 - DEBUG - Blok 97: Znaleziono okres w linii 7950
+2025-04-13 14:34:58,437 - DEBUG - Blok 98: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,437 - DEBUG - Blok 98: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,437 - DEBUG - Blok 98: Znaleziono okres w linii 8033
+2025-04-13 14:34:58,438 - DEBUG - Blok 99: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,438 - DEBUG - Blok 99: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,438 - DEBUG - Blok 99: Znaleziono okres w linii 8116
+2025-04-13 14:34:58,439 - DEBUG - Blok 100: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,439 - DEBUG - Blok 100: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,439 - DEBUG - Blok 100: Znaleziono okres w linii 8199
+2025-04-13 14:34:58,439 - DEBUG - Blok 101: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,439 - DEBUG - Blok 101: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,439 - DEBUG - Blok 101: Znaleziono okres w linii 8282
+2025-04-13 14:34:58,440 - DEBUG - Blok 102: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,440 - DEBUG - Blok 102: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,440 - DEBUG - Blok 102: Znaleziono okres w linii 8365
+2025-04-13 14:34:58,441 - DEBUG - Blok 103: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,441 - DEBUG - Blok 103: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,441 - DEBUG - Blok 103: Znaleziono okres w linii 8448
+2025-04-13 14:34:58,441 - DEBUG - Blok 104: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,442 - DEBUG - Blok 104: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,442 - DEBUG - Blok 104: Znaleziono okres w linii 8531
+2025-04-13 14:34:58,442 - DEBUG - Blok 105: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,442 - DEBUG - Blok 105: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,442 - DEBUG - Blok 105: Znaleziono okres w linii 8614
+2025-04-13 14:34:58,443 - DEBUG - Blok 106: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,443 - DEBUG - Blok 106: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,443 - DEBUG - Blok 106: Znaleziono okres w linii 8697
+2025-04-13 14:34:58,444 - DEBUG - Blok 107: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,444 - DEBUG - Blok 107: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,444 - DEBUG - Blok 107: Znaleziono okres w linii 8780
+2025-04-13 14:34:58,445 - DEBUG - Blok 108: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,445 - DEBUG - Blok 108: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,445 - DEBUG - Blok 108: Znaleziono okres w linii 8863
+2025-04-13 14:34:58,446 - DEBUG - Blok 109: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,446 - DEBUG - Blok 109: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,446 - DEBUG - Blok 109: Znaleziono okres w linii 8946
+2025-04-13 14:34:58,446 - DEBUG - Blok 110: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,446 - DEBUG - Blok 110: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,447 - DEBUG - Blok 110: Znaleziono okres w linii 9029
+2025-04-13 14:34:58,447 - DEBUG - Blok 111: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,447 - DEBUG - Blok 111: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,447 - DEBUG - Blok 111: Znaleziono okres w linii 9112
+2025-04-13 14:34:58,448 - DEBUG - Blok 112: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,448 - DEBUG - Blok 112: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,448 - DEBUG - Blok 112: Znaleziono okres w linii 9195
+2025-04-13 14:34:58,448 - DEBUG - Blok 113: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,448 - DEBUG - Blok 113: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,449 - DEBUG - Blok 113: Znaleziono okres w linii 9278
+2025-04-13 14:34:58,449 - DEBUG - Blok 114: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,449 - DEBUG - Blok 114: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,449 - DEBUG - Blok 114: Znaleziono okres w linii 9361
+2025-04-13 14:34:58,450 - DEBUG - Blok 115: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,450 - DEBUG - Blok 115: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,450 - DEBUG - Blok 115: Znaleziono okres w linii 9444
+2025-04-13 14:34:58,451 - DEBUG - Blok 116: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,451 - DEBUG - Blok 116: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,451 - DEBUG - Blok 116: Znaleziono okres w linii 9527
+2025-04-13 14:34:58,452 - DEBUG - Blok 117: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,452 - DEBUG - Blok 117: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,452 - DEBUG - Blok 117: Znaleziono okres w linii 9610
+2025-04-13 14:34:58,452 - DEBUG - Blok 118: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,452 - DEBUG - Blok 118: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,453 - DEBUG - Blok 118: Znaleziono okres w linii 9693
+2025-04-13 14:34:58,453 - DEBUG - Blok 119: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,453 - DEBUG - Blok 119: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,453 - DEBUG - Blok 119: Znaleziono okres w linii 9776
+2025-04-13 14:34:58,454 - DEBUG - Blok 120: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,454 - DEBUG - Blok 120: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,454 - DEBUG - Blok 120: Znaleziono okres w linii 9859
+2025-04-13 14:34:58,455 - DEBUG - Blok 121: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,455 - DEBUG - Blok 121: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,455 - DEBUG - Blok 121: Znaleziono konto 731: 731-1 w linii 9933
+2025-04-13 14:34:58,455 - DEBUG - Blok 121: Znaleziono okres w linii 9942
+2025-04-13 14:34:58,456 - DEBUG - Blok 122: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,456 - DEBUG - Blok 122: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,456 - DEBUG - Blok 122: Znaleziono konto 731: 731-1 w linii 10016
+2025-04-13 14:34:58,456 - DEBUG - Blok 122: Znaleziono okres w linii 10025
+2025-04-13 14:34:58,457 - DEBUG - Blok 123: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,457 - DEBUG - Blok 123: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,458 - DEBUG - Blok 123: Znaleziono konto 731: 731-1 w linii 10099
+2025-04-13 14:34:58,458 - DEBUG - Blok 123: Znaleziono okres w linii 10108
+2025-04-13 14:34:58,459 - DEBUG - Blok 124: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,459 - DEBUG - Blok 124: Znaleziono datasp = 2025-04-02
+2025-04-13 14:34:58,459 - DEBUG - Blok 124: Znaleziono konto 731: 731-1 w linii 10182
+2025-04-13 14:34:58,459 - DEBUG - Blok 124: Znaleziono okres w linii 10191
+2025-04-13 14:34:58,460 - DEBUG - Blok 125: Znaleziono data = 2025-04-02
+2025-04-13 14:34:58,460 - DEBUG - Blok 125: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,460 - DEBUG - Blok 125: Znaleziono okres w linii 10276
+2025-04-13 14:34:58,460 - DEBUG - Blok 126: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,461 - DEBUG - Blok 126: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,461 - DEBUG - Blok 126: Znaleziono konto 731: 731-1 w linii 10350
+2025-04-13 14:34:58,461 - DEBUG - Blok 126: Znaleziono okres w linii 10359
+2025-04-13 14:34:58,462 - DEBUG - Blok 127: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,462 - DEBUG - Blok 127: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,462 - DEBUG - Blok 127: Znaleziono konto 731: 731-1 w linii 10433
+2025-04-13 14:34:58,462 - DEBUG - Blok 127: Znaleziono okres w linii 10442
+2025-04-13 14:34:58,463 - DEBUG - Blok 128: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,463 - DEBUG - Blok 128: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,463 - DEBUG - Blok 128: Znaleziono konto 731: 731-1 w linii 10516
+2025-04-13 14:34:58,463 - DEBUG - Blok 128: Znaleziono okres w linii 10525
+2025-04-13 14:34:58,464 - DEBUG - Blok 129: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,464 - DEBUG - Blok 129: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,464 - DEBUG - Blok 129: Znaleziono konto 731: 731-1 w linii 10599
+2025-04-13 14:34:58,464 - DEBUG - Blok 129: Znaleziono okres w linii 10608
+2025-04-13 14:34:58,465 - DEBUG - Blok 130: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,466 - DEBUG - Blok 130: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,466 - DEBUG - Blok 130: Znaleziono konto 731: 731-1 w linii 10682
+2025-04-13 14:34:58,466 - DEBUG - Blok 130: Znaleziono okres w linii 10691
+2025-04-13 14:34:58,467 - DEBUG - Blok 131: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,467 - DEBUG - Blok 131: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,467 - DEBUG - Blok 131: Znaleziono konto 731: 731-1 w linii 10765
+2025-04-13 14:34:58,467 - DEBUG - Blok 131: Znaleziono okres w linii 10774
+2025-04-13 14:34:58,468 - DEBUG - Blok 132: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,468 - DEBUG - Blok 132: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,468 - DEBUG - Blok 132: Znaleziono konto 731: 731-1 w linii 10848
+2025-04-13 14:34:58,468 - DEBUG - Blok 132: Znaleziono okres w linii 10857
+2025-04-13 14:34:58,469 - DEBUG - Blok 133: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,469 - DEBUG - Blok 133: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,469 - DEBUG - Blok 133: Znaleziono konto 731: 731-1 w linii 10931
+2025-04-13 14:34:58,469 - DEBUG - Blok 133: Znaleziono okres w linii 10940
+2025-04-13 14:34:58,470 - DEBUG - Blok 134: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,470 - DEBUG - Blok 134: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,470 - DEBUG - Blok 134: Znaleziono konto 731: 731-1 w linii 11014
+2025-04-13 14:34:58,471 - DEBUG - Blok 134: Znaleziono okres w linii 11023
+2025-04-13 14:34:58,472 - DEBUG - Blok 135: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,472 - DEBUG - Blok 135: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,472 - DEBUG - Blok 135: Znaleziono konto 731: 731-1 w linii 11097
+2025-04-13 14:34:58,472 - DEBUG - Blok 135: Znaleziono okres w linii 11106
+2025-04-13 14:34:58,473 - DEBUG - Blok 136: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,473 - DEBUG - Blok 136: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,473 - DEBUG - Blok 136: Znaleziono konto 731: 731-1 w linii 11180
+2025-04-13 14:34:58,473 - DEBUG - Blok 136: Znaleziono okres w linii 11189
+2025-04-13 14:34:58,474 - DEBUG - Blok 137: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,474 - DEBUG - Blok 137: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,474 - DEBUG - Blok 137: Znaleziono konto 731: 731-1 w linii 11263
+2025-04-13 14:34:58,474 - DEBUG - Blok 137: Znaleziono okres w linii 11272
+2025-04-13 14:34:58,475 - DEBUG - Blok 138: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,476 - DEBUG - Blok 138: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,476 - DEBUG - Blok 138: Znaleziono konto 731: 731-1 w linii 11346
+2025-04-13 14:34:58,476 - DEBUG - Blok 138: Znaleziono okres w linii 11355
+2025-04-13 14:34:58,477 - DEBUG - Blok 139: Znaleziono data = 2025-04-03
+2025-04-13 14:34:58,477 - DEBUG - Blok 139: Znaleziono datasp = 2025-04-03
+2025-04-13 14:34:58,477 - DEBUG - Blok 139: Znaleziono konto 731: 731-1 w linii 11429
+2025-04-13 14:34:58,477 - DEBUG - Blok 139: Znaleziono okres w linii 11438
+2025-04-13 14:34:58,478 - DEBUG - Blok 140: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,478 - DEBUG - Blok 140: Znaleziono datasp = 2025-04-04
+2025-04-13 14:34:58,478 - DEBUG - Blok 140: Znaleziono okres w linii 11521
+2025-04-13 14:34:58,480 - DEBUG - Blok 141: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,480 - DEBUG - Blok 141: Znaleziono datasp = 2025-04-04
+2025-04-13 14:34:58,480 - DEBUG - Blok 141: Znaleziono konto 731: 731-1 w linii 11595
+2025-04-13 14:34:58,480 - DEBUG - Blok 141: Znaleziono okres w linii 11604
+2025-04-13 14:34:58,481 - DEBUG - Blok 142: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,481 - DEBUG - Blok 142: Znaleziono datasp = 2025-04-04
+2025-04-13 14:34:58,481 - DEBUG - Blok 142: Znaleziono konto 731: 731-1 w linii 11678
+2025-04-13 14:34:58,481 - DEBUG - Blok 142: Znaleziono okres w linii 11687
+2025-04-13 14:34:58,482 - DEBUG - Blok 143: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,482 - DEBUG - Blok 143: Znaleziono datasp = 2025-04-04
+2025-04-13 14:34:58,482 - DEBUG - Blok 143: Znaleziono konto 731: 731-1 w linii 11761
+2025-04-13 14:34:58,482 - DEBUG - Blok 143: Znaleziono okres w linii 11770
+2025-04-13 14:34:58,483 - DEBUG - Blok 144: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,483 - DEBUG - Blok 144: Znaleziono datasp = 2025-04-04
+2025-04-13 14:34:58,484 - DEBUG - Blok 144: Znaleziono konto 731: 731-1 w linii 11844
+2025-04-13 14:34:58,484 - DEBUG - Blok 144: Znaleziono okres w linii 11853
+2025-04-13 14:34:58,485 - DEBUG - Blok 145: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,485 - DEBUG - Blok 145: Znaleziono datasp = 2025-04-04
+2025-04-13 14:34:58,485 - DEBUG - Blok 145: Znaleziono konto 731: 731-1 w linii 11927
+2025-04-13 14:34:58,485 - DEBUG - Blok 145: Znaleziono okres w linii 11936
+2025-04-13 14:34:58,486 - DEBUG - Blok 146: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,486 - DEBUG - Blok 146: Znaleziono datasp = 2025-04-04
+2025-04-13 14:34:58,486 - DEBUG - Blok 146: Znaleziono konto 731: 731-1 w linii 12010
+2025-04-13 14:34:58,486 - DEBUG - Blok 146: Znaleziono okres w linii 12019
+2025-04-13 14:34:58,487 - DEBUG - Blok 147: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,487 - DEBUG - Blok 147: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,487 - DEBUG - Blok 147: Znaleziono okres w linii 12102
+2025-04-13 14:34:58,488 - DEBUG - Blok 148: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,488 - DEBUG - Blok 148: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,488 - DEBUG - Blok 148: Znaleziono okres w linii 12185
+2025-04-13 14:34:58,489 - DEBUG - Blok 149: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,489 - DEBUG - Blok 149: Znaleziono datasp = 2025-04-04
+2025-04-13 14:34:58,489 - DEBUG - Blok 149: Znaleziono okres w linii 12268
+2025-04-13 14:34:58,490 - DEBUG - Blok 150: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,490 - DEBUG - Blok 150: Znaleziono datasp = 2025-04-04
+2025-04-13 14:34:58,490 - DEBUG - Blok 150: Znaleziono konto 731: 731-1 w linii 12342
+2025-04-13 14:34:58,490 - DEBUG - Blok 150: Znaleziono okres w linii 12351
+2025-04-13 14:34:58,491 - DEBUG - Blok 151: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,491 - DEBUG - Blok 151: Znaleziono datasp = 2025-04-04
+2025-04-13 14:34:58,491 - DEBUG - Blok 151: Znaleziono konto 731: 731-1 w linii 12425
+2025-04-13 14:34:58,491 - DEBUG - Blok 151: Znaleziono okres w linii 12434
+2025-04-13 14:34:58,492 - DEBUG - Blok 152: Znaleziono data = 2025-04-04
+2025-04-13 14:34:58,493 - DEBUG - Blok 152: Znaleziono datasp = 2025-02-06
+2025-04-13 14:34:58,493 - DEBUG - Blok 152: Znaleziono okres w linii 12519
+2025-04-13 14:34:58,493 - DEBUG - Blok 153: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,493 - DEBUG - Blok 153: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,493 - DEBUG - Blok 153: Znaleziono okres w linii 12602
+2025-04-13 14:34:58,494 - DEBUG - Blok 154: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,494 - DEBUG - Blok 154: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,494 - DEBUG - Blok 154: Znaleziono konto 731: 731-1 w linii 12676
+2025-04-13 14:34:58,495 - DEBUG - Blok 154: Znaleziono okres w linii 12685
+2025-04-13 14:34:58,496 - DEBUG - Blok 155: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,496 - DEBUG - Blok 155: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,496 - DEBUG - Blok 155: Znaleziono konto 731: 731-1 w linii 12759
+2025-04-13 14:34:58,496 - DEBUG - Blok 155: Znaleziono okres w linii 12768
+2025-04-13 14:34:58,497 - DEBUG - Blok 156: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,497 - DEBUG - Blok 156: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,497 - DEBUG - Blok 156: Znaleziono konto 731: 731-1 w linii 12842
+2025-04-13 14:34:58,497 - DEBUG - Blok 156: Znaleziono okres w linii 12851
+2025-04-13 14:34:58,498 - DEBUG - Blok 157: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,498 - DEBUG - Blok 157: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,499 - DEBUG - Blok 157: Znaleziono konto 731: 731-1 w linii 12925
+2025-04-13 14:34:58,499 - DEBUG - Blok 157: Znaleziono okres w linii 12934
+2025-04-13 14:34:58,500 - DEBUG - Blok 158: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,500 - DEBUG - Blok 158: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,500 - DEBUG - Blok 158: Znaleziono konto 731: 731-1 w linii 13008
+2025-04-13 14:34:58,500 - DEBUG - Blok 158: Znaleziono okres w linii 13017
+2025-04-13 14:34:58,501 - DEBUG - Blok 159: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,501 - DEBUG - Blok 159: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,501 - DEBUG - Blok 159: Znaleziono konto 731: 731-1 w linii 13091
+2025-04-13 14:34:58,501 - DEBUG - Blok 159: Znaleziono okres w linii 13100
+2025-04-13 14:34:58,502 - DEBUG - Blok 160: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,502 - DEBUG - Blok 160: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,502 - DEBUG - Blok 160: Znaleziono konto 731: 731-1 w linii 13174
+2025-04-13 14:34:58,502 - DEBUG - Blok 160: Znaleziono okres w linii 13183
+2025-04-13 14:34:58,503 - DEBUG - Blok 161: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,503 - DEBUG - Blok 161: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,503 - DEBUG - Blok 161: Znaleziono konto 731: 731-1 w linii 13257
+2025-04-13 14:34:58,504 - DEBUG - Blok 161: Znaleziono okres w linii 13266
+2025-04-13 14:34:58,505 - DEBUG - Blok 162: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,505 - DEBUG - Blok 162: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,505 - DEBUG - Blok 162: Znaleziono konto 731: 731-1 w linii 13340
+2025-04-13 14:34:58,505 - DEBUG - Blok 162: Znaleziono okres w linii 13349
+2025-04-13 14:34:58,506 - DEBUG - Blok 163: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,506 - DEBUG - Blok 163: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,506 - DEBUG - Blok 163: Znaleziono konto 731: 731-1 w linii 13423
+2025-04-13 14:34:58,506 - DEBUG - Blok 163: Znaleziono okres w linii 13432
+2025-04-13 14:34:58,507 - DEBUG - Blok 164: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,507 - DEBUG - Blok 164: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,507 - DEBUG - Blok 164: Znaleziono konto 731: 731-1 w linii 13506
+2025-04-13 14:34:58,507 - DEBUG - Blok 164: Znaleziono okres w linii 13515
+2025-04-13 14:34:58,508 - DEBUG - Blok 165: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,508 - DEBUG - Blok 165: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,508 - DEBUG - Blok 165: Znaleziono konto 731: 731-1 w linii 13589
+2025-04-13 14:34:58,508 - DEBUG - Blok 165: Znaleziono okres w linii 13598
+2025-04-13 14:34:58,509 - DEBUG - Blok 166: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,510 - DEBUG - Blok 166: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,510 - DEBUG - Blok 166: Znaleziono konto 731: 731-1 w linii 13672
+2025-04-13 14:34:58,510 - DEBUG - Blok 166: Znaleziono okres w linii 13681
+2025-04-13 14:34:58,510 - DEBUG - Blok 167: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,511 - DEBUG - Blok 167: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,511 - DEBUG - Blok 167: Znaleziono konto 731: 731-1 w linii 13755
+2025-04-13 14:34:58,511 - DEBUG - Blok 167: Znaleziono okres w linii 13764
+2025-04-13 14:34:58,512 - DEBUG - Blok 168: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,512 - DEBUG - Blok 168: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,512 - DEBUG - Blok 168: Znaleziono konto 731: 731-1 w linii 13838
+2025-04-13 14:34:58,512 - DEBUG - Blok 168: Znaleziono okres w linii 13847
+2025-04-13 14:34:58,513 - DEBUG - Blok 169: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,513 - DEBUG - Blok 169: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,513 - DEBUG - Blok 169: Znaleziono konto 731: 731-1 w linii 13921
+2025-04-13 14:34:58,513 - DEBUG - Blok 169: Znaleziono okres w linii 13930
+2025-04-13 14:34:58,514 - DEBUG - Blok 170: Znaleziono data = 2025-04-07
+2025-04-13 14:34:58,514 - DEBUG - Blok 170: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,514 - DEBUG - Blok 170: Znaleziono konto 731: 731-1 w linii 14004
+2025-04-13 14:34:58,514 - DEBUG - Blok 170: Znaleziono okres w linii 14013
+2025-04-13 14:34:58,515 - DEBUG - Blok 171: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,516 - DEBUG - Blok 171: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,516 - DEBUG - Blok 171: Znaleziono okres w linii 14096
+2025-04-13 14:34:58,516 - DEBUG - Blok 172: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,516 - DEBUG - Blok 172: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,516 - DEBUG - Blok 172: Znaleziono okres w linii 14179
+2025-04-13 14:34:58,517 - DEBUG - Blok 173: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,517 - DEBUG - Blok 173: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,517 - DEBUG - Blok 173: Znaleziono konto 731: 731-1 w linii 14253
+2025-04-13 14:34:58,518 - DEBUG - Blok 173: Znaleziono okres w linii 14262
+2025-04-13 14:34:58,519 - DEBUG - Blok 174: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,519 - DEBUG - Blok 174: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,519 - DEBUG - Blok 174: Znaleziono konto 731: 731-1 w linii 14336
+2025-04-13 14:34:58,519 - DEBUG - Blok 174: Znaleziono okres w linii 14345
+2025-04-13 14:34:58,520 - DEBUG - Blok 175: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,520 - DEBUG - Blok 175: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,520 - DEBUG - Blok 175: Znaleziono konto 731: 731-1 w linii 14419
+2025-04-13 14:34:58,520 - DEBUG - Blok 175: Znaleziono okres w linii 14428
+2025-04-13 14:34:58,521 - DEBUG - Blok 176: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,521 - DEBUG - Blok 176: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,521 - DEBUG - Blok 176: Znaleziono konto 731: 731-1 w linii 14502
+2025-04-13 14:34:58,521 - DEBUG - Blok 176: Znaleziono okres w linii 14511
+2025-04-13 14:34:58,522 - DEBUG - Blok 177: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,522 - DEBUG - Blok 177: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,523 - DEBUG - Blok 177: Znaleziono konto 731: 731-1 w linii 14585
+2025-04-13 14:34:58,523 - DEBUG - Blok 177: Znaleziono okres w linii 14594
+2025-04-13 14:34:58,524 - DEBUG - Blok 178: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,524 - DEBUG - Blok 178: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,524 - DEBUG - Blok 178: Znaleziono konto 731: 731-1 w linii 14668
+2025-04-13 14:34:58,524 - DEBUG - Blok 178: Znaleziono okres w linii 14677
+2025-04-13 14:34:58,525 - DEBUG - Blok 179: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,525 - DEBUG - Blok 179: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,525 - DEBUG - Blok 179: Znaleziono konto 731: 731-1 w linii 14751
+2025-04-13 14:34:58,525 - DEBUG - Blok 179: Znaleziono okres w linii 14760
+2025-04-13 14:34:58,527 - DEBUG - Blok 180: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,527 - DEBUG - Blok 180: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,527 - DEBUG - Blok 180: Znaleziono konto 731: 731-1 w linii 14834
+2025-04-13 14:34:58,527 - DEBUG - Blok 180: Znaleziono okres w linii 14843
+2025-04-13 14:34:58,528 - DEBUG - Blok 181: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,528 - DEBUG - Blok 181: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,528 - DEBUG - Blok 181: Znaleziono konto 731: 731-1 w linii 14917
+2025-04-13 14:34:58,528 - DEBUG - Blok 181: Znaleziono okres w linii 14926
+2025-04-13 14:34:58,529 - DEBUG - Blok 182: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,530 - DEBUG - Blok 182: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,530 - DEBUG - Blok 182: Znaleziono konto 731: 731-1 w linii 15000
+2025-04-13 14:34:58,530 - DEBUG - Blok 182: Znaleziono okres w linii 15009
+2025-04-13 14:34:58,531 - DEBUG - Blok 183: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,531 - DEBUG - Blok 183: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,531 - DEBUG - Blok 183: Znaleziono konto 731: 731-1 w linii 15083
+2025-04-13 14:34:58,531 - DEBUG - Blok 183: Znaleziono okres w linii 15092
+2025-04-13 14:34:58,532 - DEBUG - Blok 184: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,532 - DEBUG - Blok 184: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,532 - DEBUG - Blok 184: Znaleziono konto 731: 731-1 w linii 15166
+2025-04-13 14:34:58,532 - DEBUG - Blok 184: Znaleziono okres w linii 15175
+2025-04-13 14:34:58,533 - DEBUG - Blok 185: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,533 - DEBUG - Blok 185: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,533 - DEBUG - Blok 185: Znaleziono okres w linii 15258
+2025-04-13 14:34:58,534 - DEBUG - Blok 186: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,534 - DEBUG - Blok 186: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,534 - DEBUG - Blok 186: Znaleziono okres w linii 15341
+2025-04-13 14:34:58,535 - DEBUG - Blok 187: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,535 - DEBUG - Blok 187: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,535 - DEBUG - Blok 187: Znaleziono konto 731: 731-1 w linii 15415
+2025-04-13 14:34:58,535 - DEBUG - Blok 187: Znaleziono okres w linii 15424
+2025-04-13 14:34:58,536 - DEBUG - Blok 188: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,536 - DEBUG - Blok 188: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,536 - DEBUG - Blok 188: Znaleziono konto 731: 731-1 w linii 15498
+2025-04-13 14:34:58,536 - DEBUG - Blok 188: Znaleziono okres w linii 15507
+2025-04-13 14:34:58,537 - DEBUG - Blok 189: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,537 - DEBUG - Blok 189: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,538 - DEBUG - Blok 189: Znaleziono konto 731: 731-1 w linii 15581
+2025-04-13 14:34:58,538 - DEBUG - Blok 189: Znaleziono okres w linii 15590
+2025-04-13 14:34:58,539 - DEBUG - Blok 190: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,539 - DEBUG - Blok 190: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,539 - DEBUG - Blok 190: Znaleziono konto 731: 731-1 w linii 15664
+2025-04-13 14:34:58,539 - DEBUG - Blok 190: Znaleziono okres w linii 15673
+2025-04-13 14:34:58,540 - DEBUG - Blok 191: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,540 - DEBUG - Blok 191: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,540 - DEBUG - Blok 191: Znaleziono konto 731: 731-1 w linii 15747
+2025-04-13 14:34:58,540 - DEBUG - Blok 191: Znaleziono okres w linii 15756
+2025-04-13 14:34:58,541 - DEBUG - Blok 192: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,542 - DEBUG - Blok 192: Znaleziono datasp = 2025-04-08
+2025-04-13 14:34:58,542 - DEBUG - Blok 192: Znaleziono konto 731: 731-1 w linii 15830
+2025-04-13 14:34:58,542 - DEBUG - Blok 192: Znaleziono okres w linii 15839
+2025-04-13 14:34:58,543 - DEBUG - Blok 193: Znaleziono data = 2025-04-08
+2025-04-13 14:34:58,543 - DEBUG - Blok 193: Znaleziono datasp = 2025-04-01
+2025-04-13 14:34:58,543 - DEBUG - Blok 193: Znaleziono okres w linii 15924
+2025-04-13 14:34:58,544 - DEBUG - Blok 194: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,544 - DEBUG - Blok 194: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,544 - DEBUG - Blok 194: Znaleziono konto 731: 731-1 w linii 15998
+2025-04-13 14:34:58,544 - DEBUG - Blok 194: Znaleziono okres w linii 16007
+2025-04-13 14:34:58,545 - DEBUG - Blok 195: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,545 - DEBUG - Blok 195: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,545 - DEBUG - Blok 195: Znaleziono konto 731: 731-1 w linii 16081
+2025-04-13 14:34:58,545 - DEBUG - Blok 195: Znaleziono okres w linii 16090
+2025-04-13 14:34:58,546 - DEBUG - Blok 196: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,546 - DEBUG - Blok 196: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,546 - DEBUG - Blok 196: Znaleziono konto 731: 731-1 w linii 16164
+2025-04-13 14:34:58,546 - DEBUG - Blok 196: Znaleziono okres w linii 16173
+2025-04-13 14:34:58,547 - DEBUG - Blok 197: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,547 - DEBUG - Blok 197: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,547 - DEBUG - Blok 197: Znaleziono konto 731: 731-1 w linii 16247
+2025-04-13 14:34:58,547 - DEBUG - Blok 197: Znaleziono okres w linii 16256
+2025-04-13 14:34:58,548 - DEBUG - Blok 198: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,548 - DEBUG - Blok 198: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,549 - DEBUG - Blok 198: Znaleziono konto 731: 731-1 w linii 16330
+2025-04-13 14:34:58,549 - DEBUG - Blok 198: Znaleziono okres w linii 16339
+2025-04-13 14:34:58,550 - DEBUG - Blok 199: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,550 - DEBUG - Blok 199: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,550 - DEBUG - Blok 199: Znaleziono konto 731: 731-1 w linii 16413
+2025-04-13 14:34:58,550 - DEBUG - Blok 199: Znaleziono okres w linii 16422
+2025-04-13 14:34:58,551 - DEBUG - Blok 200: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,551 - DEBUG - Blok 200: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,551 - DEBUG - Blok 200: Znaleziono okres w linii 16505
+2025-04-13 14:34:58,552 - DEBUG - Blok 201: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,552 - DEBUG - Blok 201: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,552 - DEBUG - Blok 201: Znaleziono okres w linii 16588
+2025-04-13 14:34:58,552 - DEBUG - Blok 202: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,552 - DEBUG - Blok 202: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,553 - DEBUG - Blok 202: Znaleziono okres w linii 16671
+2025-04-13 14:34:58,554 - DEBUG - Blok 203: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,554 - DEBUG - Blok 203: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,554 - DEBUG - Blok 203: Znaleziono okres w linii 16754
+2025-04-13 14:34:58,554 - DEBUG - Blok 204: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,554 - DEBUG - Blok 204: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,555 - DEBUG - Blok 204: Znaleziono okres w linii 16837
+2025-04-13 14:34:58,555 - DEBUG - Blok 205: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,556 - DEBUG - Blok 205: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,556 - DEBUG - Blok 205: Znaleziono konto 731: 731-1 w linii 16911
+2025-04-13 14:34:58,556 - DEBUG - Blok 205: Znaleziono okres w linii 16920
+2025-04-13 14:34:58,557 - DEBUG - Blok 206: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,557 - DEBUG - Blok 206: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,557 - DEBUG - Blok 206: Znaleziono konto 731: 731-1 w linii 16994
+2025-04-13 14:34:58,557 - DEBUG - Blok 206: Znaleziono okres w linii 17003
+2025-04-13 14:34:58,558 - DEBUG - Blok 207: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,558 - DEBUG - Blok 207: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,558 - DEBUG - Blok 207: Znaleziono konto 731: 731-1 w linii 17077
+2025-04-13 14:34:58,558 - DEBUG - Blok 207: Znaleziono okres w linii 17086
+2025-04-13 14:34:58,559 - DEBUG - Blok 208: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,559 - DEBUG - Blok 208: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,559 - DEBUG - Blok 208: Znaleziono okres w linii 17169
+2025-04-13 14:34:58,560 - DEBUG - Blok 209: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,560 - DEBUG - Blok 209: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,560 - DEBUG - Blok 209: Znaleziono okres w linii 17252
+2025-04-13 14:34:58,561 - DEBUG - Blok 210: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,561 - DEBUG - Blok 210: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,561 - DEBUG - Blok 210: Znaleziono konto 731: 731-1 w linii 17326
+2025-04-13 14:34:58,561 - DEBUG - Blok 210: Znaleziono okres w linii 17335
+2025-04-13 14:34:58,562 - DEBUG - Blok 211: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,562 - DEBUG - Blok 211: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,563 - DEBUG - Blok 211: Znaleziono okres w linii 17418
+2025-04-13 14:34:58,563 - DEBUG - Blok 212: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,563 - DEBUG - Blok 212: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,563 - DEBUG - Blok 212: Znaleziono okres w linii 17501
+2025-04-13 14:34:58,564 - DEBUG - Blok 213: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,564 - DEBUG - Blok 213: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,564 - DEBUG - Blok 213: Znaleziono konto 731: 731-1 w linii 17575
+2025-04-13 14:34:58,564 - DEBUG - Blok 213: Znaleziono okres w linii 17584
+2025-04-13 14:34:58,565 - DEBUG - Blok 214: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,566 - DEBUG - Blok 214: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,566 - DEBUG - Blok 214: Znaleziono konto 731: 731-1 w linii 17658
+2025-04-13 14:34:58,566 - DEBUG - Blok 214: Znaleziono okres w linii 17667
+2025-04-13 14:34:58,567 - DEBUG - Blok 215: Znaleziono data = 2025-04-09
+2025-04-13 14:34:58,567 - DEBUG - Blok 215: Znaleziono datasp = 2025-04-07
+2025-04-13 14:34:58,567 - DEBUG - Blok 215: Znaleziono okres w linii 17752
+2025-04-13 14:34:58,567 - DEBUG - Blok 216: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,567 - DEBUG - Blok 216: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,568 - DEBUG - Blok 216: Znaleziono konto 731: 731-1 w linii 17826
+2025-04-13 14:34:58,568 - DEBUG - Blok 216: Znaleziono okres w linii 17835
+2025-04-13 14:34:58,569 - DEBUG - Blok 217: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,569 - DEBUG - Blok 217: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,569 - DEBUG - Blok 217: Znaleziono konto 731: 731-1 w linii 17909
+2025-04-13 14:34:58,569 - DEBUG - Blok 217: Znaleziono okres w linii 17918
+2025-04-13 14:34:58,570 - DEBUG - Blok 218: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,570 - DEBUG - Blok 218: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,570 - DEBUG - Blok 218: Znaleziono okres w linii 18001
+2025-04-13 14:34:58,571 - DEBUG - Blok 219: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,571 - DEBUG - Blok 219: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,571 - DEBUG - Blok 219: Znaleziono okres w linii 18084
+2025-04-13 14:34:58,571 - DEBUG - Blok 220: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,571 - DEBUG - Blok 220: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,571 - DEBUG - Blok 220: Znaleziono okres w linii 18167
+2025-04-13 14:34:58,572 - DEBUG - Blok 221: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,572 - DEBUG - Blok 221: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,572 - DEBUG - Blok 221: Znaleziono okres w linii 18250
+2025-04-13 14:34:58,573 - DEBUG - Blok 222: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,573 - DEBUG - Blok 222: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,573 - DEBUG - Blok 222: Znaleziono konto 731: 731-1 w linii 18324
+2025-04-13 14:34:58,573 - DEBUG - Blok 222: Znaleziono okres w linii 18333
+2025-04-13 14:34:58,574 - DEBUG - Blok 223: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,574 - DEBUG - Blok 223: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,574 - DEBUG - Blok 223: Znaleziono konto 731: 731-1 w linii 18407
+2025-04-13 14:34:58,574 - DEBUG - Blok 223: Znaleziono okres w linii 18416
+2025-04-13 14:34:58,575 - DEBUG - Blok 224: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,576 - DEBUG - Blok 224: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,576 - DEBUG - Blok 224: Znaleziono konto 731: 731-1 w linii 18490
+2025-04-13 14:34:58,576 - DEBUG - Blok 224: Znaleziono okres w linii 18499
+2025-04-13 14:34:58,577 - DEBUG - Blok 225: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,577 - DEBUG - Blok 225: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,577 - DEBUG - Blok 225: Znaleziono konto 731: 731-1 w linii 18573
+2025-04-13 14:34:58,577 - DEBUG - Blok 225: Znaleziono okres w linii 18582
+2025-04-13 14:34:58,578 - DEBUG - Blok 226: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,578 - DEBUG - Blok 226: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,578 - DEBUG - Blok 226: Znaleziono konto 731: 731-1 w linii 18656
+2025-04-13 14:34:58,578 - DEBUG - Blok 226: Znaleziono okres w linii 18665
+2025-04-13 14:34:58,579 - DEBUG - Blok 227: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,579 - DEBUG - Blok 227: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,579 - DEBUG - Blok 227: Znaleziono konto 731: 731-1 w linii 18739
+2025-04-13 14:34:58,579 - DEBUG - Blok 227: Znaleziono okres w linii 18748
+2025-04-13 14:34:58,580 - DEBUG - Blok 228: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,580 - DEBUG - Blok 228: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,580 - DEBUG - Blok 228: Znaleziono konto 731: 731-1 w linii 18822
+2025-04-13 14:34:58,580 - DEBUG - Blok 228: Znaleziono okres w linii 18831
+2025-04-13 14:34:58,581 - DEBUG - Blok 229: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,582 - DEBUG - Blok 229: Znaleziono datasp = 2025-03-31
+2025-04-13 14:34:58,582 - DEBUG - Blok 229: Znaleziono okres w linii 18914
+2025-04-13 14:34:58,582 - DEBUG - Blok 230: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,582 - DEBUG - Blok 230: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,582 - DEBUG - Blok 230: Znaleziono okres w linii 18997
+2025-04-13 14:34:58,583 - DEBUG - Blok 231: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,583 - DEBUG - Blok 231: Znaleziono datasp = 2025-04-10
+2025-04-13 14:34:58,583 - DEBUG - Blok 231: Znaleziono konto 731: 731-1 w linii 19071
+2025-04-13 14:34:58,583 - DEBUG - Blok 231: Znaleziono okres w linii 19080
+2025-04-13 14:34:58,584 - DEBUG - Blok 232: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,584 - DEBUG - Blok 232: Znaleziono datasp = 2025-04-09
+2025-04-13 14:34:58,585 - DEBUG - Blok 232: Znaleziono okres w linii 19165
+2025-04-13 14:34:58,585 - DEBUG - Blok 233: Znaleziono data = 2025-04-10
+2025-04-13 14:34:58,585 - DEBUG - Blok 233: Znaleziono datasp = 2025-03-27
+2025-04-13 14:34:58,585 - DEBUG - Blok 233: Znaleziono konto 731: 731-1 w linii 19241
+2025-04-13 14:34:58,585 - DEBUG - Blok 233: Znaleziono okres w linii 19250
+2025-04-13 14:34:58,586 - INFO - Znaleziono 233 dokumentów w pliku VAT
+2025-04-13 14:34:58,592 - INFO - Czas przetwarzania pliku: 235.82649 ms
+2025-04-13 14:34:58,592 - INFO - --------------------------------------------------------------------------------

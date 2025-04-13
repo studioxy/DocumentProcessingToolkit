@@ -138,6 +138,8 @@ def process_vat_file(lines):
        b) Zmień datę okresu na ostatni dzień poprzedniego miesiąca
     2. W przeciwnym razie nie dokonuj zmian w dokumencie
     """
+    logging.info("===== ROZPOCZYNAM PRZETWARZANIE PLIKU VAT =====")
+    
     changes = {
         'zmiany_konto_731': 0,
         'zmiany_okres': 0,
@@ -146,135 +148,188 @@ def process_vat_file(lines):
         'liczba_wszystkich_dokumentow': 0
     }
     
-    # ======= LOGOWANIE =======
-    # Ustawmy poziom logowania na INFO w środowisku produkcyjnym
-    # logging.basicConfig(level=logging.INFO)
+    # ETAP 1: Pobieranie danych - identyfikacja bloków i ekstrakcja ich parametrów
+    logging.info("ETAP 1: Pobieranie danych z pliku")
+    baza_dokumentow = []  # Ta "baza" będzie zawierać wszystkie wyekstrahowane dokumenty z ich danymi
     
-    # W czasie debugowania możemy użyć poziomu DEBUG
-    logging.basicConfig(level=logging.DEBUG)
+    # Znajdź wszystkie bloki Kontrahent{ i ich ID
+    kontrahenci = []
+    aktualny_kontrahent = None
     
-    # ETAP 1: Dokładne wykrycie bloków dokumentów z pełnymi granicami
-    dokumenty = []  # Lista wszystkich dokumentów z metadanymi
-    linijki_poczatkowe = []  # Lista indeksów początku każdego dokumentu
-    
-    # Wykryj początki bloków (Kontrahent{) i ich zawartość
     for i, line in enumerate(lines):
-        if 'Kontrahent{' in line.strip():
-            linijki_poczatkowe.append(i)
+        linia = line.strip()
+        
+        # Znajdź początek bloku kontrahenta
+        if linia == 'Kontrahent{':
+            aktualny_kontrahent = {
+                'linia_start': i,
+                'linia_koniec': None,
+                'id': None,
+                'nazwa': None,
+                'dokumenty': []
+            }
+            kontrahenci.append(aktualny_kontrahent)
+        
+        # Pobierz ID kontrahenta
+        elif aktualny_kontrahent and 'id =' in linia and aktualny_kontrahent['id'] is None:
+            try:
+                aktualny_kontrahent['id'] = linia.split('=', 1)[1].strip()
+            except:
+                aktualny_kontrahent['id'] = 'unknown'
+            logging.debug(f"Znaleziono kontrahenta ID: {aktualny_kontrahent['id']} w linii {i}")
+        
+        # Pobierz nazwę kontrahenta
+        elif aktualny_kontrahent and 'nazwa =' in linia and aktualny_kontrahent['nazwa'] is None:
+            try:
+                aktualny_kontrahent['nazwa'] = linia.split('=', 1)[1].strip()
+            except:
+                aktualny_kontrahent['nazwa'] = 'brak nazwy'
+        
+        # Znajdź koniec bloku kontrahenta - albo nowy Kontrahent{, albo koniec pliku
+        if linia == 'Kontrahent{' and len(kontrahenci) > 1:
+            kontrahenci[-2]['linia_koniec'] = i - 1
     
-    # Dodaj sztuczny koniec dla ostatniego bloku
-    linijki_poczatkowe.append(len(lines))
+    # Ustaw koniec ostatniego kontrahenta
+    if kontrahenci:
+        kontrahenci[-1]['linia_koniec'] = len(lines) - 1
     
-    # ETAP 2: Wyodrębnij każdy blok dokumentu i przeanalizuj jego zawartość
-    for i in range(len(linijki_poczatkowe) - 1):
-        start_idx = linijki_poczatkowe[i]
-        end_idx = linijki_poczatkowe[i+1]
+    logging.info(f"Znaleziono {len(kontrahenci)} kontrahentów w pliku")
+    
+    # ETAP 2: Znajdź wszystkie dokumenty w blokach kontrahentów
+    indeks_dokumentu = 0
+    
+    for kontrahent in kontrahenci:
+        # Znajdź wszystkie bloki Dokument{ w ramach tego kontrahenta
+        i_start = kontrahent['linia_start'] 
+        i_koniec = kontrahent['linia_koniec']
         
-        # Wyodrębnij blok linii
-        blok_linii = lines[start_idx:end_idx]
-        
-        # Przygotuj słownik do analizy tego bloku
-        dokument = {
-            'id': i + 1,  # Numeracja od 1
-            'data': None,
-            'datasp': None,
-            'linijki': blok_linii,
-            'linia_start': start_idx,
-            'linia_end': end_idx - 1,
-            'konto_731_linia': None,
-            'konto_731_wartosc': None,
-            'okres_linia': None,
-            'kwota_vat': None,
-            'kwota_vat_ma_minus': False,
-            'zmien_konto': False,
-            'zmien_okres': False
-        }
-        
-        # Analizuj każdą linię w bloku
-        for j, linia in enumerate(blok_linii):
-            linia_stripped = linia.strip()
+        # Analizuj wszystkie linie w bloku kontrahenta
+        for i in range(i_start, i_koniec + 1):
+            linia = lines[i].strip()
             
-            # Znajdź datę i datę sprzedaży (tylko pierwszej)
-            if 'data =' in linia_stripped and dokument['data'] is None:
-                dokument['data'] = linia_stripped.split('=')[1].strip()
-                logging.debug(f"Blok {i+1}: Znaleziono data = {dokument['data']}")
-            
-            if 'datasp =' in linia_stripped and dokument['datasp'] is None:
-                dokument['datasp'] = linia_stripped.split('=')[1].strip()
-                logging.debug(f"Blok {i+1}: Znaleziono datasp = {dokument['datasp']}")
-            
-            # Znajdź kwotę VAT (przy koncie 221-1)
-            if 'konto =' in linia_stripped and '221-1' in linia_stripped:
-                # Znajdź kwotę w następnej linii
-                if j+1 < len(blok_linii) and 'kwota =' in blok_linii[j+1].strip():
-                    kwota_str = blok_linii[j+1].strip().split('=')[1].strip()
-                    dokument['kwota_vat'] = kwota_str
-                    dokument['kwota_vat_ma_minus'] = '-' in kwota_str
-                    logging.debug(f"Blok {i+1}: Znaleziono kwotę VAT = {kwota_str}, ma minus: {dokument['kwota_vat_ma_minus']}")
-            
-            # Znajdź konto 731-*
-            if 'konto =' in linia_stripped:
-                konto_value = linia_stripped.split('=')[1].strip()
+            # Znajdź początek dokumentu
+            if linia == 'Dokument{':
+                indeks_dokumentu += 1
+                dokument = {
+                    'id': indeks_dokumentu,
+                    'kontrahent_id': kontrahent['id'],
+                    'kontrahent_nazwa': kontrahent['nazwa'],
+                    'linia_start': i,
+                    'linia_koniec': None,
+                    'data': None,
+                    'datasp': None,
+                    'kwota_vat': None,
+                    'kwota_vat_ma_minus': False,
+                    'konto_731_linia': None,
+                    'konto_731_wartosc': None,
+                    'okres_linia': None,
+                    'do_zmiany': False
+                }
                 
-                if any(k in konto_value for k in ['731-1', '731-3', '731-4']):
-                    dokument['konto_731_linia'] = start_idx + j
-                    dokument['konto_731_wartosc'] = konto_value
-                    logging.debug(f"Blok {i+1}: Znaleziono konto 731: {konto_value} w linii {start_idx + j}")
-            
-            # Znajdź linię z okresem (bardzo dokładnie)
-            if 'okres =' in linia_stripped:
-                dokument['okres_linia'] = start_idx + j
-                logging.debug(f"Blok {i+1}: Znaleziono okres w linii {start_idx + j}")
+                # Znajdź koniec tego dokumentu (do następnego Dokument{ lub końca kontrahenta)
+                for j in range(i + 1, i_koniec + 1):
+                    if lines[j].strip() == 'Dokument{':
+                        dokument['linia_koniec'] = j - 1
+                        break
+                    elif j == i_koniec:
+                        dokument['linia_koniec'] = j
+                
+                # Teraz znajdź wszystkie potrzebne wartości w dokumencie
+                for j in range(dokument['linia_start'], dokument['linia_koniec'] + 1):
+                    linia_j = lines[j].strip()
+                    
+                    # Znajdź datę
+                    if linia_j.startswith('data ='):
+                        try:
+                            dokument['data'] = linia_j.split('=', 1)[1].strip()
+                            logging.debug(f"Dokument {indeks_dokumentu}: data = {dokument['data']}")
+                        except:
+                            pass
+                    
+                    # Znajdź datę sprzedaży
+                    elif linia_j.startswith('datasp ='):
+                        try:
+                            dokument['datasp'] = linia_j.split('=', 1)[1].strip()
+                            logging.debug(f"Dokument {indeks_dokumentu}: datasp = {dokument['datasp']}")
+                        except:
+                            pass
+                    
+                    # Znajdź okres
+                    elif linia_j.startswith('okres ='):
+                        dokument['okres_linia'] = j
+                        logging.debug(f"Dokument {indeks_dokumentu}: znaleziono okres w linii {j}")
+                    
+                    # Znajdź kwotę VAT przy koncie 221-1
+                    elif 'konto =' in linia_j and '221-1' in linia_j:
+                        # Sprawdź czy następna linia zawiera kwotę
+                        if j + 1 <= dokument['linia_koniec'] and 'kwota =' in lines[j + 1].strip():
+                            kwota_text = lines[j + 1].strip()
+                            try:
+                                wartość_kwoty = kwota_text.split('=', 1)[1].strip()
+                                dokument['kwota_vat'] = wartość_kwoty
+                                dokument['kwota_vat_ma_minus'] = '-' in wartość_kwoty
+                                logging.debug(f"Dokument {indeks_dokumentu}: kwota VAT = {wartość_kwoty}, ma minus: {dokument['kwota_vat_ma_minus']}")
+                            except:
+                                pass
+                    
+                    # Znajdź konto 731-*
+                    elif 'konto =' in linia_j:
+                        try:
+                            konto_value = linia_j.split('=', 1)[1].strip()
+                            if any(k in konto_value for k in ['731-1', '731-3', '731-4']):
+                                dokument['konto_731_linia'] = j
+                                dokument['konto_731_wartosc'] = konto_value
+                                logging.debug(f"Dokument {indeks_dokumentu}: znaleziono konto {konto_value} w linii {j}")
+                        except:
+                            pass
+                
+                # Dodaj dokument do bazy dokumentów
+                baza_dokumentow.append(dokument)
+    
+    # Aktualizuj licznik dokumentów
+    changes['liczba_wszystkich_dokumentow'] = len(baza_dokumentow)
+    logging.info(f"Łącznie znaleziono {len(baza_dokumentow)} dokumentów")
+    
+    # ETAP 3: Analiza danych i podejmowanie decyzji
+    logging.info("ETAP 3: Analiza dokumentów i warunków biznesowych")
+    
+    for dokument in baza_dokumentow:
+        # Analizuj warunki biznesowe dla każdego dokumentu
+        has_valid_dates = dokument['data'] is not None and dokument['datasp'] is not None
+        daty_rozne = has_valid_dates and dokument['data'] != dokument['datasp']
+        kwota_bez_minusa = dokument['kwota_vat'] is not None and not dokument['kwota_vat_ma_minus']
         
-        # Sprawdź czy wszystkie warunki biznesowe są spełnione:
-        # 1) dokument ma obie daty
-        # 2) data != datasp (różne daty)
-        # 3) kwota VAT istnieje i nie ma znaku minus
+        # Szczegółowy log dla tego dokumentu
+        logging.info(f"Analiza dokumentu {dokument['id']} (kontrahent: {dokument['kontrahent_id']}):")
+        logging.info(f"  - Data: {dokument['data']}, DataSp: {dokument['datasp']}")
+        logging.info(f"  - Daty są różne: {daty_rozne}")
+        logging.info(f"  - Kwota VAT: {dokument['kwota_vat']}, bez minusa: {kwota_bez_minusa}")
+        logging.info(f"  - Konto 731: {dokument['konto_731_wartosc'] if dokument['konto_731_wartosc'] else 'brak'}")
         
-        has_valid_dates = dokument['data'] and dokument['datasp']
-        dates_are_different = has_valid_dates and dokument['data'] != dokument['datasp']
-        has_valid_vat = dokument['kwota_vat'] is not None
-        vat_not_negative = has_valid_vat and not dokument['kwota_vat_ma_minus']
-        
-        # Logowanie szczegółów warunków
-        logging.debug(f"Blok {i+1}: Warunki: daty: {has_valid_dates}, różne daty: {dates_are_different}, " +
-                     f"wartość VAT: {has_valid_vat}, bez minusa: {vat_not_negative}")
-        
-        # Sprawdź czy wszystkie warunki są spełnione
-        if dates_are_different and vat_not_negative:
-            
-            # Kwalifikuje się do zmian, ale tylko określonych warunków
-            if dokument['konto_731_linia'] is not None:
-                dokument['zmien_konto'] = True
-                logging.debug(f"Blok {i+1}: Kwalifikuje się do zmiany konta 731-* -> {dokument['konto_731_wartosc']}")
-            
-            # Zmiana okresu tylko gdy wszystkie warunki są spełnione
-            if dokument['okres_linia'] is not None:
-                dokument['zmien_okres'] = True
-                logging.debug(f"Blok {i+1}: Kwalifikuje się do zmiany okresu -> różne daty i brak minusa w kwocie")
-            
-            logging.debug(f"Blok {i+1}: Finalne flagi -> zmien_konto={dokument['zmien_konto']}, zmien_okres={dokument['zmien_okres']}")
+        # Ustal, czy dokument kwalifikuje się do zmian
+        if daty_rozne and kwota_bez_minusa:
+            dokument['do_zmiany'] = True
+            logging.info(f"  => Dokument {dokument['id']} KWALIFIKUJE SIĘ do zmian")
         else:
-            # Nie kwalifikuje się - zapisz przyczynę
-            if dokument['data'] and dokument['datasp'] and dokument['data'] == dokument['datasp']:
+            # Zapisz powód niezakwalifikowania
+            if has_valid_dates and not daty_rozne:
                 changes['niezakwalifikowane_przez_date'] += 1
-                logging.debug(f"Blok {i+1}: Nie kwalifikuje się - daty są takie same {dokument['data']} = {dokument['datasp']}")
+                logging.info(f"  => Dokument {dokument['id']} NIE KWALIFIKUJE SIĘ - daty są takie same")
             
-            if dokument['kwota_vat'] and dokument['kwota_vat_ma_minus']:
+            if dokument['kwota_vat'] is not None and dokument['kwota_vat_ma_minus']:
                 changes['niezakwalifikowane_przez_kwote'] += 1
-                logging.debug(f"Blok {i+1}: Nie kwalifikuje się - kwota VAT ma minus: {dokument['kwota_vat']}")
+                logging.info(f"  => Dokument {dokument['id']} NIE KWALIFIKUJE SIĘ - kwota VAT ma minus")
+    
+    # ETAP 4: Wprowadzenie zmian w pliku na podstawie analizy
+    logging.info("ETAP 4: Wprowadzanie zmian w dokumentach")
+    
+    for dokument in baza_dokumentow:
+        # Pomiń dokumenty, które nie kwalifikują się do zmian
+        if not dokument['do_zmiany']:
+            continue
         
-        # Dodaj dokument do pełnej listy
-        dokumenty.append(dokument)
-    
-    # Uaktualnij liczbę dokumentów
-    changes['liczba_wszystkich_dokumentow'] = len(dokumenty)
-    logging.info(f"Znaleziono {len(dokumenty)} dokumentów w pliku VAT")
-    
-    # ETAP 3: Wprowadź zmiany w dokumentach, które się kwalifikują
-    for i, dokument in enumerate(dokumenty):
         # ZMIANA 1: Konto 731-* na 702-*
-        if dokument['zmien_konto'] and dokument['konto_731_linia'] is not None:
+        if dokument['konto_731_linia'] is not None:
             konto_org = dokument['konto_731_wartosc']
             new_konto = None
             
@@ -299,24 +354,20 @@ def process_vat_file(lines):
                 # Przygotuj nową linię z identycznym formatowaniem
                 lines[dokument['konto_731_linia']] = f"{indent}konto ={eq_space}{new_konto}\n"
                 changes['zmiany_konto_731'] += 1
-                logging.info(f"Blok {i+1}: Zmieniono konto {konto_org} na {new_konto}")
+                logging.info(f"Dokument {dokument['id']}: Zmieniono konto {konto_org} na {new_konto}")
         
         # ZMIANA 2: Okres na ostatni dzień poprzedniego miesiąca
-        if dokument['zmien_okres'] and dokument['okres_linia'] is not None:
+        if dokument['okres_linia'] is not None:
             org_line = lines[dokument['okres_linia']]
-            okres_split = org_line.split('=')
+            okres_split = org_line.split('=', 1)
             if len(okres_split) > 1:
                 okres_value = okres_split[1].strip()
                 nowy_okres = ostatni_dzien_poprzedniego_miesiaca(okres_value)
                 
-                # Dodatkowy log pokazujący wszystkie warunki i zmienne dla tej zmiany
-                logging.info(f"DEBUG ZMIANA OKRESU - Blok {i+1}:")
-                logging.info(f"  - zmien_okres: {dokument['zmien_okres']}")
-                logging.info(f"  - data: {dokument['data']}")
-                logging.info(f"  - datasp: {dokument['datasp']}")
-                logging.info(f"  - daty są różne: {dokument['data'] != dokument['datasp'] if dokument['data'] and dokument['datasp'] else 'Brak obu dat'}")
-                logging.info(f"  - kwota_vat_ma_minus: {dokument['kwota_vat_ma_minus']}")
-                logging.info(f"  - kwota_vat: {dokument['kwota_vat']}")
+                # Szczegółowe informacje o zmianie
+                logging.info(f"Dokument {dokument['id']}: Zmiana okresu:")
+                logging.info(f"  - Aktualny okres: {okres_value}")
+                logging.info(f"  - Nowy okres: {nowy_okres}")
                 
                 # Zachowaj dokładne formatowanie oryginału
                 spaces_before = len(org_line) - len(org_line.lstrip())
@@ -330,16 +381,18 @@ def process_vat_file(lines):
                 # Przygotuj nową linię z identycznym formatowaniem
                 lines[dokument['okres_linia']] = f"{indent}okres ={eq_space}{nowy_okres}\n"
                 changes['zmiany_okres'] += 1
-                logging.info(f"Blok {i+1}: Zmieniono okres {okres_value} na {nowy_okres}")
+                logging.info(f"Dokument {dokument['id']}: Zmieniono okres {okres_value} na {nowy_okres}")
             else:
-                logging.error(f"Blok {i+1}: Błąd parsowania linii okresu: {org_line}")
-                
+                logging.error(f"Dokument {dokument['id']}: Błąd parsowania linii okresu: {org_line}")
+    
     # Podsumowanie
-    logging.info(f'Łączna liczba bloków w pliku: {changes["liczba_wszystkich_dokumentow"]}')
-    logging.info(f'Łączna liczba zmian konta 731-* na odpowiednie wartości: {changes["zmiany_konto_731"]}')
-    logging.info(f'Łączna liczba zmian daty okresu na ostatni dzień poprzedniego miesiąca: {changes["zmiany_okres"]}')
-    logging.info(f'Łączna liczba przypadków niezakwalifikowanych przez taką samą datę: {changes["niezakwalifikowane_przez_date"]}')
-    logging.info(f'Łączna liczba przypadków niezakwalifikowanych przez ujemną kwotę (z minusem): {changes["niezakwalifikowane_przez_kwote"]}')
+    logging.info("===== PODSUMOWANIE ZMIAN =====")
+    logging.info(f"Łączna liczba dokumentów: {changes['liczba_wszystkich_dokumentow']}")
+    logging.info(f"Łączna liczba zmian konta 731-*: {changes['zmiany_konto_731']}")
+    logging.info(f"Łączna liczba zmian daty okresu: {changes['zmiany_okres']}")
+    logging.info(f"Łączna liczba dokumentów niezakwalifikowanych przez datę: {changes['niezakwalifikowane_przez_date']}")
+    logging.info(f"Łączna liczba dokumentów niezakwalifikowanych przez kwotę: {changes['niezakwalifikowane_przez_kwote']}")
+    logging.info("===== KONIEC PRZETWARZANIA PLIKU VAT =====")
     
     return changes
 
