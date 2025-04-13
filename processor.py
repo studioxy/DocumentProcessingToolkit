@@ -224,19 +224,34 @@ def process_vat_file(lines):
                 dokument['okres_linia'] = start_idx + j
                 logging.debug(f"Blok {i+1}: Znaleziono okres w linii {start_idx + j}")
         
-        # Warunek biznesowy: data != datasp i kwota VAT nie ma minusa
-        if (dokument['data'] and dokument['datasp'] and 
-            dokument['data'] != dokument['datasp'] and 
-            dokument['kwota_vat'] and not dokument['kwota_vat_ma_minus']):
+        # Sprawdź czy wszystkie warunki biznesowe są spełnione:
+        # 1) dokument ma obie daty
+        # 2) data != datasp (różne daty)
+        # 3) kwota VAT istnieje i nie ma znaku minus
+        
+        has_valid_dates = dokument['data'] and dokument['datasp']
+        dates_are_different = has_valid_dates and dokument['data'] != dokument['datasp']
+        has_valid_vat = dokument['kwota_vat'] is not None
+        vat_not_negative = has_valid_vat and not dokument['kwota_vat_ma_minus']
+        
+        # Logowanie szczegółów warunków
+        logging.debug(f"Blok {i+1}: Warunki: daty: {has_valid_dates}, różne daty: {dates_are_different}, " +
+                     f"wartość VAT: {has_valid_vat}, bez minusa: {vat_not_negative}")
+        
+        # Sprawdź czy wszystkie warunki są spełnione
+        if dates_are_different and vat_not_negative:
             
-            # Kwalifikuje się do obu zmian
+            # Kwalifikuje się do zmian, ale tylko określonych warunków
             if dokument['konto_731_linia'] is not None:
                 dokument['zmien_konto'] = True
+                logging.debug(f"Blok {i+1}: Kwalifikuje się do zmiany konta 731-* -> {dokument['konto_731_wartosc']}")
             
+            # Zmiana okresu tylko gdy wszystkie warunki są spełnione
             if dokument['okres_linia'] is not None:
                 dokument['zmien_okres'] = True
-                
-            logging.debug(f"Blok {i+1}: Kwalifikuje się do zmian -> zmien_konto={dokument['zmien_konto']}, zmien_okres={dokument['zmien_okres']}")
+                logging.debug(f"Blok {i+1}: Kwalifikuje się do zmiany okresu -> różne daty i brak minusa w kwocie")
+            
+            logging.debug(f"Blok {i+1}: Finalne flagi -> zmien_konto={dokument['zmien_konto']}, zmien_okres={dokument['zmien_okres']}")
         else:
             # Nie kwalifikuje się - zapisz przyczynę
             if dokument['data'] and dokument['datasp'] and dokument['data'] == dokument['datasp']:
