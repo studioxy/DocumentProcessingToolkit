@@ -1,0 +1,2453 @@
+INFO{
+	Nazwa programu ="TO-FI"
+	Wersja_prgramu =ver. 29.11.2020 (Harbour)
+	Wersja szablonu =3.1
+	dane_z_oddzialu =1
+	Kontrahent{
+		id =
+		kod =
+		nazwa =PRYZMAT SZCZECIN
+		miejscowosc =Szczecin
+		ulica =ul. Starkiewicza 13
+		dom =
+		lokal =
+		kodpocz =70-112
+		rejon =
+		nip =
+		tel1 =48-26-388                                                             
+		tel2 =
+		fax =
+		email =
+		www =
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGONY
+	nazwa =PARAGON
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =  -   
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =P0401/02821 
+	opis =Paragon fiskalny
+	data =2025-04-01
+	datasp =2025-04-01
+	kwota =135.30
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0401/02821 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =135.30
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =P0401/02821 
+		NumerDok =P0401/02821 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-01
+	}
+	Zapis{
+		strona=MA
+		kwota =135.30
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0401/02821 
+		NumerDok =P0401/02821 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-01
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0401/02821 
+		obGUID =
+		kwota =135.30
+	}
+}
+Kontrahent{
+	id =002138
+	kod =FELINA POLSKA SP.Z.O.O.
+	nazwa =FELINA POLSKA SP.Z.O.O.
+	miejscowosc =LODZ
+	ulica =LAKOWA 3/5
+	dom =
+	lokal =
+	kodpocz =90-562
+	nip =8310003528    
+	tel1 =507 130 991                   
+	tel2 =
+	fax =GALAXY BIELIZNA PARTER        
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01413/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-01
+	datasp =2025-04-01
+	kwota =196.23
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01413/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =196.23
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01413/S/25 
+		NumerDok =F01413/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-01
+	}
+	Zapis{
+		strona=MA
+		kwota =196.23
+		konto =201-2-1-002138
+		IdDlaRozliczen =2
+		opis =F01413/S/25 
+		NumerDok =F01413/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-01
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01413/S/25 
+		obGUID =
+		kwota =196.23
+	}
+}
+Kontrahent{
+	id =999999
+	kod =DOSTAWCA INDYWIDUALNY
+	nazwa =DOSTAWCA INDYWIDUALNY
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =S0066/S/25  
+	opis =Wyplata za skup S0066/S/25
+	data =2025-04-01
+	datasp =2025-04-01
+	kwota =10.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0066/S/25  
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =10.00
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0066/S/25  
+		NumerDok =S0066/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-01
+	}
+	Zapis{
+		strona=MA
+		kwota =10.00
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =S0066/S/25  
+		NumerDok =S0066/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-01
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0066/S/25  
+		obGUID =
+		kwota =10.00
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGONY
+	nazwa =PARAGON
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =  -   
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =P0401/02822 
+	opis =Paragon fiskalny
+	data =2025-04-01
+	datasp =2025-04-01
+	kwota =220.80
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0401/02822 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =220.80
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =P0401/02822 
+		NumerDok =P0401/02822 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-01
+	}
+	Zapis{
+		strona=MA
+		kwota =220.80
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0401/02822 
+		NumerDok =P0401/02822 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-01
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0401/02822 
+		obGUID =
+		kwota =220.80
+	}
+}
+Kontrahent{
+	id =908460
+	kod =MARCELI TOCZKO
+	nazwa =MARCELI TOCZKO
+	miejscowosc =SZCZECIN
+	ulica =KWIATKOWSKIEGO 9/12
+	dom =
+	lokal =
+	kodpocz =71-004
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0097/S/25 
+	opis =PALIWO ZS390LM 30,55L
+	data =2025-04-01
+	datasp =2025-04-01
+	kwota =106.62
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0097/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =106.62
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0097/S/25 
+		NumerDok =KW0097/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-01
+	}
+	Zapis{
+		strona=MA
+		kwota =106.62
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0097/S/25 
+		NumerDok =KW0097/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-01
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0097/S/25 
+		obGUID =
+		kwota =106.62
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGONY
+	nazwa =PARAGON
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =  -   
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =P0402/02823 
+	opis =Paragon fiskalny
+	data =2025-04-02
+	datasp =2025-04-02
+	kwota =18.45
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0402/02823 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =18.45
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =P0402/02823 
+		NumerDok =P0402/02823 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-02
+	}
+	Zapis{
+		strona=MA
+		kwota =18.45
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0402/02823 
+		NumerDok =P0402/02823 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-02
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0402/02823 
+		obGUID =
+		kwota =18.45
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGONY
+	nazwa =PARAGON
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =  -   
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =P0403/02824 
+	opis =Paragon fiskalny
+	data =2025-04-03
+	datasp =2025-04-03
+	kwota =77.98
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0403/02824 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =77.98
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =P0403/02824 
+		NumerDok =P0403/02824 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Zapis{
+		strona=MA
+		kwota =77.98
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0403/02824 
+		NumerDok =P0403/02824 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0403/02824 
+		obGUID =
+		kwota =77.98
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGONY
+	nazwa =PARAGON
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =  -   
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =P0403/02825 
+	opis =Paragon fiskalny
+	data =2025-04-03
+	datasp =2025-04-03
+	kwota =88.80
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0403/02825 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =88.80
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =P0403/02825 
+		NumerDok =P0403/02825 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Zapis{
+		strona=MA
+		kwota =88.80
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0403/02825 
+		NumerDok =P0403/02825 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0403/02825 
+		obGUID =
+		kwota =88.80
+	}
+}
+Kontrahent{
+	id =906305
+	kod =SOBCZAK MALGORZATA
+	nazwa =SOBCZAK MALGORZATA
+	miejscowosc =SZCZECIN
+	ulica =Gen.maczka 20/13
+	dom =
+	lokal =
+	kodpocz =71-050
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0098/S/25 
+	opis =fak1184- poczta
+	data =2025-04-03
+	datasp =2025-04-03
+	kwota =11.80
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0098/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =11.80
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0098/S/25 
+		NumerDok =KW0098/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Zapis{
+		strona=MA
+		kwota =11.80
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0098/S/25 
+		NumerDok =KW0098/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0098/S/25 
+		obGUID =
+		kwota =11.80
+	}
+}
+Kontrahent{
+	id =906305
+	kod =SOBCZAK MALGORZATA
+	nazwa =SOBCZAK MALGORZATA
+	miejscowosc =SZCZECIN
+	ulica =Gen.maczka 20/13
+	dom =
+	lokal =
+	kodpocz =71-050
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0099/S/25 
+	opis =czesci samochod zs6401w
+	data =2025-04-03
+	datasp =2025-04-03
+	kwota =180.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0099/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =180.00
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0099/S/25 
+		NumerDok =KW0099/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Zapis{
+		strona=MA
+		kwota =180.00
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0099/S/25 
+		NumerDok =KW0099/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0099/S/25 
+		obGUID =
+		kwota =180.00
+	}
+}
+Kontrahent{
+	id =906305
+	kod =SOBCZAK MALGORZATA
+	nazwa =SOBCZAK MALGORZATA
+	miejscowosc =SZCZECIN
+	ulica =Gen.maczka 20/13
+	dom =
+	lokal =
+	kodpocz =71-050
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0100/S/25 
+	opis =FAK 2723K1- cITI GO
+	data =2025-04-03
+	datasp =2025-04-03
+	kwota =198.66
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0100/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =198.66
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0100/S/25 
+		NumerDok =KW0100/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Zapis{
+		strona=MA
+		kwota =198.66
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0100/S/25 
+		NumerDok =KW0100/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0100/S/25 
+		obGUID =
+		kwota =198.66
+	}
+}
+Kontrahent{
+	id =002846
+	kod =LOMBARD SOS !!!gotowka!!!
+	nazwa =LOMBARD SOS SP. Z O.O.
+	miejscowosc =SZCZECIN
+	ulica =PIASTOW 63/2
+	dom =
+	lokal =
+	kodpocz =70-332
+	nip =852-270-30-35 
+	tel1 =48-88-784                     
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01538/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-03
+	datasp =2025-04-03
+	kwota =223.86
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01538/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =223.86
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01538/S/25 
+		NumerDok =F01538/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Zapis{
+		strona=MA
+		kwota =223.86
+		konto =201-2-1-002846
+		IdDlaRozliczen =2
+		opis =F01538/S/25 
+		NumerDok =F01538/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-03
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01538/S/25 
+		obGUID =
+		kwota =223.86
+	}
+}
+Kontrahent{
+	id =002086
+	kod =FUNDACJA BONA RES
+	nazwa =FUNDACJA BONA RES
+	miejscowosc =SZCZECIN
+	ulica =KRESOWA 19
+	dom =
+	lokal =
+	kodpocz =71-770
+	nip =9552342387    
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01545/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-04
+	datasp =2025-04-04
+	kwota =102.09
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01545/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =102.09
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01545/S/25 
+		NumerDok =F01545/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-04
+	}
+	Zapis{
+		strona=MA
+		kwota =102.09
+		konto =201-2-1-002086
+		IdDlaRozliczen =2
+		opis =F01545/S/25 
+		NumerDok =F01545/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-04
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01545/S/25 
+		obGUID =
+		kwota =102.09
+	}
+}
+Kontrahent{
+	id =906062
+	kod =LACINSKI MICHAL
+	nazwa =LACINSKI MICHAL
+	miejscowosc =SZCZECIN
+	ulica =KARPOWICZA 17
+	dom =
+	lokal =
+	kodpocz =71-304
+	nip =              
+	tel1 =48-733-57                     
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0101/S/25 
+	opis =PALIWO ZS6401W 39,05L
+	data =2025-04-04
+	datasp =2025-04-04
+	kwota =228.05
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0101/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =228.05
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0101/S/25 
+		NumerDok =KW0101/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-04
+	}
+	Zapis{
+		strona=MA
+		kwota =228.05
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0101/S/25 
+		NumerDok =KW0101/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-04
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0101/S/25 
+		obGUID =
+		kwota =228.05
+	}
+}
+Kontrahent{
+	id =001736
+	kod =IN TOOLS SP. Z O.O.
+	nazwa =In TOOLS sp. z o.o.
+	miejscowosc =Szczecin
+	ulica =Santocka 39
+	dom =
+	lokal =
+	kodpocz =71-083
+	nip =852-263-19-62 
+	tel1 =578-902-345                   
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KP0022/S/25 
+	opis =Naleznosc za fakture F01530/S/25
+	data =2025-04-04
+	datasp =2025-04-04
+	kwota =233.70
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KP0022/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =233.70
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =KP0022/S/25 
+		NumerDok =KP0022/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-04
+	}
+	Zapis{
+		strona=MA
+		kwota =233.70
+		konto =201-2-1-001736
+		IdDlaRozliczen =2
+		opis =KP0022/S/25 
+		NumerDok =KP0022/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-04
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01530/S/25 
+		obGUID =
+		kwota =233.70
+	}
+}
+Kontrahent{
+	id =906305
+	kod =SOBCZAK MALGORZATA
+	nazwa =SOBCZAK MALGORZATA
+	miejscowosc =SZCZECIN
+	ulica =Gen.maczka 20/13
+	dom =
+	lokal =
+	kodpocz =71-050
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0102/S/25 
+	opis =FAK-3  - REGENERACJA GASNIC
+	data =2025-04-04
+	datasp =2025-04-04
+	kwota =436.65
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0102/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =436.65
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0102/S/25 
+		NumerDok =KW0102/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-04
+	}
+	Zapis{
+		strona=MA
+		kwota =436.65
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0102/S/25 
+		NumerDok =KW0102/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-04
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0102/S/25 
+		obGUID =
+		kwota =436.65
+	}
+}
+Kontrahent{
+	id =999999
+	kod =DOSTAWCA INDYWIDUALNY
+	nazwa =DOSTAWCA INDYWIDUALNY
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =S0067/S/25  
+	opis =Wyplata za skup S0067/S/25
+	data =2025-04-04
+	datasp =2025-04-04
+	kwota =26.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0067/S/25  
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =26.00
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0067/S/25  
+		NumerDok =S0067/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-04
+	}
+	Zapis{
+		strona=MA
+		kwota =26.00
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =S0067/S/25  
+		NumerDok =S0067/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-04
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0067/S/25  
+		obGUID =
+		kwota =26.00
+	}
+}
+Kontrahent{
+	id =013947
+	kod =APTEKA DELFIN SP. Z O.O.
+	nazwa =APTEKA DELFIN SP. Z O.O. APTEKA BALTYCKA
+	miejscowosc =SZCZECIN
+	ulica =PL. STEFANA BATOREGO 5/28
+	dom =
+	lokal =
+	kodpocz =70-207
+	nip =955-19-87-739 
+	tel1 =604-0808-05                   
+	tel2 =
+	fax =MICKIEWICZA 128A              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01557/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-07
+	datasp =2025-04-07
+	kwota =206.06
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01557/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =206.06
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01557/S/25 
+		NumerDok =F01557/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Zapis{
+		strona=MA
+		kwota =206.06
+		konto =201-2-1-013947
+		IdDlaRozliczen =2
+		opis =F01557/S/25 
+		NumerDok =F01557/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01557/S/25 
+		obGUID =
+		kwota =206.06
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGONY
+	nazwa =PARAGON
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =  -   
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =P0407/02828 
+	opis =Paragon fiskalny
+	data =2025-04-07
+	datasp =2025-04-07
+	kwota =120.76
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0407/02828 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =120.76
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =P0407/02828 
+		NumerDok =P0407/02828 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Zapis{
+		strona=MA
+		kwota =120.76
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0407/02828 
+		NumerDok =P0407/02828 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0407/02828 
+		obGUID =
+		kwota =120.76
+	}
+}
+Kontrahent{
+	id =908365
+	kod =MARKIEWICZ RAFAL
+	nazwa =Markiewicz Rafal
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0103/S/25 
+	opis =WODA
+	data =2025-04-07
+	datasp =2025-04-07
+	kwota =22.90
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0103/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =22.90
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0103/S/25 
+		NumerDok =KW0103/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Zapis{
+		strona=MA
+		kwota =22.90
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0103/S/25 
+		NumerDok =KW0103/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0103/S/25 
+		obGUID =
+		kwota =22.90
+	}
+}
+Kontrahent{
+	id =017787
+	kod =AWI-GRAF IWONA KOPYTOWSKA
+	nazwa =AWI-GRAF IWONA KOPYTOWSKA
+	miejscowosc =Zalom
+	ulica =Lubczynska 18
+	dom =
+	lokal =
+	kodpocz =70-896
+	nip =851-157-94-42 
+	tel1 =434-01-01                     
+	tel2 =
+	fax =lok. 16                       
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01559/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-07
+	datasp =2025-04-07
+	kwota =78.72
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01559/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =78.72
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01559/S/25 
+		NumerDok =F01559/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Zapis{
+		strona=MA
+		kwota =78.72
+		konto =201-2-1-017787
+		IdDlaRozliczen =2
+		opis =F01559/S/25 
+		NumerDok =F01559/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01559/S/25 
+		obGUID =
+		kwota =78.72
+	}
+}
+Kontrahent{
+	id =001967
+	kod =SKLEP SPOZYWCZO-PRZEMYSLOWY "L
+	nazwa =SKLEP SPOZYWCZO-PRZEMYSLOWY "LEWIATAN" MINI MARKET KUSIO ELZBIETA
+	miejscowosc =SZCZECIN
+	ulica =JAGIELLONSKA 72/2
+	dom =
+	lokal =
+	kodpocz =70-365
+	nip =8521696238    
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01561/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-07
+	datasp =2025-04-07
+	kwota =196.23
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01561/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =196.23
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01561/S/25 
+		NumerDok =F01561/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Zapis{
+		strona=MA
+		kwota =196.23
+		konto =201-2-1-001967
+		IdDlaRozliczen =2
+		opis =F01561/S/25 
+		NumerDok =F01561/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01561/S/25 
+		obGUID =
+		kwota =196.23
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGONY
+	nazwa =PARAGON
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =  -   
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =P0407/02830 
+	opis =Paragon fiskalny
+	data =2025-04-07
+	datasp =2025-04-07
+	kwota =100.48
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0407/02830 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =100.48
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =P0407/02830 
+		NumerDok =P0407/02830 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Zapis{
+		strona=MA
+		kwota =100.48
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0407/02830 
+		NumerDok =P0407/02830 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0407/02830 
+		obGUID =
+		kwota =100.48
+	}
+}
+Kontrahent{
+	id =906062
+	kod =LACINSKI MICHAL
+	nazwa =LACINSKI MICHAL
+	miejscowosc =SZCZECIN
+	ulica =KARPOWICZA 17
+	dom =
+	lokal =
+	kodpocz =71-304
+	nip =              
+	tel1 =48-733-57                     
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0104/S/25 
+	opis =wplata do banku
+	data =2025-04-07
+	datasp =2025-04-07
+	kwota =4300.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0104/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =4300.00
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0104/S/25 
+		NumerDok =KW0104/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Zapis{
+		strona=MA
+		kwota =4300.00
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0104/S/25 
+		NumerDok =KW0104/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0104/S/25 
+		obGUID =
+		kwota =4300.00
+	}
+}
+Kontrahent{
+	id =906062
+	kod =LACINSKI MICHAL
+	nazwa =LACINSKI MICHAL
+	miejscowosc =SZCZECIN
+	ulica =KARPOWICZA 17
+	dom =
+	lokal =
+	kodpocz =71-304
+	nip =              
+	tel1 =48-733-57                     
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0105/S/25 
+	opis =wplata do banku
+	data =2025-04-07
+	datasp =2025-04-07
+	kwota =4000.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0105/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =4000.00
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0105/S/25 
+		NumerDok =KW0105/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Zapis{
+		strona=MA
+		kwota =4000.00
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0105/S/25 
+		NumerDok =KW0105/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0105/S/25 
+		obGUID =
+		kwota =4000.00
+	}
+}
+Kontrahent{
+	id =001420
+	kod =TRANSPORT BAGAZOWY GRZEGORZ OB
+	nazwa =TRANSPORT BAGAZOWY Grzegorz Obrzut
+	miejscowosc =Szczecin
+	ulica =Krakowska 32A/7
+	dom =
+	lokal =
+	kodpocz =71-017
+	nip =852-106-05-46 
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01566/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-07
+	datasp =2025-04-07
+	kwota =208.12
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01566/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =208.12
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01566/S/25 
+		NumerDok =F01566/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Zapis{
+		strona=MA
+		kwota =208.12
+		konto =201-2-1-001420
+		IdDlaRozliczen =2
+		opis =F01566/S/25 
+		NumerDok =F01566/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01566/S/25 
+		obGUID =
+		kwota =208.12
+	}
+}
+Kontrahent{
+	id =017117
+	kod =TERPILOWSCY
+	nazwa =J.J.Z. Terpilowscy SP.J.
+	miejscowosc =Szczecin
+	ulica =Jagiellonska 16/1
+	dom =
+	lokal =
+	kodpocz =70-437
+	nip =955-18-25-161 
+	tel1 =434-23-52                     
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01567/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-07
+	datasp =2025-04-07
+	kwota =736.61
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01567/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =736.61
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01567/S/25 
+		NumerDok =F01567/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Zapis{
+		strona=MA
+		kwota =736.61
+		konto =201-2-1-017117
+		IdDlaRozliczen =2
+		opis =F01567/S/25 
+		NumerDok =F01567/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-07
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01567/S/25 
+		obGUID =
+		kwota =736.61
+	}
+}
+Kontrahent{
+	id =014998
+	kod =HOKER SP.
+	nazwa =HOKER SP. CYWILNA ARTUR KALUZNY RAFAL KACZMAREK
+	miejscowosc =SZCZECIN
+	ulica =PARTYZANTOW 2
+	dom =
+	lokal =
+	kodpocz =70-222
+	nip =852-11-46-578 
+	tel1 =433-82-46 - ksi�g             
+	tel2 =
+	fax =603-133-462                   
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01575/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-08
+	datasp =2025-04-08
+	kwota =629.76
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01575/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =629.76
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01575/S/25 
+		NumerDok =F01575/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Zapis{
+		strona=MA
+		kwota =629.76
+		konto =201-2-1-014998
+		IdDlaRozliczen =2
+		opis =F01575/S/25 
+		NumerDok =F01575/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01575/S/25 
+		obGUID =
+		kwota =629.76
+	}
+}
+Kontrahent{
+	id =015026
+	kod =APTEKA "POD PAPROCIA" S.C
+	nazwa =APTEKA "POD PAPROCIA" S.C JOANNA ZALUSKA , HIERONIM ZALUSKI
+	miejscowosc =SZCZECIN
+	ulica =WLOSCIANSKA  1
+	dom =
+	lokal =
+	kodpocz =70-021
+	nip =955-21-50-133 
+	tel1 =482-16-97,601774153           
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KP0023/S/25 
+	opis =Naleznosc za fakture F01432/S/25
+	data =2025-04-08
+	datasp =2025-04-08
+	kwota =0.02
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KP0023/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =0.02
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =KP0023/S/25 
+		NumerDok =KP0023/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Zapis{
+		strona=MA
+		kwota =0.02
+		konto =201-2-1-015026
+		IdDlaRozliczen =2
+		opis =KP0023/S/25 
+		NumerDok =KP0023/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01432/S/25 
+		obGUID =
+		kwota =0.02
+	}
+}
+Kontrahent{
+	id =999999
+	kod =DOSTAWCA INDYWIDUALNY
+	nazwa =DOSTAWCA INDYWIDUALNY
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =S0068/S/25  
+	opis =Wyplata za skup S0068/S/25
+	data =2025-04-08
+	datasp =2025-04-08
+	kwota =20.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0068/S/25  
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =20.00
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0068/S/25  
+		NumerDok =S0068/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Zapis{
+		strona=MA
+		kwota =20.00
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =S0068/S/25  
+		NumerDok =S0068/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0068/S/25  
+		obGUID =
+		kwota =20.00
+	}
+}
+Kontrahent{
+	id =999999
+	kod =DOSTAWCA INDYWIDUALNY
+	nazwa =DOSTAWCA INDYWIDUALNY
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =S0069/S/25  
+	opis =Wyplata za skup S0069/S/25
+	data =2025-04-08
+	datasp =2025-04-08
+	kwota =45.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0069/S/25  
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =45.00
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0069/S/25  
+		NumerDok =S0069/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Zapis{
+		strona=MA
+		kwota =45.00
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =S0069/S/25  
+		NumerDok =S0069/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0069/S/25  
+		obGUID =
+		kwota =45.00
+	}
+}
+Kontrahent{
+	id =000012
+	kod =WI-BA LAK SP. Z O.O.
+	nazwa =WI-BA LAK Sp. z o.o.
+	miejscowosc =Wysogotowo
+	ulica =Skorzewska 25
+	dom =
+	lokal =
+	kodpocz =62-081
+	nip =777-26-26-039 
+	tel1 =508-381-035                   
+	tel2 =
+	fax =ul. �Wierczewska 55           
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01585/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-08
+	datasp =2025-04-08
+	kwota =176.85
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01585/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =176.85
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01585/S/25 
+		NumerDok =F01585/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Zapis{
+		strona=MA
+		kwota =176.85
+		konto =201-2-1-000012
+		IdDlaRozliczen =2
+		opis =F01585/S/25 
+		NumerDok =F01585/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01585/S/25 
+		obGUID =
+		kwota =176.85
+	}
+}
+Kontrahent{
+	id =013415
+	kod =PIOTR STASIEK !!!gotowka!!
+	nazwa =FHU PIOTR STASIEK
+	miejscowosc =SZCZECIN
+	ulica =UNISLAWY 6/2
+	dom =
+	lokal =
+	kodpocz =71-402
+	nip =852-070-16-35 
+	tel1 =501-692-973                   
+	tel2 =
+	fax =Mieszka I 105 (Rodzynek)      
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01589/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-08
+	datasp =2025-04-08
+	kwota =220.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01589/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =220.00
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01589/S/25 
+		NumerDok =F01589/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Zapis{
+		strona=MA
+		kwota =220.00
+		konto =201-2-1-013415
+		IdDlaRozliczen =2
+		opis =F01589/S/25 
+		NumerDok =F01589/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01589/S/25 
+		obGUID =
+		kwota =220.00
+	}
+}
+Kontrahent{
+	id =099999
+	kod =PARAGONY
+	nazwa =PARAGON
+	miejscowosc =SZCZECIN
+	ulica =
+	dom =
+	lokal =
+	kodpocz =  -   
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =P0408/02831 
+	opis =Paragon fiskalny
+	data =2025-04-08
+	datasp =2025-04-08
+	kwota =189.42
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =P0408/02831 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =189.42
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =P0408/02831 
+		NumerDok =P0408/02831 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Zapis{
+		strona=MA
+		kwota =189.42
+		konto =201-3
+		IdDlaRozliczen =2
+		opis =P0408/02831 
+		NumerDok =P0408/02831 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =P0408/02831 
+		obGUID =
+		kwota =189.42
+	}
+}
+Kontrahent{
+	id =999999
+	kod =DOSTAWCA INDYWIDUALNY
+	nazwa =DOSTAWCA INDYWIDUALNY
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =S0070/S/25  
+	opis =Wyplata za skup S0070/S/25
+	data =2025-04-08
+	datasp =2025-04-08
+	kwota =114.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0070/S/25  
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =114.00
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0070/S/25  
+		NumerDok =S0070/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Zapis{
+		strona=MA
+		kwota =114.00
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =S0070/S/25  
+		NumerDok =S0070/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0070/S/25  
+		obGUID =
+		kwota =114.00
+	}
+}
+Kontrahent{
+	id =999999
+	kod =DOSTAWCA INDYWIDUALNY
+	nazwa =DOSTAWCA INDYWIDUALNY
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =S0071/S/25  
+	opis =Wyplata za skup S0071/S/25
+	data =2025-04-08
+	datasp =2025-04-08
+	kwota =21.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0071/S/25  
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =21.00
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0071/S/25  
+		NumerDok =S0071/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Zapis{
+		strona=MA
+		kwota =21.00
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =S0071/S/25  
+		NumerDok =S0071/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-08
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0071/S/25  
+		obGUID =
+		kwota =21.00
+	}
+}
+Kontrahent{
+	id =002975
+	kod =PARAMEDIC24 SP. Z O.O.
+	nazwa =PARAMEDIC24 SP. Z O.O.
+	miejscowosc =SZCZECIN
+	ulica =ROSTOCKA 152
+	dom =
+	lokal =
+	kodpocz =71-771
+	nip =8522606384    
+	tel1 =608471824 /669067567          
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01598/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-09
+	datasp =2025-04-09
+	kwota =558.42
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01598/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =558.42
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01598/S/25 
+		NumerDok =F01598/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Zapis{
+		strona=MA
+		kwota =558.42
+		konto =201-2-1-002975
+		IdDlaRozliczen =2
+		opis =F01598/S/25 
+		NumerDok =F01598/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01598/S/25 
+		obGUID =
+		kwota =558.42
+	}
+}
+Kontrahent{
+	id =002637
+	kod =AS LUKASZ BUCHNAT
+	nazwa =AS LUKASZ BUCHNAT
+	miejscowosc =SZCZECIN
+	ulica =GENERALA MACZKA 18/14
+	dom =
+	lokal =
+	kodpocz =71-050
+	nip =8513036148    
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01599/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-09
+	datasp =2025-04-09
+	kwota =98.40
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01599/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =98.40
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01599/S/25 
+		NumerDok =F01599/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Zapis{
+		strona=MA
+		kwota =98.40
+		konto =201-2-1-002637
+		IdDlaRozliczen =2
+		opis =F01599/S/25 
+		NumerDok =F01599/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01599/S/25 
+		obGUID =
+		kwota =98.40
+	}
+}
+Kontrahent{
+	id =016091
+	kod =ZIAJA LTD. ODDZIAL SZCZECIN
+	nazwa =ZIAJA Ltd. Oddzial Szczecin Jolanta I. Duran
+	miejscowosc =DOLUJE
+	ulica =MALWOWA 1
+	dom =
+	lokal =
+	kodpocz =72-002
+	nip =852-101-04-71 
+	tel1 =091  46-44-701                
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01602/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-09
+	datasp =2025-04-09
+	kwota =325.80
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01602/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =325.80
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01602/S/25 
+		NumerDok =F01602/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Zapis{
+		strona=MA
+		kwota =325.80
+		konto =201-2-1-016091
+		IdDlaRozliczen =2
+		opis =F01602/S/25 
+		NumerDok =F01602/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01602/S/25 
+		obGUID =
+		kwota =325.80
+	}
+}
+Kontrahent{
+	id =999999
+	kod =DOSTAWCA INDYWIDUALNY
+	nazwa =DOSTAWCA INDYWIDUALNY
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =S0072/S/25  
+	opis =Wyplata za skup S0072/S/25
+	data =2025-04-09
+	datasp =2025-04-09
+	kwota =25.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =S0072/S/25  
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =25.00
+		konto =202-2-1-099999
+		IdDlaRozliczen =1
+		opis =S0072/S/25  
+		NumerDok =S0072/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Zapis{
+		strona=MA
+		kwota =25.00
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =S0072/S/25  
+		NumerDok =S0072/S/25  
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =S0072/S/25  
+		obGUID =
+		kwota =25.00
+	}
+}
+Kontrahent{
+	id =908389
+	kod =DRTUSZ SP. Z O.O.
+	nazwa =DRTUSZ SP. Z O.O.
+	miejscowosc =BIALYSTOK
+	ulica =WYSZYNSKIEGO 2/75
+	dom =
+	lokal =
+	kodpocz =15-888
+	nip =542-314-16-09 
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0106/S/25 
+	opis =Zaplata za rachunek 16556/W/2025
+	data =2025-04-09
+	datasp =2025-04-09
+	kwota =107.21
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0106/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =107.21
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0106/S/25 
+		NumerDok =KW0106/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Zapis{
+		strona=MA
+		kwota =107.21
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0106/S/25 
+		NumerDok =KW0106/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =16556/W/2025
+		obGUID =
+		kwota =107.21
+	}
+}
+Kontrahent{
+	id =908365
+	kod =MARKIEWICZ RAFAL
+	nazwa =Markiewicz Rafal
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0107/S/25 
+	opis =PALIWO LPG ZS927SG 30,23L F2939K4/1285/2
+	data =2025-04-09
+	datasp =2025-04-09
+	kwota =103.99
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0107/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =103.99
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0107/S/25 
+		NumerDok =KW0107/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Zapis{
+		strona=MA
+		kwota =103.99
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0107/S/25 
+		NumerDok =KW0107/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-09
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0107/S/25 
+		obGUID =
+		kwota =103.99
+	}
+}
+Kontrahent{
+	id =002975
+	kod =PARAMEDIC24 SP. Z O.O.
+	nazwa =PARAMEDIC24 SP. Z O.O.
+	miejscowosc =SZCZECIN
+	ulica =ROSTOCKA 152
+	dom =
+	lokal =
+	kodpocz =71-771
+	nip =8522606384    
+	tel1 =608471824 /669067567          
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =FK0034/S/25 
+	opis =Zwrot do faktury F01598/S/25
+	data =2025-04-10
+	datasp =2025-04-10
+	kwota =558.42
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =FK0034/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =558.42
+		konto =
+		IdDlaRozliczen =1
+		opis =FK0034/S/25 
+		NumerDok =FK0034/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-10
+	}
+	Zapis{
+		strona=MA
+		kwota =558.42
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =FK0034/S/25 
+		NumerDok =FK0034/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-10
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =FK0034/S/25 
+		obGUID =
+		kwota =558.42
+	}
+}
+Kontrahent{
+	id =000723
+	kod =AUTO KOMIS TRAF RAFAL CHOMICZ
+	nazwa =AUTO KOMIS TRAF RAFAL CHOMICZ
+	miejscowosc =SZCZECIN
+	ulica =MADALINSKIEGO 4
+	dom =
+	lokal =
+	kodpocz =70-101
+	nip =955-135-43-71 
+	tel1 =510-944-460                   
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =F01620/S/25 
+	opis =Faktura platna gotowka
+	data =2025-04-10
+	datasp =2025-04-10
+	kwota =100.00
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =F01620/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =100.00
+		konto =100-1
+		IdDlaRozliczen =1
+		opis =F01620/S/25 
+		NumerDok =F01620/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-10
+	}
+	Zapis{
+		strona=MA
+		kwota =100.00
+		konto =201-2-1-000723
+		IdDlaRozliczen =2
+		opis =F01620/S/25 
+		NumerDok =F01620/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-10
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =F01620/S/25 
+		obGUID =
+		kwota =100.00
+	}
+}
+Kontrahent{
+	id =908365
+	kod =MARKIEWICZ RAFAL
+	nazwa =Markiewicz Rafal
+	miejscowosc =
+	ulica =
+	dom =
+	lokal =
+	kodpocz =      
+	nip =              
+	tel1 =                              
+	tel2 =
+	fax =                              
+	}
+Dokument{
+	symbol FK =RK1
+	kod =KW0108/S/25 
+	opis =bateria
+	data =2025-04-10
+	datasp =2025-04-10
+	kwota =7.99
+	KontoKasy =100
+	obsluguj jak =RK
+	FK nazwa =KW0108/S/25 
+	opis FK =rejestr KASA za dzien 2025-04-10
+	Zapis{
+		strona=WN
+		kwota =7.99
+		konto =
+		IdDlaRozliczen =1
+		opis =KW0108/S/25 
+		NumerDok =KW0108/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-10
+	}
+	Zapis{
+		strona=MA
+		kwota =7.99
+		konto =100-1
+		IdDlaRozliczen =2
+		opis =KW0108/S/25 
+		NumerDok =KW0108/S/25 
+		Pozycja =0
+		ZapisRownolegly =0
+		dataKPKW =2025-04-10
+	}
+	Rozliczenie{
+	IdDlaRozliczen =1
+		dSymbol =KW0108/S/25 
+		obGUID =
+		kwota =7.99
+	}
+}

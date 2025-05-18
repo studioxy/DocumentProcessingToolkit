@@ -58,10 +58,8 @@ def process_file(filename, file_type):
     }
     
     try:
-        # Porada: wczytujemy plik z tym samym kodowaniem jakiego używamy do zapisu logów
-        with open(filename, 'r', encoding='utf-8', errors='replace') as file:
+        with open(filename, 'r', encoding='latin-1') as file:
             lines = file.readlines()
-            logging.info(f"Wczytano plik {filename} używając kodowania UTF-8 z automatyczną zamianą nierozpoznanych znaków")
         
         if file_type == 'bank':
             results['changes'] = process_bank_file(lines)
@@ -70,9 +68,8 @@ def process_file(filename, file_type):
         elif file_type == 'kasa':
             results['changes'] = process_kasa_file(lines)
         
-        with open(filename, 'w', encoding='utf-8') as file:
+        with open(filename, 'w', encoding='latin-1') as file:
             file.writelines(lines)
-            logging.info(f"Zapisano plik {filename} używając kodowania UTF-8")
         
         elapsed_time = (time.time() - start_time) * 1000  # time in milliseconds
         results['processing_time'] = round(elapsed_time, 5)
